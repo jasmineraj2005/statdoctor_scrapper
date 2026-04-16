@@ -1,0 +1,176 @@
+=== Phase 1: Checking 128 dense suburbs against live AHPRA ===
+
+  [1/128] Sydney, NSW 2000: AHPRA=709, scraped=100, diff=609 *** MISSING DATA
+  [2/128] Surry Hills, NSW 2010: AHPRA=132, scraped=100, diff=32 *** MISSING DATA
+  [3/128] Artarmon, NSW 2064: AHPRA=683, scraped=100, diff=583 *** MISSING DATA
+  [4/128] Frenchs Forest, NSW 2086: AHPRA=394, scraped=100, diff=294 *** MISSING DATA
+  [5/128] Mona Vale, NSW 2103: AHPRA=117, scraped=100, diff=17 *** MISSING DATA
+  [6/128] Strathfield, NSW 2135: AHPRA=162, scraped=100, diff=62 *** MISSING DATA
+  [7/128] Concord West, NSW 2138: AHPRA=0, scraped=100, diff=-100 (ok)
+  [8/128] Parramatta, NSW 2150: AHPRA=0, scraped=100, diff=-100 (ok)
+  [9/128] Castle Hill, NSW 2154: AHPRA=0, scraped=100, diff=-100 (ok)
+  [10/128] Hurstville, NSW 2220: AHPRA=0, scraped=100, diff=-100 (ok)
+  [11/128] North Tamworth, NSW 2340: AHPRA=0, scraped=100, diff=-100 (ok)
+  [12/128] Taree, NSW 2430: AHPRA=0, scraped=100, diff=-100 (ok)
+  [13/128] Coffs Harbour, NSW 2450: AHPRA=0, scraped=100, diff=-100 (ok)
+  [14/128] Lismore, NSW 2480: AHPRA=0, scraped=100, diff=-100 (ok)
+  [15/128] Cudgen, NSW 2487: AHPRA=0, scraped=100, diff=-100 (ok)
+  [16/128] Campbelltown, NSW 2560: AHPRA=0, scraped=100, diff=-100 (ok)
+  [17/128] Wahroonga, NSW 2076: AHPRA=0, scraped=100, diff=-100 (ok)
+  [18/128] Mosman, NSW 2088: AHPRA=0, scraped=100, diff=-100 (ok)
+  [19/128] Burwood, NSW 2134: AHPRA=0, scraped=100, diff=-100 (ok)
+  [20/128] Auburn, NSW 2144: AHPRA=0, scraped=100, diff=-100 (ok)
+  [21/128] Bella Vista, NSW 2153: AHPRA=0, scraped=100, diff=-100 (ok)
+  [22/128] Dubbo, NSW 2830: AHPRA=0, scraped=100, diff=-100 (ok)
+  [23/128] Chatswood, NSW 2067: AHPRA=0, scraped=100, diff=-100 (ok)
+  [24/128] Spring Hill, QLD 4000: AHPRA=0, scraped=100, diff=-100 (ok)
+  [25/128] South Brisbane, QLD 4101: AHPRA=0, scraped=100, diff=-100 (ok)
+  [26/128] Greenslopes, QLD 4120: AHPRA=0, scraped=100, diff=-100 (ok)
+  [27/128] Meadowbrook, QLD 4131: AHPRA=0, scraped=100, diff=-100 (ok)
+  [28/128] Adelaide, SA 5000: AHPRA=0, scraped=100, diff=-100 (ok)
+  [29/128] North Adelaide, SA 5006: AHPRA=0, scraped=100, diff=-100 (ok)
+  [30/128] Norwood, SA 5067: AHPRA=0, scraped=100, diff=-100 (ok)
+  [31/128] Perth, WA 6000: AHPRA=0, scraped=100, diff=-100 (ok)
+  [32/128] Claremont, WA 6010: AHPRA=0, scraped=100, diff=-100 (ok)
+  [33/128] Joondalup, WA 6027: AHPRA=0, scraped=100, diff=-100 (ok)
+  [34/128] Hobart, TAS 7000: AHPRA=0, scraped=100, diff=-100 (ok)
+  [35/128] Launceston, TAS 7250: AHPRA=0, scraped=100, diff=-100 (ok)
+  [36/128] Carlingford, NSW 2118: AHPRA=0, scraped=99, diff=-99 (ok)
+  [37/128] Prairiewood, NSW 2176: AHPRA=0, scraped=99, diff=-99 (ok)
+  [38/128] Goulburn, NSW 2580: AHPRA=0, scraped=95, diff=-95 (ok)
+  [39/128] Tamworth, NSW 2340: AHPRA=0, scraped=94, diff=-94 (ok)
+  [40/128] North Sydney, NSW 2060: AHPRA=0, scraped=93, diff=-93 (ok)
+  [41/128] Sandy Bay, TAS 7005: AHPRA=0, scraped=93, diff=-93 (ok)
+  [42/128] Bowral, NSW 2576: AHPRA=0, scraped=91, diff=-91 (ok)
+  [43/128] Clayfield, QLD 4011: AHPRA=0, scraped=88, diff=-88 (ok)
+  [44/128] Annerley, QLD 4103: AHPRA=0, scraped=84, diff=-84 (ok)
+  [45/128] Paddington, NSW 2021: AHPRA=0, scraped=81, diff=-81 (ok)
+  [46/128] Lindfield, NSW 2070: AHPRA=0, scraped=81, diff=-81 (ok)
+  [47/128] Dulwich, SA 5065: AHPRA=0, scraped=80, diff=-80 (ok)
+  [48/128] Drummoyne, NSW 2047: AHPRA=0, scraped=79, diff=-79 (ok)
+  [49/128] Sunnybank, QLD 4109: AHPRA=0, scraped=78, diff=-78 (ok)
+  [50/128] Bega, NSW 2550: AHPRA=0, scraped=77, diff=-77 (ok)
+  [51/128] Woollahra, NSW 2025: AHPRA=0, scraped=76, diff=-76 (ok)
+  [52/128] Gordon, NSW 2072: AHPRA=0, scraped=75, diff=-75 (ok)
+  [53/128] Double Bay, NSW 2028: AHPRA=0, scraped=74, diff=-74 (ok)
+  [54/128] Denistone, NSW 2114: AHPRA=0, scraped=74, diff=-74 (ok)
+  [55/128] Bondi Junction, NSW 2022: AHPRA=0, scraped=74, diff=-74 (ok)
+  [56/128] Cooloongup, WA 6168: AHPRA=0, scraped=74, diff=-74 (ok)
+  [57/128] Orange, NSW 2800: AHPRA=0, scraped=73, diff=-73 (ok)
+  [58/128] Taringa, QLD 4068: AHPRA=0, scraped=73, diff=-73 (ok)
+  [59/128] Bedford Park, SA 5042: AHPRA=0, scraped=73, diff=-73 (ok)
+  [60/128] Eastwood, NSW 2122: AHPRA=0, scraped=72, diff=-72 (ok)
+  [61/128] Woolloongabba, QLD 4102: AHPRA=0, scraped=72, diff=-72 (ok)
+  [62/128] Bentley, WA 6102: AHPRA=0, scraped=72, diff=-72 (ok)
+  [63/128] Camperdown, NSW 2050: AHPRA=0, scraped=71, diff=-71 (ok)
+  [64/128] Herston, QLD 4006: AHPRA=0, scraped=70, diff=-70 (ok)
+  [65/128] West Leederville, WA 6007: AHPRA=0, scraped=70, diff=-70 (ok)
+  [66/128] Brookvale, NSW 2100: AHPRA=0, scraped=69, diff=-69 (ok)
+  [67/128] Epping, NSW 2121: AHPRA=0, scraped=69, diff=-69 (ok)
+  [68/128] Glebe, NSW 2037: AHPRA=0, scraped=69, diff=-69 (ok)
+  [69/128] Nowra, NSW 2541: AHPRA=0, scraped=68, diff=-68 (ok)
+  [70/128] Fairfield, NSW 2165: AHPRA=0, scraped=67, diff=-67 (ok)
+  [71/128] Ashford, SA 5035: AHPRA=0, scraped=67, diff=-67 (ok)
+  [72/128] Norwest, NSW 2153: AHPRA=0, scraped=66, diff=-66 (ok)
+  [73/128] Ashgrove, QLD 4060: AHPRA=0, scraped=66, diff=-66 (ok)
+  [74/128] Tweed Heads, NSW 2485: AHPRA=0, scraped=65, diff=-65 (ok)
+  [75/128] Springwood, QLD 4127: AHPRA=0, scraped=65, diff=-65 (ok)
+  [76/128] Mount Nasura, WA 6112: AHPRA=0, scraped=65, diff=-65 (ok)
+  [77/128] Manly, NSW 2095: AHPRA=0, scraped=64, diff=-64 (ok)
+  [78/128] New Farm, QLD 4005: AHPRA=0, scraped=64, diff=-64 (ok)
+  [79/128] Albany Creek, QLD 4035: AHPRA=0, scraped=64, diff=-64 (ok)
+  [80/128] Indooroopilly, QLD 4068: AHPRA=0, scraped=64, diff=-64 (ok)
+  [81/128] Piccadilly, WA 6430: AHPRA=0, scraped=64, diff=-64 (ok)
+  [82/128] Wentworthville, NSW 2145: AHPRA=0, scraped=63, diff=-63 (ok)
+  [83/128] Ryde, NSW 2112: AHPRA=0, scraped=63, diff=-63 (ok)
+  [84/128] Neutral Bay, NSW 2089: AHPRA=0, scraped=62, diff=-62 (ok)
+  [85/128] Ballina, NSW 2478: AHPRA=0, scraped=60, diff=-60 (ok)
+  [86/128] Malabar, NSW 2036: AHPRA=0, scraped=60, diff=-60 (ok)
+  [87/128] Balmain, NSW 2041: AHPRA=0, scraped=58, diff=-58 (ok)
+  [88/128] West Pennant Hills, NSW 2125: AHPRA=0, scraped=58, diff=-58 (ok)
+  [89/128] West End, QLD 4101: AHPRA=0, scraped=58, diff=-58 (ok)
+  [90/128] Lidcombe, NSW 2141: AHPRA=0, scraped=57, diff=-57 (ok)
+  [91/128] Greenwich, NSW 2065: AHPRA=0, scraped=56, diff=-56 (ok)
+  [92/128] Five Dock, NSW 2046: AHPRA=0, scraped=55, diff=-55 (ok)
+  [93/128] Pymble, NSW 2073: AHPRA=0, scraped=55, diff=-55 (ok)
+  [94/128] Merrylands, NSW 2160: AHPRA=0, scraped=55, diff=-55 (ok)
+  [95/128] Kenmore, QLD 4069: AHPRA=0, scraped=55, diff=-55 (ok)
+  [96/128] Mile End, SA 5031: AHPRA=0, scraped=55, diff=-55 (ok)
+  [97/128] Ashfield, NSW 2131: AHPRA=0, scraped=54, diff=-54 (ok)
+  [98/128] East Lismore, NSW 2480: AHPRA=0, scraped=54, diff=-54 (ok)
+  [99/128] Browns Plains, QLD 4118: AHPRA=0, scraped=54, diff=-54 (ok)
+  [100/128] Kent Town, SA 5067: AHPRA=0, scraped=54, diff=-54 (ok)
+  [101/128] Potts Point, NSW 2011: AHPRA=0, scraped=53, diff=-53 (ok)
+  [102/128] Coogee, NSW 2034: AHPRA=0, scraped=53, diff=-53 (ok)
+  [103/128] Rozelle, NSW 2039: AHPRA=0, scraped=53, diff=-53 (ok)
+  [104/128] Tweed Heads South, NSW 2486: AHPRA=0, scraped=53, diff=-53 (ok)
+  [105/128] Alexandria, NSW 2015: AHPRA=0, scraped=53, diff=-53 (ok)
+  [106/128] Cremorne, NSW 2090: AHPRA=0, scraped=53, diff=-53 (ok)
+  [107/128] Lane Cove, NSW 2066: AHPRA=0, scraped=52, diff=-52 (ok)
+  [108/128] Cherrybrook, NSW 2126: AHPRA=0, scraped=52, diff=-52 (ok)
+  [109/128] Mascot, NSW 2020: AHPRA=0, scraped=51, diff=-51 (ok)
+  [110/128] Rose Bay, NSW 2029: AHPRA=0, scraped=51, diff=-51 (ok)
+  [111/128] Kensington, NSW 2033: AHPRA=0, scraped=50, diff=-50 (ok)
+  [112/128] Maroubra, NSW 2035: AHPRA=0, scraped=50, diff=-50 (ok)
+  [113/128] Leichhardt, NSW 2040: AHPRA=0, scraped=50, diff=-50 (ok)
+  [114/128] Crows Nest, NSW 2065: AHPRA=0, scraped=50, diff=-50 (ok)
+  [115/128] Hunters Hill, NSW 2110: AHPRA=0, scraped=50, diff=-50 (ok)
+  [116/128] Beecroft, NSW 2119: AHPRA=0, scraped=50, diff=-50 (ok)
+  [117/128] Kellyville, NSW 2155: AHPRA=0, scraped=50, diff=-50 (ok)
+  [118/128] St Ives, NSW 2075: AHPRA=0, scraped=50, diff=-50 (ok)
+  [119/128] Gladesville, NSW 2111: AHPRA=0, scraped=50, diff=-50 (ok)
+  [120/128] Cabramatta, NSW 2166: AHPRA=0, scraped=50, diff=-50 (ok)
+  [121/128] Brisbane City, QLD 4000: AHPRA=0, scraped=50, diff=-50 (ok)
+  [122/128] Milton, QLD 4064: AHPRA=0, scraped=50, diff=-50 (ok)
+  [123/128] Coopers Plains, QLD 4108: AHPRA=0, scraped=50, diff=-50 (ok)
+  [124/128] Sunnybank Hills, QLD 4109: AHPRA=0, scraped=50, diff=-50 (ok)
+  [125/128] Eastwood, SA 5063: AHPRA=0, scraped=50, diff=-50 (ok)
+  [126/128] Osborne Park, WA 6017: AHPRA=0, scraped=50, diff=-50 (ok)
+  [127/128] Midland, WA 6056: AHPRA=0, scraped=50, diff=-50 (ok)
+  [128/128] Fremantle, WA 6160: AHPRA=0, scraped=50, diff=-50 (ok)
+
+=== Phase 2: Spot-checking zero-result postcodes ===
+
+NSW: checking 30 of 676 zero-result postcodes...
+  *** FALSE ZERO: 2190 -> Chullora: 4 practitioners on AHPRA!
+QLD: checking 30 of 947 zero-result postcodes...
+  *** FALSE ZERO: 4132 -> Marsden: 12 practitioners on AHPRA!
+  *** FALSE ZERO: 4133 -> Waterford: 2 practitioners on AHPRA!
+  *** FALSE ZERO: 4151 -> Coorparoo: 81 practitioners on AHPRA!
+  *** FALSE ZERO: 4152 -> Carina: 45 practitioners on AHPRA!
+  *** FALSE ZERO: 4153 -> Belmont: 5 practitioners on AHPRA!
+  *** FALSE ZERO: 4154 -> Gumdale: 6 practitioners on AHPRA!
+  *** FALSE ZERO: 4155 -> Chandler: 3 practitioners on AHPRA!
+SA: checking 30 of 960 zero-result postcodes...
+  *** FALSE ZERO: 5007 -> Bowden: 4 practitioners on AHPRA!
+WA: checking 30 of 934 zero-result postcodes...
+TAS: checking 30 of 979 zero-result postcodes...
+  *** FALSE ZERO: 7004 -> South Hobart: 56 practitioners on AHPRA!
+  *** FALSE ZERO: 7007 -> Mount Nelson: 8 practitioners on AHPRA!
+
+============================================================
+SUMMARY
+============================================================
+
+6 suburbs with significant missing data (gap > 5):
+  Sydney, NSW 2000: missing ~609 practitioners
+  Artarmon, NSW 2064: missing ~583 practitioners
+  Frenchs Forest, NSW 2086: missing ~294 practitioners
+  Strathfield, NSW 2135: missing ~62 practitioners
+  Surry Hills, NSW 2010: missing ~32 practitioners
+  Mona Vale, NSW 2103: missing ~17 practitioners
+
+  → Saved to coverage_gaps.csv
+
+11 postcodes incorrectly recorded as empty:
+  NSW 2190 (Chullora): 4 practitioners
+  QLD 4132 (Marsden): 12 practitioners
+  QLD 4133 (Waterford): 2 practitioners
+  QLD 4151 (Coorparoo): 81 practitioners
+  QLD 4152 (Carina): 45 practitioners
+  QLD 4153 (Belmont): 5 practitioners
+  QLD 4154 (Gumdale): 6 practitioners
+  QLD 4155 (Chandler): 3 practitioners
+  SA 5007 (Bowden): 4 practitioners
+  TAS 7004 (South Hobart): 56 practitioners
+  TAS 7007 (Mount Nelson): 8 practitioners

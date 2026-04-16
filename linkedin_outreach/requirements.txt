@@ -1,0 +1,5 @@
+playwright==1.42.0
+gspread==6.1.2
+google-auth==2.29.0
+rapidfuzz==3.8.1
+pandas==2.2.2

@@ -1,0 +1,60 @@
+
+============================================================
+Phase 1: Fixing 6 dense suburbs
+============================================================
+
+
+[Sydney, NSW 2000] AHPRA=709, have=100, gap=~609
+    Male+A: +40 new (of 23)
+    Male+B: +38 new (of 29)
+    Male+C: +56 new (of 41)
+    Male+D: +30 new (of 31)
+    Male+E: +47 new (of 43)
+    Male+F: +15 new (of 16)
+  → Added 226 new practitioners (total in file: 11553)
+  [Rate limited — waiting]
+  Waiting 90s...
+  Unblocked.
+
+[Artarmon, NSW 2064] AHPRA=683, have=100, gap=~583
+    Male+A: +16 new (of 16)
+    Male+B: +27 new (of 28)
+    Male+C: +29 new (of 34)
+    Male+D: +26 new (of 25)
+    Male+E: +22 new (of 21)
+  → Added 120 new practitioners (total in file: 11644)
+  [Rate limited — waiting]
+  Waiting 90s...
+  Unblocked.
+
+[Frenchs Forest, NSW 2086] AHPRA=394, have=100, gap=~294
+    Male+A: +8 new (of 8)
+    Male+B: +28 new (of 21)
+    Male+C: +26 new (of 28)
+    Male+D: +10 new (of 24)
+    Male+E: +14 new (of 22)
+  → Added 86 new practitioners (total in file: 11700)
+  [Rate limited — waiting]
+  Waiting 90s...
+  Unblocked.
+
+[Strathfield, NSW 2135] AHPRA=162, have=100, gap=~62
+    Male+A: +2 new (of 4)
+    Male+B: +2 new (of 2)
+    Male+C: +5 new (of 8)
+    Male+D: +7 new (of 5)
+    Male+E: +2 new (of 7)
+    Male+Y: +3 new (of 10)
+    Male+Z: +1 new (of 2)
+    Female+B: +2 new (of 3)
+    Female+C: +3 new (of 5)
+  → Added 27 new practitioners (total in file: 11719)
+  [Rate limited — waiting]
+  Waiting 90s...
+  Unblocked.
+
+[Surry Hills, NSW 2010] AHPRA=132, have=100, gap=~32
+    Male+A: +3 new (of 5)
+    Male+B: +1 new (of 8)
+    Male+C: +1 new (of 7)
+    Male+E: +2 new (of 3)

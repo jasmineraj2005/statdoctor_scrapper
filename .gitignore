@@ -1,0 +1,17 @@
+.env
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Service account credentials (already handled inside linkedin_outreach/ but pin here too)
+arpha-outreach-*.json
+*_creds.json
+
+# Outreach artefacts
+outreach_log.csv
+linkedin_progress.txt
+linkedin_outreach/linkedin_cookies.json
+linkedin_outreach/browser_profile/
+dry_run_debug/
+dry_run.log
