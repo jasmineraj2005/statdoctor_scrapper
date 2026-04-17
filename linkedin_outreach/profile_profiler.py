@@ -175,8 +175,14 @@ ACTIVITY_POSTS_JS = r"""
 
 # ── Public API ───────────────────────────────────────────────────────────────
 
-def profile(page: Page, profile_url: str) -> dict[str, Any]:
-    """Scrape a LinkedIn profile + its recent activity. Graceful on missing data."""
+def profile(page: Page, profile_url: str,
+            verifier_confidence: str = "") -> dict[str, Any]:
+    """Scrape a LinkedIn profile + its recent activity. Graceful on missing data.
+
+    `verifier_confidence` passes through the matcher's confidence tag
+    ("high" / "medium" / "") so the classifier downstream can be stricter
+    on empty-location-but-strong-name matches.
+    """
     result: dict[str, Any] = {
         "url": profile_url,
         "name": "",
@@ -191,6 +197,7 @@ def profile(page: Page, profile_url: str) -> dict[str, Any]:
         "last_post_date": None,
         "has_video_90d": False,
         "avg_likes_per_post": 0.0,
+        "verifier_confidence": verifier_confidence,
         "fail_reason": "",
     }
 

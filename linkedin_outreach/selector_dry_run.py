@@ -157,8 +157,10 @@ def run(limit: int, sample: bool = False, seed: int = 42) -> None:
                 time.sleep(random.uniform(*config.DELAY_BETWEEN_SEARCHES_SEC))
                 continue
 
+            confidence = profile.get("verifier_confidence", "high")
             report_lines.append(
-                f"- matched: [{profile['name']}]({profile['url']}) — {profile.get('headline', '')[:80]}"
+                f"- matched ({confidence}): [{profile['name']}]({profile['url']}) — "
+                f"{profile.get('headline', '')[:80]}"
             )
 
             # Cool-down guard — skip profile visit if the matched URL is HOT.

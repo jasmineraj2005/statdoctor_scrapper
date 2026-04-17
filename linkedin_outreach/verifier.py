@@ -119,44 +119,63 @@ def is_active_account(profile: dict) -> tuple[bool, str]:
     return True, "ok"
 
 
-def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str]:
+def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
     """
-    Full verification pipeline — returns (is_match, reason).
+    Full verification pipeline — returns (is_match, reason, confidence).
+
+    confidence is one of:
+      "high"   — location matched normally (AHPRA suburb / state token / VIC
+                 fallback list)
+      "medium" — location was EMPTY but the name matched at >=
+                 MEDIUM_CONF_NAME_SCORE (95). Downstream classifier should
+                 apply stricter influencer gates to these.
+      ""       — not a match (is_match == False)
+
     Profile dict must have: name, location, headline, has_degree_badge,
     has_headline, has_action_button.
     """
     name_ok, score = name_matches(practitioner["name"], profile.get("name", ""))
     if not name_ok:
-        return False, f"name_mismatch (score={score})"
+        return False, f"name_mismatch (score={score})", ""
 
+    confidence = "high"
     if config.REQUIRE_LOCATION_MATCH:
-        if not location_matches(practitioner.get("suburb", ""),
-                                practitioner.get("state", ""),
-                                profile.get("location", ""),
-                                postcode=practitioner.get("postcode", "")):
-            return False, f"location_mismatch (score={score})"
+        loc = (profile.get("location", "") or "").strip()
+        if not loc:
+            # Empty-loc acceptance — only when the name match is very strong,
+            # and only if the feature is enabled. Produces medium-confidence.
+            if config.ACCEPT_EMPTY_LOCATION_WITH_STRONG_NAME and \
+                    score >= config.MEDIUM_CONF_NAME_SCORE:
+                confidence = "medium"
+            else:
+                return False, f"empty_location (score={score})", ""
+        elif not location_matches(practitioner.get("suburb", ""),
+                                  practitioner.get("state", ""),
+                                  loc,
+                                  postcode=practitioner.get("postcode", "")):
+            return False, f"location_mismatch (score={score})", ""
 
     if config.REQUIRE_ACTIVE_ACCOUNT:
         alive, why = is_active_account(profile)
         if not alive:
-            return False, f"dead_account:{why} (score={score})"
+            return False, f"dead_account:{why} (score={score})", ""
 
     if config.REQUIRE_MEDICAL_KEYWORD:
         if not headline_is_medical(profile.get("headline", "")):
-            return False, f"no_medical_keyword (score={score})"
+            return False, f"no_medical_keyword (score={score})", ""
 
-    # Speciality booster: if configured AND practitioner has specialities,
-    # require at least one matching keyword in the headline.
     if config.REQUIRE_SPECIALITY_MATCH and practitioner.get("specialities"):
         sp_ok, hits = headline_matches_speciality(
             practitioner["specialities"], profile.get("headline", "")
         )
         if not sp_ok:
-            return False, f"speciality_mismatch (score={score}, expected one of {_speciality_keywords(practitioner['specialities'])})"
+            return False, \
+                f"speciality_mismatch (score={score}, expected one of " \
+                f"{_speciality_keywords(practitioner['specialities'])})", \
+                ""
 
-    # All gates passed
     sp_ok, hits = headline_matches_speciality(
         practitioner.get("specialities", ""), profile.get("headline", "")
     )
     boost = f", speciality_hits={hits}" if hits else ""
-    return True, f"matched (name_score={score}{boost})"
+    return True, f"matched (name_score={score}, confidence={confidence}{boost})", confidence

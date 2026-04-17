@@ -47,6 +47,14 @@ REQUIRE_ACTIVE_ACCOUNT   = True  # skip profiles that look abandoned
 REQUIRE_MEDICAL_KEYWORD  = False # profile headline must mention a medical term
 REQUIRE_SPECIALITY_MATCH = False # profile headline must mention the practitioner's speciality
 
+# Empty-location acceptance: many medical-practitioner LinkedIn profiles
+# don't fill in a city. When the profile has an EMPTY location string we
+# still accept the match if the name matches at a very high fidelity and
+# record the row as medium-confidence (classifier can require a higher
+# influencer soft-score before sending a connect).
+ACCEPT_EMPTY_LOCATION_WITH_STRONG_NAME = True
+MEDIUM_CONF_NAME_SCORE = 95  # >= this score + empty location → medium confidence
+
 # Locations that LinkedIn shows without a state but that plausibly mean VIC.
 # Many profiles list just "Melbourne" or "Greater Melbourne Area" with no
 # "Victoria" token — earlier verifier rejected those, so we accept them.

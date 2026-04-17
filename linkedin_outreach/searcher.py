@@ -198,9 +198,10 @@ def search_and_find_profile(page: Page, practitioner: dict) -> dict | None:
         return None
 
     for i, profile in enumerate(cards[:config.MAX_PROFILES_TO_CHECK]):
-        is_match, reason = verifier.verify_profile(practitioner, profile)
+        is_match, reason, confidence = verifier.verify_profile(practitioner, profile)
         print(f"  [search] Result {i+1}: '{profile['name']}' | '{profile['location']}' | '{profile['headline'][:80]}' — {reason}")
         if is_match:
+            profile["verifier_confidence"] = confidence
             return profile
         time.sleep(random.uniform(*config.DELAY_BETWEEN_PROFILES_SEC))
 
