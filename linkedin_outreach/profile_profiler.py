@@ -25,6 +25,7 @@ from typing import Any
 from playwright.sync_api import Page
 
 import li_selectors as selectors
+from _visit_tracker import mark_visited
 
 
 def _dump_activity(page: Page, handle: str) -> None:
@@ -194,6 +195,7 @@ def profile(page: Page, profile_url: str) -> dict[str, Any]:
     }
 
     # ── 1. Profile page ──
+    mark_visited(profile_url)
     try:
         page.goto(profile_url, wait_until="domcontentloaded", timeout=30_000)
         time.sleep(random.uniform(3, 6))
@@ -247,6 +249,7 @@ def profile(page: Page, profile_url: str) -> dict[str, Any]:
         return result
 
     activity_url = f"https://www.linkedin.com/in/{handle}/recent-activity/all/"
+    mark_visited(activity_url)
     try:
         page.goto(activity_url, wait_until="domcontentloaded", timeout=30_000)
         time.sleep(random.uniform(3, 6))

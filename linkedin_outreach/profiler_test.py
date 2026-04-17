@@ -20,6 +20,7 @@ sys.path.insert(0, str(THIS_DIR))
 import auth  # noqa: E402
 import config  # noqa: E402
 from profile_profiler import profile  # noqa: E402
+from _visit_tracker import is_hot  # noqa: E402
 
 
 def load_dotenv() -> None:
@@ -55,6 +56,10 @@ def main(urls: list[str]) -> None:
 
         all_results = []
         for url in urls:
+            if is_hot(url):
+                print(f"\n[SKIP] {url} is HOT (visited <48h ago). "
+                      f"Use cached dump for selector validation.")
+                continue
             print(f"\n=== profiling {url} ===")
             data = profile(page, url)
             all_results.append(data)

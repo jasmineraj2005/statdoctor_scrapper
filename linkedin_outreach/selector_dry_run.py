@@ -30,6 +30,7 @@ import auth  # noqa: E402
 import searcher  # noqa: E402
 import li_selectors as selectors  # noqa: E402
 from searcher import RateLimitError  # noqa: E402
+from _visit_tracker import is_hot, mark_visited  # noqa: E402
 
 SUBSET_CSV = THIS_DIR / "data" / "vic_high_yield_subset.csv"
 AUDIT_MD = THIS_DIR / "selector_audit.md"
@@ -99,6 +100,11 @@ def run(limit: int, sample: bool = False, seed: int = 42) -> None:
         sys.exit(f"subset CSV not found: {SUBSET_CSV}")
     df = pd.read_csv(SUBSET_CSV, dtype=str).fillna("")
     if sample:
+        # Oversample, then filter out practitioners whose matched LinkedIn URL
+        # would hit the 48h cool-down. We don't know the LinkedIn URL pre-search,
+        # so we can only pre-filter by practitioner_id if we've mapped it before
+        # — for now, the hot-set filter applies at the profile-visit step inside
+        # search_and_find_profile. Sampling itself stays deterministic per seed.
         rows = df.sample(n=limit, random_state=seed).to_dict("records")
     else:
         rows = df.head(limit).to_dict("records")
@@ -155,9 +161,25 @@ def run(limit: int, sample: bool = False, seed: int = 42) -> None:
                 f"- matched: [{profile['name']}]({profile['url']}) — {profile.get('headline', '')[:80]}"
             )
 
+            # Cool-down guard — skip profile visit if the matched URL is HOT.
+            if is_hot(profile["url"]):
+                report_lines.append(
+                    "- skipped profile probe: URL is within 48h cool-down"
+                )
+                time.sleep(random.uniform(*config.DELAY_BETWEEN_SEARCHES_SEC))
+                continue
+
             # Navigate to the profile page and probe selectors
+            mark_visited(profile["url"])
+            nav_start = time.time()
             try:
                 page.goto(profile["url"], wait_until="domcontentloaded", timeout=30_000)
+                nav_elapsed = time.time() - nav_start
+                if nav_elapsed > 30:
+                    report_lines.append(
+                        f"- **STOP** profile nav took {nav_elapsed:.1f}s — possible throttle"
+                    )
+                    break
                 time.sleep(random.uniform(3, 6))
                 # Scroll down a bit to trigger lazy-render of top-card
                 page.mouse.wheel(0, 400)
