@@ -71,33 +71,50 @@ PROFILE_DATA_JS = r"""
     if (/\/in\/[^\/]+$/.test(href)) { out.canonical_url = href; break; }
   }
 
-  // Degree-badge tokens (· 1st, · 2nd, · 3rd+, 1st degree connection) — filter these out.
+  // Scope to the top-card section — the <section> containing the <h2> that
+  // matches the profile owner's name. Profile pages have many <h2>s (Activity,
+  // Experience, etc.); the owner's name is one of them.
+  const nameH2 = Array.from(mainEl.querySelectorAll("h2"))
+    .find(h => ((h.innerText || "").trim() === out.name));
+  const topCard = nameH2
+    ? (nameH2.closest("section") || nameH2.parentElement || mainEl)
+    : mainEl;
+
+  // Regexes for filters
   const degreeRx = /^[·•\s]*\d+(?:st|nd|rd|th)(?:\+)?(\s*degree)?\s*$/i;
-  // Typical geo string: "Suburb, State, Country" — at least two commas OR ends with a known country.
-  const geoRx = /,\s*(Australia|Victoria|New South Wales|Queensland|Western Australia|South Australia|Tasmania|Northern Territory|ACT|NSW|VIC|QLD|WA|SA|TAS|NT)\b/i;
+  const geoRx    = /,\s*(Australia|Victoria|New South Wales|Queensland|Western Australia|South Australia|Tasmania|Northern Territory|ACT|NSW|VIC|QLD|WA|SA|TAS|NT)\b/i;
+  const pronounRx = /^(he\/him|she\/her|they\/them|[a-z]{2,4}\/[a-z]{2,4})$/i;
+  const uiChipRx  = /^(contact info|message|connect|follow|more|see more|show more|send|edit|about|activity|experience|education|skills|interests|languages|recommendations|highlights)$/i;
+  // Action-button row like "Message Connect Jason Ha He/Him" — contains the
+  // word "connect" AND another action verb (message/follow/more).
+  const actionComboRx = /\b(message|follow|more)\b[^.]*\bconnect\b|\bconnect\b[^.]*\b(message|follow|more)\b/i;
+  // LinkedIn top nav line: "Home ... My Network ... Jobs ..."
+  const navRx = /\b(my network|messaging|notifications|for business)\b/i;
 
-  // Collect candidate lines from the top-card region. Use the first self-link
-  // as an anchor and look within its closest <section>.
-  const anchorLink = selfLinks.find(a => /\/in\/[^\/]+$/.test((a.href||"").split("?")[0].replace(/\/$/, "")));
-  const block = anchorLink ? (anchorLink.closest("section") || mainEl) : mainEl;
+  const isValid = (l) => {
+    if (!l) return false;
+    if (l === out.name) return false;
+    if (degreeRx.test(l)) return false;
+    if (geoRx.test(l)) return false;
+    if (pronounRx.test(l)) return false;
+    if (uiChipRx.test(l)) return false;
+    if (actionComboRx.test(l)) return false;
+    if (navRx.test(l)) return false;
+    if (l.length < 10 || l.length > 220) return false;
+    return true;
+  };
 
-  const lines = Array.from(block.querySelectorAll("p, span"))
-    .map(el => (el.innerText || "").trim())
-    .filter(Boolean)
-    .filter(l => l !== out.name)
-    .filter(l => !degreeRx.test(l))
-    .filter(l => l.length >= 3 && l.length <= 200);
+  const paraTexts = Array.from(topCard.querySelectorAll("p"))
+    .map(p => (p.innerText || "").trim().replace(/\s+/g, " "))
+    .filter(Boolean);
 
-  // Dedupe while preserving order
-  const seen = new Set();
-  const uniq = [];
-  for (const l of lines) { if (!seen.has(l)) { seen.add(l); uniq.push(l); } }
-
-  // Headline = first non-geo line; location = first geo-looking line.
-  for (const l of uniq) {
-    if (!out.location && geoRx.test(l)) { out.location = l; continue; }
-    if (!out.headline && !geoRx.test(l)) { out.headline = l; }
-    if (out.headline && out.location) break;
+  // Headline: first valid <p> inside the top-card section.
+  for (const txt of paraTexts) {
+    if (isValid(txt)) { out.headline = txt; break; }
+  }
+  // Location: first geo-matching <p> (≤ 100 chars to exclude recruiter ads).
+  for (const txt of paraTexts) {
+    if (geoRx.test(txt) && txt.length <= 100) { out.location = txt; break; }
   }
 
   return out;
@@ -113,7 +130,12 @@ PROFILE_DATA_JS = r"""
 # Use these as aria-label templates, substituting the name at call time:
 #   CONNECT_BUTTON_FMT.format(name="Peter Lange")
 #   FOLLOW_BUTTON_FMT.format(name="Peter Lange")
-CONNECT_BUTTON_FMT = 'button[aria-label="Invite {name} to connect"]'
+#
+# IMPORTANT: owner's Connect is rendered as an <a> anchor (href points to
+# /preload/custom-invite/?vanityName=...). Sidebar "Invite X to connect"
+# recommendations are <button>s. Tagging Connect as `a[...]` auto-excludes
+# sidebar. Follow remains a <button>.
+CONNECT_BUTTON_FMT = 'a[aria-label="Invite {name} to connect"]'
 FOLLOW_BUTTON_FMT  = 'button[aria-label="Follow {name}"]'
 
 # "More" overflow — when Connect isn't in the primary top-card area, it lives
@@ -121,11 +143,12 @@ FOLLOW_BUTTON_FMT  = 'button[aria-label="Follow {name}"]'
 # Multiple "More" buttons may exist; the top-card one is the FIRST in <main>.
 MORE_MENU_BUTTON = 'main button[aria-label="More"]'
 
-# Inside the More-menu dropdown, the Connect option is a <div role="button">
-# (not a real button) with aria-label that still embeds the owner's name.
-# Empirically LinkedIn also offers "Connect" inside a menu list item.
+# Inside the More-menu dropdown, Connect is typically an <a> anchor OR a
+# role=button element with aria-label embedding the owner's name. Use a union
+# that covers both shapes.
 MORE_MENU_CONNECT_FMT = (
-    "div[role='button'][aria-label*='Invite {name}'][aria-label*='connect'],"
+    "a[aria-label='Invite {name} to connect'],"
+    " div[role='button'][aria-label*='Invite {name}'][aria-label*='connect'],"
     " div[role='menuitem'][aria-label*='Invite {name}'][aria-label*='connect'],"
     " li[role='menuitem'][aria-label*='Invite {name}'][aria-label*='connect']"
 )

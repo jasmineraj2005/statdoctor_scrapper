@@ -92,11 +92,14 @@ def probe_group(page, label: str, candidates: list[str]) -> list[dict]:
     return rows
 
 
-def run(limit: int) -> None:
+def run(limit: int, sample: bool = False, seed: int = 42) -> None:
     if not SUBSET_CSV.exists():
         sys.exit(f"subset CSV not found: {SUBSET_CSV}")
     df = pd.read_csv(SUBSET_CSV, dtype=str).fillna("")
-    rows = df.head(limit).to_dict("records")
+    if sample:
+        rows = df.sample(n=limit, random_state=seed).to_dict("records")
+    else:
+        rows = df.head(limit).to_dict("records")
 
     report_lines: list[str] = []
     report_lines.append(f"# Selector audit — {time.strftime('%Y-%m-%d %H:%M:%S')}")
@@ -237,6 +240,48 @@ def run(limit: int) -> None:
                         f"{' sample=`'+r['sample']+'`' if r['sample'] else ''}"
                     )
 
+            # DOM-variant signals — catch Creator Mode / Open-to-Work / Premium /
+            # incomplete / own-profile variations that change selector behaviour.
+            try:
+                signals = page.evaluate("""() => {
+                    const main = document.querySelector('main');
+                    const html = (document.body && document.body.innerText) || '';
+                    const lc = html.toLowerCase();
+                    const mainText = (main && main.innerText) || '';
+                    const mainLc = mainText.toLowerCase();
+                    const count = sel => (main ? main.querySelectorAll(sel).length : 0);
+                    return {
+                      is_own_profile:  location.pathname.includes('/in/me/')
+                                       || mainLc.includes('edit public profile')
+                                       || mainLc.includes('add profile section'),
+                      open_to_work:    lc.includes('#opentowork') || lc.includes('open to work'),
+                      premium_badge:   lc.includes('premium account')
+                                       || !!document.querySelector('li-icon[type="premium"]')
+                                       || !!document.querySelector('svg[aria-label*="Premium" i]'),
+                      creator_mode:    mainLc.includes('creator mode')
+                                       || mainLc.includes('creator mode on')
+                                       || mainLc.includes('follow for')
+                                       || mainLc.includes('followers'),
+                      connections_txt: (mainText.match(/([\\d,]+\\+?)\\s*connections?/i) || [null,''])[1] || '',
+                      followers_txt:   (mainText.match(/([\\d,]+\\+?)\\s*followers?/i)   || [null,''])[1] || '',
+                      h1_in_main:      count('h1'),
+                      h2_in_main:      count('h2'),
+                      self_link_count: count("a[href*='/in/']"),
+                    };
+                }""")
+                report_lines.append(
+                    f"- signals: creator_mode={signals['creator_mode']} "
+                    f"open_to_work={signals['open_to_work']} "
+                    f"premium={signals['premium_badge']} "
+                    f"own_profile={signals['is_own_profile']} "
+                    f"connections=`{signals['connections_txt']}` "
+                    f"followers=`{signals['followers_txt']}` "
+                    f"h1_main={signals['h1_in_main']} "
+                    f"h2_main={signals['h2_in_main']}"
+                )
+            except Exception as e:
+                report_lines.append(f"- signals error: {e}")
+
             report_lines.append("")
             time.sleep(random.uniform(*config.DELAY_BETWEEN_SEARCHES_SEC))
 
@@ -261,5 +306,8 @@ def load_dotenv() -> None:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=2)
+    ap.add_argument("--sample", action="store_true",
+                    help="Random-sample rows (seeded) instead of head(limit)")
+    ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
-    run(args.limit)
+    run(args.limit, sample=args.sample, seed=args.seed)

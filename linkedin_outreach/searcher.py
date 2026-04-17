@@ -45,7 +45,11 @@ EXTRACT_RESULTS_JS = r"""
 
   const anchors = document.querySelectorAll("a[href*='/in/']");
   for (const a of anchors) {
-    let href = (a.href || "").split("?")[0].replace(/\/$/, "");
+    // Normalise href: strip query, hash, /overlay/<anything>, and trailing slash.
+    // Without the /overlay/ strip, a single profile card produces multiple
+    // "cards" (main link vs background-photo/contact-info overlays).
+    let href = (a.href || "").split("?")[0].split("#")[0]
+                 .replace(/\/overlay\/.*$/, "").replace(/\/$/, "");
     if (!href.includes("/in/")) continue;
     if (seenUrls.has(href)) continue;
 
