@@ -33,14 +33,51 @@ _STATE_TOKENS = {
 }
 
 
-def location_matches(suburb: str, state: str, linkedin_location: str) -> bool:
-    loc = linkedin_location.lower()
+def location_matches(suburb: str, state: str, linkedin_location: str,
+                     postcode: str = "") -> bool:
+    """Return True iff the LinkedIn-listed location plausibly matches the
+    AHPRA record. Looser than the original suburb-or-state rule to cover
+    the common case of profiles that omit the state token.
+
+    Order of checks (any one is enough):
+      1. AHPRA suburb substring in the location
+      2. State token (victoria, vic, etc.) present
+      3. Melbourne / Greater Melbourne / etc. (VIC only)
+      4. A VIC suburb from the allowlist in the location
+      5. Location is effectively "Australia" AND AHPRA postcode is VIC
+    """
+    loc = (linkedin_location or "").strip().lower()
     if not loc:
         return False
+
+    # 1. AHPRA suburb (practice address)
+    if suburb and suburb.lower() in loc:
+        return True
+
+    # 2. Explicit state token
     state_tokens = _STATE_TOKENS.get(state.upper(), [state.lower()])
-    suburb_match = bool(suburb) and suburb.lower() in loc
-    state_match  = any(t in loc for t in state_tokens)
-    return suburb_match or state_match
+    if any(t in loc for t in state_tokens):
+        return True
+
+    st = (state or "").upper()
+
+    # 3/4. VIC-specific fallbacks (only when we expect a VIC profile)
+    if st == "VIC":
+        for tok in config.VIC_CITY_TOKENS:
+            if tok in loc:
+                return True
+        for sub in config.VIC_SUBURB_ALLOWLIST:
+            if sub in loc:
+                return True
+
+    # 5. Only-"Australia" soft match when AHPRA postcode implies VIC
+    pc = (postcode or "").strip()
+    if pc.startswith(config.VIC_POSTCODE_PREFIX):
+        compact = re.sub(r"[^a-z]", "", loc)
+        if compact == "australia":
+            return True
+
+    return False
 
 
 def headline_is_medical(headline: str) -> bool:
@@ -95,7 +132,8 @@ def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str]:
     if config.REQUIRE_LOCATION_MATCH:
         if not location_matches(practitioner.get("suburb", ""),
                                 practitioner.get("state", ""),
-                                profile.get("location", "")):
+                                profile.get("location", ""),
+                                postcode=practitioner.get("postcode", "")):
             return False, f"location_mismatch (score={score})"
 
     if config.REQUIRE_ACTIVE_ACCOUNT:

@@ -56,11 +56,13 @@ def adapt_row(row: dict) -> dict:
     loc = row.get("location", "") or ""
     m = SUBURB_RX.match(loc)
     suburb = m.group(1).strip() if m else ""
+    postcode = (row.get("postcode_searched", "") or "").strip()
     return {
         "practitioner_id": row["practitioner_id"],
         "name": row["name"],
         "suburb": suburb,
-        "state": postcode_to_state(row.get("postcode_searched", "")),
+        "state": postcode_to_state(postcode),
+        "postcode": postcode,
         "specialities": row.get("speciality", ""),
         "registration_type": "Specialist",
     }

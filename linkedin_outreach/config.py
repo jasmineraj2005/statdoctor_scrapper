@@ -46,6 +46,50 @@ REQUIRE_LOCATION_MATCH   = True  # profile location must contain suburb or state
 REQUIRE_ACTIVE_ACCOUNT   = True  # skip profiles that look abandoned
 REQUIRE_MEDICAL_KEYWORD  = False # profile headline must mention a medical term
 REQUIRE_SPECIALITY_MATCH = False # profile headline must mention the practitioner's speciality
+
+# Locations that LinkedIn shows without a state but that plausibly mean VIC.
+# Many profiles list just "Melbourne" or "Greater Melbourne Area" with no
+# "Victoria" token — earlier verifier rejected those, so we accept them.
+VIC_CITY_TOKENS = [
+    "melbourne",
+    "greater melbourne",
+    "greater melbourne area",
+    "melbourne, australia",
+]
+
+# VIC suburb allowlist: hand-curated inner-metro + the top-50-postcode suburbs
+# from data/vic_high_yield_subset.csv. Used for substring match against the
+# LinkedIn-listed location when the profile omits the state token.
+VIC_SUBURB_ALLOWLIST = {
+    # hand-curated inner-metro (spec-locked)
+    "footscray", "parkville", "south yarra", "fitzroy", "carlton",
+    "richmond", "hawthorn", "prahran", "bentleigh", "kew", "toorak",
+    "brighton", "caulfield",
+    # derived from top-50 postcodes in the subset
+    "ashburton", "ashwood", "bangholme", "bendigo", "berwick", "blackburn",
+    "blackburn north", "blackburn south", "botanic ridge", "briar hill",
+    "brunswick", "bundoora", "burnside", "cairnlea", "camberwell",
+    "carnegie", "caroline springs", "caulfield south", "clifton hill",
+    "coburg", "coburg north", "collingwood", "cranbourne", "dandenong",
+    "dandenong north", "deer park", "dennington", "doncaster east",
+    "east melbourne", "elsternwick", "fairfield", "fitzroy north",
+    "flora hill", "gardenvale", "glen huntly", "glen waverley",
+    "greensborough", "harkaway", "heathmont", "hoppers crossing",
+    "ironbark", "ivanhoe", "ivanhoe east", "kennington", "langwarrin",
+    "mitcham", "moonee ponds", "mornington", "mount waverley",
+    "murrumbeena", "narre warren", "narre warren south", "noble park",
+    "noble park north", "north melbourne", "pakenham", "point cook",
+    "preston", "ravenhall", "ringwood", "ringwood east", "ringwood north",
+    "ripponlea", "rowville", "royal melbourne hospital", "sandhurst",
+    "skye", "south melbourne", "st helena", "sunshine", "sunshine north",
+    "sunshine west", "tarneit", "truganina", "wangaratta", "wantirna",
+    "wantirna south", "warranwood", "warrnambool", "werribee",
+    "west wodonga", "wheelers hill", "windsor", "wodonga",
+}
+
+# When the profile lists only "Australia" (no city/state), accept as a soft
+# match if the AHPRA postcode is VIC (3xxx). Low-confidence fallback.
+VIC_POSTCODE_PREFIX = "3"
 MEDICAL_KEYWORDS         = [
     "doctor", "medical", "physician", "gp", "surgeon", "specialist",
     "registrar", "consultant", "mbbs", "md", "anaesth", "oncol",
