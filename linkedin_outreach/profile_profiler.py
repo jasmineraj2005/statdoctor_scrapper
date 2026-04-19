@@ -25,6 +25,7 @@ from typing import Any
 from playwright.sync_api import Page
 
 import li_selectors as selectors
+import verifier
 from _visit_tracker import mark_visited
 
 
@@ -46,6 +47,37 @@ BIO_KEYWORDS = ["speaker", "author", "educator", "podcast", "media", "researcher
 
 
 # ── Page-scoped JS extractors ────────────────────────────────────────────────
+
+EXPERIENCE_JS = r"""
+() => {
+  const main = document.querySelector("main");
+  if (!main) return [];
+  const expH2 = Array.from(main.querySelectorAll("h2"))
+    .find(h => ((h.innerText || "").trim().toLowerCase() === "experience"));
+  if (!expH2) return [];
+  const section = expH2.closest("section") || expH2.parentElement;
+  if (!section) return [];
+
+  const out = [];
+  const seen = new Set();
+  for (const li of section.querySelectorAll("li, div[data-view-name='profile-component-entity']")) {
+    const raw = (li.innerText || "").trim();
+    if (!raw || raw.length < 4 || raw.length > 1500) continue;
+    const key = raw.slice(0, 80);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const lines = raw.split("\n").map(s => s.trim()).filter(Boolean);
+    // Typical experience item lines: title / company / employment-type / dates / location
+    out.push({
+      title:   (lines[0] || "").slice(0, 200),
+      company: (lines[1] || "").slice(0, 200),
+      full:    raw.slice(0, 500),
+    });
+    if (out.length >= 20) break;
+  }
+  return out;
+}
+"""
 
 PROFILE_OVERVIEW_JS = r"""
 () => {
@@ -176,12 +208,18 @@ ACTIVITY_POSTS_JS = r"""
 # ── Public API ───────────────────────────────────────────────────────────────
 
 def profile(page: Page, profile_url: str,
-            verifier_confidence: str = "") -> dict[str, Any]:
+            verifier_confidence: str = "",
+            ahpra_specialities: str = "") -> dict[str, Any]:
     """Scrape a LinkedIn profile + its recent activity. Graceful on missing data.
 
-    `verifier_confidence` passes through the matcher's confidence tag
-    ("high" / "medium" / "") so the classifier downstream can be stricter
-    on empty-location-but-strong-name matches.
+    `verifier_confidence` is the matcher's tag ("high" / "medium" / "").
+    For medium-conf rows we run an additional post-scrape medical-signal
+    check against the full profile text (headline + bio + experience). If
+    no signal is found we downgrade confidence to "" and set fail_reason
+    to "medium_no_medical_signal" — caller should treat as non-match.
+
+    `ahpra_specialities` is the AHPRA speciality string, used in the
+    post-scrape signal check.
     """
     result: dict[str, Any] = {
         "url": profile_url,
@@ -193,6 +231,7 @@ def profile(page: Page, profile_url: str,
         "creator_mode": False,
         "bio": "",
         "bio_signals": [],
+        "experience": [],
         "post_count_90d": 0,
         "last_post_date": None,
         "has_video_90d": False,
@@ -249,6 +288,33 @@ def profile(page: Page, profile_url: str,
     result["bio_signals"] = _bio_signals(
         " ".join([result.get("bio", ""), result.get("headline", "")])
     )
+
+    # Scrape experience for post-scrape medium-conf check + future classifier
+    # context. No extra navigation — the data is on the profile page already.
+    try:
+        exp = page.evaluate(EXPERIENCE_JS) or []
+        result["experience"] = exp[:20]
+    except Exception:
+        pass
+
+    # Medium-confidence post-scrape medical-signal gate. Verifier accepts
+    # medium on name+empty-loc alone; here we re-check against the full
+    # profile text. If no signal found, downgrade to reject.
+    if result["verifier_confidence"] == "medium":
+        full_text = "\n".join([
+            result.get("headline", "") or "",
+            result.get("bio", "") or "",
+            " ".join(
+                f"{e.get('title','')} | {e.get('company','')} | {e.get('full','')}"
+                for e in result["experience"]
+            ),
+        ])
+        ok, reason = verifier.medical_signal_in_text(full_text, ahpra_specialities)
+        if ok:
+            result["medium_signal_reason"] = reason
+        else:
+            result["verifier_confidence"] = ""
+            result["fail_reason"] = "medium_no_medical_signal"
 
     # ── 2. Recent activity ──
     handle = _extract_handle(profile_url)

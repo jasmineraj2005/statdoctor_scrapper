@@ -75,6 +75,30 @@ ACCEPT_EMPTY_LOCATION_WITH_STRONG_NAME = True
 # gate, since the verifier had less location signal to work with.
 MEDIUM_CONF_CLASSIFIER_SOFT_SCORE = 5  # normal threshold is 3
 
+# VIC health-service / hospital tokens. A candidate profile whose bio or
+# experience section mentions one of these is almost certainly working in
+# VIC healthcare — strong medical signal that complements MEDICAL_KEYWORDS
+# + SPECIALITY_KEYWORDS. Lowercase substring match.
+VIC_HOSPITAL_TOKENS = [
+    "royal melbourne hospital", "royal children's hospital",
+    "royal women's hospital", "royal victorian eye and ear",
+    "murdoch children",  # covers "Murdoch Children's Research Institute"
+    "alfred health", "the alfred", "monash health", "monash medical centre",
+    "barwon health", "austin health", "austin hospital",
+    "peter maccallum", "peter mac",
+    "st vincent's", "st. vincent's",
+    "western health", "footscray hospital", "sunshine hospital",
+    "mercy hospital", "werribee mercy", "mercy health",
+    "northern health", "eastern health", "box hill hospital",
+    "walter and eliza hall", "wehi",
+    "cabrini", "epworth", "ramsay health",
+    "bendigo health", "ballarat health",
+    "melbourne academic centre for health", "mach-track", "mach track",
+    "university of melbourne", "monash university",
+    # Education / research that signals medical affiliation
+    "faculty of medicine, dentistry and health sciences",
+]
+
 # Locations that LinkedIn shows without a state but that plausibly mean VIC.
 # Many profiles list just "Melbourne" or "Greater Melbourne Area" with no
 # "Victoria" token — earlier verifier rejected those, so we accept them.

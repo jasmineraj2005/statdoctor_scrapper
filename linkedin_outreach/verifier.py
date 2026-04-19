@@ -138,6 +138,42 @@ def headline_matches_speciality(specialities: str, headline: str) -> tuple[bool,
     return bool(hits), hits
 
 
+def medical_signal_in_text(text: str, specialities: str) -> tuple[bool, str]:
+    """Post-scrape medical-signal check for medium-confidence matches.
+
+    `text` should combine everything we scraped — headline, bio/about,
+    experience titles and companies. Returns (True, reason) on first match,
+    (False, "no_signal") otherwise.
+
+    Check order (cheapest first):
+      1. Any config.MEDICAL_KEYWORDS substring
+      2. Any SPECIALITY_KEYWORDS entry for the practitioner's speciality
+      3. Verbatim AHPRA speciality string
+      4. Any VIC_HOSPITAL_TOKENS entry
+    """
+    if not text:
+        return False, "no_text"
+    t = text.lower()
+
+    for kw in config.MEDICAL_KEYWORDS:
+        if kw in t:
+            return True, f"medical_keyword:{kw}"
+
+    for kw in _speciality_keywords(specialities):
+        if kw in t:
+            return True, f"speciality_keyword:{kw}"
+
+    sp = (specialities or "").strip().lower()
+    if sp and sp in t:
+        return True, "speciality_verbatim"
+
+    for hosp in config.VIC_HOSPITAL_TOKENS:
+        if hosp in t:
+            return True, f"hospital:{hosp}"
+
+    return False, "no_signal"
+
+
 def is_active_account(profile: dict) -> tuple[bool, str]:
     """Return (True, reason) if the card has signals of a real, active
     account; (False, why_rejected) otherwise."""
@@ -199,17 +235,10 @@ def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
                 )
             confidence = "high"
         elif config.ACCEPT_EMPTY_LOCATION_WITH_STRONG_NAME:
-            # Empty-loc route: require a medical signal before accepting.
-            hl = profile.get("headline", "") or ""
-            sp_ok, _hits = headline_matches_speciality(
-                practitioner.get("specialities", ""), hl
-            )
-            if not (headline_is_medical(hl) or sp_ok):
-                return (
-                    False,
-                    f"empty_location_no_medical_signal (sort={sort_s})",
-                    "",
-                )
+            # Empty-loc route: mark as medium-confidence. Medical-signal check
+            # is DEFERRED to post-scrape (profile_profiler) so we can evaluate
+            # against bio + experience, not just the sparse search-card
+            # headline. Profiler downgrades to "low" on no signal → rejected.
             confidence = "medium"
         else:
             return False, f"empty_location (sort={sort_s})", ""
