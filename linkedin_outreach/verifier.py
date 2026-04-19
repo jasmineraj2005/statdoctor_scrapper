@@ -174,10 +174,18 @@ def medical_signal_in_text(text: str, specialities: str) -> tuple[bool, str]:
     return False, "no_signal"
 
 
-def is_active_account(profile: dict) -> tuple[bool, str]:
+def is_active_account(profile: dict, medical_signal: bool = False) -> tuple[bool, str]:
     """Return (True, reason) if the card has signals of a real, active
-    account; (False, why_rejected) otherwise."""
-    if not profile.get("has_degree_badge"):
+    account; (False, why_rejected) otherwise.
+
+    `medical_signal` — when True, bypass the `no_degree_badge` check. The
+    degree badge reflects whether the logged-in session is connected to the
+    profile (1st/2nd/3rd), not whether the account is alive. An out-of-network
+    doctor (e.g. a researcher at a different institution) has no badge but is
+    clearly a real account if the headline shows medical content. Structural
+    dead-account signals (`empty_headline`, `no_action_button`) still reject.
+    """
+    if not medical_signal and not profile.get("has_degree_badge"):
         return False, "no_degree_badge"
     if not profile.get("has_headline"):
         return False, "empty_headline"
@@ -246,7 +254,11 @@ def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
         confidence = "high"
 
     if config.REQUIRE_ACTIVE_ACCOUNT:
-        alive, why = is_active_account(profile)
+        # Medical signal in the headline bypasses `no_degree_badge` (see
+        # is_active_account). Confirmed medical content ⇒ alive, regardless
+        # of the viewer's network distance to the profile.
+        medical_signal = headline_is_medical(profile.get("headline", "") or "")
+        alive, why = is_active_account(profile, medical_signal=medical_signal)
         if not alive:
             return False, f"dead_account:{why} (sort={sort_s})", ""
 
