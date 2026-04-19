@@ -39,8 +39,10 @@ For a new agent picking this up cold. Status as of 2026-04-20.
 | 4b-v4 | **Deferred medical check to post-scrape + VIC hospital registry** | ✅ local | `acd955d` |
 | 4c | Re-audit seed=42 (measure verifier ceiling) | ✅ done (4/10 legit, Pala cleanly rejected) | — |
 | 4d | Profiler dry-test on 5 new matches | ✅ done seed=7+42; 10 legit across 20 rows | — |
-| 4e | Medical-signal headline bypasses `no_degree_badge` in `is_active_account` (Christos fix) | ✅ local | *pending commit* |
-| 5 | `influencer_classifier.py` — heuristic + Ollama edge-case | ⏳ next up (Christos resolved) | — |
+| 4e | Medical-signal headline bypasses `no_degree_badge` in `is_active_account` (Christos fix) | ✅ local | `1c53533` |
+| 5a | `profile_profiler` emits `post_previews_90d` (prereq for classifier Ollama prompt) | ✅ local | `65fb9d8` |
+| 5b | `influencer_classifier.py` — heuristic + Ollama edge-case | ✅ local | `fe03ec3` |
+| 5c | Hand-label harness (`step5_classifier_test.py`) — 10 rows, 10/10 agreement (Ollama off) | ✅ local | *pending commit* |
 | 6 | Gate `connector.py` on `is_influencer` + no-note flow | ⏳ blocked on 5 | — |
 | 7 | Extend `sheets_logger.py` — Influencers VIC + Reviewed Skipped + Processing Status tabs | ⏳ blocked on 5 | — |
 | 8 | Full 50-row dry-run | ⏳ blocked on 7 | — |
@@ -80,7 +82,10 @@ Implementation:
 - `39155a3` empty-loc accept v1 (superseded by dca0179)
 - `dca0179` two-scorer + three-tier confidence
 - `acd955d` deferred medical check + VIC hospital registry + `step4d_audit.py`
-- *pending* 4e — medical-headline bypass of `no_degree_badge`
+- `1c53533` 4e — medical-headline bypass of `no_degree_badge`
+- `65fb9d8` 5a — profiler emits `post_previews_90d`
+- `fe03ec3` 5b — `influencer_classifier.py` (heuristic + Ollama edge-case)
+- *pending* 5c — hand-label harness (10/10 agreement, Ollama off)
 
 ## Key files
 
@@ -178,7 +183,7 @@ davidgillproperty             (rejected post-scrape; not a doctor)
 - **Out-of-network researchers (Christos)**: Resolved 2026-04-20. Medical
   headline signal bypasses `no_degree_badge` in `is_active_account`. See
   "Christos decision (2026-04-20) — RESOLVED" above.
-- **Ollama not installed yet** — `brew install ollama && ollama pull llama3.2:3b` needed before step 5. Step 5 code must gracefully handle `ollama` unreachable (default to `non_influencer`).
+- **Ollama still not installed** — `brew install ollama && ollama pull llama3.2:3b`. Step 5 code (`influencer_classifier._call_ollama`) already handles unreachable gracefully (defaults to `non_influencer` with `fail_reason=ollama_unreachable`). Once installed, rerun `python3 step5_classifier_test.py` without the in-script `OLLAMA_URL=""` override to measure real heuristic-vs-Ollama agreement on soft-1–2 (high-conf) and soft-1–4 (medium-conf) edge cases. HARD STOP rule applies: > 2 of 10 disagreements must be surfaced to user.
 - **Existing `main.py` `load_queue` expects old schema** (`state`, `suburb`, `specialities`, `registration_type`). Subset CSV has (`postcode_searched`, `location`, `speciality`). `selector_dry_run.adapt_row` + `step4d_audit.adapt_row` already handle mapping; **main.py must be updated at step 6** to read the subset CSV with the same adapter.
 
 ## Resume checklist for a new agent
