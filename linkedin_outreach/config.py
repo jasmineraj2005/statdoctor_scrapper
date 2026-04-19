@@ -41,19 +41,39 @@ SEARCH_GEO_URNS = ["101452733"]    # [] = no location filter (worldwide)
 # Given a 30k LIFETIME connection cap per LinkedIn account, bias hard toward
 # precision. A missed match is cheap (24k practitioners remain), a false positive
 # costs one of our finite invites.
-NAME_MATCH_THRESHOLD     = 82    # rapidfuzz token_set_ratio 0-100
 REQUIRE_LOCATION_MATCH   = True  # profile location must contain suburb or state
 REQUIRE_ACTIVE_ACCOUNT   = True  # skip profiles that look abandoned
-REQUIRE_MEDICAL_KEYWORD  = False # profile headline must mention a medical term
-REQUIRE_SPECIALITY_MATCH = False # profile headline must mention the practitioner's speciality
+REQUIRE_MEDICAL_KEYWORD  = False # globally enforce medical keyword in headline
+REQUIRE_SPECIALITY_MATCH = False # globally require speciality keyword in headline
 
-# Empty-location acceptance: many medical-practitioner LinkedIn profiles
-# don't fill in a city. When the profile has an EMPTY location string we
-# still accept the match if the name matches at a very high fidelity and
-# record the row as medium-confidence (classifier can require a higher
-# influencer soft-score before sending a connect).
+# Name matching — 2026 two-scorer design.
+#
+# AHPRA records carry the practitioner's LEGAL FULL name (first + [middle…]
+# + last). LinkedIn usually shows the COMMON name (first + last). Scoring
+# the raw AHPRA string against the LinkedIn string kills legit matches
+# (Jason Chek Hou Ha ↔ Jason Ha → token_sort=64). So the verifier simplifies
+# the AHPRA name to first+last BEFORE scoring.
+#
+# Primary scorer is token_sort_ratio (respects token count, so an EXTRA
+# name on the LinkedIn side — e.g. "Pala Ravindra Reddy" matched against
+# AHPRA "Ravindra Reddy" — drops the score). token_set_ratio is retained
+# as a secondary signal that must ALSO clear a floor; set_ratio alone would
+# misbehave on the extra-name shape because it ignores extras.
+NAME_SORT_THRESHOLD   = 85  # token_sort_ratio — match gate
+NAME_SET_THRESHOLD    = 90  # token_set_ratio  — match gate (AND with sort)
+NAME_HIGH_CONF_SCORE  = 95  # >= sort for high/medium confidence; 85-94 = low = reject today
+NAME_TOKEN_DELTA_MAX  = 1   # |len(simplified_ahpra_tokens) - len(linkedin_tokens)| upper bound
+
+# Empty-location acceptance for medium confidence — kept from the prior
+# commit. Medium-conf rows also require a medical signal in the headline
+# (medical keyword OR practitioner's speciality token) to protect against
+# wrong-person matches when location is missing.
 ACCEPT_EMPTY_LOCATION_WITH_STRONG_NAME = True
-MEDIUM_CONF_NAME_SCORE = 95  # >= this score + empty location → medium confidence
+
+# Classifier addendum (consumed by influencer_classifier in step 5).
+# Medium-conf rows need a higher influencer soft-score to pass the connect
+# gate, since the verifier had less location signal to work with.
+MEDIUM_CONF_CLASSIFIER_SOFT_SCORE = 5  # normal threshold is 3
 
 # Locations that LinkedIn shows without a state but that plausibly mean VIC.
 # Many profiles list just "Melbourne" or "Greater Melbourne Area" with no

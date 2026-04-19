@@ -14,11 +14,43 @@ def _clean_name(name: str) -> str:
     return " ".join(name.split()).lower()
 
 
-def name_matches(practitioner_name: str, linkedin_name: str) -> tuple[bool, int]:
-    p = _clean_name(practitioner_name)
-    l = _clean_name(linkedin_name)
-    score = fuzz.token_set_ratio(p, l)
-    return score >= config.NAME_MATCH_THRESHOLD, int(score)
+def _simplify_ahpra(name: str) -> str:
+    """Reduce AHPRA's 'First [Middle…] Last' to 'First Last'.
+
+    AHPRA stores the legal full name; LinkedIn shows the common (first+last)
+    name. Comparing raw AHPRA to LinkedIn destroys the score on any legit
+    match that has middle names. So we strip middles before scoring.
+    """
+    toks = _clean_name(name).split()
+    if len(toks) <= 2:
+        return " ".join(toks)
+    return f"{toks[0]} {toks[-1]}"
+
+
+def name_scores(practitioner_name: str, linkedin_name: str) -> tuple[int, int, int]:
+    """Return (token_sort, token_set, token_delta).
+
+    - token_sort is the primary signal (penalises extra LinkedIn tokens).
+    - token_set is the secondary signal (more permissive; acts as a floor).
+    - token_delta is |len(simplified_ahpra_tokens) - len(linkedin_tokens)|.
+    """
+    ahpra  = _simplify_ahpra(practitioner_name)
+    linked = _clean_name(linkedin_name)
+    sort_s = fuzz.token_sort_ratio(ahpra, linked)
+    set_s  = fuzz.token_set_ratio(ahpra, linked)
+    delta  = abs(len(ahpra.split()) - len(linked.split()))
+    return int(sort_s), int(set_s), delta
+
+
+def name_matches(practitioner_name: str, linkedin_name: str) -> tuple[bool, int, int, int]:
+    """Hard gate for whether the names match at all. Returns
+    (passes_gate, sort_score, set_score, token_delta).
+    """
+    sort_s, set_s, delta = name_scores(practitioner_name, linkedin_name)
+    ok = (sort_s >= config.NAME_SORT_THRESHOLD
+          and set_s >= config.NAME_SET_THRESHOLD
+          and delta <= config.NAME_TOKEN_DELTA_MAX)
+    return ok, sort_s, set_s, delta
 
 
 _STATE_TOKENS = {
@@ -123,59 +155,90 @@ def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
     """
     Full verification pipeline — returns (is_match, reason, confidence).
 
-    confidence is one of:
-      "high"   — location matched normally (AHPRA suburb / state token / VIC
-                 fallback list)
-      "medium" — location was EMPTY but the name matched at >=
-                 MEDIUM_CONF_NAME_SCORE (95). Downstream classifier should
-                 apply stricter influencer gates to these.
-      ""       — not a match (is_match == False)
+    Three confidence tiers:
+      "high"   — location matched normally + sort_score >= NAME_HIGH_CONF_SCORE
+      "medium" — location was EMPTY, sort_score >= NAME_HIGH_CONF_SCORE, AND
+                 the headline/speciality shows a medical signal
+      ""       — rejected (includes "low": sort in [85, 95) range → reject today)
 
     Profile dict must have: name, location, headline, has_degree_badge,
     has_headline, has_action_button.
     """
-    name_ok, score = name_matches(practitioner["name"], profile.get("name", ""))
+    name_ok, sort_s, set_s, delta = name_matches(
+        practitioner["name"], profile.get("name", "")
+    )
     if not name_ok:
-        return False, f"name_mismatch (score={score})", ""
+        return (
+            False,
+            f"name_mismatch (sort={sort_s}, set={set_s}, Δtok={delta})",
+            "",
+        )
 
-    confidence = "high"
+    # Tier based on primary score. Sort in [85, 95) is "low" — rejected today;
+    # kept in code as an explicit branch so future relaxations are one line.
+    if sort_s < config.NAME_HIGH_CONF_SCORE:
+        return (
+            False,
+            f"name_low_confidence (sort={sort_s}, set={set_s}, Δtok={delta})",
+            "",
+        )
+
+    confidence = ""
+    loc = (profile.get("location", "") or "").strip()
+
     if config.REQUIRE_LOCATION_MATCH:
-        loc = (profile.get("location", "") or "").strip()
-        if not loc:
-            # Empty-loc acceptance — only when the name match is very strong,
-            # and only if the feature is enabled. Produces medium-confidence.
-            if config.ACCEPT_EMPTY_LOCATION_WITH_STRONG_NAME and \
-                    score >= config.MEDIUM_CONF_NAME_SCORE:
-                confidence = "medium"
-            else:
-                return False, f"empty_location (score={score})", ""
-        elif not location_matches(practitioner.get("suburb", ""),
-                                  practitioner.get("state", ""),
-                                  loc,
-                                  postcode=practitioner.get("postcode", "")):
-            return False, f"location_mismatch (score={score})", ""
+        if loc:
+            if not location_matches(practitioner.get("suburb", ""),
+                                    practitioner.get("state", ""),
+                                    loc,
+                                    postcode=practitioner.get("postcode", "")):
+                return (
+                    False,
+                    f"location_mismatch (sort={sort_s})",
+                    "",
+                )
+            confidence = "high"
+        elif config.ACCEPT_EMPTY_LOCATION_WITH_STRONG_NAME:
+            # Empty-loc route: require a medical signal before accepting.
+            hl = profile.get("headline", "") or ""
+            sp_ok, _hits = headline_matches_speciality(
+                practitioner.get("specialities", ""), hl
+            )
+            if not (headline_is_medical(hl) or sp_ok):
+                return (
+                    False,
+                    f"empty_location_no_medical_signal (sort={sort_s})",
+                    "",
+                )
+            confidence = "medium"
+        else:
+            return False, f"empty_location (sort={sort_s})", ""
+    else:
+        confidence = "high"
 
     if config.REQUIRE_ACTIVE_ACCOUNT:
         alive, why = is_active_account(profile)
         if not alive:
-            return False, f"dead_account:{why} (score={score})", ""
+            return False, f"dead_account:{why} (sort={sort_s})", ""
 
     if config.REQUIRE_MEDICAL_KEYWORD:
         if not headline_is_medical(profile.get("headline", "")):
-            return False, f"no_medical_keyword (score={score})", ""
+            return False, f"no_medical_keyword (sort={sort_s})", ""
 
     if config.REQUIRE_SPECIALITY_MATCH and practitioner.get("specialities"):
         sp_ok, hits = headline_matches_speciality(
             practitioner["specialities"], profile.get("headline", "")
         )
         if not sp_ok:
-            return False, \
-                f"speciality_mismatch (score={score}, expected one of " \
-                f"{_speciality_keywords(practitioner['specialities'])})", \
-                ""
+            return False, f"speciality_mismatch (sort={sort_s})", ""
 
-    sp_ok, hits = headline_matches_speciality(
+    _sp_ok, hits = headline_matches_speciality(
         practitioner.get("specialities", ""), profile.get("headline", "")
     )
     boost = f", speciality_hits={hits}" if hits else ""
-    return True, f"matched (name_score={score}, confidence={confidence}{boost})", confidence
+    return (
+        True,
+        f"matched (sort={sort_s}, set={set_s}, Δtok={delta}, "
+        f"confidence={confidence}{boost})",
+        confidence,
+    )
