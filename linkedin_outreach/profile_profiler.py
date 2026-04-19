@@ -236,6 +236,7 @@ def profile(page: Page, profile_url: str,
         "last_post_date": None,
         "has_video_90d": False,
         "avg_likes_per_post": 0.0,
+        "post_previews_90d": [],
         "verifier_confidence": verifier_confidence,
         "fail_reason": "",
     }
@@ -354,6 +355,15 @@ def profile(page: Page, profile_url: str,
     if originals_90:
         total_reactions = sum(int(p.get("reactions", 0) or 0) for p in originals_90)
         result["avg_likes_per_post"] = round(total_reactions / len(originals_90), 2)
+
+    # Post previews — newest 10, trimmed. Consumed by the classifier's Ollama
+    # edge-case call as `recent_post_topics`. Previews already capped to 160
+    # chars at extraction time; we just bound the count.
+    result["post_previews_90d"] = [
+        (p.get("preview") or "").strip()
+        for p in sorted(originals_90, key=lambda x: x["abs_date"], reverse=True)[:10]
+        if (p.get("preview") or "").strip()
+    ]
 
     # last_post_date spans all posts we saw (the 60-day hard filter is applied
     # by the classifier, not here — profiler's job is to report ground truth).
