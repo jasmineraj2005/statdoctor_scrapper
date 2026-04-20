@@ -1,6 +1,6 @@
 # linkedin_outreach — Roadmap & Handoff
 
-For a new agent picking this up cold. Status as of 2026-04-20.
+For a new agent picking this up cold. Status as of 2026-04-21.
 
 ## Scope (locked — do not re-open)
 
@@ -17,13 +17,18 @@ For a new agent picking this up cold. Status as of 2026-04-20.
 
 1. **`data/vic_high_yield_subset.csv`** — shipped (commit `4b2aa2f`, pushed).
    Columns: `practitioner_id, name, speciality, postcode_searched, location`
-2. **`data/vic_linkedin_classifications.csv`** — NOT YET WRITTEN. Appended as
-   classifier runs. Columns: `practitioner_id, linkedin_url, classification
-   (influencer|non_influencer|not_found|error), soft_score,
+2. **`data/vic_linkedin_classifications.csv`** — v2 schema (16 columns).
+   Appended as classifier runs. Columns: `practitioner_id, linkedin_url,
+   classification (influencer|non_influencer|not_found|error), soft_score,
    hard_filters_passed, follower_count, post_count_90d, last_post_date,
    has_video_90d, creator_mode, bio_signals (pipe-delimited),
    classifier_source (heuristic|ollama), classifier_confidence, classified_at,
-   fail_reason`
+   fail_reason, engagement_rate` (float, `avg_likes / followers`; 0.0 when
+   followers=0). Schema mismatch at `sheets_logger._ensure_classifications_csv`
+   auto-migrates v1 → `<path>.v1.bak` and starts a fresh v2 file.
+3. **`data/vic_processing_status.csv`** — per-practitioner pipeline stage
+   (pending/searched/profiled/classified/connected/skipped/not_found/error),
+   upserted by practitioner_id. `main.load_queue` dedups on terminal stages.
 
 ## Progress by step
 
@@ -42,11 +47,14 @@ For a new agent picking this up cold. Status as of 2026-04-20.
 | 4e | Medical-signal headline bypasses `no_degree_badge` in `is_active_account` (Christos fix) | ✅ local | `1c53533` |
 | 5a | `profile_profiler` emits `post_previews_90d` (prereq for classifier Ollama prompt) | ✅ local | `65fb9d8` |
 | 5b | `influencer_classifier.py` — heuristic + Ollama edge-case | ✅ local | `fe03ec3` |
-| 5c | Hand-label harness (`step5_classifier_test.py`) — 10 rows, 10/10 agreement (Ollama off) | ✅ local | *pending commit* |
-| 6 | Gate `connector.py` on `is_influencer` + no-note flow | ⏳ blocked on 5 | — |
-| 7 | Extend `sheets_logger.py` — Influencers VIC + Reviewed Skipped + Processing Status tabs | ⏳ blocked on 5 | — |
-| 8 | Full 50-row dry-run | ⏳ blocked on 7 | — |
-| 9 | Staged real run — Day 1: 10 connects; Day 2: 25 | ⏳ blocked on 8 + user approval | — |
+| 5c | Hand-label harness (`step5_classifier_test.py`) — 10 rows, 10/10 agreement (Ollama off); 9/10 Ollama live (1 legit edge) | ✅ local | `67cf172` |
+| 6-prereq | Live More-menu → Connect probe (Connect-primary confirmed on Caroline Macindoe, seed=23) | ✅ local | `3421191` |
+| 6 | Gate `connector.py` on `classification=='influencer'` + no-note flow (top-card anchor + More-menu fallback) | ✅ local | `7a12bdc` |
+| 7 | Extend `sheets_logger.py` — Influencers VIC + Reviewed Skipped + Processing Status tabs, auto-creation, CSV-as-source-of-truth | ✅ local | `0e7c2c3` |
+| 6b | `main.py` — subset CSV + full pipeline (search → is_hot → profile → classify → connect) | ✅ local | `5fbc755`, `1156c03` |
+| 8 | 50-row dry-run — all 5 gate checks passed: classifications.csv (52 rows), Processing Status (52), Reviewed Skipped populated, Influencers VIC empty (0 influencers in sample — expected low yield), zero connects, zero exceptions | ✅ local | — |
+| v2-5c | Spec v2 rewrite — hard filters 500/2/90d/5, engagement_rate, +bio kw, soft threshold 4, new Ollama prompt | ✅ local | *pending commit* |
+| 9 | Staged real run — Day 1: 10 connects; Day 2: 25 | ⏳ blocked on v2 landing + user approval | — |
 
 ### Christos decision (2026-04-20) — RESOLVED
 
@@ -111,30 +119,56 @@ Implementation:
 - Daily cap: 20–25 connects (spec lock).
 - Subset: ~4k VIC specialists in top-50 postcodes — do not pad with regional or plain-General GPs.
 
-### Influencer classifier spec (locked — for step 5)
+### Influencer classifier spec v2 (locked — 2026-04-21 revision)
+
+**Target**: a doctor who regularly shares medical insights with an engaged
+niche audience — not a mainstream celebrity. A 400-follower/20-avg-likes
+creator (5% engagement) outranks a 3k-follower/10-avg-likes account (0.3%).
 
 **Hard filters** (ALL must pass, else `non_influencer`):
-- `follower_count >= 1500`
-- `>= 4 original posts in last 90 days` (not reshares)
-- `last_post_date within 60 days`
-- `avg_likes_per_post >= 15`
+- `follower_count >= 500`
+- `>= 2 original posts in last 90 days` (not reshares) — consistency > volume
+- `last_post_date within 90 days`
+- `avg_likes_per_post >= 5`
+
+**Engagement rate** (primary new signal):
+`engagement_rate = avg_likes_per_post / follower_count` (0 if followers=0).
+Tracked as a dedicated CSV column.
 
 **Soft score** (if hard pass):
+- +3 engagement_rate ≥ 2%      *(mutually exclusive with the +2 tier)*
+- +2 engagement_rate ≥ 1%
 - +2 any video in last 90 days
 - +2 Creator Mode on / prominent Follow button
-- +1 per bio keyword (`speaker, author, educator, podcast, media, researcher`), max +3
-- +2 if followers 5k–10k
-- +4 if followers 10k+
+- +2 followers ≥ 2000          *(mutually exclusive with the +1 tier)*
+- +1 followers ≥ 1000
+- +1 per bio keyword (`speaker, author, educator, podcast, media,
+  researcher, presenter, columnist`), max +3
+- +2 post previews contain medical/clinical content (substring match
+  on `config.MEDICAL_KEYWORDS`; reshares already excluded by profiler)
+- +1 post_count_90d ≥ 3 (≈ 1 post/month average)
 
 **Decision**:
-- Hard fail → `non_influencer` (heuristic)
-- Hard pass + soft ≥ 3 → `influencer` (heuristic)
-- Hard pass + soft 1–2 → **Ollama edge-case call**
-- Hard pass + soft 0 → `non_influencer` (heuristic)
+- Hard fail               → `non_influencer` (heuristic)
+- Hard pass + soft ≥ 4    → `influencer`     (heuristic)
+- Hard pass + soft 2–3    → **Ollama edge-case call** (high-conf)
+- Hard pass + soft 1–3    → **Ollama edge-case call** (medium-conf; band widened)
+- Hard pass + soft 0/0–1  → `non_influencer` (heuristic)
 
-**Ollama prompt**: JSON input `{name, specialty, recent_post_topics[≤10], follower_count, avg_likes, has_video, bio_signals}`; ask: *"Is this a medical influencer whose content would resonate with healthcare professionals? Reply JSON: {classification: INFLUENCER|NOT, confidence: 0-1, reason: one line}"*. If Ollama unreachable or parse fails → default `non_influencer`. Never block on Ollama.
+**Medium-confidence connect gate** (`main.py` step 5b): medium rows must
+score `soft >= 4` before a real connect fires. An Ollama "influencer"
+verdict on a medium row with soft < 4 is recorded in classifications.csv
+(audit trail) but downgraded to `skipped` at send.
 
-**Classifier addendum (user instruction)**: medium-confidence rows require `soft_score >= 5` before connect (vs 3 for high). Value stored in `config.MEDIUM_CONF_CLASSIFIER_SOFT_SCORE`.
+**Ollama prompt (v2)**: JSON input `{name, specialty, recent_post_topics[≤10],
+follower_count, avg_likes, engagement_rate, has_video, bio_signals}`; asks:
+*"This is a medical professional on LinkedIn. Based on their posting activity
+and engagement, would healthcare professionals consider them a trusted voice
+or active content creator in their field? They do not need a large following
+— consistent, relevant medical content with an engaged niche audience
+qualifies. Reply JSON: {classification: INFLUENCER|NOT, confidence: 0-1,
+reason: one line}"*. If Ollama unreachable or parse fails → default
+`non_influencer`. Never block on Ollama.
 
 ### Google Sheets output (step 7)
 

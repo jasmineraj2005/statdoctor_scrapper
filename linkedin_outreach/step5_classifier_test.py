@@ -1,14 +1,17 @@
 """step5_classifier_test.py — hand-label harness for influencer_classifier.
 
 Combines the 4 real profiled rows in step4d_profiler_output.json with 6
-synthetic fixtures that cover every decision branch, yielding a 10-row
-labelled set. Runs `classify()` on each and reports agreement.
+synthetic fixtures that cover every decision branch under SPEC V2 (2026-
+04-21 revision: 500/2/90d/5 hard filters, engagement_rate soft signal,
+new 4-pt threshold), yielding a 10-row labelled set. Runs `classify()`
+on each and reports agreement.
 
 Run: `python3 step5_classifier_test.py`  (from linkedin_outreach/)
 
 Zero network: OLLAMA_URL is set to empty so the Ollama branch always
-returns None → non_influencer(ollama_unreachable). Once Ollama is
-installed locally, re-run without the env override to see real verdicts.
+returns None → non_influencer(ollama_unreachable). With Ollama up, rows
+in the edge-case band may legitimately diverge — the offline labels are
+the conservative fallback.
 
 This is NOT step 7's CSV writer — output goes to stdout only. The classifier
 decision logic is the only thing under test here.
@@ -40,35 +43,58 @@ def _recent(days_ago: int) -> str:
 # expects the classifier to output given the spec.
 
 SYNTHETIC = [
-    # 1. Classic medical influencer. High-conf, clean hard pass, soft ≥ 3.
+    # 1. Classic volume influencer. High-conf, clean hard pass, soft >= 4.
     {
         "label": "influencer",
-        "why":   "high-conf hard_pass soft>=3 → heuristic influencer",
+        "why":   "high-conf hard_pass soft>=4 (video+creator+fol>=2k+bio+regular) → heuristic",
         "profile": {
             "url": "https://www.linkedin.com/in/inf-a",
             "name": "Dr High Follower",
-            "followers": 25_000,           # +4
+            "followers": 25_000,
             "post_count_90d": 12,
             "last_post_date": _recent(5),
-            "has_video_90d": True,         # +2
-            "avg_likes_per_post": 120.0,
-            "creator_mode": True,          # +2
+            "has_video_90d": True,
+            "avg_likes_per_post": 120.0,    # ER 0.48% → 0 pts (mainstream passive audience)
+            "creator_mode": True,
             "bio_signals": ["speaker", "author"],
             "verifier_confidence": "high",
             "post_previews_90d": [],
             "fail_reason": "",
         },
     },
-    # 2. Hard fail on followers. Even with activity the gate rejects.
+    # 2. Niche-engagement influencer — small but highly engaged audience.
+    #    Exactly the case spec v2 is designed to catch.
     {
-        "label": "non_influencer",
-        "why":   "hard_fail followers<1500 → non_influencer (heuristic)",
+        "label": "influencer",
+        "why":   "niche 5% engagement rate + medical posts → heuristic influencer",
         "profile": {
             "url": "https://www.linkedin.com/in/inf-b",
-            "name": "Dr Small Network",
-            "followers": 800,
-            "post_count_90d": 10,
-            "last_post_date": _recent(2),
+            "name": "Dr Niche Engaged",
+            "followers": 600,
+            "post_count_90d": 4,
+            "last_post_date": _recent(10),
+            "has_video_90d": False,
+            "avg_likes_per_post": 30.0,     # ER 5% → +3
+            "creator_mode": False,
+            "bio_signals": [],
+            "verifier_confidence": "high",
+            "post_previews_90d": [
+                "thoughts on the new cardiology guidelines",
+                "a tricky ecg case from this week's clinic",
+            ],                              # medical keywords → +2
+            "fail_reason": "",
+        },
+    },
+    # 3. Hard fail on followers (< 500). Even with great activity, gate rejects.
+    {
+        "label": "non_influencer",
+        "why":   "hard_fail followers<500 → non_influencer (heuristic)",
+        "profile": {
+            "url": "https://www.linkedin.com/in/inf-c",
+            "name": "Dr Too Small",
+            "followers": 300,
+            "post_count_90d": 5,
+            "last_post_date": _recent(5),
             "has_video_90d": True,
             "avg_likes_per_post": 40.0,
             "creator_mode": True,
@@ -78,18 +104,21 @@ SYNTHETIC = [
             "fail_reason": "",
         },
     },
-    # 3. Hard pass, soft=0. Borderline but cleanly non_influencer (heuristic).
+    # 4. Hard pass, soft = 0 — quiet hard-floor passer with no creator signals.
+    #    999 followers keeps us under the +1 fol band; 5 avg_likes at 999 fol
+    #    is ER 0.5% (below moderate tier). No creator, no video, no bio, no
+    #    medical, posts<3 for regular.
     {
         "label": "non_influencer",
         "why":   "high-conf hard_pass soft=0 → non_influencer (heuristic)",
         "profile": {
-            "url": "https://www.linkedin.com/in/inf-c",
-            "name": "Dr Silent Active",
-            "followers": 2_000,            # below 5k, 0 soft pts
-            "post_count_90d": 5,
+            "url": "https://www.linkedin.com/in/inf-d",
+            "name": "Dr Silent Pass",
+            "followers": 999,
+            "post_count_90d": 2,
             "last_post_date": _recent(15),
             "has_video_90d": False,
-            "avg_likes_per_post": 18.0,
+            "avg_likes_per_post": 5.0,
             "creator_mode": False,
             "bio_signals": [],
             "verifier_confidence": "high",
@@ -97,60 +126,43 @@ SYNTHETIC = [
             "fail_reason": "",
         },
     },
-    # 4. High-conf Ollama edge case (soft 1-2). With Ollama off → defaults to
-    #    non_influencer with fail_reason ollama_unreachable.
+    # 5. High-conf Ollama edge case (soft 2-3). Creator mode alone → +2.
+    #    Ollama off → default non_influencer(ollama_unreachable).
     {
         "label": "non_influencer",
         "why":   "high-conf soft=2 Ollama edge; Ollama off → non_influencer(ollama_unreachable)",
         "profile": {
-            "url": "https://www.linkedin.com/in/inf-d",
+            "url": "https://www.linkedin.com/in/inf-e",
             "name": "Dr Edge",
-            "followers": 2_500,            # no follower band pts
-            "post_count_90d": 6,
+            "followers": 999,
+            "post_count_90d": 2,
             "last_post_date": _recent(10),
             "has_video_90d": False,
-            "avg_likes_per_post": 22.0,
-            "creator_mode": True,          # +2
+            "avg_likes_per_post": 5.0,
+            "creator_mode": True,           # +2
             "bio_signals": [],
             "verifier_confidence": "high",
-            "post_previews_90d": ["teaching junior doctors about ECG reading"],
+            # deliberately non-medical preview — medical keyword would push
+            # soft to 4 and skip the Ollama edge band we're testing here.
+            "post_previews_90d": ["attending the rsl annual dinner last night"],
             "fail_reason": "",
         },
     },
-    # 5. Medium-conf hard_pass, soft=5. Hits the medium threshold → influencer.
-    {
-        "label": "influencer",
-        "why":   "medium-conf hard_pass soft>=5 → heuristic influencer",
-        "profile": {
-            "url": "https://www.linkedin.com/in/inf-e",
-            "name": "Dr Medium Match",
-            "followers": 7_500,            # +2 (5k-10k)
-            "post_count_90d": 6,
-            "last_post_date": _recent(12),
-            "has_video_90d": True,         # +2
-            "avg_likes_per_post": 30.0,
-            "creator_mode": True,          # +2
-            "bio_signals": ["researcher"], # +1
-            "verifier_confidence": "medium",
-            "post_previews_90d": [],
-            "fail_reason": "",
-        },
-    },
-    # 6. Medium-conf hard_pass, soft=3. Falls in expanded Ollama band (1-4)
-    #    because medium threshold is 5. With Ollama off → non_influencer.
+    # 6. Medium-conf Ollama edge (soft band 1-3 for medium). fol>=2000 → +2,
+    #    nothing else. Soft=2. Ollama off → non_influencer(ollama_unreachable).
     {
         "label": "non_influencer",
-        "why":   "medium-conf soft=3 falls in expanded Ollama band (1-4); Ollama off → non_influencer(ollama_unreachable)",
+        "why":   "medium-conf soft=2 Ollama edge; Ollama off → non_influencer(ollama_unreachable)",
         "profile": {
             "url": "https://www.linkedin.com/in/inf-f",
             "name": "Dr Medium Border",
-            "followers": 2_500,            # 0 pts from band
-            "post_count_90d": 5,
+            "followers": 2_500,             # fol>=2000 → +2
+            "post_count_90d": 2,
             "last_post_date": _recent(20),
             "has_video_90d": False,
-            "avg_likes_per_post": 20.0,
-            "creator_mode": True,          # +2
-            "bio_signals": ["author"],     # +1
+            "avg_likes_per_post": 5.0,      # ER 0.2% → 0 pts; clears hard-floor
+            "creator_mode": False,
+            "bio_signals": [],
             "verifier_confidence": "medium",
             "post_previews_90d": [],
             "fail_reason": "",
