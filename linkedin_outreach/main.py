@@ -241,6 +241,10 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
         logger.set_stage(pr, STAGE_ERROR)
         return STAGE_ERROR, 0
     logger.set_stage(pr, STAGE_PROFILED)
+    print(f"  → profiled: followers={profile_dict.get('followers', 0)} "
+          f"posts_90d={profile_dict.get('post_count_90d', 0)} "
+          f"creator_mode={profile_dict.get('creator_mode', False)} "
+          f"fail={profile_dict.get('fail_reason','') or '—'}")
 
     # 4. Classify
     classification = influencer_classifier.classify(
@@ -414,7 +418,7 @@ def run(args):
 
         context.close()
 
-    print(f"\n[main] Session complete. Sent: {sent_this_session} / cap {session_limit}.")
+    print(f"\n[main] Session complete. Sent: {sent_this_session} / cap {send_cap}.")
 
 
 if __name__ == "__main__":
