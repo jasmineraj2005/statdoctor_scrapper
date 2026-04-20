@@ -265,12 +265,13 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
         return STAGE_SKIPPED, 0
 
     # 5b. Medium-confidence connect-time gate (spec v2). Classifier may emit
-    #     classification="influencer" from Ollama on soft<4 medium rows; spec
-    #     requires soft>=4 before any connect on medium. Downgrade here so the
-    #     Ollama verdict is preserved in classifications.csv for audit but
-    #     doesn't fire a real request.
-    if conf == "medium" and soft < 4:
-        print(f"  → medium-conf + soft={soft}<4; spec gate → skip")
+    #     classification="influencer" from Ollama on soft<5 medium rows; spec
+    #     requires soft >= 5 before any connect on medium (one point tighter
+    #     than high-conf's 4, because a lower-confidence match must clear more
+    #     signal). The Ollama verdict is preserved in classifications.csv for
+    #     audit; we downgrade here so it doesn't fire a real request.
+    if conf == "medium" and soft < 5:
+        print(f"  → medium-conf + soft={soft}<5; spec gate → skip")
         logger.set_stage(pr, STAGE_SKIPPED)
         return STAGE_SKIPPED, 0
 

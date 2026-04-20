@@ -29,15 +29,15 @@ Decision branches:
 
   verifier_confidence="medium"
     hard_fail              → non_influencer (heuristic)
-    hard_pass, soft >= 4   → influencer     (heuristic)
-    hard_pass, soft 1–3    → Ollama         (edge-case; band expanded)
+    hard_pass, soft >= 5   → influencer     (heuristic)
+    hard_pass, soft 1–4    → Ollama         (edge-case; band expanded)
     hard_pass, soft 0      → non_influencer (heuristic)
 
-    Spec says "soft >= 4 required before connect" for medium rows — so
-    an Ollama "influencer" vote on a medium row with soft < 4 is
-    downgraded back to non_influencer at the connect gate. Classifier
-    still records Ollama's verdict (audit trail); main.py enforces the
-    soft-score pre-connect check.
+    Spec: medium-conf rows require soft >= 5 before a real connect (one
+    point tighter than high-conf's 4 — lower-confidence matches must
+    clear more signal). An Ollama "influencer" vote on a medium row with
+    soft < 5 is recorded in classifications.csv (audit trail) but
+    downgraded to `skipped` at main.py's connect gate.
 
 A profile with `fail_reason` from the profiler (nav error, downgraded
 medium-no-signal, etc.) is short-circuited to `error` or `not_found` —
@@ -78,12 +78,16 @@ HF_AVG_LIKES_MIN  = 5     # was 15  — small engaged niche audiences yield low 
 
 # ── Soft-score thresholds (spec v2) ──────────────────────────────────────────
 
-SOFT_THRESHOLD_NORMAL  = 4          # was 3 — raised because new soft score has more sources
-SOFT_OLLAMA_BAND_NORMAL = (2, 3)    # inclusive — edge-case band for high-conf rows
-# Medium-conf uses the same pass threshold (4). Ollama band widened to 1-3
-# so medium rows with fewer signals still get a second opinion; the connect
-# gate in main.py then requires soft >= 4 before firing.
-SOFT_OLLAMA_BAND_MEDIUM = (1, 3)
+# High-conf rows clear at soft >= 4; the Ollama edge band is 2-3.
+SOFT_THRESHOLD_NORMAL  = 4
+SOFT_OLLAMA_BAND_NORMAL = (2, 3)
+
+# Medium-conf rows clear at soft >= 5 (one point tighter than high-conf —
+# lower-confidence matches must clear more signal before firing a connect).
+# Ollama edge band 1-4 covers the gap between soft=0 (heuristic non) and
+# soft=5 (heuristic influencer).
+SOFT_THRESHOLD_MEDIUM  = 5
+SOFT_OLLAMA_BAND_MEDIUM = (1, 4)
 
 
 # ── Engagement-rate bands (spec v2 — primary signal) ─────────────────────────
@@ -151,13 +155,15 @@ def classify(profile: dict[str, Any],
     soft = _soft_score(profile, engagement)
     out["soft_score"] = soft
 
-    # Tier-specific band
+    # Tier-specific threshold + Ollama band
     if verif_conf == "medium":
+        pass_thresh = SOFT_THRESHOLD_MEDIUM
         ollama_lo, ollama_hi = SOFT_OLLAMA_BAND_MEDIUM
     else:
+        pass_thresh = SOFT_THRESHOLD_NORMAL
         ollama_lo, ollama_hi = SOFT_OLLAMA_BAND_NORMAL
 
-    if soft >= SOFT_THRESHOLD_NORMAL:
+    if soft >= pass_thresh:
         out["classification"]    = "influencer"
         out["classifier_source"] = "heuristic"
         return out
