@@ -7,10 +7,15 @@ import os
 ROOT_DIR      = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 THIS_DIR      = os.path.dirname(os.path.abspath(__file__))
 
-INPUT_CSV     = os.path.join(ROOT_DIR, "db_ARPHA", "practitioners_clean.csv")
-OUTPUT_LOG    = os.path.join(ROOT_DIR, "outreach_log.csv")
+INPUT_CSV     = os.path.join(ROOT_DIR, "db_ARPHA", "practitioners_clean.csv")  # legacy — unused by new pipeline
+OUTPUT_LOG    = os.path.join(ROOT_DIR, "outreach_log.csv")                      # legacy Outreach tab mirror
 PROGRESS_FILE = os.path.join(ROOT_DIR, "linkedin_progress.txt")
 COOKIES_FILE  = os.path.join(THIS_DIR, "linkedin_cookies.json")
+
+# ── New pipeline CSVs (VIC high-yield subset flow) ───────────────────────────
+INPUT_SUBSET_CSV         = os.path.join(THIS_DIR, "data", "vic_high_yield_subset.csv")
+CLASSIFICATIONS_CSV      = os.path.join(THIS_DIR, "data", "vic_linkedin_classifications.csv")
+PROCESSING_STATUS_CSV    = os.path.join(THIS_DIR, "data", "vic_processing_status.csv")
 
 # ── Google Sheets ─────────────────────────────────────────────────────────────
 # Setup steps:
@@ -21,7 +26,12 @@ COOKIES_FILE  = os.path.join(THIS_DIR, "linkedin_cookies.json")
 #   5. Share your Google Sheet with the service account email (Editor access)
 GSHEET_CREDENTIALS_FILE = os.path.join(THIS_DIR, "credentials", "gsheet_creds.json")
 GSHEET_SPREADSHEET_NAME = "LinkedIn Outreach Tracker"   # exact name of your Google Sheet
-GSHEET_WORKSHEET_NAME   = "Outreach"                    # tab name inside the sheet
+GSHEET_WORKSHEET_NAME   = "Outreach"                    # legacy tab (plain connect tracking)
+
+# Step-7 tab names (created if missing). Re-naming here must match the sheet.
+GSHEET_INFLUENCERS_TAB  = "Influencers VIC"
+GSHEET_SKIPPED_TAB      = "Reviewed Skipped"
+GSHEET_STATUS_TAB       = "Processing Status"
 
 # ── Targeting filters (applied before any LinkedIn activity) ──────────────────
 # Empty list = include all. Add values to restrict.
