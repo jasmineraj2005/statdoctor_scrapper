@@ -62,7 +62,9 @@ DROPDOWN_SETTLE_SEC      = (1.0, 2.0)
 def send_connection_request(page: Page,
                              profile_url: str,
                              practitioner_name: str,
-                             classification: str = "") -> tuple[str, str]:
+                             classification: str = "",
+                             event_logger=None,
+                             practitioner: dict | None = None) -> tuple[str, str]:
     """Send a plain connect (no note) for an influencer profile.
 
     Args:
@@ -72,10 +74,26 @@ def send_connection_request(page: Page,
                              if PROFILE_DATA_JS can't read the on-page name).
         classification:      classifier verdict. Anything other than
                              "influencer" short-circuits to `skipped`.
+        event_logger:        optional SheetsLogger; if provided, emits a
+                             connect_sent / connect_failed event on every
+                             return path.
 
     Returns (status, detail). Statuses map to sheets_logger constants
     plus the two extras above.
     """
+    status, detail = _send_connection_request_core(
+        page, profile_url, practitioner_name, classification,
+    )
+    _emit(event_logger, practitioner, profile_url, status, detail)
+    return status, detail
+
+
+def _send_connection_request_core(page: Page,
+                                   profile_url: str,
+                                   practitioner_name: str,
+                                   classification: str) -> tuple[str, str]:
+    """All the actual connect logic. Wrapped by send_connection_request so
+    every return path emits a single live event."""
     # ── Gate 1 — classification ──────────────────────────────────────────────
     if classification != "influencer":
         return STATUS_SKIPPED, f"classification={classification or 'unknown'}"
@@ -252,3 +270,30 @@ def _weekly_limit_hit(page: Page) -> bool:
 
 def _post_connect_pause() -> None:
     time.sleep(random.uniform(*config.DELAY_BETWEEN_CONNECTIONS_SEC))
+
+
+def _emit(logger, practitioner, profile_url: str, status: str, detail: str) -> None:
+    """Map connector status → (event, outcome) and fire a live event.
+    Never raises."""
+    if not logger:
+        return
+
+    if status == STATUS_SENT:
+        event, outcome = "connect_sent", "success"
+    elif status == STATUS_DRY_RUN:
+        event, outcome = "connect_sent", "pending"    # dry-run intent logged
+    elif status == STATUS_SKIPPED:
+        event, outcome = "skipped_non_influencer", "skipped"
+    else:
+        event, outcome = "connect_failed", "fail"
+
+    try:
+        logger.log_live_event(
+            practitioner=practitioner,
+            linkedin_url=profile_url,
+            event=event,
+            outcome=outcome,
+            detail=f"{status} — {detail}" if detail else status,
+        )
+    except Exception as e:
+        print(f"  [connector] WARNING: event log failed: {e}")

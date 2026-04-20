@@ -153,12 +153,18 @@ def _probe_candidate_selectors(page: Page):
             pass
 
 
-def search_and_find_profile(page: Page, practitioner: dict) -> dict | None:
+def search_and_find_profile(page: Page, practitioner: dict,
+                             event_logger=None) -> dict | None:
     """
     Search LinkedIn for the practitioner and return the best matching profile,
     or None if no match found within MAX_PROFILES_TO_CHECK results.
 
     Returns dict with keys: name, location, headline, url
+
+    If `event_logger` (a sheets_logger.SheetsLogger or DryRunLogger) is
+    supplied, emits a `searched` or `not_found` event the moment the
+    decision is final. Sheet writes are append-only and tolerant of
+    transient failures; searcher itself never blocks on them.
     """
     clean_name = _clean_for_search(practitioner["name"])
     query = config.SEARCH_QUERY_TEMPLATE.format(
@@ -195,6 +201,9 @@ def search_and_find_profile(page: Page, practitioner: dict) -> dict | None:
     if not cards:
         print("  [search] No cards found — dumping page for inspection.")
         _dump_debug(page, practitioner.get("practitioner_id", "unknown"), "no_cards")
+        _emit(event_logger, practitioner,
+              event="not_found", outcome="fail",
+              detail="LinkedIn search returned 0 results")
         return None
 
     for i, profile in enumerate(cards[:config.MAX_PROFILES_TO_CHECK]):
@@ -202,10 +211,31 @@ def search_and_find_profile(page: Page, practitioner: dict) -> dict | None:
         print(f"  [search] Result {i+1}: '{profile['name']}' | '{profile['location']}' | '{profile['headline'][:80]}' — {reason}")
         if is_match:
             profile["verifier_confidence"] = confidence
+            _emit(event_logger, practitioner,
+                  event="searched", outcome="success",
+                  linkedin_url=profile.get("url", ""),
+                  detail=f"matched {profile.get('name','?')} ({confidence})")
             return profile
         time.sleep(random.uniform(*config.DELAY_BETWEEN_PROFILES_SEC))
 
+    _emit(event_logger, practitioner,
+          event="not_found", outcome="fail",
+          detail=f"searched top {config.MAX_PROFILES_TO_CHECK} results, no match")
     return None
+
+
+def _emit(logger, practitioner: dict, **kwargs) -> None:
+    """Fire-and-forget event wrapper. Never raises — searcher's job is to
+    find profiles, not to keep a sheet alive."""
+    if not logger:
+        return
+    try:
+        logger.log_live_event(
+            practitioner=practitioner,
+            **kwargs,
+        )
+    except Exception as e:
+        print(f"  [search] WARNING: event log failed: {e}")
 
 
 def get_profile_page_data(page: Page, profile_url: str) -> dict:

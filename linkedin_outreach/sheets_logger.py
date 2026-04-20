@@ -41,10 +41,36 @@ CLASSIFICATIONS_HEADERS = [
     "classifier_confidence", "classified_at", "fail_reason", "engagement_rate",
 ]
 
-# Processing-status CSV: per-practitioner pipeline stage (upsert).
+# Processing-status CSV: per-practitioner pipeline stage (upsert). Step-7b
+# adds a `detail` column — the last event's one-line reason/outcome so the
+# client can see WHY a row is in that stage without opening Live Run Log.
 STATUS_CSV_HEADERS = [
-    "practitioner_id", "name", "pipeline_stage", "last_updated",
+    "practitioner_id", "name", "pipeline_stage", "detail", "last_updated",
 ]
+
+# Step-7b live event log — one row per pipeline event, appended in real time.
+# Column count MUST match the user-facing schema locked in the Day-1 spec.
+LIVE_LOG_HEADERS = [
+    "timestamp", "practitioner_id", "name", "speciality", "linkedin_url",
+    "event", "outcome", "detail", "daily_connect_count",
+]
+
+# Known event types. Kept as constants so mis-spellings in callers fail at
+# lint time rather than silently corrupting the sheet.
+EVENT_SEARCHED                = "searched"
+EVENT_NOT_FOUND               = "not_found"
+EVENT_PROFILED                = "profiled"
+EVENT_CLASSIFIED              = "classified"
+EVENT_CONNECT_SENT            = "connect_sent"
+EVENT_CONNECT_FAILED          = "connect_failed"
+EVENT_SKIPPED_HOT             = "skipped_hot"
+EVENT_SKIPPED_NON_INFLUENCER  = "skipped_non_influencer"
+EVENT_SKIPPED_CAP_REACHED     = "skipped_cap_reached"
+
+OUTCOME_SUCCESS  = "success"
+OUTCOME_FAIL     = "fail"
+OUTCOME_SKIPPED  = "skipped"
+OUTCOME_PENDING  = "pending"
 
 # Influencers-VIC sheet tab columns.
 INFLUENCERS_SHEET_HEADERS = [
@@ -104,6 +130,12 @@ class SheetsLogger:
         self._classified_ids     = set()  # dedup — loaded from classifications.csv
         self._status_stage_cache = {}     # practitioner_id → last stage (CSV source-of-truth)
 
+        # Step-7b live-reporting state
+        self.ws_live      = None
+        self.ws_summary   = None
+        self._send_cap    = 0      # set by set_send_cap; used for "N/cap" column
+        self._sends_today_session = 0  # count of connect_sent events this run
+
         self._connect_sheets()
         self._ensure_local_log()
         self._ensure_classifications_csv()
@@ -137,12 +169,18 @@ class SheetsLogger:
             self.ws_status = self._get_or_create_tab(
                 sheet, config.GSHEET_STATUS_TAB, STATUS_SHEET_HEADERS)
 
+            # Step-7b tabs
+            self.ws_live = self._get_or_create_tab(
+                sheet, config.GSHEET_LIVE_TAB, LIVE_LOG_HEADERS)
+            self.ws_summary = self._get_or_create_summary_tab(sheet)
+
             self._sync_influencer_rows()
             self._sync_status_rows()
 
             print(f"[sheets] Connected to '{config.GSHEET_SPREADSHEET_NAME}' — "
                   f"Outreach={bool(self.ws)} Influencers={bool(self.ws_influencers)} "
-                  f"Skipped={bool(self.ws_skipped)} Status={bool(self.ws_status)}")
+                  f"Skipped={bool(self.ws_skipped)} Status={bool(self.ws_status)} "
+                  f"Live={bool(self.ws_live)} Summary={bool(self.ws_summary)}")
         except gspread.exceptions.SpreadsheetNotFound:
             print(f"[sheets] ERROR: Spreadsheet '{config.GSHEET_SPREADSHEET_NAME}' not found.")
             print("[sheets] Create it and share it with your service account email.")
@@ -167,6 +205,29 @@ class SheetsLogger:
                 ws.append_row(headers, value_input_option="RAW")
         except Exception:
             pass
+        return ws
+
+    def _get_or_create_summary_tab(self, sheet):
+        """Summary tab is 6 labelled cells — not a tabular header. Create
+        with the label column + an empty value column when first provisioned."""
+        title = config.GSHEET_SUMMARY_TAB
+        try:
+            ws = sheet.worksheet(title)
+        except gspread.exceptions.WorksheetNotFound:
+            try:
+                ws = sheet.add_worksheet(title=title, rows=8, cols=2)
+                ws.update("A1:B6", [
+                    ["Run date",                         ""],
+                    ["Total processed today",            "0"],
+                    ["Connects sent today / daily cap",  "0/0"],
+                    ["Total influencers found (all time)", "0"],
+                    ["Total connects sent (all time)",   "0"],
+                    ["Last updated",                     ""],
+                ], value_input_option="RAW")
+                print(f"[sheets] Created missing tab: {title}")
+            except Exception as e:
+                print(f"[sheets] ERROR creating Summary tab: {e}")
+                return None
         return ws
 
     def _ensure_local_log(self):
@@ -215,6 +276,26 @@ class SheetsLogger:
     def _ensure_status_csv(self):
         path = config.PROCESSING_STATUS_CSV
         os.makedirs(os.path.dirname(path), exist_ok=True)
+
+        # Schema migration for step-7b `detail` column. Old 4-col files get
+        # renamed to .v1.bak and we start fresh — the alternative of padding
+        # in-place would silently mutate an existing ops artifact.
+        if os.path.exists(path):
+            try:
+                with open(path, "r", newline="") as f:
+                    first = next(csv.reader(f), [])
+            except Exception:
+                first = []
+            if first and first != STATUS_CSV_HEADERS:
+                bak = f"{path}.v1.bak"
+                i = 1
+                while os.path.exists(bak):
+                    bak = f"{path}.v1.bak.{i}"
+                    i += 1
+                os.rename(path, bak)
+                print(f"[sheets] processing_status schema changed — migrated "
+                      f"old CSV to {bak}; starting fresh at {path}")
+
         if not os.path.exists(path):
             with open(path, "w", newline="") as f:
                 csv.writer(f).writerow(STATUS_CSV_HEADERS)
@@ -296,34 +377,186 @@ class SheetsLogger:
 
     # ── STEP-7 new-pipeline API ───────────────────────────────────────────────
 
-    def set_stage(self, practitioner: dict, stage: str) -> None:
-        """Upsert the Processing Status row for `practitioner` to `stage`.
+    # ── Step-7b — live event log + status + summary ───────────────────────────
 
-        CSV is source of truth; sheet mirrors. Cheap to call many times — the
-        per-practitioner row is overwritten in place rather than appended.
+    def set_send_cap(self, cap: int) -> None:
+        """Caller registers the effective send cap for the current session so
+        Live Run Log's `daily_connect_count` column can format as `N/cap`.
         """
-        pid = practitioner.get("practitioner_id", "") or ""
-        if not pid:
-            return
-        self._status_stage_cache[pid] = stage
-        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        row = [pid, practitioner.get("name", ""), stage, now]
+        self._send_cap = max(int(cap or 0), 0)
+        self._sends_today_session = 0
 
+    def log_live_event(self, *,
+                       practitioner: dict | None = None,
+                       practitioner_id: str = "",
+                       name: str = "",
+                       speciality: str = "",
+                       linkedin_url: str = "",
+                       event: str = "",
+                       outcome: str = "",
+                       detail: str = "") -> None:
+        """Append one row to the Live Run Log tab. Never raises — sheet
+        failures log a warning and continue; one retry on transient failures.
+
+        Pass either a `practitioner` dict OR the individual string fields
+        (callers embedded in searcher/classifier/etc. usually have the
+        dict; main.py's skipped paths have just the id).
+        """
+        if practitioner:
+            practitioner_id = practitioner_id or practitioner.get("practitioner_id", "") or ""
+            name            = name or practitioner.get("name", "") or ""
+            speciality      = speciality or practitioner.get("speciality", "") or practitioner.get("specialities", "") or ""
+
+        if event == EVENT_CONNECT_SENT:
+            self._sends_today_session += 1
+        cap_cell = f"{self._sends_today_session}/{self._send_cap}" if self._send_cap else str(self._sends_today_session)
+
+        row = [
+            datetime.now().isoformat(timespec="seconds"),
+            practitioner_id,
+            name,
+            speciality,
+            linkedin_url,
+            event,
+            outcome,
+            detail[:300] if detail else "",
+            cap_cell,
+        ]
+
+        if not self.ws_live:
+            return
+        # Single retry on transient gspread errors — covers momentary network
+        # flaps without masking persistent misconfigurations.
+        for attempt in (1, 2):
+            try:
+                self.ws_live.append_row(row, value_input_option="RAW")
+                break
+            except Exception as e:
+                if attempt == 2:
+                    print(f"[sheets] WARNING: log_live_event failed (retry 1/1): {e}")
+                    return
+
+        # Refresh Summary on terminal events to keep the tab usable at a glance.
+        if event in (EVENT_CONNECT_SENT, EVENT_CONNECT_FAILED):
+            self._refresh_summary()
+
+    def update_status(self, practitioner_id: str, stage: str,
+                      detail: str = "", name: str = "") -> None:
+        """Upsert the Processing Status row with stage + detail."""
+        if not practitioner_id:
+            return
+        # If caller didn't supply a name but we already have a row, preserve it.
+        if not name and practitioner_id in self._status_rows and self.ws_status:
+            try:
+                existing = self.ws_status.row_values(self._status_rows[practitioner_id])
+                if len(existing) >= 2:
+                    name = existing[1]
+            except Exception:
+                pass
+
+        now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        row = [practitioner_id, name, stage, (detail or "")[:300], now]
+        self._status_stage_cache[practitioner_id] = stage
         self._upsert_status_csv(row)
 
         if not self.ws_status:
             return
+        for attempt in (1, 2):
+            try:
+                if practitioner_id in self._status_rows:
+                    rn = self._status_rows[practitioner_id]
+                    self.ws_status.update(f"A{rn}:E{rn}", [row], value_input_option="RAW")
+                else:
+                    self.ws_status.append_row(row, value_input_option="RAW")
+                    self._status_rows[practitioner_id] = len(self.ws_status.get_all_values())
+                break
+            except Exception as e:
+                if attempt == 2:
+                    print(f"[sheets] WARNING: update_status failed for {practitioner_id}: {e}")
+                    return
+
+    def _refresh_summary(self) -> None:
+        """Recompute + overwrite the 6-cell Summary tab.
+
+        Sourced from the existing CSVs + session counter rather than querying
+        sheets — cheaper and avoids a read/write round-trip per event.
+        """
+        if not self.ws_summary:
+            return
+
+        today = datetime.now().strftime("%Y-%m-%d")
+        now   = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # Count today's rows in Live Run Log (by timestamp prefix) — cheap
+        # proxy for "total processed today" which covers every pipeline event.
+        processed_today = self._sends_today_session  # at minimum this session
+        influencers_all_time = 0
+        connects_all_time    = 0
+
+        # Influencers: classifications.csv rows with classification=influencer
         try:
-            if pid in self._status_rows:
-                rn = self._status_rows[pid]
-                self.ws_status.update(
-                    f"A{rn}:D{rn}", [row], value_input_option="RAW",
+            with open(config.CLASSIFICATIONS_CSV, "r", newline="") as f:
+                for r in csv.DictReader(f):
+                    if r.get("classification", "") == "influencer":
+                        influencers_all_time += 1
+        except Exception:
+            pass
+
+        # Connects: sum of sent rows in the legacy outreach_log.csv + this
+        # session's sends. Legacy log receives nothing in the new pipeline,
+        # so in practice this matches "sent-events-observed-this-session"
+        # until we start running real-mode multi-day.
+        try:
+            if os.path.exists(config.OUTPUT_LOG):
+                with open(config.OUTPUT_LOG, "r", newline="") as f:
+                    for r in csv.DictReader(f):
+                        if r.get("status", "") == STATUS_SENT:
+                            connects_all_time += 1
+        except Exception:
+            pass
+        # Plus this session (only relevant if caller hasn't also mirrored to
+        # outreach_log.csv — the new pipeline doesn't, so we add explicitly).
+        connects_all_time += self._sends_today_session
+
+        # Processed today: live log rows whose timestamp starts with `today`.
+        try:
+            if self.ws_live:
+                all_live = self.ws_live.get_all_values()
+                processed_today = sum(
+                    1 for r in all_live[1:]
+                    if r and r[0].startswith(today)
                 )
-            else:
-                self.ws_status.append_row(row, value_input_option="RAW")
-                self._status_rows[pid] = len(self.ws_status.get_all_values())
+        except Exception:
+            pass
+
+        cap_txt = f"{self._sends_today_session}/{self._send_cap}" if self._send_cap else str(self._sends_today_session)
+        rows = [
+            ["Run date",                           today],
+            ["Total processed today",              processed_today],
+            ["Connects sent today / daily cap",    cap_txt],
+            ["Total influencers found (all time)", influencers_all_time],
+            ["Total connects sent (all time)",     connects_all_time],
+            ["Last updated",                       now],
+        ]
+        try:
+            self.ws_summary.update("A1:B6", rows, value_input_option="RAW")
         except Exception as e:
-            print(f"[sheets] WARNING: could not upsert Status row for {pid}: {e}")
+            print(f"[sheets] WARNING: _refresh_summary failed: {e}")
+
+    def set_stage(self, practitioner: dict, stage: str, detail: str = "") -> None:
+        """Upsert the Processing Status row for `practitioner` to `stage`.
+
+        Thin wrapper over update_status — kept so existing callers
+        (main.py, step-7-era tests) don't need to rewire to the dict-less
+        signature. CSV is source of truth; sheet mirrors. Optional `detail`
+        kwarg lets callers attach an explanation when they have one.
+        """
+        pid = (practitioner or {}).get("practitioner_id", "") or ""
+        if not pid:
+            return
+        self.update_status(pid, stage,
+                           detail=detail,
+                           name=(practitioner or {}).get("name", ""))
 
     def log_classification(self,
                            practitioner: dict,

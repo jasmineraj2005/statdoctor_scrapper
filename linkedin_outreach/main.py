@@ -119,8 +119,11 @@ class DryRunLogger:
     def __init__(self):
         print("[main] DryRunLogger: no CSV / sheet writes will occur.")
     def add_pending(self, practitioner): pass
-    def set_stage(self, practitioner, stage): pass
+    def set_stage(self, practitioner, stage, detail=""): pass
+    def set_send_cap(self, cap): pass
     def log_classification(self, practitioner, profile, classification): pass
+    def log_live_event(self, **kwargs): pass
+    def update_status(self, practitioner_id, stage, detail="", name=""): pass
     def update_connect_status(self, pid, status, detail=""): pass
     def update(self, pid, status, linkedin_url="", notes=""): pass
     def already_classified(self, practitioner_id): return False
@@ -204,7 +207,7 @@ def _profile_and_classify(page, pr: dict, logger) -> dict:
 
     # 1. Search
     try:
-        matched = searcher.search_and_find_profile(page, pr)
+        matched = searcher.search_and_find_profile(page, pr, event_logger=logger)
     except RateLimitError:
         raise
     except Exception as e:
@@ -220,7 +223,7 @@ def _profile_and_classify(page, pr: dict, logger) -> dict:
         print("  → no LinkedIn match")
         classification = _error_classification(pr, "", "not_found", verdict="not_found")
         logger.log_classification(pr, {}, classification)
-        logger.set_stage(pr, STAGE_NOT_FOUND)
+        logger.set_stage(pr, STAGE_NOT_FOUND, detail="no LinkedIn match")
         return {"terminal_stage": STAGE_NOT_FOUND, "pending": None}
 
     url  = matched["url"]
@@ -230,6 +233,13 @@ def _profile_and_classify(page, pr: dict, logger) -> dict:
     # 2. is_hot gate — skip if visited in last 48h (resume semantics).
     if is_hot(url):
         print(f"  → HOT (48h cool-down). Skipping profile + classify for this pass.")
+        logger.log_live_event(
+            practitioner=pr,
+            linkedin_url=url,
+            event="skipped_hot",
+            outcome="skipped",
+            detail="profiled within last 48h — cool-down",
+        )
         return {"terminal_stage": "", "pending": None}
 
     # 3. Profile
@@ -238,6 +248,8 @@ def _profile_and_classify(page, pr: dict, logger) -> dict:
             page, url,
             verifier_confidence=conf,
             ahpra_specialities=pr.get("speciality", "") or pr.get("specialities", ""),
+            event_logger=logger,
+            practitioner=pr,
         )
     except RateLimitError:
         raise
@@ -259,6 +271,8 @@ def _profile_and_classify(page, pr: dict, logger) -> dict:
         profile_dict,
         practitioner_id=pid,
         ahpra_specialty=pr.get("speciality", "") or pr.get("specialities", ""),
+        event_logger=logger,
+        practitioner=pr,
     )
     verdict = classification.get("classification", "")
     soft    = classification.get("soft_score", 0)
@@ -269,7 +283,8 @@ def _profile_and_classify(page, pr: dict, logger) -> dict:
 
     # 5a. Non-influencer classifications short-circuit to terminal skipped.
     if verdict != "influencer":
-        logger.set_stage(pr, STAGE_SKIPPED)
+        fail = classification.get("fail_reason", "") or verdict
+        logger.set_stage(pr, STAGE_SKIPPED, detail=f"{verdict}: {fail}")
         return {"terminal_stage": STAGE_SKIPPED, "pending": None}
 
     # 5b. Medium-confidence connect gate (spec v2): medium rows require
@@ -325,12 +340,20 @@ def _connect_pending(page, pending: list[dict], logger, send_cap: int) -> int:
         if sent >= send_cap:
             print(f"  → send cap {send_cap} reached; remaining "
                   f"{len(pending) - pending.index(p)} skipped")
-            logger.set_stage(pr, STAGE_SKIPPED)
+            logger.set_stage(pr, STAGE_SKIPPED, detail=f"send cap {send_cap} reached")
+            logger.log_live_event(
+                practitioner=pr,
+                linkedin_url=url,
+                event="skipped_cap_reached",
+                outcome="skipped",
+                detail=f"send cap {send_cap} reached before this row's turn",
+            )
             continue
 
         try:
             status, detail = connector.send_connection_request(
                 page, url, pr["name"], classification=verdict,
+                event_logger=logger, practitioner=pr,
             )
         except RateLimitError:
             raise
@@ -345,13 +368,14 @@ def _connect_pending(page, pending: list[dict], logger, send_cap: int) -> int:
 
         if status == STATUS_SENT:
             sent += 1
-            logger.set_stage(pr, STAGE_CONNECTED)
+            logger.set_stage(pr, STAGE_CONNECTED,
+                             detail=f"connect sent — soft={p['soft_score']}")
             if sent % config.SESSION_BREAK_EVERY_N == 0:
                 break_dur = random.uniform(*config.SESSION_BREAK_DURATION_SEC)
                 print(f"[main] Session break {break_dur:.0f}s")
                 time.sleep(break_dur)
         else:
-            logger.set_stage(pr, STAGE_SKIPPED)
+            logger.set_stage(pr, STAGE_SKIPPED, detail=f"connect {status}: {detail}")
 
     return sent
 
@@ -429,6 +453,10 @@ def run(args):
           f"(quota {quota_cap}"
           + (f", user cap {args.connect_cap}" if args.connect_cap is not None else "")
           + ")")
+
+    # Register send cap with the logger so Live Run Log's daily_connect_count
+    # column formats as `N/cap` (e.g. "3/10" on Day 1, "17/25" on Day 2).
+    logger.set_send_cap(send_cap)
 
     queue = load_queue(logger)[: args.limit]
     print(f"[main] Walking {len(queue)} practitioners this session")

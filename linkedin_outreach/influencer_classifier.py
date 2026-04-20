@@ -107,11 +107,14 @@ FOLLOWER_BAND_MID   = 1000   # +1
 
 def classify(profile: dict[str, Any],
              practitioner_id: str = "",
-             ahpra_specialty: str = "") -> dict[str, Any]:
+             ahpra_specialty: str = "",
+             event_logger=None,
+             practitioner: dict | None = None) -> dict[str, Any]:
     """Run hard filters + soft score → heuristic-or-Ollama decision.
 
     Returns a dict matching the v2 CSV schema. Pure function modulo the
-    optional Ollama HTTP call (which is guarded against every error mode).
+    optional Ollama HTTP call (which is guarded against every error mode)
+    and the optional live-event write (fire-and-forget).
     """
     url           = profile.get("url", "") or ""
     verif_conf    = profile.get("verifier_confidence", "") or ""
@@ -131,16 +134,23 @@ def classify(profile: dict[str, Any],
         engagement_rate=engagement,
     )
 
+    # Local finaliser — emit a live event on every return path so sheet stays
+    # in sync with whatever classify() decides. Fire-and-forget; see
+    # _emit_classified for error handling.
+    def _finalize(result: dict[str, Any]) -> dict[str, Any]:
+        _emit_classified(event_logger, practitioner, result)
+        return result
+
     # Short-circuit on profiler failure.
     if profiler_fail:
         if profiler_fail == "medium_no_medical_signal":
             out["classification"]    = "non_influencer"
             out["classifier_source"] = "heuristic"
             out["fail_reason"]       = profiler_fail
-            return out
+            return _finalize(out)
         out["classification"] = "error"
         out["fail_reason"]    = profiler_fail
-        return out
+        return _finalize(out)
 
     # Hard filters
     hard_pass, hard_fail_reason = _hard_filters(profile)
@@ -149,7 +159,7 @@ def classify(profile: dict[str, Any],
         out["classification"]    = "non_influencer"
         out["classifier_source"] = "heuristic"
         out["fail_reason"]       = hard_fail_reason
-        return out
+        return _finalize(out)
 
     # Soft score
     soft = _soft_score(profile, engagement)
@@ -166,12 +176,12 @@ def classify(profile: dict[str, Any],
     if soft >= pass_thresh:
         out["classification"]    = "influencer"
         out["classifier_source"] = "heuristic"
-        return out
+        return _finalize(out)
 
     if soft == 0:
         out["classification"]    = "non_influencer"
         out["classifier_source"] = "heuristic"
-        return out
+        return _finalize(out)
 
     # Ambiguous band → ask Ollama.
     if ollama_lo <= soft <= ollama_hi:
@@ -181,7 +191,7 @@ def classify(profile: dict[str, Any],
             out["classifier_source"]     = "ollama"
             out["classifier_confidence"] = 0.0
             out["fail_reason"]           = "ollama_unreachable"
-            return out
+            return _finalize(out)
         out["classification"]        = verdict["classification"]
         out["classifier_source"]     = "ollama"
         out["classifier_confidence"] = verdict["confidence"]
@@ -189,13 +199,39 @@ def classify(profile: dict[str, Any],
         # For medium rows: Ollama INFLUENCER + soft < normal_threshold means
         # the connect gate will block anyway; classifier records the tentative
         # verdict so audits can see disagreement, main.py downgrades at send.
-        return out
+        return _finalize(out)
 
     # Defensive fall-through — any score not covered above → non_influencer.
     out["classification"]    = "non_influencer"
     out["classifier_source"] = "heuristic"
     out["fail_reason"]       = f"soft_score_out_of_bands:{soft}"
-    return out
+    return _finalize(out)
+
+
+def _emit_classified(event_logger, practitioner: dict | None, out: dict) -> None:
+    """Live-event wrapper for the classify outcome. Never raises."""
+    if not event_logger:
+        return
+    verdict = out.get("classification", "")
+    soft    = out.get("soft_score", 0)
+    src     = out.get("classifier_source", "")
+    outcome = "success" if verdict == "influencer" else (
+        "fail" if verdict == "error" else "skipped"
+    )
+    detail = (
+        f"{verdict} soft={soft} source={src}"
+        + (f" fail={out['fail_reason']}" if out.get("fail_reason") else "")
+    )
+    try:
+        event_logger.log_live_event(
+            practitioner=practitioner,
+            linkedin_url=out.get("linkedin_url", ""),
+            event="classified",
+            outcome=outcome,
+            detail=detail,
+        )
+    except Exception as e:
+        print(f"  [classifier] WARNING: event log failed: {e}")
 
 
 # ── Engagement rate ──────────────────────────────────────────────────────────

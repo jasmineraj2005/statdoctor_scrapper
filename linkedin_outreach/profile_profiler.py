@@ -211,7 +211,9 @@ ACTIVITY_POSTS_JS = r"""
 
 def profile(page: Page, profile_url: str,
             verifier_confidence: str = "",
-            ahpra_specialities: str = "") -> dict[str, Any]:
+            ahpra_specialities: str = "",
+            event_logger=None,
+            practitioner: dict | None = None) -> dict[str, Any]:
     """Scrape a LinkedIn profile + its recent activity. Graceful on missing data.
 
     `verifier_confidence` is the matcher's tag ("high" / "medium" / "").
@@ -258,6 +260,17 @@ def profile(page: Page, profile_url: str,
             pass
     except Exception as e:
         result["fail_reason"] = f"profile_nav: {type(e).__name__}"
+        if event_logger:
+            try:
+                event_logger.log_live_event(
+                    practitioner=practitioner,
+                    linkedin_url=profile_url,
+                    event="profiled",
+                    outcome="fail",
+                    detail=result["fail_reason"],
+                )
+            except Exception:
+                pass
         return result
 
     # Top-card fields (reuse selector module)
@@ -371,6 +384,27 @@ def profile(page: Page, profile_url: str,
     # by the classifier, not here — profiler's job is to report ground truth).
     if parsed:
         result["last_post_date"] = max(p["abs_date"] for p in parsed).date().isoformat()
+
+    # Step-7b live event — fire-and-forget. Always a success case when we
+    # reach this point; profile-nav / top-card failures return earlier with
+    # fail_reason set and no event emitted from here (main.py emits a
+    # fail-side event in that path if desired).
+    if event_logger:
+        try:
+            event_logger.log_live_event(
+                practitioner=practitioner,
+                linkedin_url=profile_url,
+                event="profiled",
+                outcome="success" if not result.get("fail_reason") else "fail",
+                detail=(
+                    f"followers={result['followers']} posts_90d={result['post_count_90d']} "
+                    f"creator_mode={result['creator_mode']} "
+                    f"avg_likes={result['avg_likes_per_post']}"
+                    + (f" fail={result['fail_reason']}" if result.get("fail_reason") else "")
+                ),
+            )
+        except Exception as e:
+            print(f"  [profiler] WARNING: event log failed: {e}")
 
     return result
 

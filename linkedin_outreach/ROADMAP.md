@@ -17,18 +17,14 @@ For a new agent picking this up cold. Status as of 2026-04-21.
 
 1. **`data/vic_high_yield_subset.csv`** — shipped (commit `4b2aa2f`, pushed).
    Columns: `practitioner_id, name, speciality, postcode_searched, location`
-2. **`data/vic_linkedin_classifications.csv`** — v2 schema (16 columns).
-   Appended as classifier runs. Columns: `practitioner_id, linkedin_url,
-   classification (influencer|non_influencer|not_found|error), soft_score,
+2. **`data/vic_linkedin_classifications.csv`** — v2 schema (active).
+   Columns: `practitioner_id, linkedin_url, classification
+   (influencer|non_influencer|not_found|error), soft_score,
    hard_filters_passed, follower_count, post_count_90d, last_post_date,
    has_video_90d, creator_mode, bio_signals (pipe-delimited),
-   classifier_source (heuristic|ollama), classifier_confidence, classified_at,
-   fail_reason, engagement_rate` (float, `avg_likes / followers`; 0.0 when
-   followers=0). Schema mismatch at `sheets_logger._ensure_classifications_csv`
-   auto-migrates v1 → `<path>.v1.bak` and starts a fresh v2 file.
-3. **`data/vic_processing_status.csv`** — per-practitioner pipeline stage
-   (pending/searched/profiled/classified/connected/skipped/not_found/error),
-   upserted by practitioner_id. `main.load_queue` dedups on terminal stages.
+   engagement_rate, classifier_source (heuristic|ollama),
+   classifier_confidence, classified_at, fail_reason`
+   v1 backup at `vic_linkedin_classifications.csv.v1.bak`.
 
 ## Progress by step
 
@@ -38,208 +34,188 @@ For a new agent picking this up cold. Status as of 2026-04-21.
 | 2 | VIC high-yield subset builder (`build_subset.py`) + CSV | ✅ **pushed** | `4b2aa2f` |
 | 3 | Selectors rewritten for 2026 LinkedIn DOM | ✅ **pushed** | `385acca`, `c0dbc24` |
 | 4a | `profile_profiler.py` — followers/creator-mode/posts/bio | ✅ local | `826322a` |
-| 4b-v1 | Location-match loosen (Melbourne/greater/Australia-only soft) | ✅ local | `0c0e663` |
-| 4b-v2 | Empty-loc accept when name_score≥95 (first pass) | ✅ local | `39155a3` |
+| 4b-v1 | Location-match loosen | ✅ local | `0c0e663` |
+| 4b-v2 | Empty-loc accept when name_score≥95 | ✅ local | `39155a3` |
 | 4b-v3 | Two-scorer (token_sort + token_set), 3-tier confidence | ✅ local | `dca0179` |
-| 4b-v4 | **Deferred medical check to post-scrape + VIC hospital registry** | ✅ local | `acd955d` |
-| 4c | Re-audit seed=42 (measure verifier ceiling) | ✅ done (4/10 legit, Pala cleanly rejected) | — |
-| 4d | Profiler dry-test on 5 new matches | ✅ done seed=7+42; 10 legit across 20 rows | — |
-| 4e | Medical-signal headline bypasses `no_degree_badge` in `is_active_account` (Christos fix) | ✅ local | `1c53533` |
-| 5a | `profile_profiler` emits `post_previews_90d` (prereq for classifier Ollama prompt) | ✅ local | `65fb9d8` |
-| 5b | `influencer_classifier.py` — heuristic + Ollama edge-case | ✅ local | `fe03ec3` |
-| 5c | Hand-label harness (`step5_classifier_test.py`) — 10 rows, 10/10 agreement (Ollama off); 9/10 Ollama live (1 legit edge) | ✅ local | `67cf172` |
-| 6-prereq | Live More-menu → Connect probe (Connect-primary confirmed on Caroline Macindoe, seed=23) | ✅ local | `3421191` |
-| 6 | Gate `connector.py` on `classification=='influencer'` + no-note flow (top-card anchor + More-menu fallback) | ✅ local | `7a12bdc` |
-| 7 | Extend `sheets_logger.py` — Influencers VIC + Reviewed Skipped + Processing Status tabs, auto-creation, CSV-as-source-of-truth | ✅ local | `0e7c2c3` |
-| 6b | `main.py` — subset CSV + full pipeline (search → is_hot → profile → classify → connect) | ✅ local | `5fbc755`, `1156c03` |
-| 8 | 50-row dry-run — all 5 gate checks passed: classifications.csv (52 rows), Processing Status (52), Reviewed Skipped populated, Influencers VIC empty (0 influencers in sample — expected low yield), zero connects, zero exceptions | ✅ local | — |
-| v2-5c | Spec v2 rewrite — hard filters 500/2/90d/5, engagement_rate, +bio kw, soft threshold 4, new Ollama prompt | ✅ local | *pending commit* |
-| 9 | Staged real run — Day 1: 10 connects; Day 2: 25 | ⏳ blocked on v2 landing + user approval | — |
+| 4b-v4 | Deferred medical check + VIC hospital registry | ✅ local | `acd955d` |
+| 4c | Re-audit seed=42 | ✅ done | — |
+| 4d | Profiler dry-test on 5 new matches | ✅ done | — |
+| 4e | Medical-signal headline bypasses `no_degree_badge` | ✅ local | `1c53533` |
+| 5a | `profile_profiler` emits `post_previews_90d` | ✅ local | `65fb9d8` |
+| 5b | `influencer_classifier.py` v1 | ✅ local | `fe03ec3` |
+| 5c | Hand-label harness v1 — 10/10 agreement | ✅ local | `67cf172` |
+| 5d | **Classifier v2** — engagement_rate, relaxed thresholds, Ollama v2 | ✅ local | `dd65859` |
+| 5e | Harness v2 + ROADMAP — 10/10 offline, 9/10 Ollama live | ✅ local | `6bbce13` |
+| 6 | `connector.py` rewrite — semantic selectors, no-note, influencer gate | ✅ local | — |
+| 7a | `sheets_logger.py` — Influencers VIC + Reviewed Skipped + Processing Status | ✅ local | — |
+| 7b | **Live Run Log + Summary tabs** — real-time per-event sheet writes for client | ⏳ next task | — |
+| 8 | 50-row dry-run — 0 connects fired, schema migration clean | ✅ done | — |
+| 9 | Staged real run — Day 1: 10 connects; Day 2: 25 | ⏳ blocked — see gates | — |
 
-### Christos decision (2026-04-20) — RESOLVED
+## Gates before Step 9 (ALL must clear before any connect fires)
 
-Chosen fix: **reorder — medical headline signal bypasses `no_degree_badge`**.
-Rationale: degree badge reflects viewer-to-profile network distance, not
-account liveness. An out-of-network real doctor has no badge but is clearly
-alive if the headline contains medical content. Structural dead-account
-signals (`empty_headline`, `no_action_button`) still reject.
+1. **Step 7b complete** — Live Run Log + Summary tabs working in Google Sheets.
+2. **Step 7b dry-run passes** — `main.py --dry-run --limit 5` shows all 5 rows in "Live Run Log", Processing Status updated, Summary tab correct.
+3. **More-menu → Connect live nav test** — one Follow-primary profile tested live. Confirm right element clicks before Day 1.
 
-Implementation:
-- `verifier.is_active_account(profile, medical_signal=False)` now takes
-  an optional flag; when True, the `no_degree_badge` branch is skipped.
-- `verifier.verify_profile` computes `headline_is_medical(headline)` and
-  passes it in.
-- Rejected A1 (defer `is_active_account` wholesale to post-scrape): would
-  have doubled profile-visit budget on junk, unacceptable at 30k lifetime
-  cap. A2 keeps the cheap pre-visit gate for truly-dead non-medical accounts.
-- Deeper post-scrape full-text medical check (`profile_profiler`) is
-  unchanged and still acts as the safety net for medium-conf (empty-loc)
-  rows.
+## Classifier v2 spec (locked — replaces v1)
+
+### Hard filters (ALL must pass, else `non_influencer`)
+- `follower_count >= 500`             ← lowered from 1500
+- `post_count_90d >= 2`               ← lowered from 4
+- `last_post_date within 90 days`     ← extended from 60
+- `avg_likes_per_post >= 5`           ← lowered from 15
+
+### Engagement rate (new primary signal)
+`engagement_rate = avg_likes_per_post / follower_count`
+- >= 2% → strong; >= 1% → moderate; < 0.5% → weak
+
+### Soft score
+- +3 engagement_rate >= 2%
+- +2 engagement_rate >= 1%
+- +2 any video in last 90 days
+- +2 Creator Mode on / prominent Follow button
+- +2 followers >= 2000
+- +1 followers >= 1000
+- +1 per bio keyword (speaker, author, educator, podcast, media, researcher, presenter, columnist) — max +3
+- +2 posts contain medical/clinical content
+- +1 posts >= 1/month average over 90 days
+
+### Decision thresholds
+- Hard fail → `non_influencer` (heuristic)
+- Hard pass + soft >= 4 → `influencer` (heuristic)
+- Hard pass + soft 2–3 → Ollama edge-case call
+- Hard pass + soft 0–1 → `non_influencer` (heuristic)
+- **Medium-conf rows: soft >= 5 required before connect** (normal=4, medium=5)
+
+### Ollama prompt (v2)
+JSON input: `{name, specialty, recent_post_topics[≤10], follower_count, avg_likes, engagement_rate, has_video, bio_signals, post_frequency_per_month}`
+Ask: *"This is a medical professional on LinkedIn. Based on their posting activity and engagement, would healthcare professionals consider them a trusted voice or active content creator in their field? They do not need a large following — consistent, relevant medical content with an engaged niche audience qualifies. Reply JSON: {classification: INFLUENCER|NOT, confidence: 0-1, reason: one line}"*
+
+## V2 validation results (2026-04-21)
+
+- 10/10 offline agreement on re-labelled fixtures; 9/10 Ollama live (row 6 medium-edge correctly downgraded by step 5b gate).
+- **First v2 hard-filter passer: Adam Bystrzycki** (MED0001154842) — 939 followers, 11 posts/90d, last post 2026-04-13. Rejected under v1 (followers<1500). Passes all v2 hard gates. Soft score pending re-profile (avg_likes not in v1 CSV). Will enter queue naturally after 48h cool-down.
+- Decision taken: Option C — sufficient evidence v2 thresholds work. Proceed to step 9 after gates clear.
+
+## Step 7b spec — Live Google Sheets reporting
+
+Sheet: `"LinkedIn Outreach Tracker"` (exists).
+
+**Tab: `Live Run Log`** (new) — one row per event, appended in real time:
+`timestamp, practitioner_id, name, speciality, linkedin_url, event (searched|profiled|classified|connect_sent|connect_failed|skipped_hot|skipped_non_influencer|not_found), outcome (success|fail|skipped|pending), detail (one-line), daily_connect_count (e.g. 3/10)`
+
+**Tab: `Summary`** (new) — 6 live-updating cells:
+`Run date, Total processed today, Connects sent today / daily cap, Total influencers found (all time), Total connects sent (all time), Last updated`
+
+**Tab: `Processing Status`** (exists) — update stage per practitioner in real time.
+
+Implementation rules:
+- Write after EVERY event. Sheet failure must never crash the run — log locally, retry once.
+- Add `log_live_event(row)` and `update_status(pid, stage, detail)` to `sheets_logger.py`.
+- Call from: `searcher.py`, `profile_profiler.py`, `influencer_classifier.py`, `connector.py`, `main.py` (skips).
+- `daily_connect_count` shows X/10 Day 1, X/25 Day 2.
+- Commit: `"linkedin_outreach: step-7b live sheets reporting — Live Run Log + Summary tabs"`
 
 ## Commits — what's local vs pushed
 
 **Pushed to origin/main:**
 - `4b2aa2f` subset builder + CSV
-- `c0dbc24` initial selector rewrite (broken PROFILE_DATA_JS, superseded)
+- `c0dbc24` initial selector rewrite
 - `385acca` PROFILE_DATA_JS fix + Connect anchor tag
 
 **LOCAL ONLY** (do not push without user approval):
 - `826322a` profile_profiler.py
 - `0c0e663` location-match loosen v1
 - `e1a17a6` visit tracker + cached-HTML mode + nav watchdog
-- `39155a3` empty-loc accept v1 (superseded by dca0179)
+- `39155a3` empty-loc accept v1
 - `dca0179` two-scorer + three-tier confidence
-- `acd955d` deferred medical check + VIC hospital registry + `step4d_audit.py`
-- `1c53533` 4e — medical-headline bypass of `no_degree_badge`
-- `65fb9d8` 5a — profiler emits `post_previews_90d`
-- `fe03ec3` 5b — `influencer_classifier.py` (heuristic + Ollama edge-case)
-- *pending* 5c — hand-label harness (10/10 agreement, Ollama off)
+- `acd955d` deferred medical check + VIC hospital registry
+- `1c53533` 4e — medical-headline bypass
+- `65fb9d8` 5a — profiler emits post_previews_90d
+- `fe03ec3` 5b — influencer_classifier v1
+- `67cf172` 5c — hand-label harness v1
+- `dd65859` 5d — classifier v2
+- `6bbce13` 5e — harness v2 + ROADMAP
+- *(connector.py rewrite — step 6)*
+- *(sheets_logger step 7a)*
 
 ## Key files
 
 | File | Role |
 |---|---|
-| `build_subset.py` | One-shot subset builder. Rerun only if heuristic changes. |
-| `searcher.py` | LinkedIn people-search + JS-based result extraction. `EXTRACT_RESULTS_JS` uses `a[href*='/in/']` walker (class-agnostic). |
-| `verifier.py` | Name scoring (two-scorer: token_sort primary, token_set floor); location matching; post-scrape `medical_signal_in_text` helper. |
-| `li_selectors.py` | **Semantic-only** selectors (aria-label, role, tags — NO class names — LinkedIn's classes are opaque hashes). `PROFILE_DATA_JS` extracts name/headline/location/URL; `CONNECT_BUTTON_FMT` is `a[aria-label="Invite {name} to connect"]` (owner Connect is an anchor, sidebar is a button — this split auto-disambiguates). |
-| `profile_profiler.py` | Scrapes followers, creator_mode, bio, experience, recent activity. Post-scrape re-evaluates medium-conf rows via `verifier.medical_signal_in_text`. Downgrades to `""` + `fail_reason="medium_no_medical_signal"` when no signal. |
-| `connector.py` | **Will break at runtime** — references removed selector names (`CONNECT_BUTTON_PRIMARY`, `SEND_BUTTON`, etc.). Needs rewrite at step 6. Dry-run mode still safe (early-return before touching selectors). |
-| `_visit_tracker.py` | JSON-backed 48h cool-down. `mark_visited` / `is_hot` / `hot_set`. URL canonicalisation strips overlay/recent-activity suffixes. |
-| `visited_profiles.json` | HOT-set store. Editable by hand if needed. |
-| `selector_dry_run.py` | 10-row audit harness. Use `--sample --seed N` (rotate seeds; don't reuse). |
-| `reprobe_profiles.py --cached HTML_PATH` | Offline selector validation against saved HTML in `dry_run_debug/`. **Zero network.** Strips trusted-types CSP to allow `set_content`. |
-| `profiler_test.py` | Run profiler on explicit URL list. HOT URLs auto-skipped. |
-| `step4d_audit.py` | Seed-rotating orchestrator: search → verify → profiler. Respects HOT cool-down. Good regression harness for future verifier/profiler changes. |
+| `build_subset.py` | One-shot subset builder. |
+| `searcher.py` | LinkedIn people-search + JS result extraction. |
+| `verifier.py` | Name scoring (two-scorer); location matching; medical signal helper. |
+| `li_selectors.py` | **Semantic-only** selectors — NO class names. |
+| `profile_profiler.py` | Scrapes followers, creator_mode, bio, experience, post_previews_90d. |
+| `influencer_classifier.py` | v2 — heuristic + engagement_rate + Ollama edge-case. |
+| `connector.py` | Step 6 rewrite. `CONNECT_BUTTON_FMT.format(name=name)` + `SEND_WITHOUT_NOTE_BUTTON`. More-menu fallback. |
+| `sheets_logger.py` | Google Sheets writer. Step 7b adds `log_live_event` + `update_status`. |
+| `_visit_tracker.py` | JSON-backed 48h cool-down. |
+| `step4d_audit.py` | Seed-rotating orchestrator for regression testing. |
+| `step5_classifier_test.py` | v2 hand-label harness. |
 
 ## Hard decisions (locked)
 
 - Scope: VIC only.
-- Connect: plain, NO note. `CONNECTION_NOTE` in config.py is **dead** — step 6 must use `SEND_WITHOUT_NOTE_BUTTON`.
-- Daily cap: 20–25 connects (spec lock).
-- Subset: ~4k VIC specialists in top-50 postcodes — do not pad with regional or plain-General GPs.
+- Connect: plain, NO note. `CONNECTION_NOTE` in config.py is **dead**.
+- Daily cap: 20–25 connects.
+- Subset: ~4k VIC specialists in top-50 postcodes.
+- Medium-conf classifier threshold: soft >= 5 (normal >= 4, gap of 1).
 
-### Influencer classifier spec v2 (locked — 2026-04-21 revision)
+## Safety rules (KEEP)
 
-**Target**: a doctor who regularly shares medical insights with an engaged
-niche audience — not a mainstream celebrity. A 400-follower/20-avg-likes
-creator (5% engagement) outranks a 3k-follower/10-avg-likes account (0.3%).
+1. **Seed rotation** — never reuse 7, 42. Rotate 13, 17, 23, 29…
+2. **Cached-HTML-first** — selector work uses `reprobe_profiles.py --cached`.
+3. **48h cool-down** — `_visit_tracker.is_hot(url)` before any profile visit. No bypass without explicit user approval.
+4. **Nav watchdog** — abort if `page.goto` > 30s.
+5. **Stop on challenge/captcha** — `searcher._is_rate_limited` checks captcha + weekly-limit banner.
+6. **No push without approval** — hold all local commits.
+7. **Profile-visit budget** — ~200–300/day session cap.
 
-**Hard filters** (ALL must pass, else `non_influencer`):
-- `follower_count >= 500`
-- `>= 2 original posts in last 90 days` (not reshares) — consistency > volume
-- `last_post_date within 90 days`
-- `avg_likes_per_post >= 5`
+## HOT set (as of 2026-04-21)
 
-**Engagement rate** (primary new signal):
-`engagement_rate = avg_likes_per_post / follower_count` (0 if followers=0).
-Tracked as a dedicated CSV column.
-
-**Soft score** (if hard pass):
-- +3 engagement_rate ≥ 2%      *(mutually exclusive with the +2 tier)*
-- +2 engagement_rate ≥ 1%
-- +2 any video in last 90 days
-- +2 Creator Mode on / prominent Follow button
-- +2 followers ≥ 2000          *(mutually exclusive with the +1 tier)*
-- +1 followers ≥ 1000
-- +1 per bio keyword (`speaker, author, educator, podcast, media,
-  researcher, presenter, columnist`), max +3
-- +2 post previews contain medical/clinical content (substring match
-  on `config.MEDICAL_KEYWORDS`; reshares already excluded by profiler)
-- +1 post_count_90d ≥ 3 (≈ 1 post/month average)
-
-**Decision**:
-- Hard fail               → `non_influencer` (heuristic)
-- Hard pass + soft ≥ 4    → `influencer`     (heuristic)
-- Hard pass + soft 2–3    → **Ollama edge-case call** (high-conf)
-- Hard pass + soft 1–3    → **Ollama edge-case call** (medium-conf; band widened)
-- Hard pass + soft 0/0–1  → `non_influencer` (heuristic)
-
-**Medium-confidence connect gate** (`main.py` step 5b): medium rows must
-score `soft >= 4` before a real connect fires. An Ollama "influencer"
-verdict on a medium row with soft < 4 is recorded in classifications.csv
-(audit trail) but downgraded to `skipped` at send.
-
-**Ollama prompt (v2)**: JSON input `{name, specialty, recent_post_topics[≤10],
-follower_count, avg_likes, engagement_rate, has_video, bio_signals}`; asks:
-*"This is a medical professional on LinkedIn. Based on their posting activity
-and engagement, would healthcare professionals consider them a trusted voice
-or active content creator in their field? They do not need a large following
-— consistent, relevant medical content with an engaged niche audience
-qualifies. Reply JSON: {classification: INFLUENCER|NOT, confidence: 0-1,
-reason: one line}"*. If Ollama unreachable or parse fails → default
-`non_influencer`. Never block on Ollama.
-
-### Google Sheets output (step 7)
-
-Sheet: `"LinkedIn Outreach Tracker"` (exists). Three tabs:
-- `Influencers VIC`: practitioner_id, name, speciality, postcode, linkedin_url, follower_count, post_count_90d, has_video, soft_score, classifier_source, connect_status, connect_sent_at, last_checked
-- `Reviewed Skipped`: practitioner_id, name, linkedin_url, fail_reason, follower_count, last_post_date, checked_date
-- `Processing Status` (user addendum): per-practitioner pipeline stage (pending/searched/profiled/classified/connected/skipped) + last_updated
-
-CSV is source of truth, Sheet mirrors it.
-
-## Safety rules enforced mid-session (KEEP)
-
-1. **Seed rotation** — never reuse the same seed on consecutive audits. Rotate 7, 13, 17, 23, 29… seed=42 and seed=7 are now saturated.
-2. **Cached-HTML-first selector validation** — any selector-only iteration uses `reprobe_profiles.py --cached dry_run_debug/<file>.html`. Live reprobes only for genuinely new DOM cases.
-3. **48h cool-down** — `_visit_tracker.is_hot(url)` gate before any profile visit. All entry points respect it (profile_profiler, selector_dry_run, reprobe_profiles live mode, profiler_test, step4d_audit).
-4. **Nav watchdog** — abort if a single `page.goto` takes > 30s (possible throttle). Implemented in selector_dry_run + reprobe live.
-5. **Stop on challenge/captcha** — `searcher._is_rate_limited` already checks for captcha iframes + weekly-limit banner text. Don't bypass.
-6. **No push without approval** — user has been reviewing each commit. Hold all local commits until explicit approval.
-7. **Profile-visit budget** — ~200–300/day session cap per spec. Connect sends 20–25/day FIFO by soft_score desc.
-
-## HOT set (as of 2026-04-20, ages in hours)
-
-Full 48h cool-down on these — any work involving them must use cached HTML dumps in `dry_run_debug/`:
+48h cool-down. Use cached HTML in `dry_run_debug/` for selector work:
 
 ```
 dr-jason-ha
 susie-tang-2a0baa344
-philip-bloom-439846382       (empty-profile variant, probably not the real Dr Bloom)
-philip-bloom-2258a273        (real Dr Philip David Bloom — "Sports Physician")
+philip-bloom-439846382
+philip-bloom-2258a273
 peter-lange-987ba575
 glendon-bates-a33799399
 hong-tran-46235784
 mustafa-ebrahimjee-48472b1a3
 dylan-rajeswaran-48821b269
-pala-ravindra-reddy-a762b5234 (WRONG PERSON — rejected post-fix; don't re-confuse)
+pala-ravindra-reddy-a762b5234  (WRONG PERSON — rejected; don't re-confuse)
 dennis-shandler-b3325230
-fiona-christie-b7415139       (rejected post-scrape; not a doctor)
-davidgillproperty             (rejected post-scrape; not a doctor)
+fiona-christie-b7415139        (rejected post-scrape; not a doctor)
+davidgillproperty              (rejected post-scrape; not a doctor)
+adam-bystrzycki-9462ba1b       (HOT from step-8 re-eval; first v2 hard-filter passer — re-profile after cool-down)
 ```
 
-## Known edge cases / issues
+## Known issues
 
-- **connector.py will break at runtime** — references `selectors.CONNECT_BUTTON_PRIMARY` etc. which no longer exist. Dry-run early-return protects the step-8 dry-run path. Must be rewritten at step 6 to use `CONNECT_BUTTON_FMT.format(name=name)` (anchor, not button), `SEND_WITHOUT_NOTE_BUTTON` (no note flow), and the More-menu fallback for Follow-primary profiles.
-- **More-menu → Connect path untested live.** Step 6 must dry-run nav (click More → find Connect in dropdown) on one profile before any real connect fires. LinkedIn has at least 2 UI variants; wrong click can accidentally Follow or Message.
-- **Pala-type false positives**: Mitigated by two-scorer (`sort=84` rejects). Keep `NAME_TOKEN_DELTA_MAX=1` and `NAME_HIGH_CONF_SCORE=95`.
-- **Out-of-network researchers (Christos)**: Resolved 2026-04-20. Medical
-  headline signal bypasses `no_degree_badge` in `is_active_account`. See
-  "Christos decision (2026-04-20) — RESOLVED" above.
-- **Ollama still not installed** — `brew install ollama && ollama pull llama3.2:3b`. Step 5 code (`influencer_classifier._call_ollama`) already handles unreachable gracefully (defaults to `non_influencer` with `fail_reason=ollama_unreachable`). Once installed, rerun `python3 step5_classifier_test.py` without the in-script `OLLAMA_URL=""` override to measure real heuristic-vs-Ollama agreement on soft-1–2 (high-conf) and soft-1–4 (medium-conf) edge cases. HARD STOP rule applies: > 2 of 10 disagreements must be surfaced to user.
-- **Existing `main.py` `load_queue` expects old schema** (`state`, `suburb`, `specialities`, `registration_type`). Subset CSV has (`postcode_searched`, `location`, `speciality`). `selector_dry_run.adapt_row` + `step4d_audit.adapt_row` already handle mapping; **main.py must be updated at step 6** to read the subset CSV with the same adapter.
+- **More-menu → Connect path untested live.** Hard gate before Step 9.
+- **post_count_90d may undercount.** Profiler scrapes general activity feed. If zero-influencer outcomes persist at scale, switch profiler to scrape Posts tab directly. Spot-check 5 profiles manually first.
+- **Ollama must be running** (`ollama serve`) before classified runs.
+- **main.py** uses `adapt_row` for subset CSV schema — do not revert.
 
 ## Resume checklist for a new agent
 
-1. **Read this file first**, then `CLAUDE.md` / auto-memory / recent git log (`git log --oneline`).
-2. `git status` — verify no unexpected uncommitted state. Nothing should be staged.
-3. **Do not push** local commits; user reviews each.
-4. Christos decision is resolved (see section above). Proceed to step 5:
-   - Install Ollama if needed (`brew install ollama && ollama pull llama3.2:3b`)
-   - Build `influencer_classifier.py` with spec above
-   - Hand-label 10 profiles, check classifier agrees, report accuracy
-5. **Before touching connector.py (step 6)**: live dry-run the More-menu → Connect nav path on ONE non-HOT profile. Confirm the right element clicks.
-6. **Before step 8**: adapt `main.py` to consume `data/vic_high_yield_subset.csv` + feed `verifier_confidence` all the way through to the classifier + sheets_logger.
-7. **Step 8 gate**: `python main.py --dry-run --limit 50` must complete with the CSV populating, both sheet tabs populating, and ZERO connects firing. Report before any real-run.
+1. Read this file. Then `git log --oneline` and `git status`.
+2. Do not push. User reviews each commit.
+3. **Next task: Step 7b** — Live Run Log + Summary tabs in `sheets_logger.py`.
+4. After 7b: `main.py --dry-run --limit 5` — confirm "Live Run Log" populates.
+5. Live More-menu → Connect nav test on one Follow-primary profile.
+6. Step 9 Day 1: 10 connects. Report before Day 2.
 
 ## Anti-patterns (do not repeat)
 
-- Running audits on the same seed repeatedly (was burning Jason Ha). Rotate seeds.
-- Re-hitting a profile for selector debugging when its HTML is already in `dry_run_debug/`. Use cached mode.
-- Force-pushing, skipping hooks (`--no-verify`), amending published commits — all forbidden per session defaults.
-- Accepting "researcher" into `MEDICAL_KEYWORDS` (whack-a-mole). The correct path is the deferred post-scrape check on full profile text (already implemented in `acd955d`).
-
-## Session memory reference
-
-Memory file: `project_linkedin_outreach.md` in the auto-memory system. Update there when user's preferences/decisions solidify.
+- Reusing saturated seeds (7, 42).
+- Re-hitting HOT profiles for selector debugging — use cached HTML.
+- Force-pushing, skipping hooks, amending published commits.
+- Adding class-name selectors to `li_selectors.py` — semantic only.
+- Bypassing `is_hot` without explicit user approval.
+- Batching sheet writes — write per-event, not end-of-run.

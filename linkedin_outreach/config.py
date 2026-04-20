@@ -32,6 +32,9 @@ GSHEET_WORKSHEET_NAME   = "Outreach"                    # legacy tab (plain conn
 GSHEET_INFLUENCERS_TAB  = "Influencers VIC"
 GSHEET_SKIPPED_TAB      = "Reviewed Skipped"
 GSHEET_STATUS_TAB       = "Processing Status"
+# Step-7b live reporting tabs.
+GSHEET_LIVE_TAB         = "Live Run Log"
+GSHEET_SUMMARY_TAB      = "Summary"
 
 # ── Targeting filters (applied before any LinkedIn activity) ──────────────────
 # Empty list = include all. Add values to restrict.
