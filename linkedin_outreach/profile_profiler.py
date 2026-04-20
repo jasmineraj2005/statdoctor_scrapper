@@ -42,8 +42,10 @@ def _dump_activity(page: Page, handle: str) -> None:
         pass
 
 
-# ── Spec-locked bio keywords for soft-score ──────────────────────────────────
-BIO_KEYWORDS = ["speaker", "author", "educator", "podcast", "media", "researcher"]
+# ── Spec-v2 bio keywords for soft-score ──────────────────────────────────────
+# 2026-04-21 revision adds "presenter" and "columnist" to the original six.
+BIO_KEYWORDS = ["speaker", "author", "educator", "podcast", "media",
+                "researcher", "presenter", "columnist"]
 
 
 # ── Page-scoped JS extractors ────────────────────────────────────────────────

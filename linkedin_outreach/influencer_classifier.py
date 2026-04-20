@@ -1,9 +1,14 @@
 """influencer_classifier.py — gate the connect queue on "is this a medical
 influencer whose content resonates with healthcare professionals".
 
+Spec v2 (2026-04-21 revision) — target is the genuinely-active medical
+content creator with an engaged niche audience, NOT a mainstream celebrity
+doctor. A real professional with 400 followers and 5% engagement outranks
+a dormant 3k-follower account.
+
 Consumes a profile dict from `profile_profiler.profile()`. Produces a
-classification dict matching the `data/vic_linkedin_classifications.csv`
-schema locked in ROADMAP.md §"File I/O contract". Two decision tiers:
+classification dict matching the v2 CSV schema (15 v1 cols + engagement_rate).
+Two decision tiers:
 
   1. Heuristic  — hard filters (followers / posts / recency / avg likes),
                   then a soft score. Clean pass → influencer; clean fail →
@@ -14,32 +19,35 @@ schema locked in ROADMAP.md §"File I/O contract". Two decision tiers:
                   unreachable / slow / returns garbage, the classifier
                   defaults to `non_influencer`. NEVER block on Ollama.
 
-Decision branches (per spec):
+Decision branches:
 
-  verifier_confidence="high"
+  verifier_confidence="high" (or empty — treated as high)
     hard_fail              → non_influencer (heuristic)
-    hard_pass, soft ≥ 3    → influencer     (heuristic)
-    hard_pass, soft 1–2    → Ollama         (edge-case)
+    hard_pass, soft >= 4   → influencer     (heuristic)
+    hard_pass, soft 2–3    → Ollama         (edge-case)
+    hard_pass, soft 0–1    → non_influencer (heuristic)
+
+  verifier_confidence="medium"
+    hard_fail              → non_influencer (heuristic)
+    hard_pass, soft >= 4   → influencer     (heuristic)
+    hard_pass, soft 1–3    → Ollama         (edge-case; band expanded)
     hard_pass, soft 0      → non_influencer (heuristic)
 
-  verifier_confidence="medium" (spec: threshold raises to 5)
-    hard_fail              → non_influencer (heuristic)
-    hard_pass, soft ≥ 5    → influencer     (heuristic)
-    hard_pass, soft 1–4    → Ollama         (edge-case; band expanded vs
-                                             high-conf — same "ambiguous →
-                                             ask Ollama" intent at the
-                                             higher medium threshold)
-    hard_pass, soft 0      → non_influencer (heuristic)
+    Spec says "soft >= 4 required before connect" for medium rows — so
+    an Ollama "influencer" vote on a medium row with soft < 4 is
+    downgraded back to non_influencer at the connect gate. Classifier
+    still records Ollama's verdict (audit trail); main.py enforces the
+    soft-score pre-connect check.
 
 A profile with `fail_reason` from the profiler (nav error, downgraded
 medium-no-signal, etc.) is short-circuited to `error` or `not_found` —
 we do not attempt to classify an incomplete scrape.
 
-Output schema (CSV columns, locked):
+Output schema (CSV columns, locked v2):
     practitioner_id, linkedin_url, classification, soft_score,
     hard_filters_passed, follower_count, post_count_90d, last_post_date,
     has_video_90d, creator_mode, bio_signals, classifier_source,
-    classifier_confidence, classified_at, fail_reason
+    classifier_confidence, classified_at, fail_reason, engagement_rate
 """
 from __future__ import annotations
 
@@ -47,30 +55,48 @@ import json
 import os
 import urllib.error
 import urllib.request
-from datetime import datetime, timedelta
+from datetime import datetime
 from typing import Any
 
 import config
 
 
-# ── Constants ────────────────────────────────────────────────────────────────
+# ── Ollama config ────────────────────────────────────────────────────────────
 
-# Ollama local HTTP endpoint. Overridable via env so tests can point at a
-# stub server, and so the classifier can be disabled by setting it empty.
 OLLAMA_URL_DEFAULT = "http://localhost:11434/api/generate"
 OLLAMA_MODEL       = "llama3.2:3b"
 OLLAMA_TIMEOUT_SEC = 25
 
 
-# Hard filters (spec-locked)
-HF_FOLLOWERS_MIN     = 1500
-HF_POSTS_90D_MIN     = 4
-HF_LAST_POST_DAYS    = 60
-HF_AVG_LIKES_MIN     = 15
+# ── Hard filters (spec v2) ───────────────────────────────────────────────────
 
-# Soft-score thresholds
-SOFT_THRESHOLD_HIGH_CONF   = 3   # high-conf row passes
-SOFT_OLLAMA_BAND_HIGH      = (1, 2)   # inclusive, high-conf edge case
+HF_FOLLOWERS_MIN  = 500   # was 1500 — niche medical creators often sit 500–2k
+HF_POSTS_90D_MIN  = 2     # was 4   — consistency > volume for specialists
+HF_LAST_POST_DAYS = 90    # was 60  — extended to include quarterly posters
+HF_AVG_LIKES_MIN  = 5     # was 15  — small engaged niche audiences yield low abs numbers
+
+
+# ── Soft-score thresholds (spec v2) ──────────────────────────────────────────
+
+SOFT_THRESHOLD_NORMAL  = 4          # was 3 — raised because new soft score has more sources
+SOFT_OLLAMA_BAND_NORMAL = (2, 3)    # inclusive — edge-case band for high-conf rows
+# Medium-conf uses the same pass threshold (4). Ollama band widened to 1-3
+# so medium rows with fewer signals still get a second opinion; the connect
+# gate in main.py then requires soft >= 4 before firing.
+SOFT_OLLAMA_BAND_MEDIUM = (1, 3)
+
+
+# ── Engagement-rate bands (spec v2 — primary signal) ─────────────────────────
+
+ENGAGEMENT_STRONG   = 0.02   # >= 2% → +3
+ENGAGEMENT_MODERATE = 0.01   # >= 1% → +2
+# < 0.5% is "weak signal" per spec — no points.
+
+
+# ── Follower bands (spec v2 — mutually exclusive) ────────────────────────────
+
+FOLLOWER_BAND_HIGH  = 2000   # +2
+FOLLOWER_BAND_MID   = 1000   # +1
 
 
 # ── Public API ───────────────────────────────────────────────────────────────
@@ -80,12 +106,14 @@ def classify(profile: dict[str, Any],
              ahpra_specialty: str = "") -> dict[str, Any]:
     """Run hard filters + soft score → heuristic-or-Ollama decision.
 
-    Returns a dict matching the CSV schema. Pure function modulo the
+    Returns a dict matching the v2 CSV schema. Pure function modulo the
     optional Ollama HTTP call (which is guarded against every error mode).
     """
     url           = profile.get("url", "") or ""
     verif_conf    = profile.get("verifier_confidence", "") or ""
     profiler_fail = profile.get("fail_reason", "") or ""
+
+    engagement = _engagement_rate(profile)
 
     out = _schema_row(
         practitioner_id=practitioner_id,
@@ -96,17 +124,15 @@ def classify(profile: dict[str, Any],
         has_video_90d=bool(profile.get("has_video_90d", False)),
         creator_mode=bool(profile.get("creator_mode", False)),
         bio_signals=list(profile.get("bio_signals") or []),
+        engagement_rate=engagement,
     )
 
-    # Short-circuit on profiler failure. No classification attempted.
+    # Short-circuit on profiler failure.
     if profiler_fail:
-        # medium_no_medical_signal is the deferred-check downgrade — it is a
-        # non-match, not a "profile page broken" error. Treat as non_influencer
-        # with the reason preserved so sheets/CSV stay informative.
         if profiler_fail == "medium_no_medical_signal":
-            out["classification"]        = "non_influencer"
-            out["classifier_source"]     = "heuristic"
-            out["fail_reason"]           = profiler_fail
+            out["classification"]    = "non_influencer"
+            out["classifier_source"] = "heuristic"
+            out["fail_reason"]       = profiler_fail
             return out
         out["classification"] = "error"
         out["fail_reason"]    = profiler_fail
@@ -122,20 +148,16 @@ def classify(profile: dict[str, Any],
         return out
 
     # Soft score
-    soft = _soft_score(profile)
+    soft = _soft_score(profile, engagement)
     out["soft_score"] = soft
 
-    # Tier-specific threshold and Ollama band
+    # Tier-specific band
     if verif_conf == "medium":
-        pass_thresh    = config.MEDIUM_CONF_CLASSIFIER_SOFT_SCORE  # 5
-        ollama_band_lo = 1
-        ollama_band_hi = pass_thresh - 1                           # 1..4
+        ollama_lo, ollama_hi = SOFT_OLLAMA_BAND_MEDIUM
     else:
-        # high-conf, or empty verifier_confidence (treat conservatively as high)
-        pass_thresh    = SOFT_THRESHOLD_HIGH_CONF                  # 3
-        ollama_band_lo, ollama_band_hi = SOFT_OLLAMA_BAND_HIGH     # 1..2
+        ollama_lo, ollama_hi = SOFT_OLLAMA_BAND_NORMAL
 
-    if soft >= pass_thresh:
+    if soft >= SOFT_THRESHOLD_NORMAL:
         out["classification"]    = "influencer"
         out["classifier_source"] = "heuristic"
         return out
@@ -145,9 +167,9 @@ def classify(profile: dict[str, Any],
         out["classifier_source"] = "heuristic"
         return out
 
-    # Ambiguous band → ask Ollama. On any failure, fall through to non_influencer.
-    if ollama_band_lo <= soft <= ollama_band_hi:
-        verdict = _call_ollama(profile, ahpra_specialty)
+    # Ambiguous band → ask Ollama.
+    if ollama_lo <= soft <= ollama_hi:
+        verdict = _call_ollama(profile, ahpra_specialty, engagement)
         if verdict is None:
             out["classification"]        = "non_influencer"
             out["classifier_source"]     = "ollama"
@@ -158,15 +180,29 @@ def classify(profile: dict[str, Any],
         out["classifier_source"]     = "ollama"
         out["classifier_confidence"] = verdict["confidence"]
         out["fail_reason"]           = ""
+        # For medium rows: Ollama INFLUENCER + soft < normal_threshold means
+        # the connect gate will block anyway; classifier records the tentative
+        # verdict so audits can see disagreement, main.py downgrades at send.
         return out
 
-    # Defensive: any score outside defined branches → non_influencer.
-    # This path shouldn't trigger with the soft-score calculator, but if
-    # thresholds change we'd rather under-connect than misclassify.
+    # Defensive fall-through — any score not covered above → non_influencer.
     out["classification"]    = "non_influencer"
     out["classifier_source"] = "heuristic"
     out["fail_reason"]       = f"soft_score_out_of_bands:{soft}"
     return out
+
+
+# ── Engagement rate ──────────────────────────────────────────────────────────
+
+def _engagement_rate(profile: dict[str, Any]) -> float:
+    """avg_likes_per_post / follower_count. 0 when followers is 0 (protects
+    against div-by-zero AND against new accounts inflating ratio artificially).
+    """
+    fol = int(profile.get("followers", 0) or 0)
+    if fol <= 0:
+        return 0.0
+    avg = float(profile.get("avg_likes_per_post", 0.0) or 0.0)
+    return round(avg / fol, 6)
 
 
 # ── Hard filters ─────────────────────────────────────────────────────────────
@@ -183,7 +219,6 @@ def _hard_filters(profile: dict[str, Any]) -> tuple[bool, str]:
     last_dt = _parse_iso_date(profile.get("last_post_date"))
     if last_dt is None:
         return False, "no_last_post_date"
-    # datetime.now() is fine — recency rounding is on day boundary.
     age_days = (datetime.now().date() - last_dt).days
     if age_days > HF_LAST_POST_DAYS:
         return False, f"last_post>{HF_LAST_POST_DAYS}d"
@@ -195,10 +230,16 @@ def _hard_filters(profile: dict[str, Any]) -> tuple[bool, str]:
     return True, ""
 
 
-# ── Soft score ───────────────────────────────────────────────────────────────
+# ── Soft score (spec v2) ─────────────────────────────────────────────────────
 
-def _soft_score(profile: dict[str, Any]) -> int:
+def _soft_score(profile: dict[str, Any], engagement: float) -> int:
     score = 0
+
+    # Engagement rate (mutually exclusive — higher tier wins)
+    if engagement >= ENGAGEMENT_STRONG:
+        score += 3
+    elif engagement >= ENGAGEMENT_MODERATE:
+        score += 2
 
     if profile.get("has_video_90d"):
         score += 2
@@ -206,28 +247,52 @@ def _soft_score(profile: dict[str, Any]) -> int:
     if profile.get("creator_mode"):
         score += 2
 
-    # bio keywords already filtered to the spec list by the profiler
+    # Follower bands (mutually exclusive — higher tier wins)
+    followers = int(profile.get("followers", 0) or 0)
+    if followers >= FOLLOWER_BAND_HIGH:
+        score += 2
+    elif followers >= FOLLOWER_BAND_MID:
+        score += 1
+
+    # Bio keywords — profiler already filtered to the spec-v2 list
     bio_signals = profile.get("bio_signals") or []
     score += min(3, len(bio_signals))
 
-    followers = int(profile.get("followers", 0) or 0)
-    # Bands are mutually exclusive. 5k–10k inclusive; >10k takes the higher tier.
-    if followers > 10_000:
-        score += 4
-    elif 5_000 <= followers <= 10_000:
+    # Medical/clinical content in post previews
+    if _posts_are_medical(profile):
         score += 2
+
+    # Posts regularly (>= 1/month on average over 90d → >= 3 posts)
+    if int(profile.get("post_count_90d", 0) or 0) >= 3:
+        score += 1
 
     return score
 
 
+def _posts_are_medical(profile: dict[str, Any]) -> bool:
+    """True iff at least one post preview in the last 90 days contains a
+    medical keyword. Covers the "medical content, not just reshares of
+    generic news or career posts" spec. The profiler already excludes
+    reshares from post_previews_90d, so this is effectively a
+    'is-original-post-medical' check.
+    """
+    previews = profile.get("post_previews_90d", []) or []
+    if not previews:
+        return False
+    joined = " ".join(p for p in previews if p).lower()
+    for kw in config.MEDICAL_KEYWORDS:
+        if kw in joined:
+            return True
+    return False
+
+
 # ── Ollama edge-case ─────────────────────────────────────────────────────────
 
-def _call_ollama(profile: dict[str, Any], ahpra_specialty: str) -> dict | None:
+def _call_ollama(profile: dict[str, Any],
+                 ahpra_specialty: str,
+                 engagement: float) -> dict | None:
     """Call local Ollama. Return {classification, confidence} on success,
     None on any error. Never raises.
-
-    `classification` in the returned dict is normalised to the CSV vocabulary
-    ("influencer" / "non_influencer").
     """
     url = os.environ.get("OLLAMA_URL", OLLAMA_URL_DEFAULT)
     if not url:
@@ -239,18 +304,21 @@ def _call_ollama(profile: dict[str, Any], ahpra_specialty: str) -> dict | None:
         "recent_post_topics":  (profile.get("post_previews_90d") or [])[:10],
         "follower_count":      int(profile.get("followers", 0) or 0),
         "avg_likes":           float(profile.get("avg_likes_per_post", 0.0) or 0.0),
+        "engagement_rate":     engagement,
         "has_video":           bool(profile.get("has_video_90d", False)),
         "bio_signals":         profile.get("bio_signals") or [],
     }
 
     prompt = (
-        "You are classifying whether a medical professional's LinkedIn account "
-        "is a MEDICAL INFLUENCER whose content would resonate with healthcare "
-        "professionals.\n\n"
+        "This is a medical professional on LinkedIn. Based on their posting "
+        "activity and engagement, would healthcare professionals consider them "
+        "a trusted voice or active content creator in their field? They do not "
+        "need a large following — consistent, relevant medical content with an "
+        "engaged niche audience qualifies.\n\n"
         f"Candidate JSON: {json.dumps(payload_in, ensure_ascii=False)}\n\n"
         "Reply with ONLY a JSON object: "
         "{\"classification\": \"INFLUENCER\" | \"NOT\", "
-        "\"confidence\": 0-1, \"reason\": \"one short line\"}"
+        "\"confidence\": 0-1, \"reason\": \"one line\"}"
     )
 
     body = json.dumps({
@@ -274,7 +342,6 @@ def _call_ollama(profile: dict[str, Any], ahpra_specialty: str) -> dict | None:
     except Exception:
         return None
 
-    # Ollama /api/generate returns {"response": "...model output...", ...}
     try:
         wrap = json.loads(raw)
     except Exception:
@@ -283,7 +350,6 @@ def _call_ollama(profile: dict[str, Any], ahpra_specialty: str) -> dict | None:
     if not inner:
         return None
 
-    # The model was asked for JSON; format=json on the Ollama side forces it.
     try:
         parsed = json.loads(inner)
     except Exception:
@@ -300,14 +366,12 @@ def _call_ollama(profile: dict[str, Any], ahpra_specialty: str) -> dict | None:
         return {"classification": "influencer", "confidence": conf}
     if verdict in ("NOT", "NOT_INFLUENCER", "NON_INFLUENCER"):
         return {"classification": "non_influencer", "confidence": conf}
-    # Unknown verbiage — treat as unparseable.
     return None
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
 def _parse_iso_date(value: Any):
-    """Accept ISO date ('2026-04-15') or datetime str. Return a date or None."""
     if not value:
         return None
     if isinstance(value, datetime):
@@ -319,11 +383,11 @@ def _parse_iso_date(value: Any):
 
 
 def _schema_row(**kwargs) -> dict[str, Any]:
-    """Build a classification row with all CSV columns in locked order."""
+    """Build a v2 classification row with all CSV columns in locked order."""
     return {
         "practitioner_id":       kwargs.get("practitioner_id", ""),
         "linkedin_url":          kwargs.get("linkedin_url", ""),
-        "classification":        "",        # filled by caller
+        "classification":        "",
         "soft_score":            0,
         "hard_filters_passed":   False,
         "follower_count":        kwargs.get("follower_count", 0),
@@ -336,4 +400,5 @@ def _schema_row(**kwargs) -> dict[str, Any]:
         "classifier_confidence": None,
         "classified_at":         datetime.now().isoformat(timespec="seconds"),
         "fail_reason":           "",
+        "engagement_rate":       kwargs.get("engagement_rate", 0.0),
     }

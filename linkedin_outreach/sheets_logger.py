@@ -32,12 +32,13 @@ HEADERS = [
     "linkedin_url", "status", "timestamp", "notes",
 ]
 
-# Classifications CSV columns — locked by ROADMAP §"File I/O contract".
+# Classifications CSV columns — v2 schema (v1 + engagement_rate).
+# Locked by ROADMAP §"File I/O contract".
 CLASSIFICATIONS_HEADERS = [
     "practitioner_id", "linkedin_url", "classification", "soft_score",
     "hard_filters_passed", "follower_count", "post_count_90d", "last_post_date",
     "has_video_90d", "creator_mode", "bio_signals", "classifier_source",
-    "classifier_confidence", "classified_at", "fail_reason",
+    "classifier_confidence", "classified_at", "fail_reason", "engagement_rate",
 ]
 
 # Processing-status CSV: per-practitioner pipeline stage (upsert).
@@ -176,10 +177,34 @@ class SheetsLogger:
     def _ensure_classifications_csv(self):
         path = config.CLASSIFICATIONS_CSV
         os.makedirs(os.path.dirname(path), exist_ok=True)
+
+        # Schema migration: if an existing file's header doesn't match the
+        # current CLASSIFICATIONS_HEADERS (e.g. post v1→v2 upgrade), rename
+        # it to <path>.v1.bak so we never mix schemas in-place. User can
+        # diff or merge by hand after the run.
+        if os.path.exists(path):
+            try:
+                with open(path, "r", newline="") as f:
+                    first = next(csv.reader(f), [])
+            except Exception:
+                first = []
+            if first and first != CLASSIFICATIONS_HEADERS:
+                bak = f"{path}.v1.bak"
+                # If bak already exists, append a numeric suffix so we never
+                # clobber an earlier migration artifact.
+                i = 1
+                while os.path.exists(bak):
+                    bak = f"{path}.v1.bak.{i}"
+                    i += 1
+                os.rename(path, bak)
+                print(f"[sheets] classifications schema changed — migrated old "
+                      f"CSV to {bak}; starting fresh at {path}")
+
         if not os.path.exists(path):
             with open(path, "w", newline="") as f:
                 csv.writer(f).writerow(CLASSIFICATIONS_HEADERS)
             return
+
         # Prime dedup set from any pre-existing rows.
         with open(path, "r", newline="") as f:
             for row in csv.DictReader(f):
@@ -426,6 +451,7 @@ class SheetsLogger:
                else classification.get("classifier_confidence"),
             classification.get("classified_at", ""),
             classification.get("fail_reason", "") or "",
+            classification.get("engagement_rate", 0.0),
         ]
         with open(config.CLASSIFICATIONS_CSV, "a", newline="") as f:
             csv.writer(f).writerow(row)

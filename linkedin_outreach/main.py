@@ -264,6 +264,16 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
         logger.set_stage(pr, STAGE_SKIPPED)
         return STAGE_SKIPPED, 0
 
+    # 5b. Medium-confidence connect-time gate (spec v2). Classifier may emit
+    #     classification="influencer" from Ollama on soft<4 medium rows; spec
+    #     requires soft>=4 before any connect on medium. Downgrade here so the
+    #     Ollama verdict is preserved in classifications.csv for audit but
+    #     doesn't fire a real request.
+    if conf == "medium" and soft < 4:
+        print(f"  → medium-conf + soft={soft}<4; spec gate → skip")
+        logger.set_stage(pr, STAGE_SKIPPED)
+        return STAGE_SKIPPED, 0
+
     if session_sent >= send_cap:
         print(f"  → send cap reached ({session_sent}/{send_cap}); skipping connect")
         logger.set_stage(pr, STAGE_SKIPPED)
@@ -316,6 +326,7 @@ def _error_classification(pr: dict, url: str, reason: str,
         "classifier_confidence": None,
         "classified_at":         datetime.now().isoformat(timespec="seconds"),
         "fail_reason":           reason,
+        "engagement_rate":       0.0,
     }
 
 
