@@ -140,8 +140,12 @@ FOLLOW_BUTTON_FMT  = 'button[aria-label="Follow {name}"]'
 
 # "More" overflow — when Connect isn't in the primary top-card area, it lives
 # inside the More menu. Scope to <main> to avoid the global nav "More" button.
-# Multiple "More" buttons may exist; the top-card one is the FIRST in <main>.
-MORE_MENU_BUTTON = 'main button[aria-label="More"]'
+# `:visible` rejects the 0×0 hidden-ghost More button that LinkedIn also
+# renders inside <main> (observed live on graham-mccorkill + dawidnaude
+# probes, 2026-04-21). Playwright's :visible pseudo works in page.locator()
+# chains; connector.py uses those, not page.query_selector, so the filter
+# actually runs.
+MORE_MENU_BUTTON = 'main button[aria-label="More"]:visible'
 
 # Inside the More-menu dropdown, Connect is typically an <a> anchor OR a
 # role=button element with aria-label embedding the owner's name. Use a union
