@@ -142,6 +142,9 @@ def parse_args():
                         "MAX_CONNECTIONS_PER_DAY/WEEK regardless of --limit.")
     p.add_argument("--dry-run",  action="store_true",
                    help="Run the full pipeline but connector early-returns (no clicks).")
+    p.add_argument("--connect-cap", type=int, default=None,
+                   help="Cap sends THIS session (overrides daily/weekly if set). "
+                        "Use 10 for Day-1 staged run, 25 for Day-2.")
     p.add_argument("--no-logging", action="store_true",
                    help="Use DryRunLogger — skip all CSV + sheet writes. "
                         "Use with --dry-run for an isolated test pass.")
@@ -178,14 +181,20 @@ def load_queue(logger) -> list[dict]:
     return rows
 
 
-# ── Per-practitioner pipeline ────────────────────────────────────────────────
+# ── Phase 1 — per-practitioner profile + classify (no connect) ───────────────
 
-def _process_practitioner(page, pr: dict, logger, session_sent: int,
-                          send_cap: int) -> tuple[str, int]:
-    """Run one practitioner end-to-end. Returns (terminal_stage, sent_increment).
+def _profile_and_classify(page, pr: dict, logger) -> dict:
+    """Run search → is_hot-gate → profile → classify for one row.
 
-    terminal_stage is one of TERMINAL_STAGES. sent_increment is 1 iff we
-    successfully clicked Connect in this call, else 0.
+    Returns a dict with keys:
+      terminal_stage — one of TERMINAL_STAGES or "" (hot-skipped, non-terminal)
+      pending         — {soft_score, url, classification} iff this row is a
+                        connect candidate (classification='influencer' and the
+                        medium-conf connect gate clears). Else None.
+
+    Connect is NOT attempted here — that's phase 2's job. Keeping search/
+    profile/classify/connect split lets the orchestrator order connects by
+    soft_score desc instead of FIFO-by-walk-order.
     """
     pid  = pr["practitioner_id"]
     name = pr["name"]
@@ -197,13 +206,13 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
     try:
         matched = searcher.search_and_find_profile(page, pr)
     except RateLimitError:
-        raise  # bubble up to main loop so session stops
+        raise
     except Exception as e:
         print(f"  search error: {type(e).__name__}: {e}")
         classification = _error_classification(pr, "", f"search_error:{type(e).__name__}")
         logger.log_classification(pr, {}, classification)
         logger.set_stage(pr, STAGE_ERROR)
-        return STAGE_ERROR, 0
+        return {"terminal_stage": STAGE_ERROR, "pending": None}
 
     logger.set_stage(pr, STAGE_SEARCHED)
 
@@ -212,7 +221,7 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
         classification = _error_classification(pr, "", "not_found", verdict="not_found")
         logger.log_classification(pr, {}, classification)
         logger.set_stage(pr, STAGE_NOT_FOUND)
-        return STAGE_NOT_FOUND, 0
+        return {"terminal_stage": STAGE_NOT_FOUND, "pending": None}
 
     url  = matched["url"]
     conf = matched.get("verifier_confidence", "")
@@ -221,9 +230,7 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
     # 2. is_hot gate — skip if visited in last 48h (resume semantics).
     if is_hot(url):
         print(f"  → HOT (48h cool-down). Skipping profile + classify for this pass.")
-        # Deliberately DON'T set_stage to terminal — we want to retry on a
-        # future run once the cool-down expires.
-        return "", 0
+        return {"terminal_stage": "", "pending": None}
 
     # 3. Profile
     try:
@@ -239,7 +246,8 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
         classification = _error_classification(pr, url, f"profiler_error:{type(e).__name__}")
         logger.log_classification(pr, {}, classification)
         logger.set_stage(pr, STAGE_ERROR)
-        return STAGE_ERROR, 0
+        return {"terminal_stage": STAGE_ERROR, "pending": None}
+
     logger.set_stage(pr, STAGE_PROFILED)
     print(f"  → profiled: followers={profile_dict.get('followers', 0)} "
           f"posts_90d={profile_dict.get('post_count_90d', 0)} "
@@ -259,49 +267,99 @@ def _process_practitioner(page, pr: dict, logger, session_sent: int,
     logger.log_classification(pr, profile_dict, classification)
     logger.set_stage(pr, STAGE_CLASSIFIED)
 
-    # 5. Connect gate — only influencers proceed.
+    # 5a. Non-influencer classifications short-circuit to terminal skipped.
     if verdict != "influencer":
         logger.set_stage(pr, STAGE_SKIPPED)
-        return STAGE_SKIPPED, 0
+        return {"terminal_stage": STAGE_SKIPPED, "pending": None}
 
-    # 5b. Medium-confidence connect-time gate (spec v2). Classifier may emit
-    #     classification="influencer" from Ollama on soft<5 medium rows; spec
-    #     requires soft >= 5 before any connect on medium (one point tighter
-    #     than high-conf's 4, because a lower-confidence match must clear more
-    #     signal). The Ollama verdict is preserved in classifications.csv for
-    #     audit; we downgrade here so it doesn't fire a real request.
-    if conf == "medium" and soft < 5:
-        print(f"  → medium-conf + soft={soft}<5; spec gate → skip")
+    # 5b. Medium-confidence connect gate (spec v2): medium rows require
+    #     soft >= 5 before a real connect even if Ollama voted influencer.
+    if conf == "medium" and soft < SOFT_MEDIUM_CONNECT_THRESHOLD:
+        print(f"  → medium-conf + soft={soft}<{SOFT_MEDIUM_CONNECT_THRESHOLD}; "
+              f"spec gate → skip")
         logger.set_stage(pr, STAGE_SKIPPED)
-        return STAGE_SKIPPED, 0
+        return {"terminal_stage": STAGE_SKIPPED, "pending": None}
 
-    if session_sent >= send_cap:
-        print(f"  → send cap reached ({session_sent}/{send_cap}); skipping connect")
-        logger.set_stage(pr, STAGE_SKIPPED)
-        return STAGE_SKIPPED, 0
+    # Eligible for phase 2 — caller decides ordering by soft_score.
+    return {
+        "terminal_stage": "",
+        "pending": {
+            "soft_score":     soft,
+            "url":            url,
+            "practitioner":   pr,
+            "classification": classification,
+            "verifier_conf":  conf,
+        },
+    }
 
-    # 6. Connect
-    try:
-        status, detail = connector.send_connection_request(
-            page, url, name, classification=verdict,
-        )
-    except RateLimitError:
-        raise
-    except Exception as e:
-        print(f"  connector error: {type(e).__name__}: {e}")
-        logger.update_connect_status(pid, STAGE_ERROR, detail=str(e)[:100])
-        logger.set_stage(pr, STAGE_ERROR)
-        return STAGE_ERROR, 0
 
-    print(f"  → connect: {status} — {detail}")
-    logger.update_connect_status(pid, status, detail=detail)
-    if status == STATUS_SENT:
-        logger.set_stage(pr, STAGE_CONNECTED)
-        return STAGE_CONNECTED, 1
+# ── Phase 2 — sorted connect pass ────────────────────────────────────────────
 
-    # connect failed cleanly (unavailable / needs-note / etc) — terminal skip.
-    logger.set_stage(pr, STAGE_SKIPPED)
-    return STAGE_SKIPPED, 0
+def _connect_pending(page, pending: list[dict], logger, send_cap: int) -> int:
+    """Sort `pending` by soft_score desc (FIFO within ties) and click Connect
+    on the top `send_cap` rows. Returns the count of successful sends.
+
+    In dry-run mode, connector early-returns — we still iterate so the audit
+    trail (Influencers VIC sheet connect_status column) reflects intent.
+    """
+    if not pending:
+        print("[main] No influencer candidates to connect — nothing to do in phase 2.")
+        return 0
+
+    # Priority: higher soft_score first; stable on insertion order within ties.
+    pending.sort(key=lambda p: (-p["soft_score"], p.get("_idx", 0)))
+
+    print(f"\n[main] Phase 2 — {len(pending)} influencer candidate(s); "
+          f"send cap {send_cap}.")
+    for i, p in enumerate(pending):
+        print(f"  [{i+1}] soft={p['soft_score']:>2d}  {p['practitioner']['name']}  "
+              f"{p['url']}")
+
+    sent = 0
+    for p in pending:
+        pr       = p["practitioner"]
+        pid      = pr["practitioner_id"]
+        url      = p["url"]
+        verdict  = p["classification"].get("classification", "")
+
+        if sent >= send_cap:
+            print(f"  → send cap {send_cap} reached; remaining "
+                  f"{len(pending) - pending.index(p)} skipped")
+            logger.set_stage(pr, STAGE_SKIPPED)
+            continue
+
+        try:
+            status, detail = connector.send_connection_request(
+                page, url, pr["name"], classification=verdict,
+            )
+        except RateLimitError:
+            raise
+        except Exception as e:
+            print(f"  connector error for {pid}: {type(e).__name__}: {e}")
+            logger.update_connect_status(pid, STAGE_ERROR, detail=str(e)[:100])
+            logger.set_stage(pr, STAGE_ERROR)
+            continue
+
+        print(f"  [connect] {pr['name']}: {status} — {detail}")
+        logger.update_connect_status(pid, status, detail=detail)
+
+        if status == STATUS_SENT:
+            sent += 1
+            logger.set_stage(pr, STAGE_CONNECTED)
+            if sent % config.SESSION_BREAK_EVERY_N == 0:
+                break_dur = random.uniform(*config.SESSION_BREAK_DURATION_SEC)
+                print(f"[main] Session break {break_dur:.0f}s")
+                time.sleep(break_dur)
+        else:
+            logger.set_stage(pr, STAGE_SKIPPED)
+
+    return sent
+
+
+# Spec-v2 medium-conf connect-gate threshold. Kept local so main.py doesn't
+# import private classifier internals. Must stay in sync with
+# influencer_classifier.SOFT_THRESHOLD_MEDIUM.
+SOFT_MEDIUM_CONNECT_THRESHOLD = 5
 
 
 def _error_classification(pr: dict, url: str, reason: str,
@@ -355,18 +413,25 @@ def run(args):
         print("[main] Weekly limit reached.")
         return
 
-    # Row cap = --limit. Send cap = remaining daily/weekly quota.
-    # Real-mode sends stop as soon as either cap is hit; dry-run never sends.
-    send_cap = min(
-        config.MAX_CONNECTIONS_PER_DAY - sent_today,
+    # Row cap = --limit. Send cap defaults to remaining daily/weekly quota,
+    # tightened by --connect-cap when set (Day-1 staged run uses --connect-cap 10,
+    # Day-2 uses 25). Real-mode sends stop as soon as either cap is hit;
+    # dry-run never sends.
+    quota_cap = min(
+        config.MAX_CONNECTIONS_PER_DAY  - sent_today,
         config.MAX_CONNECTIONS_PER_WEEK - sent_week,
     )
-    print(f"[main] Row cap: {args.limit} practitioners | Send cap: {send_cap}")
+    if args.connect_cap is not None:
+        send_cap = min(args.connect_cap, quota_cap)
+    else:
+        send_cap = quota_cap
+    print(f"[main] Row cap: {args.limit} practitioners | Send cap: {send_cap} "
+          f"(quota {quota_cap}"
+          + (f", user cap {args.connect_cap}" if args.connect_cap is not None else "")
+          + ")")
 
     queue = load_queue(logger)[: args.limit]
     print(f"[main] Walking {len(queue)} practitioners this session")
-
-    sent_this_session = 0
 
     with sync_playwright() as pw:
         profile_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -401,36 +466,35 @@ def run(args):
             context.close()
             return
 
-        for pr in queue:
+        # ── Phase 1 — profile + classify entire queue, accumulate candidates ──
+        pending: list[dict] = []
+        for idx, pr in enumerate(queue):
             try:
-                terminal_stage, sent_inc = _process_practitioner(
-                    page, pr, logger, sent_this_session, send_cap,
-                )
+                res = _profile_and_classify(page, pr, logger)
             except RateLimitError as e:
-                print(f"\n[main] RATE LIMIT: {e}. Stopping session.")
+                print(f"\n[main] RATE LIMIT: {e}. Stopping phase 1.")
                 logger.set_stage(pr, STAGE_ERROR)
                 break
 
-            sent_this_session += sent_inc
+            if res["pending"]:
+                res["pending"]["_idx"] = idx
+                pending.append(res["pending"])
 
-            if sent_this_session >= send_cap and sent_inc:
-                print(f"[main] Send cap reached ({sent_this_session}/{send_cap}).")
-                break
+            # Pacing between rows (search/profile already include their own
+            # mid-call delays; this is just inter-row jitter).
+            time.sleep(random.uniform(*config.DELAY_BETWEEN_SEARCHES_SEC))
 
-            if sent_inc:
-                # Post-send break when hitting a multiple of SESSION_BREAK_EVERY_N
-                if sent_this_session % config.SESSION_BREAK_EVERY_N == 0:
-                    break_dur = random.uniform(*config.SESSION_BREAK_DURATION_SEC)
-                    print(f"[main] Session break {break_dur:.0f}s")
-                    time.sleep(break_dur)
-            else:
-                # Pacing between non-sending iterations. Profiler already pauses
-                # while extracting; this is just the inter-search jitter.
-                time.sleep(random.uniform(*config.DELAY_BETWEEN_SEARCHES_SEC))
+        # ── Phase 2 — FIFO-by-soft_score-desc connect pass ────────────────────
+        try:
+            sent_this_session = _connect_pending(page, pending, logger, send_cap)
+        except RateLimitError as e:
+            print(f"\n[main] RATE LIMIT during connects: {e}. Stopping.")
+            sent_this_session = 0  # conservative — count is unreliable after bailout
 
         context.close()
 
-    print(f"\n[main] Session complete. Sent: {sent_this_session} / cap {send_cap}.")
+    print(f"\n[main] Session complete. Sent: {sent_this_session} / cap {send_cap}. "
+          f"Candidates: {len(pending) if 'pending' in dir() else 'n/a'}.")
 
 
 if __name__ == "__main__":
