@@ -48,17 +48,37 @@ For a new agent picking this up cold. Status as of 2026-04-21.
 | 5e | Harness v2 + ROADMAP — 10/10 offline, 9/10 Ollama live | ✅ local | `6bbce13` |
 | 6 | `connector.py` rewrite — semantic selectors, no-note, influencer gate | ✅ local | — |
 | 7a | `sheets_logger.py` — Influencers VIC + Reviewed Skipped + Processing Status | ✅ local | — |
-| 7b | **Live Run Log + Summary tabs** — real-time per-event sheet writes for client | ⏳ next task | — |
+| 7b | **Live Run Log + Summary tabs** — real-time per-event sheet writes for client | ✅ local | — |
 | 8 | 50-row dry-run — 0 connects fired, schema migration clean | ✅ done | — |
-| 9 | Staged real run — Day 1: 10 connects; Day 2: 25 | ⏳ blocked — see gates | — |
+| 9 Day 1 | Staged real run — 203 rows, 0 connects (0 influencers under v2.0) | ✅ done | — |
+| 9.5 | **Classifier v2.1** — followers≥300, posts≥1, dropped avg_likes filter | ✅ local | `ed1bac0` |
+| 9.5b | Re-profile 4 user-approved candidates — all 4 already 1st-degree | ✅ done | `ed1bac0` |
+| 9.5c | Fix already_connected false-positive + sheet relabel | ✅ local | `d8c97d4` |
+| 9 Day 2 | Staged real run — 200 rows, 25 connect cap under v2.1 | ⏳ next | — |
 
-## Gates before Step 9 (ALL must clear before any connect fires)
+## Classifier v2.1 (locked — replaces v2)
 
-1. **Step 7b complete** — Live Run Log + Summary tabs working in Google Sheets.
-2. **Step 7b dry-run passes** — `main.py --dry-run --limit 5` shows all 5 rows in "Live Run Log", Processing Status updated, Summary tab correct.
-3. **More-menu → Connect live nav test** — one Follow-primary profile tested live. Confirm right element clicks before Day 1.
+Day-1 real run showed v2.0 was over-gating — 0 influencers across 201 rows.
+User reviewed the 28 non-influencer near-misses (followers ≥ 300) and
+approved exactly 4 under v2.1 thresholds:
 
-## Classifier v2 spec (locked — replaces v1)
+- `follower_count >= 300`          ← v2.0 was 500
+- `post_count_90d >= 1`            ← v2.0 was 2
+- `last_post_date within 90 days`  ← unchanged
+- ~~`avg_likes_per_post >= 5`~~    ← DROPPED (profiler bug: like counts
+  aren't captured from the activity feed — logged 0 for every Day-1 row
+  including weekly posters; was a false-fail gate)
+
+Engagement stays as a soft-score signal only. Re-score of Day-1 data under
+v2.1 surfaced exactly the 4 user-approved profiles: Fakhouri (7.8k fol, 4
+posts, soft=8), Alan Paul (2.6k, 2, soft=6), Alice Bergin (448, 10, soft=6),
+Amanda Osborne (379, 3, soft=3 → Ollama overruled to non_influencer).
+
+**Day-1 outcome:** 0 new connects. The 3 user-approved heuristic-influencer
+matches were all already 1st-degree connections (user had connected manually
+between the Day-1 scrape and the re-profile run).
+
+## Classifier v2 spec (superseded by v2.1 above — kept for history)
 
 ### Hard filters (ALL must pass, else `non_influencer`)
 - `follower_count >= 500`             ← lowered from 1500
