@@ -88,6 +88,13 @@ SKIPPED_SHEET_HEADERS = [
 # Processing-status sheet tab columns.
 STATUS_SHEET_HEADERS = list(STATUS_CSV_HEADERS)
 
+# Connections Sent tab — clean feed of successful connect requests only.
+# Populated from update_connect_status whenever status == STATUS_SENT.
+CONNECTIONS_SENT_HEADERS = [
+    "sent_at", "practitioner_id", "name", "speciality", "linkedin_url",
+    "follower_count", "post_count_90d", "soft_score", "classifier_source",
+]
+
 
 # Status values — legacy (Outreach tab) + pipeline stages.
 STATUS_PENDING           = "pending"
@@ -133,6 +140,7 @@ class SheetsLogger:
         # Step-7b live-reporting state
         self.ws_live      = None
         self.ws_summary   = None
+        self.ws_connections = None    # v2.1 — Connections Sent tab
         self._send_cap    = 0      # set by set_send_cap; used for "N/cap" column
         self._sends_today_session = 0  # count of connect_sent events this run
 
@@ -173,6 +181,10 @@ class SheetsLogger:
             self.ws_live = self._get_or_create_tab(
                 sheet, config.GSHEET_LIVE_TAB, LIVE_LOG_HEADERS)
             self.ws_summary = self._get_or_create_summary_tab(sheet)
+
+            # v2.1 Connections Sent tab
+            self.ws_connections = self._get_or_create_tab(
+                sheet, config.GSHEET_CONNECTIONS_TAB, CONNECTIONS_SENT_HEADERS)
 
             self._sync_influencer_rows()
             self._sync_status_rows()
@@ -608,6 +620,33 @@ class SheetsLogger:
             )
         except Exception as e:
             print(f"[sheets] WARNING: could not update Influencers row for {practitioner_id}: {e}")
+
+        # Mirror successful connects into the Connections Sent tab. This gives
+        # the client a clean, append-only feed of actual connect requests sent,
+        # independent of Influencers VIC (which keeps every classification).
+        if connect_status == STATUS_SENT and self.ws_connections is not None:
+            self._append_connection_sent(practitioner_id, now)
+
+    def _append_connection_sent(self, practitioner_id: str, sent_at: str) -> None:
+        """Append one row to the Connections Sent tab. Pulls name/speciality/
+        metrics from the Influencers VIC row we just updated. Fire-and-forget."""
+        try:
+            rn = self._influencer_rows.get(practitioner_id)
+            if not rn:
+                return
+            src = self.ws_influencers.row_values(rn)
+            # Influencers VIC cols: A=pid B=name C=speciality D=postcode E=url
+            # F=follower_count G=post_count_90d H=has_video I=soft_score J=classifier_source
+            pad = src + [""] * (10 - len(src))
+            row = [
+                sent_at,
+                pad[0], pad[1], pad[2], pad[4],
+                pad[5], pad[6], pad[8], pad[9],
+            ]
+            self.ws_connections.append_row(row, value_input_option="RAW")
+        except Exception as e:
+            print(f"[sheets] WARNING: Connections Sent append failed for "
+                  f"{practitioner_id}: {e}")
 
     def already_classified(self, practitioner_id: str) -> bool:
         """True iff this practitioner has a classification row already."""

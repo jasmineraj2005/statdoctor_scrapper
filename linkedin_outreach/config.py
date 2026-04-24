@@ -35,6 +35,10 @@ GSHEET_STATUS_TAB       = "Processing Status"
 # Step-7b live reporting tabs.
 GSHEET_LIVE_TAB         = "Live Run Log"
 GSHEET_SUMMARY_TAB      = "Summary"
+# v2.1 — dedicated "Connections Sent" table for the client (clean feed of
+# successful connects only; Influencers VIC still lists all influencer
+# classifications regardless of connect outcome).
+GSHEET_CONNECTIONS_TAB  = "Connections Sent"
 
 # ── Targeting filters (applied before any LinkedIn activity) ──────────────────
 # Empty list = include all. Add values to restrict.
