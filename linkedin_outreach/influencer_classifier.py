@@ -70,10 +70,14 @@ OLLAMA_TIMEOUT_SEC = 25
 
 # ── Hard filters (spec v2) ───────────────────────────────────────────────────
 
-HF_FOLLOWERS_MIN  = 500   # was 1500 — niche medical creators often sit 500–2k
-HF_POSTS_90D_MIN  = 2     # was 4   — consistency > volume for specialists
-HF_LAST_POST_DAYS = 90    # was 60  — extended to include quarterly posters
-HF_AVG_LIKES_MIN  = 5     # was 15  — small engaged niche audiences yield low abs numbers
+HF_FOLLOWERS_MIN  = 300   # v2.1: was 500 — user-reviewed near-misses at 379/448 are valid targets
+HF_POSTS_90D_MIN  = 1     # v2.1: was 2   — "any activity within 90 days" is the user's gate
+HF_LAST_POST_DAYS = 90    # unchanged — hard requirement
+# v2.1: avg_likes hard filter DROPPED. The profiler's activity-feed scrape
+# does not capture like counts reliably (Day-1 data showed 0 likes for every
+# row including profiles posting weekly). Keeping it as a hard gate was
+# rejecting legitimate creators like Dr Amireh Fakhouri (7.8k fol, posting
+# weekly). Engagement stays as a soft-score signal only.
 
 
 # ── Soft-score thresholds (spec v2) ──────────────────────────────────────────
@@ -264,10 +268,6 @@ def _hard_filters(profile: dict[str, Any]) -> tuple[bool, str]:
     age_days = (datetime.now().date() - last_dt).days
     if age_days > HF_LAST_POST_DAYS:
         return False, f"last_post>{HF_LAST_POST_DAYS}d"
-
-    avg_likes = float(profile.get("avg_likes_per_post", 0.0) or 0.0)
-    if avg_likes < HF_AVG_LIKES_MIN:
-        return False, f"avg_likes<{HF_AVG_LIKES_MIN}"
 
     return True, ""
 
