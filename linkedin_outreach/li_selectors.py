@@ -135,8 +135,12 @@ PROFILE_DATA_JS = r"""
 # /preload/custom-invite/?vanityName=...). Sidebar "Invite X to connect"
 # recommendations are <button>s. Tagging Connect as `a[...]` auto-excludes
 # sidebar. Follow remains a <button>.
-CONNECT_BUTTON_FMT = 'a[aria-label="Invite {name} to connect"]'
-FOLLOW_BUTTON_FMT  = 'button[aria-label="Follow {name}"]'
+# `:visible` rejects hidden duplicates. LinkedIn renders up to 3 Connect
+# anchors with identical aria-label (top-card + sticky bar + hidden viewport
+# variant); without :visible we sometimes pick the hidden one and click
+# raises (observed on andrew-white-69253041, Day-2 2026-04-24).
+CONNECT_BUTTON_FMT = 'a[aria-label="Invite {name} to connect"]:visible'
+FOLLOW_BUTTON_FMT  = 'button[aria-label="Follow {name}"]:visible'
 
 # "More" overflow — when Connect isn't in the primary top-card area, it lives
 # inside the More menu. Scope to <main> to avoid the global nav "More" button.

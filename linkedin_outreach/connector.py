@@ -118,28 +118,29 @@ def _send_connection_request_core(page: Page,
         raise RateLimitError("Weekly invitation limit reached.")
 
     # Resolve the owner's name from the live DOM. LinkedIn shows the common
-    # name (first + last), which may differ from the AHPRA legal name; the
-    # Connect aria-label always matches what's in <title>.
+    # name (first + last), which may differ from the AHPRA legal name AND
+    # from the aria-label (which uses the plain name, no title prefix).
+    # Day-2 failure mode: document.title often has "Dr Andrew White | LinkedIn"
+    # but the aria-label is "Invite Andrew White to connect" — so we also
+    # try a stripped-prefix variant.
     owner_name = _resolve_owner_name(page) or practitioner_name
     if not owner_name:
         return STATUS_ERROR, "could not read profile owner name"
+    owner_name_stripped = _strip_title_prefix(owner_name)
 
     # ── Try top-card Connect anchor ──────────────────────────────────────────
-    connect_sel = selectors.CONNECT_BUTTON_FMT.format(name=owner_name)
-    try:
-        connect = page.locator(connect_sel).first
-        connect.wait_for(state="visible", timeout=FIND_CONNECT_TIMEOUT_MS)
-        connect.click()
-    except PwTimeoutError:
+    # Sequence: exact match on resolved name → exact on stripped-prefix →
+    # permissive fallback "Invite …to connect" scoped to the top-card section.
+    clicked = _try_topcard_connect(page, owner_name, owner_name_stripped)
+    if clicked is None:
         # Top card didn't have Connect — try the More-menu fallback.
-        status, detail = _try_more_menu_connect(page, owner_name)
+        status, detail = _try_more_menu_connect(page, owner_name_stripped or owner_name)
         if status != STATUS_SENT:
             return status, detail
-        # More-menu path already completed the modal; we're done.
         _post_connect_pause()
         return status, detail
-    except Exception as e:
-        return STATUS_ERROR, f"connect click failed: {type(e).__name__}: {str(e)[:80]}"
+    if clicked is False:
+        return STATUS_ERROR, "connect click failed"
 
     # ── Modal → Send without a note ──────────────────────────────────────────
     status, detail = _click_send_without_note(page)
@@ -156,6 +157,68 @@ def _resolve_owner_name(page: Page) -> str:
         return (data.get("name") or "").strip()
     except Exception:
         return ""
+
+
+_TITLE_PREFIXES = ("dr ", "dr. ", "prof ", "prof. ", "a/prof ", "a/prof. ")
+
+
+def _strip_title_prefix(name: str) -> str:
+    """Strip common medical/academic title prefixes. LinkedIn's
+    aria-label uses the plain name, so "Dr Andrew White" in document.title
+    needs to become "Andrew White" for the selector to match."""
+    low = name.lower()
+    for p in _TITLE_PREFIXES:
+        if low.startswith(p):
+            return name[len(p):].strip()
+    return name
+
+
+def _try_topcard_connect(page: Page, owner_name: str,
+                          owner_name_stripped: str) -> bool | None:
+    """Try to click the top-card Connect anchor. Returns:
+      True  — clicked successfully
+      False — located but click raised (caller treats as error)
+      None  — not present; caller should fall through to More-menu
+
+    Tries three selectors in order:
+      1. exact aria-label match on resolved name
+      2. exact aria-label match on stripped-prefix name (Day-2 fix)
+      3. permissive substring "Invite …to connect" scoped to top-card section
+         (guards against sidebar "People you may know" Connect chips)
+    """
+    candidates: list[str] = [selectors.CONNECT_BUTTON_FMT.format(name=owner_name)]
+    if owner_name_stripped and owner_name_stripped != owner_name:
+        candidates.append(selectors.CONNECT_BUTTON_FMT.format(name=owner_name_stripped))
+    # Permissive fallback: first section inside <main> is the top card.
+    # :visible guards against the hidden viewport-variant anchors.
+    candidates.append(
+        "main section:first-of-type "
+        "a[aria-label*='Invite '][aria-label*=' to connect']:visible"
+    )
+
+    for sel in candidates:
+        try:
+            matches = page.locator(sel)
+            n = matches.count()
+        except Exception:
+            continue
+        if n == 0:
+            continue
+        # LinkedIn often renders 2+ identical Connect anchors (top-card +
+        # sticky header bar). Iterate through them — if the first is
+        # pointer-intercepted or off-screen, the second usually isn't.
+        for i in range(n):
+            try:
+                loc = matches.nth(i)
+                loc.wait_for(state="visible", timeout=2_000)
+                loc.scroll_into_view_if_needed(timeout=2_000)
+                loc.click(timeout=3_000)
+                return True
+            except PwTimeoutError:
+                continue
+            except Exception:
+                continue
+    return None
 
 
 def _try_more_menu_connect(page: Page, owner_name: str) -> tuple[str, str]:
@@ -182,14 +245,21 @@ def _try_more_menu_connect(page: Page, owner_name: str) -> tuple[str, str]:
 
     time.sleep(random.uniform(*DROPDOWN_SETTLE_SEC))
 
-    dropdown_sel = selectors.MORE_MENU_CONNECT_FMT.format(name=owner_name)
-    try:
-        item = page.locator(dropdown_sel).first
-        item.wait_for(state="visible", timeout=FIND_CONNECT_TIMEOUT_MS)
-        item.click()
-    except PwTimeoutError:
-        # Dropdown opened but none of the 4 known shapes matched. Close the
-        # menu politely by pressing Escape so we leave the page clean.
+    # Try the aria-label union first (covers the Dawid-Naude shape). If that
+    # misses, fall back to matching menu items by text — Day-2 probe on Dr
+    # Abhilash found a Connect item rendered as <a role="menuitem"> with
+    # EMPTY aria-label and visible text "Connect", which the aria-only union
+    # couldn't catch.
+    # Resolve the Connect item. Two strategies in order:
+    #   1. aria-label union (covers the Dawid-Naude shape with a proper
+    #      "Invite <Name> to connect" aria-label)
+    #   2. text-based fallback scoped to the visible dropdown menu — catches
+    #      the Day-2 Abhilash shape where <a role="menuitem"> has an EMPTY
+    #      aria-label and visible text "Connect".
+    clicked, err = _resolve_and_click_more_connect(page, owner_name)
+    if err:
+        return STATUS_ERROR, err
+    if not clicked:
         try:
             page.keyboard.press("Escape")
         except Exception:
@@ -198,10 +268,44 @@ def _try_more_menu_connect(page: Page, owner_name: str) -> tuple[str, str]:
         if rel in ("message", "following", "pending"):
             return STATUS_ALREADY_CONNECTED, f"relationship={rel}"
         return STATUS_CONNECT_UNAVAIL, "more menu opened but no Connect match"
-    except Exception as e:
-        return STATUS_ERROR, f"more→connect click failed: {type(e).__name__}: {str(e)[:80]}"
 
     return _click_send_without_note(page)
+
+
+def _resolve_and_click_more_connect(page: Page, owner_name: str) -> tuple[bool, str]:
+    """Click the Connect item inside an already-open More dropdown.
+
+    Returns (clicked, error_message). clicked=True on success; clicked=False
+    with empty error means "no Connect item found" (caller emits
+    connect_unavailable); non-empty error means an unexpected exception.
+    """
+    dropdown_sel = selectors.MORE_MENU_CONNECT_FMT.format(name=owner_name)
+    try:
+        item = page.locator(dropdown_sel).first
+        item.wait_for(state="visible", timeout=FIND_CONNECT_TIMEOUT_MS)
+        item.click()
+        return True, ""
+    except PwTimeoutError:
+        pass
+    except Exception as e:
+        return False, f"more→connect click failed: {type(e).__name__}: {str(e)[:80]}"
+
+    # Text-based fallback. Playwright's has_text is substring + case-insensitive;
+    # narrow to menuitem-role items so we don't catch e.g. a "Connections" link.
+    try:
+        item = (page.locator("div[role='menu'], ul[role='menu'], "
+                             "div.artdeco-dropdown__content")
+                .locator("a[role='menuitem'], div[role='menuitem'], "
+                         "li[role='menuitem'], button[role='menuitem']")
+                .filter(has_text="Connect")
+                .first)
+        item.wait_for(state="visible", timeout=FIND_CONNECT_TIMEOUT_MS)
+        item.click()
+        return True, ""
+    except PwTimeoutError:
+        return False, ""
+    except Exception as e:
+        return False, f"more→connect text click failed: {type(e).__name__}: {str(e)[:80]}"
 
 
 def _click_send_without_note(page: Page) -> tuple[str, str]:
