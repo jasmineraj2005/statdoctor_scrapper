@@ -245,15 +245,32 @@ def _dismiss_modal(page: Page) -> None:
 
 
 def _get_relationship_label(page: Page) -> str:
-    """Best-effort: read the profile's top-card action button text so a
-    missing Connect can be attributed to an existing relationship."""
+    """Read the profile top-card's primary action to detect an existing
+    relationship. Scoped to <main> to exclude the left-nav "Messaging" link,
+    which matched page.content() on every profile under the old check and
+    caused false-positive `already_connected` verdicts.
+
+    Checks by aria-label:
+      - "Pending, click to withdraw invitation..."  → pending
+      - "Message <Name>"                            → 1st-degree (message button present)
+      - "Follow <Name>" / "Following <Name>"        → following
+    Returns "unknown" when none matched.
+    """
     try:
-        content = page.content().lower()
+        if page.locator('main button[aria-label^="Pending"]').first.is_visible(timeout=800):
+            return "pending"
     except Exception:
-        return "unknown"
-    for label in ("pending", "message", "following", "unfollow"):
-        if label in content:
-            return label
+        pass
+    try:
+        if page.locator('main button[aria-label^="Message "]').first.is_visible(timeout=800):
+            return "message"
+    except Exception:
+        pass
+    try:
+        if page.locator('main button[aria-label^="Following "]').first.is_visible(timeout=800):
+            return "following"
+    except Exception:
+        pass
     return "unknown"
 
 
@@ -284,6 +301,8 @@ def _emit(logger, practitioner, profile_url: str, status: str, detail: str) -> N
         event, outcome = "connect_sent", "pending"    # dry-run intent logged
     elif status == STATUS_SKIPPED:
         event, outcome = "skipped_non_influencer", "skipped"
+    elif status == STATUS_ALREADY_CONNECTED:
+        event, outcome = "already_connected", "skipped"
     else:
         event, outcome = "connect_failed", "fail"
 
