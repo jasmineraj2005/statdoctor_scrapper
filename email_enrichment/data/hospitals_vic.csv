@@ -1,0 +1,258 @@
+reporting_unit_code,name,private,latitude,longitude,lhn_name,phn_name,health_service_name,domain,tier,resolution_method,mx_ok
+H0233,Western District Health Service [Hamilton],False,-37.736495,142.030606,Western District Health Service (Vic),Western Victoria,Western District Health Service,wdhs.net,rural_public,exact_lhn,True
+H0234,Western District Health Service [Penshurst],False,-37.877275,142.282487,Western District Health Service (Vic),Western Victoria,Western District Health Service,wdhs.net,rural_public,exact_lhn,True
+H0235,Colac Area Health,False,-38.341201,143.582854,Colac Area Health,Western Victoria,,,unknown,ddg_search_failed,False
+H0236,Hesse Rural Health Service [Winchelsea],False,-38.243369,143.985357,Hesse Rural Health Service (Winchelsea),Western Victoria,Hesse Rural Health Service,hesseruralhealth.net.au,rural_public,exact_lhn,True
+H0237,Otway Health & Community Services [Apollo Bay],False,-38.753853,143.664264,Great Ocean Road Health,Western Victoria,Great Ocean Road Health,greatoceanroadhealth.com.au,rural_public,exact_lhn,True
+H0238,University Hospital Geelong,False,-38.151533,144.364964,Barwon Health,Western Victoria,Barwon Health,barwonhealth.org.au,rural_public,exact_lhn,True
+H0239,Casterton Memorial Hospital,False,-37.589989,141.392283,Casterton Memorial Hospital,Western Victoria,Casterton Memorial Hospital,casterton.org.au,rural_public,exact_lhn,True
+H0240,Western District Health Service [Coleraine],False,-37.599913,141.692018,Western District Health Service (Vic),Western Victoria,Western District Health Service,wdhs.net,rural_public,exact_lhn,True
+H0241,South West Healthcare [Warrnambool],False,-38.380085,142.472977,South West Healthcare (Vic),Western Victoria,South West Healthcare,southwesthealthcare.com.au,rural_public,exact_lhn,True
+H0242,Beaufort & Skipton Health Service [Skipton],False,-37.683998,143.367547,Beaufort and Skipton Health Service,Western Victoria,Beaufort and Skipton Health Service,bshs.org.au,rural_public,exact_lhn,True
+H0243,Heywood Rural Health,False,-38.137788,141.624256,Heywood Rural Health,Western Victoria,,heywoodruralhealth.vic.gov.au,unknown,public_override:heywood rural,True
+H0244,Timboon & District Healthcare Service,False,-38.486231,142.976717,Timboon and District Healthcare Service,Western Victoria,Timboon and District Healthcare Service,timboonhealthcare.com.au,rural_public,exact_lhn,True
+H0245,Moyne Health Services [Port Fairy],False,-38.381599,142.227523,Moyne Health Services (Port Fairy),Western Victoria,,moynehealth.vic.gov.au,unknown,public_override:moyne health,True
+H0246,Portland District Health,False,-38.340713,141.606087,Portland District Health,Western Victoria,Portland District Health,pdh.net.au,rural_public,exact_lhn,True
+H0247,Lorne Community Hospital,False,-38.545513,143.980743,Great Ocean Road Health,Western Victoria,Great Ocean Road Health,greatoceanroadhealth.com.au,rural_public,exact_lhn,True
+H0248,The McKellar Centre,False,-38.118795,144.335728,Barwon Health,Western Victoria,Barwon Health,barwonhealth.org.au,rural_public,exact_lhn,True
+H0249,South West Healthcare [Camperdown],False,-38.237101,143.137714,South West Healthcare (Vic),Western Victoria,South West Healthcare,southwesthealthcare.com.au,rural_public,exact_lhn,True
+H0250,Terang & Mortlake Health Service [Terang],False,-38.239388,142.902119,Terang and Mortlake Health Service (Terang),Western Victoria,,tmhs.vic.gov.au,unknown,public_override:terang,True
+H0251,East Grampians Health Service [Ararat],False,-37.278816,142.932858,East Grampians Health Service,Western Victoria,East Grampians Health Service,eghs.net.au,rural_public,exact_lhn,True
+H0252,East Grampians Health Service [Willaura],False,-37.544798,142.74587,East Grampians Health Service,Western Victoria,East Grampians Health Service,eghs.net.au,rural_public,exact_lhn,True
+H0253,Rural Northwest Health [Warracknabeal],False,-36.252614,142.381609,Rural Northwest Health (Vic),Western Victoria,Rural Northwest Health,rnh.net.au,rural_public,exact_lhn,True
+H0254,Rural Northwest Health [Hopetoun],False,-35.732201,142.366411,Rural Northwest Health (Vic),Western Victoria,Rural Northwest Health,rnh.net.au,rural_public,exact_lhn,True
+H0255,Ballarat Health Services [Base Hospital],False,-37.559658,143.847041,Grampians Health,Western Victoria,Grampians Health,grampianshealth.org.au,rural_public,exact_lhn,True
+H0256,Ballarat Health Services [Queen Elizabeth Campus],False,-37.564276,143.843264,Grampians Health,Western Victoria,Grampians Health,grampianshealth.org.au,rural_public,exact_lhn,True
+H0257,Wimmera Base Hospital [Horsham],False,-36.712441,142.208522,Grampians Health,Western Victoria,Grampians Health,grampianshealth.org.au,rural_public,exact_lhn,True
+H0258,West Wimmera Health Service [Rupanyup],False,-36.636571,142.631849,West Wimmera Health Service,Western Victoria,West Wimmera Health Service,wwhs.net.au,rural_public,exact_lhn,True
+H0259,Stawell Regional Health,False,-37.059577,142.781603,Grampians Health,Western Victoria,Grampians Health,grampianshealth.org.au,rural_public,exact_lhn,True
+H0260,West Wimmera Health Service [Nhill],False,-36.334003,141.655579,West Wimmera Health Service,Western Victoria,West Wimmera Health Service,wwhs.net.au,rural_public,exact_lhn,True
+H0261,West Wimmera Health Service [Kaniva],False,-36.381386,141.246006,West Wimmera Health Service,Western Victoria,West Wimmera Health Service,wwhs.net.au,rural_public,exact_lhn,True
+H0262,West Wimmera Health Service [Jeparit],False,-36.141132,141.984686,West Wimmera Health Service,Western Victoria,West Wimmera Health Service,wwhs.net.au,rural_public,exact_lhn,True
+H0263,West Wimmera Health Service [Rainbow],False,-35.903874,141.995112,West Wimmera Health Service,Western Victoria,West Wimmera Health Service,wwhs.net.au,rural_public,exact_lhn,True
+H0264,East Wimmera Health Service [St Arnaud],False,-36.609275,143.246676,East Wimmera Health Service,Western Victoria,East Wimmera Health Service,ewhs.org.au,rural_public,exact_lhn,True
+H0265,Djerriwarrh Health Service [Bacchus Marsh],False,-37.678267,144.433264,Western Health (Vic),North Western Melbourne,Western Health,westernhealth.org.au,metro_public,exact_lhn,True
+H0266,Beaufort & Skipton Health Service [Beaufort],False,-37.431028,143.382284,Beaufort and Skipton Health Service,Western Victoria,Beaufort and Skipton Health Service,bshs.org.au,rural_public,exact_lhn,True
+H0267,Dimboola District Hospital,False,-36.449887,142.024286,Grampians Health,Western Victoria,Grampians Health,grampianshealth.org.au,rural_public,exact_lhn,True
+H0268,Edenhope and District Memorial Hospital,False,-37.035323,141.288829,Grampians Health,Western Victoria,Grampians Health,grampianshealth.org.au,rural_public,exact_lhn,True
+H0269,Melton Health,False,-37.686449,144.558284,Western Health (Vic),North Western Melbourne,Western Health,westernhealth.org.au,metro_public,exact_lhn,True
+H0270,Daylesford District Hospital,False,-37.337365,144.145774,Central Highlands Rural Health,Western Victoria,Central Highlands Rural Health,chrh.org.au,rural_public,exact_lhn,True
+H0271,Creswick District Hospital,False,-37.421192,143.891533,Central Highlands Rural Health,Western Victoria,Central Highlands Rural Health,chrh.org.au,rural_public,exact_lhn,True
+H0272,The Bendigo Hospital,False,-36.748727,144.283372,Bendigo Health Care Group,Murray,Bendigo Health Care Group,bendigohealth.org.au,rural_public,exact_lhn,True
+H0273,Bendigo Health Care Group [Anne Caudle],False,-36.750919,144.280399,Bendigo Health Care Group,Murray,Bendigo Health Care Group,bendigohealth.org.au,rural_public,exact_lhn,True
+H0274,Goulburn Valley Health [Waranga],False,-36.587827,145.008593,Goulburn Valley Health,Murray,Goulburn Valley Health,gvhealth.org.au,rural_public,exact_lhn,True
+H0275,Kyabram & District Health Service,False,-36.315539,145.042705,Kyabram and District Health Service,Murray,Kyabram and District Health Service,kyhealth.org.au,rural_public,exact_lhn,True
+H0276,Kyneton District Health Service,False,-37.254431,144.469742,Central Highlands Rural Health,Murray,Central Highlands Rural Health,chrh.org.au,rural_public,exact_lhn,True
+H0277,Heathcote Health,False,-36.925786,144.709499,Heathcote Health,Murray,Heathcote Health,heathcotehealth.org,rural_public,exact_lhn,True
+H0278,Maryborough District Health Service [Maryborough],False,-37.044781,143.737692,Maryborough District Health Service,Western Victoria,,mdhs.vic.gov.au,unknown,public_override:maryborough district,True
+H0279,Maryborough District Health Service [Dunolly],False,-36.855269,143.735139,Maryborough District Health Service,Western Victoria,,mdhs.vic.gov.au,unknown,public_override:maryborough district,True
+H0280,Swan Hill District Health [Swan Hill],False,-35.340588,143.556514,Swan Hill District Health,Murray,Swan Hill District Health,shdh.org.au,rural_public,exact_lhn,True
+H0281,Swan Hill District Health [Nyah],False,-35.186052,143.355428,Swan Hill District Health,Murray,Swan Hill District Health,shdh.org.au,rural_public,exact_lhn,True
+H0282,East Wimmera Health Service [Wycheproof],False,-36.078447,143.233779,East Wimmera Health Service,Murray,East Wimmera Health Service,ewhs.org.au,rural_public,exact_lhn,True
+H0283,Cohuna District Hospital,False,-35.800063,144.214911,Cohuna District Hospital,Murray,,cohunahealth.com.au,unknown,public_override:cohuna district,False
+H0284,Echuca Regional Health,False,-36.138186,144.748369,Echuca Regional Health,Murray,Echuca Regional Health,erh.org.au,rural_public,exact_lhn,True
+H0285,Kerang District Health,False,-35.724287,143.916563,Kerang District Health,Murray,Kerang District Health,kdh.org.au,rural_public,exact_lhn,True
+H0286,Mildura Base Hospital,False,-34.185634,142.143348,Mildura Base Hospital,Murray,Mildura Base Public Hospital,mbph.org.au,rural_public,fuzzy_lhn_85,True
+H0287,Mallee Track Health & Community Service [Ouyen],False,-35.074349,142.312345,Mallee Track Health and Community Service,Murray,Mallee Track Health and Community Service,mthcs.com.au,rural_public,exact_lhn,True
+H0288,Maldon Hospital,False,-36.992672,144.063677,Dhelkaya Health,Murray,Dhelkaya Health,dhelkayahealth.org.au,rural_public,exact_lhn,True
+H0289,Manangatang & District Hospital,False,-35.050955,142.880512,Robinvale District Health Services,Murray,Robinvale District Health Services,rdhs.com.au,rural_public,exact_lhn,True
+H0290,Boort District Health,False,-36.111703,143.727285,Boort District Health,Murray,Omeo District Health,odh.net.au,rural_public,fuzzy_lhn_87,False
+H0291,Robinvale District Health Services,False,-34.584146,142.781367,Robinvale District Health Services,Murray,Robinvale District Health Services,rdhs.com.au,rural_public,exact_lhn,True
+H0292,Rochester & Elmore District Health Service,False,-36.366579,144.697751,Rochester and Elmore District Health Service,Murray,Rochester and Elmore District Health Service,redhs.com.au,rural_public,exact_lhn,True
+H0293,East Wimmera Health Service [Donald],False,-36.366895,142.976583,East Wimmera Health Service,Murray,East Wimmera Health Service,ewhs.org.au,rural_public,exact_lhn,True
+H0294,Inglewood & District Health Service,False,-36.572147,143.873755,Inglewood and District Health Service,Murray,,idhs.vic.gov.au,unknown,public_override:inglewood,True
+H0295,East Wimmera Health Service [Birchip],False,-35.980167,142.915891,East Wimmera Health Service,Murray,East Wimmera Health Service,ewhs.org.au,rural_public,exact_lhn,True
+H0296,East Wimmera Health Service [Charlton],False,-36.271037,143.345889,East Wimmera Health Service,Murray,East Wimmera Health Service,ewhs.org.au,rural_public,exact_lhn,True
+H0297,Castlemaine Health,False,-37.052539,144.212315,Dhelkaya Health,Murray,Dhelkaya Health,dhelkayahealth.org.au,rural_public,exact_lhn,True
+H0298,Goulburn Valley Health [Shepparton],False,-36.363625,145.404911,Goulburn Valley Health,Murray,Goulburn Valley Health,gvhealth.org.au,rural_public,exact_lhn,True
+H0299,Goulburn Valley Health [Tatura],False,-36.439082,145.225535,Goulburn Valley Health,Murray,Goulburn Valley Health,gvhealth.org.au,rural_public,exact_lhn,True
+H0300,Northeast Health Wangaratta,False,-36.354035,146.313889,Northeast Health Wangaratta,Murray,Northeast Health Wangaratta,northeasthealth.org.au,rural_public,exact_lhn,True
+H0301,Tallangatta Health Service,False,-36.213705,147.183709,Tallangatta Health Service,Murray,Tallangatta Health Service,tallangattahealthservice.com.au,rural_public,exact_lhn,True
+H0302,Albury Wodonga Health [Wodonga Campus],False,-36.131791,146.879417,Albury Wodonga Health,Murray,Albury Wodonga Health,awh.org.au,rural_public,exact_lhn,True
+H0303,Yarrawonga Health,False,-36.011547,146.006584,Yarrawonga District Health Service,Murray,Yarrawonga Health,yh.org.au,rural_public,exact_hospital_name,True
+H0304,Alpine Health [Myrtleford],False,-36.554525,146.728795,Alpine Health (Vic),Murray,Alpine Health,alpinehealth.org.au,rural_public,exact_lhn,True
+H0305,Alpine Health [Bright],False,-36.732701,146.965924,Alpine Health (Vic),Murray,Alpine Health,alpinehealth.org.au,rural_public,exact_lhn,True
+H0306,Alpine Health [Mount Beauty],False,-36.743354,147.169359,Alpine Health (Vic),Murray,Alpine Health,alpinehealth.org.au,rural_public,exact_lhn,True
+H0307,Corryong Health,False,-36.198711,147.902798,Upper Murray Health and Community Services (Corryong),Murray,Corryong Health,corryonghealth.org.au,rural_public,exact_hospital_name,True
+H0308,Seymour District Memorial Hospital,False,-37.018384,145.138771,Seymour District Memorial Hospital,Murray,,seymourhealth.org.au,unknown,public_override:seymour district,True
+H0309,Mansfield District Hospital,False,-37.057574,146.086149,Mansfield District Hospital,Murray,Mansfield District Hospital,mdh.org.au,rural_public,exact_lhn,True
+H0310,Alexandra District Hospital,False,-37.195065,145.716143,Alexandra District Hospital,Murray,Alexandra District Hospital,adh.org.au,rural_public,exact_lhn,True
+H0311,Numurkah & District Health Service,False,-36.100001,145.443695,NCN Health,Murray,NCN Health,ncnhealth.org.au,rural_public,exact_lhn,True
+H0312,The Kilmore & District Hospital,False,-37.301794,144.957915,Northern Health (Vic),Murray,Northern Health,nh.org.au,metro_public,exact_lhn,True
+H0313,Yea & District Memorial Hospital,False,-37.213634,145.430724,Yea and District Memorial Hospital,Murray,Yea and District Memorial Hospital,yeahospital.org.au,rural_public,exact_lhn,True
+H0314,Nathalia District Hospital,False,-36.054754,145.204324,NCN Health,Murray,NCN Health,ncnhealth.org.au,rural_public,exact_lhn,True
+H0315,Benalla & District Memorial Hospital,False,-36.555239,145.994675,Benalla and District Memorial Hospital,Murray,Yea and District Memorial Hospital,yeahospital.org.au,rural_public,fuzzy_lhn_91,True
+H0316,Beechworth Health Service,False,-36.349359,146.690739,Beechworth Health Service,Murray,Beechworth Health Service,beechworthhealthservice.com.au,rural_public,exact_lhn,True
+H0317,Cobram District Health,False,-35.916273,145.651029,NCN Health,Murray,NCN Health,ncnhealth.org.au,rural_public,exact_lhn,True
+H0318,Bairnsdale Regional Health Service,False,-37.830814,147.607905,Bairnsdale Regional Health Service,Gippsland,Bairnsdale Regional Health Service,brhs.com.au,rural_public,exact_lhn,True
+H0319,West Gippsland Healthcare Group [Warragul],False,-38.173009,145.926804,West Gippsland Healthcare Group,Gippsland,West Gippsland Healthcare Group,wghg.com.au,rural_public,exact_lhn,True
+H0320,Bass Coast Health,False,-38.608747,145.580906,Bass Coast Regional Health,Gippsland,,basscoasthealth.com.au,unknown,public_override:bass coast health,True
+H0321,Yarram & District Health Service,False,-38.556975,146.678316,Yarram and District Health Service,Gippsland,Yarram and District Health Service,ydhs.com.au,rural_public,exact_lhn,True
+H0322,Omeo District Health,False,-37.098142,147.597321,Omeo District Health,Gippsland,Omeo District Health,odh.net.au,rural_public,exact_lhn,False
+H0323,Central Gippsland Health Service [Sale],False,-38.108408,147.080637,Central Gippsland Health Service,Gippsland,Central Gippsland Health Service,cghs.com.au,rural_public,exact_lhn,True
+H0324,Gippsland Southern Health Service - Korumburra,False,-38.430328,145.828249,Gippsland Southern Health Service,Gippsland,,gshs.com.au,unknown,public_override:gippsland southern,True
+H0325,Gippsland Southern Health Service - Leongatha,False,-38.487171,145.950343,Gippsland Southern Health Service,Gippsland,,gshs.com.au,unknown,public_override:gippsland southern,True
+H0326,Latrobe Regional Hospital [Traralgon],False,-38.218475,146.471335,Latrobe Regional Hospital,Gippsland,Latrobe Regional Hospital,lrh.com.au,rural_public,exact_lhn,True
+H0327,Central Gippsland Health Service [Maffra],False,-37.961032,146.983487,Central Gippsland Health Service,Gippsland,Central Gippsland Health Service,cghs.com.au,rural_public,exact_lhn,True
+H0328,South Gippsland Hospital [Foster],False,-38.658319,146.207031,South Gippsland Hospital (Foster),Gippsland,South Gippsland Hospital,southgippslandhospital.com.au,rural_public,exact_lhn,True
+H0329,Orbost Regional Health,False,-37.701844,148.464957,Orbost Regional Health,Gippsland,Orbost Regional Health,orbostregionalhealth.com.au,rural_public,exact_lhn,False
+H0330,Box Hill Hospital,False,-37.813682,145.119094,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H0331,Monash Medical Centre [Clayton],False,-37.9275697,145.1587291,Monash Health,Eastern Melbourne,Monash Health,monashhealth.org,tertiary,exact_lhn,True
+H0332,Maroondah Hospital [East Ringwood],False,-37.806884,145.254535,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H0333,Angliss Hospital,False,-37.898663,145.314166,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H0334,St George's Health Service- Aged Care,False,-37.809085,145.052585,St Vincent's Hospital (Melbourne) Limited,Eastern Melbourne,St Vincent's Health,svhm.org.au,metro_public,manual_override,True
+H0335,Caritas Christi Hospice [Kew],False,-37.804706,145.015557,St Vincent's Hospital (Melbourne) Limited,Eastern Melbourne,St Vincent's Health,svhm.org.au,metro_public,manual_override,True
+H0336,Mercy Health - O'Connell Family Centre,False,-37.816688,145.061729,Mercy Public Hospital Inc. (Vic),Eastern Melbourne,Mercy Public Hospitals Inc.,mercy.com.au,metro_public,manual_override,True
+H0337,The Peter James Centre [East Burwood],False,-37.852712,145.164542,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H0338,Wantirna Health,False,-37.848525,145.225902,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H0339,Royal Talbot Rehabilitation Centre [Kew],False,-37.789522,145.023715,Austin Health (Vic),Eastern Melbourne,Austin Health,austin.org.au,metro_public,exact_lhn,True
+H0340,Healesville Hospital and Yarra Valley Health,False,-37.646879,145.529032,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H0341,Yarra Ranges Health,False,-37.756319,145.351204,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H0342,Monash Medical Centre [Moorabbin],False,-37.920697,145.063197,Monash Health,South Eastern Melbourne,Monash Health,monashhealth.org,tertiary,exact_lhn,True
+H0343,Rosebud Hospital,False,-38.362168,144.884899,Peninsula Health (Vic),South Eastern Melbourne,Bayside Health - Peninsula Care Group,peninsulahealth.org.au,metro_public,manual_override,True
+H0344,Sandringham Hospital,False,-37.961049,145.018157,Alfred Health (Vic),South Eastern Melbourne,Bayside Health - Alfred Care Group,alfredhealth.org.au,metro_public,manual_override,True
+H0345,Caulfield Hospital,False,-37.882707,145.016892,Alfred Health (Vic),South Eastern Melbourne,Bayside Health - Alfred Care Group,alfredhealth.org.au,metro_public,manual_override,True
+H0346,Kooweerup Regional Health Service,False,-38.200653,145.484433,Kooweerup Regional Health Service,South Eastern Melbourne,,kooweeruphealth.com.au,unknown,public_override:kooweerup regional,False
+H0347,Kingston Centre [Cheltenham],False,-37.955018,145.078969,Monash Health,South Eastern Melbourne,Monash Health,monashhealth.org,metro_public,exact_lhn,True
+H0348,Dandenong Hospital,False,-37.976459,145.218529,Monash Health,South Eastern Melbourne,Monash Health,monashhealth.org,metro_public,exact_lhn,True
+H0349,Cranbourne Integrated Care Centre,False,-38.113312,145.280832,Monash Health,South Eastern Melbourne,Monash Health,monashhealth.org,metro_public,exact_lhn,True
+H0350,Frankston Hospital,False,-38.150791,145.128428,Peninsula Health (Vic),South Eastern Melbourne,Bayside Health - Peninsula Care Group,peninsulahealth.org.au,metro_public,manual_override,True
+H0351,Calvary Health Care Bethlehem,False,-37.896962,145.013415,Calvary Health Care Bethlehem Limited,South Eastern Melbourne,,calvarycare.org.au,unknown,public_override:calvary health care bethlehem,True
+H0352,Queen Elizabeth Centre [Noble Park],False,-37.972053,145.178285,Victoria Virtual Local Hospital Network,South Eastern Melbourne,,qec.org.au,unknown,public_override:queen elizabeth centre,True
+H0353,Casey Hospital,False,-38.045325,145.347181,Monash Health,South Eastern Melbourne,Monash Health,monashhealth.org,metro_public,exact_lhn,True
+H0356,Golf Links Road Rehabilitation Centre,False,-38.173447,145.149769,Peninsula Health (Vic),South Eastern Melbourne,Bayside Health - Peninsula Care Group,peninsulahealth.org.au,metro_public,manual_override,True
+H0357,The Mornington Centre,False,-38.230174,145.041697,Peninsula Health (Vic),South Eastern Melbourne,Bayside Health - Peninsula Care Group,peninsulahealth.org.au,metro_public,manual_override,True
+H0358,The Alfred,False,-37.846087,144.981937,Alfred Health (Vic),North Western Melbourne,Bayside Health - Alfred Care Group,alfredhealth.org.au,tertiary,manual_override,True
+H0359,Austin Hospital [Heidelberg],False,-37.756355,145.060236,Austin Health (Vic),Eastern Melbourne,Austin Health,austin.org.au,tertiary,exact_lhn,True
+H0360,Heidelberg Repatriation Hospital [Heidelberg West],False,-37.755973,145.04749,Austin Health (Vic),Eastern Melbourne,Austin Health,austin.org.au,metro_public,exact_lhn,True
+H0361,Bundoora Extended Care Centre,False,-37.701124,145.055569,Northern Health (Vic),North Western Melbourne,Northern Health,nh.org.au,metro_public,exact_lhn,True
+H0362,Mercy Hospital for Women,False,-37.756075,145.061008,Mercy Public Hospital Inc. (Vic),Eastern Melbourne,Mercy Public Hospitals Inc.,mercy.com.au,metro_public,manual_override,True
+H0363,Western Hospital [Footscray],False,-37.792298,144.887191,Western Health (Vic),North Western Melbourne,Western Health,westernhealth.org.au,metro_public,exact_lhn,True
+H0364,Royal Children's Hospital [Parkville],False,-37.794997,144.950859,Royal Children's Hospital (Melbourne),North Western Melbourne,The Royal Children's Hospital,rch.org.au,tertiary,manual_override,True
+H0366,Royal Women's Hospital [Parkville],False,-37.798772,144.954825,Royal Women's Hospital (Melbourne),North Western Melbourne,The Royal Women's Hospital,thewomens.org.au,tertiary,manual_override,True
+H0367,The Royal Victorian Eye & Ear Hospital,False,-37.808978,144.976245,Royal Victorian Eye and Ear Hospital,North Western Melbourne,The Royal Victorian Eye and Ear Hospital,eyeandear.org.au,metro_public,manual_override,True
+H0368,The Northern Hospital [Epping],False,-37.653417,145.014381,Northern Health (Vic),Eastern Melbourne,Northern Health,nh.org.au,metro_public,exact_lhn,True
+H0369,Werribee Mercy Hospital,False,-37.886587,144.698621,Mercy Public Hospital Inc. (Vic),North Western Melbourne,Mercy Public Hospitals Inc.,mercy.com.au,metro_public,manual_override,True
+H0370,Orygen Inpatient Unit,False,-37.791926,144.886617,Melbourne Health,North Western Melbourne,Melbourne Health,thermh.org.au,metro_public,manual_override,True
+H0371,Royal Melbourne Hospital [City Campus],False,-37.799259,144.956864,Melbourne Health,North Western Melbourne,Melbourne Health,thermh.org.au,tertiary,manual_override,True
+H0372,Royal Melbourne Hospital [Royal Park Campus],False,-37.778813,144.948049,Melbourne Health,North Western Melbourne,Melbourne Health,thermh.org.au,tertiary,manual_override,True
+H0373,Sunshine Hospital,False,-37.759179,144.816477,Western Health (Vic),North Western Melbourne,Western Health,westernhealth.org.au,metro_public,exact_lhn,True
+H0374,St Vincent's Hospital [Melbourne],False,-37.806545,144.975231,St Vincent's Hospital (Melbourne) Limited,North Western Melbourne,St Vincent's Health,svhm.org.au,tertiary,manual_override,True
+H0375,Williamstown Hospital,False,-37.863576,144.892339,Western Health (Vic),North Western Melbourne,Western Health,westernhealth.org.au,metro_public,exact_lhn,True
+H0376,Peter MacCallum Cancer Centre,False,-37.80001,144.956607,Peter MacCallum Cancer Institute (Vic),North Western Melbourne,Peter Mac Callum Cancer Centre,petermac.org,tertiary,fuzzy_hospital_98,True
+H0377,Tweddle Child & Family Health Centre [Footscray],False,-37.797407,144.887421,Tweddle Child and Family Health Service,North Western Melbourne,Tweddle Child and Family Health Service,tweddle.org.au,metro_public,exact_lhn,True
+H0378,Sunbury Day Hospital,False,-37.576998,144.732674,Western Health (Vic),North Western Melbourne,Western Health,westernhealth.org.au,metro_public,exact_lhn,True
+H0379,Broadmeadows Health Service,False,-37.684321,144.913106,Northern Health (Vic),North Western Melbourne,Northern Health,nh.org.au,metro_public,exact_lhn,True
+H0380,Craigieburn Health Service,False,-37.596015,144.91928,Northern Health (Vic),North Western Melbourne,Northern Health,nh.org.au,metro_public,exact_lhn,True
+H0381,The Royal Dental Hospital of Melbourne,False,-37.799299,144.964529,Unknown,North Western Melbourne,,dhsv.org.au,unknown,public_override:royal dental hospital,True
+H0383,Victorian Institute of Forensic Mental Health,False,-37.78931,145.012975,Victorian Institute of Forensic Mental Health,North Western Melbourne,,forensicare.vic.gov.au,unknown,public_override:victorian institute of forensic,True
+H0384,Victorian Institute of Forensic Mental Health Prison Health Service,False,-37.812763,144.950757,Victorian Institute of Forensic Mental Health,North Western Melbourne,,forensicare.vic.gov.au,unknown,public_override:victorian institute of forensic,True
+H0749,Women's at Sandringham,False,-37.961049,145.018157,Royal Women's Hospital (Melbourne),South Eastern Melbourne,The Royal Women's Hospital,thewomens.org.au,metro_public,manual_override,True
+H1009,Dame Phyllis Frost Centre - Marmak unit,False,-37.781307,144.742309,Unknown,North Western Melbourne,,correctionshealth.vic.gov.au,unknown,public_override:dame phyllis frost,False
+H1046,Mallee Track Health & Community Service [Sea Lake],False,-35.500395,142.858003,Mallee Track Health and Community Service,Murray,Mallee Track Health and Community Service,mthcs.com.au,rural_public,exact_lhn,True
+H1047,Ursula Frayne Centre,False,-37.791148,144.886747,Mercy Public Hospital Inc. (Vic),North Western Melbourne,Mercy Public Hospitals Inc.,mercy.com.au,metro_public,manual_override,True
+H1049,St Vincent's On the Park,False,-37.81115,144.97784,St Vincent's Hospital (Melbourne) Limited,North Western Melbourne,St Vincent's Health,svhm.org.au,tertiary,manual_override,True
+H1054,Victorian Heart Hospital,False,-37.91254,145.13984,Monash Health,Eastern Melbourne,Monash Health,monashhealth.org,metro_public,exact_lhn,True
+H1055,Blackburn Public Surgical Centre,False,-37.83332,145.15611,Eastern Health (Vic),Eastern Melbourne,Eastern Health,easternhealth.org.au,metro_public,exact_lhn,True
+H1056,Frankston Public Surgical Centre,False,-38.1544,145.13313,Peninsula Health (Vic),South Eastern Melbourne,Bayside Health - Peninsula Care Group,peninsulahealth.org.au,metro_public,manual_override,True
+H1057,Sandringham Monash,False,-37.961049,145.018157,Monash Health,South Eastern Melbourne,Monash Health,monashhealth.org,metro_public,exact_lhn,True
+H1060,Casey Early Parenting Centre,False,-38.09400971455602,145.34344614603108,Monash Health,South Eastern Melbourne,Monash Health,monashhealth.org,metro_public,exact_lhn,True
+H1061,Wyndham Early Parenting Centre,False,-37.887658114488794,144.6923555976354,Not stated/inadequately described,North Western Melbourne,,tweddle.org.au,unknown,public_override:wyndham early parenting,True
+H1062,Whittlesea Early Parenting Centre,False,-37.64895327721592,145.07769055344102,Mercy Public Hospital Inc. (Vic),Eastern Melbourne,Mercy Public Hospitals Inc.,mercy.com.au,metro_public,manual_override,True
+H1065,Barwon Health North,False,,,Barwon Health,Western Victoria,Barwon Health,barwonhealth.org.au,rural_public,exact_lhn,True
+H1066,Wayipunga Early Parenting Centre,False,-36.765508992623616,144.29099262505918,Bendigo Health Care Group,Murray,Bendigo Health Care Group,bendigohealth.org.au,rural_public,exact_lhn,True
+H1067,Goulburn Valley Health [Euroa],False,-36.75912524197217,145.57030258412962,Goulburn Valley Health,Murray,Goulburn Valley Health,gvhealth.org.au,rural_public,exact_lhn,True
+H5005,Albert Road Clinic,True,-37.834246,144.972151,,,,ramsayhealth.com.au,private,operator_kw:albert road,True
+H5017,Beleura Private Hospital,True,-38.225484,145.049136,,,,ramsayhealth.com.au,private,operator_kw:beleura,True
+H5027,Cabrini Brighton,True,-37.91165,144.991572,,,,cabrini.com.au,private,operator_kw:cabrini,True
+H5028,Cabrini Health Elsternwick Rehabilitation - Glenhuntly Rd,True,-37.88543,145.009328,,,,cabrini.com.au,private,operator_kw:cabrini,True
+H5029,Cabrini Health Elsternwick Rehabilitation - Hopetoun,True,-37.884778,145.01039,,,,cabrini.com.au,private,operator_kw:cabrini,True
+H5030,Cabrini Malvern,True,-37.861641,145.0335,,,,cabrini.com.au,private,operator_kw:cabrini,True
+H5031,Cabrini Prahran,True,-37.854034,145.009017,,,,cabrini.com.au,private,operator_kw:cabrini,True
+H5063,Donvale Rehabilitation Hospital,True,-37.789836,145.171655,,,,healthscope.com.au,private,operator_kw:donvale rehabilitation,True
+H5064,Dorset Rehabilitation Centre,True,-37.723402,144.947436,,,,healthscope.com.au,private,operator_kw:dorset rehabilitation,True
+H5069,Epworth Eastern,True,-37.814678,145.119368,,,,epworth.org.au,private,operator_kw:epworth,True
+H5070,Epworth Freemasons [Albert Street],True,-37.810694,144.984107,,,,epworth.org.au,private,operator_kw:epworth,True
+H5071,Epworth Freemasons [Victoria Parade],True,-37.809284,144.98212,,,,epworth.org.au,private,operator_kw:epworth,True
+H5072,Epworth Rehabilitation Brighton,True,-37.913689,145.002815,,,,epworth.org.au,private,operator_kw:epworth,True
+H5073,Epworth Camberwell,True,-37.846223,145.054689,,,,epworth.org.au,private,operator_kw:epworth,True
+H5074,Epworth Richmond Rehabilitation,True,-37.817419,144.993503,,,,epworth.org.au,private,operator_kw:epworth,True
+H5075,Epworth Richmond,True,-37.817433,144.993029,,,,epworth.org.au,private,operator_kw:epworth,True
+H5081,Frances Perry House,True,-37.798758,144.955135,,,,ramsayhealth.com.au,private,operator_kw:frances perry,True
+H5084,Ramsay Surgical Centre Glenferrie,True,-37.819459,145.031544,,,,,private,ddg_search_failed,False
+H5101,John Fawkner Private Hospital,True,-37.754369,144.958398,,,,healthscope.com.au,private,operator_kw:john fawkner,True
+H5107,Knox Private Hospital,True,-37.849645,145.228035,,,,ramsayhealth.com.au,private,operator_kw:knox private,True
+H5111,Linacre Private Hospital,True,-37.942699,145.003259,,,,healthecare.com.au,private,operator_kw:linacre private,True
+H5114,Maryvale Private Hospital,True,-38.215028,146.418561,,,,,private,ddg_search_failed,False
+H5115,Masada Private Hospital,True,-37.869799,145.003096,,,,ramsayhealth.com.au,private,operator_kw:masada,True
+H5130,Melbourne Private Hospital,True,-37.798272,144.957025,,,,healthscope.com.au,private,operator_kw:melbourne private,True
+H5132,St Vincent's Private Hospital [East Melbourne],True,-37.811733,144.984164,,,,svha.org.au,tertiary,operator_kw:st vincent's private,True
+H5135,Mildura Health Private Hospital,True,-34.18479,142.145705,,,,,private,ddg_search_failed,False
+H5136,Mitcham Private Hospital,True,-37.810436,145.194808,,,,ramsayhealth.com.au,private,operator_kw:mitcham private,True
+H5144,Murray Valley Private Hospital,True,-36.138419,146.876478,,,,,private,ddg_search_failed,False
+H5151,North Eastern Rehabilitation Centre,True,-37.763424,145.031344,,,,,private,ddg_search_failed,False
+H5154,Northpark Private Hospital,True,-37.691208,145.061631,,,,,private,ddg_search_failed,False
+H5167,Peninsula Private Hospital Victoria,True,-38.157557,145.169552,,,,ramsayhealth.com.au,private,operator_kw:peninsula private,True
+H5175,Ringwood Private Hospital,True,-37.811523,145.243629,,,,ramsayhealth.com.au,private,operator_kw:ringwood private,True
+H5179,Shepparton Private Hospital,True,-36.359183,145.410825,,,,,private,ddg_search_failed,False
+H5182,South Eastern Private Hospital,True,-37.966243,145.191922,,,,,private,ddg_search_failed,False
+H5192,St John of God Ballarat Hospital,True,-37.558544,143.847406,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5193,St John of God Bendigo Hospital,True,-36.762043,144.263298,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5194,St John of God Berwick Hospital,True,-38.034499,145.344974,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5197,St John of God Geelong Hospital,True,-38.151567,144.357679,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5202,St John of God Warrnambool Hospital,True,-38.371405,142.478749,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5203,St John of God Frankston Rehabilitation Hospital,True,-38.153035,145.155926,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5209,St Vincent's Private Hospital Fitzroy,True,-37.807993,144.976029,,,,svha.org.au,tertiary,operator_kw:st vincent's private,True
+H5222,The Avenue Hospital,True,-37.854809,144.998513,,,,,private,ddg_search_failed,False
+H5223,The Bays Hospital,True,-38.223524,145.040939,,,,,private,ddg_search_failed,False
+H5226,The Geelong Clinic,True,-38.182406,144.393267,,,,,private,ddg_search_failed,False
+H5231,The Melbourne Clinic,True,-37.814361,144.998739,,,,,private,ddg_search_failed,False
+H5236,Mulgrave Private Hospital,True,-37.938409,145.213122,,,,,private,ddg_search_failed,False
+H5237,The Victoria Clinic,True,-37.847714,144.997225,,,,,private,ddg_search_failed,False
+H5238,The Victorian Rehabilitation Centre,True,-37.898227,145.161425,,,,,private,ddg_search_failed,False
+H5245,Victoria Parade Surgery Centre,True,-37.808521,144.97476,,,,,private,ddg_search_failed,False
+H5246,St Vincent's Private Hospital [Kew],True,-37.806567,145.023694,,,,svha.org.au,tertiary,operator_kw:st vincent's private,True
+H5248,Wangaratta Private Hospital,True,-36.349299,146.312423,,,,ramsayhealth.com.au,private,operator_kw:wangaratta private,True
+H5250,Warringal Private Hospital,True,-37.754419,145.060728,,,,healthecare.com.au,private,operator_kw:warringal,True
+H5251,Waverley Private Hospital,True,-37.884632,145.145798,,,,ramsayhealth.com.au,private,operator_kw:waverley private,True
+H5255,Western Private Hospital,True,-37.793045,144.885932,,,,westernprivate.com.au,private,operator_kw:western private,True
+H5276,Manningham Day Procedure Centre,True,-37.773471,145.115662,,,,,private,ddg_search_failed,False
+H5279,Vision Day Surgery Eastern,True,-37.817591,145.119433,,,,visioneyeinstitute.com.au,private,operator_kw:vision day surgery,True
+H5280,Vision Day Surgery Camberwell,True,-37.83252,145.0556,,,,visioneyeinstitute.com.au,private,operator_kw:vision day surgery,True
+H5281,Vision Day Surgery Footscray,True,-37.800508,144.895155,,,,visioneyeinstitute.com.au,private,operator_kw:vision day surgery,True
+H5286,Vision Eye Institute,True,-37.850605,144.980304,,,,visioneyeinstitute.com.au,private,operator_kw:vision eye,True
+H5289,Epworth Hawthorn,True,-37.821229,145.023405,,,,epworth.org.au,private,operator_kw:epworth,True
+H5307,Hobsons Bay Endoscopy Centre Werribee,True,-37.890649,144.686494,,,,,private,ddg_search_failed,False
+H5308,Altona Endoscopy Centre,True,-37.869448,144.828494,,,,,private,ddg_search_failed,False
+H5309,Hobsons Bay Endoscopy Centre Sydenham,True,-37.693365,144.758677,,,,,private,ddg_search_failed,False
+H5314,Ballarat Day Procedure Centre,True,-37.540799,143.83214,,,,,private,ddg_search_failed,False
+H5328,Jessie McPherson Private Hospital,True,-37.9201,145.1225,,,,monashhealth.org,private,operator_kw:jessie mcpherson,True
+H5337,La Trobe Private Hospital,True,-37.716679,145.044334,,,,latrobeprivate.com.au,private,operator_kw:la trobe private,False
+H5338,Holmesglen Private Hospital,True,-37.935738,145.050581,,,,healthscope.com.au,private,operator_kw:holmesglen private,True
+H5339,Epworth Geelong,True,-38.193882,144.302472,,,,epworth.org.au,private,operator_kw:epworth,True
+H5354,Brunswick Private Hospital,True,-37.756737,144.972183,,,,brunswickprivatehospital.com.au,private,operator_kw:brunswick private,True
+H5355,St Vincent's Private Hospital [Werribee],True,-37.887905,144.701508,,,,svha.org.au,tertiary,operator_kw:st vincent's private,True
+H5371,Bendigo Day Surgery,True,-36.761902,144.261673,,,,bendigoprivatehospital.com.au,private,operator_kw:bendigo day,False
+H5383,Delmont Private Hospital,True,-37.856853,145.094055,,,,delmontprivate.com.au,private,operator_kw:delmont private,False
+H5387,Forest Hill Dialysis Clinic,True,-37.836281,145.166397,,,,,private,ddg_search_failed,False
+H5408,Malvern Dialysis Clinic,True,-37.851421,145.030624,,,,,private,ddg_search_failed,False
+H5413,Monash House Private Hospital,True,-37.920898,145.120193,,,,,private,ddg_search_failed,False
+H5416,Neerim District Health Service,True,-38.022629,145.953903,,,Western District Health Service,wdhs.net,private,fuzzy_hospital_88,True
+H5425,PANCH Day Surgery Centre,True,-37.752338,145.006271,,,,,private,ddg_search_failed,False
+H5444,The Glen Endoscopy Centre,True,-37.884701,145.165359,,,,,private,ddg_search_failed,False
+H5445,The Melbourne Eastern Private Hospital,True,-37.855701,145.269073,,,,,private,ddg_search_failed,False
+H5455,Ballan District Health & Care,True,-37.59919,144.2228,,,,,private,ddg_search_failed,False
+H5457,Bayside Endoscopy Day Hospital,True,-37.933098,145.036667,,,,,private,ddg_search_failed,False
+H5461,Bayside Day Procedure and Specialist Centre,True,-38.148136,145.143524,,,,,private,ddg_search_failed,False
+H5463,Casey Day Hospital,True,-38.02488,145.31446,,,,,private,ddg_search_failed,False
+H5466,Eastside Endoscopy Centre,True,-37.819901,145.228134,,,,,private,ddg_search_failed,False
+H5467,Euroa Health,True,-36.75922,145.570465,,,,,private,ddg_search_failed,False
+H5468,Greensborough Day Surgery,True,-37.70393,145.10629,,,,,private,ddg_search_failed,False
+H5469,Heyfield Hospital,True,-37.97633,146.784012,,,,,private,ddg_search_failed,False
+H5472,Kew Endoscopy Centre,True,-37.79461,145.06255,,,,,private,ddg_search_failed,False
+H5475,Melbourne Endoscopy Monash Day Procedure Centre,True,-37.921371,145.120255,,,,,private,ddg_search_failed,False
+H5476,Melbourne Endoscopy,True,-37.811069,144.984085,,,,,private,ddg_search_failed,False
+H5490,Toorak Cosmetic Surgery Day Centre,True,-37.84138,145.00798,,,,,private,ddg_search_failed,False
+H5515,Chesterville Day Hospital,True,-37.96,145.056,,,,,private,ddg_search_failed,False
+H5520,Glen Iris Private,True,-37.858,145.093,,,,healthecare.com.au,private,operator_kw:glen iris private,True
+H5522,Sir John Monash Private Hospital,True,-37.918,145.121,,,,sjmph.com.au,private,operator_kw:sir john monash,False

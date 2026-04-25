@@ -1,0 +1,824 @@
+{
+  "adh.org.au": {
+    "format": "firstnamelastname",
+    "confidence": "medium",
+    "samples": [
+      "alexandra@adh.org.au",
+      "alexandracec@adh.org.au",
+      "jennifer.creed@adh.org.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/contact-us",
+      "/our-people"
+    ],
+    "raw_email_count": 3,
+    "source": "scraped"
+  },
+  "alfredhealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "alpinehealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "austin.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "awh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "barwonhealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "basscoasthealth.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "beechworthhealthservice.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "bendigohealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "brhs.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "low",
+    "samples": [
+      "barbara.poynton@brhs.com.au",
+      "brhs.communications@brhs.com.au",
+      "chealth@brhs.com.au",
+      "email@brhs.com.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/about",
+      "/staff",
+      "/our-people",
+      "/media",
+      "/executive",
+      "/board"
+    ],
+    "raw_email_count": 9,
+    "source": "scraped"
+  },
+  "brunswickprivatehospital.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "bshs.org.au": {
+    "format": "flastname",
+    "confidence": "high",
+    "samples": [
+      "beaufort@bshs.org.au",
+      "bshs@bshs.org.au",
+      "skipton@bshs.org.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/contact-us",
+      "/about",
+      "/about-us",
+      "/staff",
+      "/executive"
+    ],
+    "raw_email_count": 3,
+    "source": "scraped"
+  },
+  "cabrini.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "calvarycare.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/contact-us",
+      "/about",
+      "/about-us",
+      "/staff",
+      "/staff-directory",
+      "/our-staff",
+      "/our-people",
+      "/media",
+      "/media-releases",
+      "/research",
+      "/leadership",
+      "/executive",
+      "/board"
+    ],
+    "raw_email_count": 1,
+    "source": "default"
+  },
+  "casterton.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "cghs.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "chrh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "high",
+    "samples": [
+      "clunes.reception@chrh.org.au",
+      "creswick.reception@chrh.org.au",
+      "daylesford.hospitalreception@chrh.org.au",
+      "daylesfordipc.reception@chrh.org.au",
+      "district.kyneton@chrh.org.au"
+    ],
+    "pages_probed": [
+      "/contact",
+      "/about"
+    ],
+    "raw_email_count": 7,
+    "source": "scraped"
+  },
+  "corryonghealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/about",
+      "/about-us",
+      "/executive",
+      "/board"
+    ],
+    "raw_email_count": 1,
+    "source": "default"
+  },
+  "dhelkayahealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "dhsv.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [
+      "/",
+      "/about-us"
+    ],
+    "raw_email_count": 2,
+    "source": "default"
+  },
+  "easternhealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "eghs.net.au": {
+    "format": "firstname.lastname",
+    "confidence": "high",
+    "samples": [
+      "alison.fitzgerald@eghs.net.au",
+      "celina.day@eghs.net.au",
+      "ella.ottrey@eghs.net.au",
+      "jaclyn.bishop@eghs.net.au",
+      "michele.conlin@eghs.net.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/about",
+      "/staff",
+      "/research",
+      "/executive",
+      "/board"
+    ],
+    "raw_email_count": 6,
+    "source": "scraped"
+  },
+  "epworth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "erh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "ewhs.org.au": {
+    "format": "flastname",
+    "confidence": "high",
+    "samples": [
+      "birchip@ewhs.org.au",
+      "charlton@ewhs.org.au",
+      "donald@ewhs.org.au",
+      "starnaud@ewhs.org.au",
+      "wycheproof@ewhs.org.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/about",
+      "/staff",
+      "/board"
+    ],
+    "raw_email_count": 5,
+    "source": "scraped"
+  },
+  "eyeandear.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "forensicare.vic.gov.au": {
+    "format": "firstname.lastname",
+    "confidence": "low",
+    "samples": [
+      "melanie.starr@forensicare.vic.gov.au"
+    ],
+    "pages_probed": [
+      "/contact",
+      "/media"
+    ],
+    "raw_email_count": 4,
+    "source": "scraped"
+  },
+  "grampianshealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "greatoceanroadhealth.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "gshs.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "gvhealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "healthecare.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "healthscope.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "heathcotehealth.org": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/contact-us",
+      "/about",
+      "/about-us",
+      "/our-people",
+      "/board"
+    ],
+    "raw_email_count": 1,
+    "source": "default"
+  },
+  "hesseruralhealth.net.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "heywoodruralhealth.vic.gov.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/about",
+      "/about-us",
+      "/staff",
+      "/leadership",
+      "/board"
+    ],
+    "raw_email_count": 3,
+    "source": "default"
+  },
+  "idhs.vic.gov.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [
+      "/contact"
+    ],
+    "raw_email_count": 2,
+    "source": "default"
+  },
+  "kdh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "kyhealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "lrh.com.au": {
+    "format": "flastname",
+    "confidence": "medium",
+    "samples": [
+      "araymond@lrh.com.au",
+      "jduncan@lrh.com.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/research",
+      "/leadership"
+    ],
+    "raw_email_count": 6,
+    "source": "scraped"
+  },
+  "mbph.org.au": {
+    "format": "firstnamelastname",
+    "confidence": "low",
+    "samples": [
+      "jmadafferi@mbph.org.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact"
+    ],
+    "raw_email_count": 2,
+    "source": "scraped"
+  },
+  "mdh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "mdhs.vic.gov.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "mercy.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "monashhealth.org": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "moynehealth.vic.gov.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "mthcs.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "ncnhealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "nh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "northeasthealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "pdh.net.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "peninsulahealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "petermac.org": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "qec.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "ramsayhealth.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "rch.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "rdhs.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "redhs.com.au": {
+    "format": "flastname",
+    "confidence": "low",
+    "samples": [
+      "rochhosp@redhs.com.au"
+    ],
+    "pages_probed": [
+      "/contact"
+    ],
+    "raw_email_count": 1,
+    "source": "scraped"
+  },
+  "rnh.net.au": {
+    "format": "firstname.lastname",
+    "confidence": "medium",
+    "samples": [
+      "beulah.admin@rnh.net.au",
+      "hadmin@rnh.net.au",
+      "melissa.jefferies@rnh.net.au"
+    ],
+    "pages_probed": [
+      "/contact"
+    ],
+    "raw_email_count": 5,
+    "source": "scraped"
+  },
+  "seymourhealth.org.au": {
+    "format": "firstnamelastname",
+    "confidence": "low",
+    "samples": [
+      "sheducation@seymourhealth.org.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/about",
+      "/about-us",
+      "/our-people"
+    ],
+    "raw_email_count": 3,
+    "source": "scraped"
+  },
+  "shdh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [
+      "/contact"
+    ],
+    "raw_email_count": 1,
+    "source": "default"
+  },
+  "sjog.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "southgippslandhospital.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "southwesthealthcare.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "svha.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "svhm.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "tallangattahealthservice.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "thermh.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "thewomens.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "timboonhealthcare.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "tmhs.vic.gov.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "tweddle.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "visioneyeinstitute.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "wdhs.net": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "westernhealth.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "known",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "hardcoded"
+  },
+  "westernprivate.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "wghg.com.au": {
+    "format": "firstname.lastname",
+    "confidence": "low",
+    "samples": [
+      "ah.office@wghg.com.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact",
+      "/contact-us",
+      "/about",
+      "/about-us",
+      "/research",
+      "/executive",
+      "/board"
+    ],
+    "raw_email_count": 3,
+    "source": "scraped"
+  },
+  "wwhs.net.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "ydhs.com.au": {
+    "format": "flastname",
+    "confidence": "low",
+    "samples": [
+      "ydhs@ydhs.com.au"
+    ],
+    "pages_probed": [
+      "/contact-us"
+    ],
+    "raw_email_count": 2,
+    "source": "scraped"
+  },
+  "yeahospital.org.au": {
+    "format": "firstname.lastname",
+    "confidence": "default",
+    "samples": [],
+    "pages_probed": [],
+    "raw_email_count": 0,
+    "source": "default"
+  },
+  "yh.org.au": {
+    "format": "flastname",
+    "confidence": "medium",
+    "samples": [
+      "comms@yh.org.au",
+      "yhinfo@yh.org.au"
+    ],
+    "pages_probed": [
+      "/",
+      "/contact-us",
+      "/about-us"
+    ],
+    "raw_email_count": 3,
+    "source": "scraped"
+  }
+}

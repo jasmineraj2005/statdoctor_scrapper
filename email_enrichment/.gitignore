@@ -1,0 +1,23 @@
+.env
+__pycache__/
+*.pyc
+credentials/
+
+# Large outputs / probe artefacts — regeneratable
+data/disify_probe_log.csv
+data/smtp_probe_log.csv
+data/halaxy_sitemap_index.json
+data/gp_practices.csv
+data/gp_clinic_domains.json
+data/probes/
+data/canary_cache.json
+disify_run.log
+decisions.log
+
+# Abandoned exploration scripts (kept locally for reference)
+gp_probe.py
+gp_probe2.py
+gp_probe3.py
+gp_probe4.py
+gp_probe5.py
+gp_resolver_pw.py

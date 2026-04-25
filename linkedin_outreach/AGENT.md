@@ -71,6 +71,28 @@ logs as `already_connected/skipped` instead of `connect_failed/fail`.
    rows processed in batches respecting daily cap (40 once proven; 25 for
    now), 30k lifetime cap, 48h per-profile cool-down.
 
+## Upstream changes you should know about (2026-04-25)
+
+The email_enrichment agent has been working on the pipeline today. Two changes
+may affect how you read `vic_practitioners_enriched.csv`:
+
+- **`email_confidence=n_a` is gone.** Previously, `pipeline=linkedin` rows had
+  `email_source=n_a` + `email_confidence=n_a`. Now LinkedIn-pipeline rows also
+  get email synthesis, so they'll have a real `email_source` (usually
+  `hospital_postcode` or `gp_unresolved`) and a Disify verdict. The `pipeline`
+  column still authoritatively tells you which channel is primary — use that
+  for your gating, not email_source.
+- **GPs now flagged `email_source=gp_unresolved` instead of being given hospital
+  emails.** If you were using candidate_email presence as a reachability
+  signal for anything, note that GPs on the LinkedIn pipeline may have empty
+  candidate_email (gp_unresolved) even though a clinic phone/address is
+  available in `email_enrichment/data/gp_practices.csv`. Don't read that file
+  yourself — if LinkedIn needs clinic info for a row, request a schema update
+  to `vic_practitioners_enriched.csv` via the user.
+
+See `email_enrichment/AGENT.md` for full details. Do not edit anything in that
+directory.
+
 ## HARD RULES (unchanged from v1)
 
 - **Never push to remote.** Hold all commits local until user approves.

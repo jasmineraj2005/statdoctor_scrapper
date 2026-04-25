@@ -1,0 +1,68 @@
+health_service_name,website_url,domain,segment
+Austin Health,https://www.austin.org.au/,austin.org.au,metro
+Bayside Health - Alfred Care Group,https://www.alfredhealth.org.au/,alfredhealth.org.au,metro
+Bayside Health - Peninsula Care Group,https://www.peninsulahealth.org.au/,peninsulahealth.org.au,metro
+Calvary Bethlehem Melbourne,https://www.calvarycare.org.au/public-hospital-bethlehem/,calvarycare.org.au,metro
+Oral Health Victoria,https://www.dhsv.org.au/,dhsv.org.au,metro
+Eastern Health,https://www.easternhealth.org.au/,easternhealth.org.au,metro
+Melbourne Health,https://www.thermh.org.au/,thermh.org.au,metro
+Mercy Public Hospitals Inc.,https://www.mercyhealth.com.au/,mercyhealth.com.au,metro
+Monash Health,https://monashhealth.org/,monashhealth.org,metro
+Northern Health,https://www.nh.org.au/,nh.org.au,metro
+Peter Mac Callum Cancer Centre,https://www.petermac.org/,petermac.org,metro
+Queen Elizabeth Centre,http://www.qec.org.au/,qec.org.au,metro
+St Vincent's Health,https://www.svhm.org.au/,svhm.org.au,metro
+The Royal Children's Hospital,https://www.rch.org.au/home/,rch.org.au,metro
+The Royal Victorian Eye and Ear Hospital,https://www.eyeandear.org.au/,eyeandear.org.au,metro
+The Royal Women's Hospital,https://www.thewomens.org.au/,thewomens.org.au,metro
+Tweddle Child and Family Health Service,https://www.tweddle.org.au/,tweddle.org.au,metro
+Western Health,https://www.westernhealth.org.au/Pages/default.aspx,westernhealth.org.au,metro
+Albury Wodonga Health,https://www.awh.org.au/,awh.org.au,rural
+Alexandra District Hospital,https://adh.org.au/,adh.org.au,rural
+Alpine Health,https://www.alpinehealth.org.au/,alpinehealth.org.au,rural
+Bairnsdale Regional Health Service,https://brhs.com.au/,brhs.com.au,rural
+Barwon Health,https://www.barwonhealth.org.au/,barwonhealth.org.au,rural
+Bayside Health – Regional Care Group,https://www.baysidehealth.org.au/,baysidehealth.org.au,rural
+Beaufort and Skipton Health Service,https://bshs.org.au/,bshs.org.au,rural
+Beechworth Health Service,https://beechworthhealthservice.com.au/,beechworthhealthservice.com.au,rural
+Benalla Health,https://www.benallahealth.org.au/,benallahealth.org.au,rural
+Bendigo Health Care Group,https://www.bendigohealth.org.au/,bendigohealth.org.au,rural
+Casterton Memorial Hospital,https://www.casterton.org.au/hospital-aged-care-and-medical.html,casterton.org.au,rural
+Central Gippsland Health Service,http://www.cghs.com.au/,cghs.com.au,rural
+Central Highlands Rural Health,https://www.chrh.org.au/,chrh.org.au,rural
+Corryong Health,https://www.corryonghealth.org.au/,corryonghealth.org.au,rural
+Dhelkaya Health,https://dhelkayahealth.org.au,dhelkayahealth.org.au,rural
+East Grampians Health Service,https://eghs.net.au/,eghs.net.au,rural
+East Wimmera Health Service,http://ewhs.org.au/,ewhs.org.au,rural
+Echuca Regional Health,https://erh.org.au/,erh.org.au,rural
+Goulburn Valley Health,http://www.gvhealth.org.au/,gvhealth.org.au,rural
+Grampians Health,https://grampianshealth.org.au/,grampianshealth.org.au,rural
+Great Ocean Road Health,https://www.greatoceanroadhealth.com.au/,greatoceanroadhealth.com.au,rural
+Heathcote Health,https://www.heathcotehealth.org/,heathcotehealth.org,rural
+Hesse Rural Health Service,https://www.hesseruralhealth.net.au/,hesseruralhealth.net.au,rural
+Kerang District Health,https://www.kdh.org.au,kdh.org.au,rural
+Kyabram and District Health Service,https://www.kyhealth.org.au/,kyhealth.org.au,rural
+Latrobe Regional Hospital,https://lrh.com.au,lrh.com.au,rural
+Mansfield District Hospital,https://mdh.org.au/,mdh.org.au,rural
+Mallee Track Health and Community Service,https://www.mthcs.com.au/,mthcs.com.au,rural
+Mildura Base Public Hospital,https://www.mbph.org.au/,mbph.org.au,rural
+NCN Health,https://ncnhealth.org.au/,ncnhealth.org.au,rural
+Northeast Health Wangaratta,https://www.northeasthealth.org.au/,northeasthealth.org.au,rural
+Omeo District Health,https://www.odh.net.au/,odh.net.au,rural
+Orbost Regional Health,https://www.orbostregionalhealth.com.au/,orbostregionalhealth.com.au,rural
+Portland District Health,https://pdh.net.au/,pdh.net.au,rural
+Robinvale District Health Services,https://www.rdhs.com.au/,rdhs.com.au,rural
+Rochester and Elmore District Health Service,http://www.redhs.com.au/,redhs.com.au,rural
+Rural Northwest Health,https://rnh.net.au/,rnh.net.au,rural
+Seymour Health,http://www.seymourhealth.org.au/,seymourhealth.org.au,rural
+South Gippsland Hospital,https://southgippslandhospital.com.au/,southgippslandhospital.com.au,rural
+South West Healthcare,https://southwesthealthcare.com.au/,southwesthealthcare.com.au,rural
+Swan Hill District Health,https://www.shdh.org.au/,shdh.org.au,rural
+Tallangatta Health Service,https://www.tallangattahealthservice.com.au/,tallangattahealthservice.com.au,rural
+Timboon and District Healthcare Service,https://www.timboonhealthcare.com.au/,timboonhealthcare.com.au,rural
+West Gippsland Healthcare Group,https://wghg.com.au/,wghg.com.au,rural
+West Wimmera Health Service,https://www.wwhs.net.au/,wwhs.net.au,rural
+Western District Health Service,https://wdhs.net/v2/,wdhs.net,rural
+Yarram and District Health Service,https://www.ydhs.com.au/,ydhs.com.au,rural
+Yarrawonga Health,https://www.yh.org.au/,yh.org.au,rural
+Yea and District Memorial Hospital,https://yeahospital.org.au/,yeahospital.org.au,rural

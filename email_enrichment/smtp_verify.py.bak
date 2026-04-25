@@ -1,0 +1,302 @@
+"""
+STEP 5 — SMTP RCPT verification at scale.
+
+Per-domain flow:
+  1. If we haven't probed a canary (random fake localpart) against this domain
+     yet, do that once. Cache: domain → "catch_all" | "strict" | "unverified".
+  2. For each candidate email on a strict domain, do a RCPT probe.
+     Results: 250 → verified, 550/551/553 → failed, anything else → unverified.
+  3. For addresses on catch-all domains, mark them `catch_all` confidence
+     WITHOUT probing (probing would always return 250 — no information gain).
+
+Throttling:
+  - Random 3–8 s jitter between probes.
+  - One SMTP connection per domain per batch; RSET between probes on same
+    connection where possible.
+
+Persistence:
+  - `data/canary_cache.json`   : {domain: {"verdict": "...", "canary_code": N, "probed_at": iso}}
+  - `data/smtp_probe_log.csv`  : one row per probe attempted, append-only.
+
+Resumability:
+  - On startup, read smtp_probe_log.csv → skip addresses already probed
+    (unless --force).
+"""
+from __future__ import annotations
+import argparse
+import csv
+import json
+import random
+import smtplib
+import string
+import time
+from datetime import datetime
+from pathlib import Path
+from typing import Iterable
+
+import dns.resolver
+
+import config
+from common import append_csv, delay, load_env, read_csv
+
+load_env()  # ensure HELO_DOMAIN is set
+
+PROBE_FIELDS = [
+    "practitioner_id", "email", "domain", "code", "verdict",
+    "mx", "probed_at", "msg",
+]
+
+# Verdict values used in smtp_probe_log.csv
+V_VERIFIED = "verified"      # RCPT 250 on strict domain
+V_FAILED = "failed"          # RCPT 550 on strict domain, with "user unknown"-style reason
+V_CATCH_ALL = "catch_all"    # domain flagged catch-all, address not actually probed
+V_UNVERIFIED = "unverified"  # probe errored / HELO rejected / connect timeout
+V_IP_BLOCKED = "ip_blocked"  # server rejects our client IP (Spamhaus/PBL/etc) — no info on mailbox
+
+# Substrings that identify IP-reputation rejections rather than real user-unknown.
+# Case-insensitive. Hit on any of these → verdict = ip_blocked (not failed).
+IP_BLOCK_MARKERS = (
+    "spamhaus", "pbl", "zen.mimecast", "client host", "blocked using",
+    "service unavailable", "blacklisted", "blocklist", "denylist",
+    "barracudacentral", "sorbs.net", "spamcop", "rbl.",
+    "not allowed to relay", "access denied",
+)
+
+
+def _is_ip_block(msg: str) -> bool:
+    if not msg:
+        return False
+    m = msg.lower()
+    return any(marker in m for marker in IP_BLOCK_MARKERS)
+
+
+def fake_localpart(n: int = 12) -> str:
+    tail = "".join(random.choices(string.ascii_lowercase + string.digits, k=n))
+    return f"zzz9canary{tail}"
+
+
+def mx_for(domain: str) -> str | None:
+    try:
+        ans = dns.resolver.resolve(domain, "MX", lifetime=10)
+        best = sorted(ans, key=lambda r: r.preference)[0]
+        return str(best.exchange).rstrip(".")
+    except Exception:
+        return None
+
+
+def _load_canary_cache() -> dict:
+    if not config.CANARY_CACHE_JSON.exists():
+        return {}
+    try:
+        return json.loads(config.CANARY_CACHE_JSON.read_text())
+    except Exception:
+        return {}
+
+
+def _save_canary_cache(cache: dict):
+    config.CANARY_CACHE_JSON.write_text(json.dumps(cache, indent=2))
+
+
+def _already_probed() -> set[str]:
+    """Set of email addresses we've probed before (verified / failed / unverified)."""
+    if not config.SMTP_PROBE_LOG_CSV.exists():
+        return set()
+    out = set()
+    for r in read_csv(config.SMTP_PROBE_LOG_CSV):
+        if r.get("verdict") in (V_VERIFIED, V_FAILED, V_CATCH_ALL, V_UNVERIFIED):
+            out.add(r["email"])
+    return out
+
+
+def probe_canary(domain: str) -> tuple[str, int | None, str]:
+    """Run canary probe on a domain. Returns (verdict, code, msg)."""
+    mx = mx_for(domain)
+    if not mx:
+        return V_UNVERIFIED, None, "no MX record"
+    canary = f"{fake_localpart()}@{domain}"
+    try:
+        with smtplib.SMTP(timeout=config.SMTP_TIMEOUT_S) as smtp:
+            smtp.connect(mx, 25)
+            hc, _ = smtp.helo(config.HELO_DOMAIN)
+            if hc >= 400:
+                return V_UNVERIFIED, hc, "HELO rejected"
+            mc, _ = smtp.mail(config.MAIL_FROM)
+            if mc >= 400:
+                return V_UNVERIFIED, mc, "MAIL FROM rejected"
+            code, msg = smtp.rcpt(canary)
+            msg_s = msg.decode(errors="replace")[:200] if isinstance(msg, bytes) else str(msg)[:200]
+            if code in (250, 251):
+                return "catch_all", code, msg_s
+            if code in (550, 551, 553):
+                # If the 550 is an IP-reputation block, we can't determine catch-all vs strict.
+                if _is_ip_block(msg_s):
+                    return V_IP_BLOCKED, code, msg_s
+                return "strict", code, msg_s
+            return V_UNVERIFIED, code, msg_s
+    except Exception as e:
+        return V_UNVERIFIED, None, f"{type(e).__name__}: {e}"
+
+
+def classify_domain(domain: str, cache: dict, force_recheck: bool = False) -> dict:
+    """Get cached canary verdict or run canary if missing. Updates cache in place."""
+    if not force_recheck and domain in cache and cache[domain].get("verdict"):
+        return cache[domain]
+    verdict, code, msg = probe_canary(domain)
+    entry = {
+        "verdict": verdict,
+        "canary_code": code,
+        "canary_msg": msg,
+        "mx": mx_for(domain),
+        "probed_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+    }
+    cache[domain] = entry
+    _save_canary_cache(cache)
+    return entry
+
+
+def probe_address(mx_host: str, email: str) -> tuple[int | None, str]:
+    """Run a single RCPT probe, with a fresh SMTP connection. Returns (code, msg)."""
+    try:
+        with smtplib.SMTP(timeout=config.SMTP_TIMEOUT_S) as smtp:
+            smtp.connect(mx_host, 25)
+            hc, _ = smtp.helo(config.HELO_DOMAIN)
+            if hc >= 400:
+                return hc, "HELO rejected"
+            mc, _ = smtp.mail(config.MAIL_FROM)
+            if mc >= 400:
+                return mc, "MAIL FROM rejected"
+            code, msg = smtp.rcpt(email)
+            msg_s = msg.decode(errors="replace")[:200] if isinstance(msg, bytes) else str(msg)[:200]
+            return code, msg_s
+    except Exception as e:
+        return None, f"{type(e).__name__}: {e}"
+
+
+def verify_batch(targets: Iterable[tuple[str, str]], force: bool = False):
+    """
+    targets = iterable of (practitioner_id, email).
+    Writes rows to smtp_probe_log.csv as each probe completes.
+    """
+    cache = _load_canary_cache()
+    already = set() if force else _already_probed()
+    skipped = 0
+    rows_written = 0
+
+    # Group by domain so we classify each once.
+    buckets: dict[str, list[tuple[str, str]]] = {}
+    for pid, email in targets:
+        if "@" not in email:
+            continue
+        if email in already:
+            skipped += 1
+            continue
+        dom = email.split("@", 1)[1].lower()
+        buckets.setdefault(dom, []).append((pid, email))
+
+    print(f"[smtp] targets: {sum(len(v) for v in buckets.values())} emails across {len(buckets)} domain(s)")
+    print(f"[smtp] already probed (skipped): {skipped}")
+
+    for dom, items in buckets.items():
+        entry = classify_domain(dom, cache)
+        print(f"[smtp] {dom}: canary={entry['verdict']} code={entry.get('canary_code')}")
+
+        batch = []
+        if entry["verdict"] == "catch_all":
+            for pid, email in items:
+                batch.append({
+                    "practitioner_id": pid, "email": email, "domain": dom,
+                    "code": entry.get("canary_code"), "verdict": V_CATCH_ALL,
+                    "mx": entry.get("mx", ""),
+                    "probed_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                    "msg": "catch-all (marked without individual probe)",
+                })
+            append_csv(batch, config.SMTP_PROBE_LOG_CSV, fieldnames=PROBE_FIELDS)
+            rows_written += len(batch)
+            continue
+
+        if entry["verdict"] == V_IP_BLOCKED:
+            # All probes to this domain will be IP-blocked; no point probing.
+            for pid, email in items:
+                batch.append({
+                    "practitioner_id": pid, "email": email, "domain": dom,
+                    "code": entry.get("canary_code"), "verdict": V_IP_BLOCKED,
+                    "mx": entry.get("mx", ""),
+                    "probed_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                    "msg": f"canary-ip-block: {entry.get('canary_msg', '')[:100]}",
+                })
+            append_csv(batch, config.SMTP_PROBE_LOG_CSV, fieldnames=PROBE_FIELDS)
+            rows_written += len(batch)
+            continue
+
+        if entry["verdict"] == V_UNVERIFIED:
+            for pid, email in items:
+                batch.append({
+                    "practitioner_id": pid, "email": email, "domain": dom,
+                    "code": entry.get("canary_code"), "verdict": V_UNVERIFIED,
+                    "mx": entry.get("mx", ""),
+                    "probed_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                    "msg": f"canary-inconclusive: {entry.get('canary_msg', '')[:100]}",
+                })
+            append_csv(batch, config.SMTP_PROBE_LOG_CSV, fieldnames=PROBE_FIELDS)
+            rows_written += len(batch)
+            continue
+
+        # Strict — probe each address
+        mx = entry.get("mx") or mx_for(dom)
+        count_today = 0
+        for pid, email in items:
+            if count_today >= config.SMTP_PROBES_PER_DOMAIN_PER_DAY:
+                print(f"[smtp]   {dom}: hit daily cap ({config.SMTP_PROBES_PER_DOMAIN_PER_DAY}); stopping for this domain")
+                break
+            code, msg = probe_address(mx, email)
+            if code in (250, 251):
+                verdict = V_VERIFIED
+            elif code in (550, 551, 553):
+                verdict = V_IP_BLOCKED if _is_ip_block(msg) else V_FAILED
+            else:
+                verdict = V_UNVERIFIED
+            row = {
+                "practitioner_id": pid, "email": email, "domain": dom,
+                "code": code, "verdict": verdict, "mx": mx,
+                "probed_at": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+                "msg": msg,
+            }
+            append_csv([row], config.SMTP_PROBE_LOG_CSV, fieldnames=PROBE_FIELDS)
+            rows_written += 1
+            count_today += 1
+            print(f"[smtp]   {email}: code={code} {verdict}")
+            delay(*config.SMTP_JITTER_S)
+
+    # Summary
+    print()
+    print(f"[smtp] rows written this run: {rows_written}")
+    print(f"[smtp] canary cache now tracks {len(cache)} domains")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--targets-csv", help="CSV with columns practitioner_id,email")
+    ap.add_argument("--force", action="store_true", help="Re-probe already-logged addresses")
+    ap.add_argument("--sample", type=int, default=0,
+                    help="Sample N targets from --targets-csv (dry-test)")
+    ap.add_argument("--inline", nargs="+", default=[],
+                    help="Inline emails to probe; PIDs auto-assigned as TEST_{i}. Debug only.")
+    args = ap.parse_args()
+
+    targets: list[tuple[str, str]] = []
+    if args.inline:
+        targets = [(f"TEST_{i}", e) for i, e in enumerate(args.inline)]
+    elif args.targets_csv:
+        rows = read_csv(Path(args.targets_csv))
+        if args.sample:
+            rows = rows[: args.sample]
+        targets = [(r["practitioner_id"], r["email"]) for r in rows if r.get("email")]
+    else:
+        ap.print_help()
+        return
+
+    verify_batch(targets, force=args.force)
+
+
+if __name__ == "__main__":
+    main()
