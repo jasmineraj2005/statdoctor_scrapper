@@ -313,10 +313,14 @@ def profile(page: Page, profile_url: str,
     except Exception:
         pass
 
-    # Medium-confidence post-scrape medical-signal gate. Verifier accepts
-    # medium on name+empty-loc alone; here we re-check against the full
-    # profile text. If no signal found, downgrade to reject.
-    if result["verifier_confidence"] == "medium":
+    # Post-scrape medical-signal gate. Applied to BOTH high- and medium-
+    # confidence matches (changed 2026-04-25 after 3 false-positive connects
+    # to non-medical name twins — Christopher McCormack/Project Manager,
+    # Claire Stewart/PA, Christine Rizkallah/Senior Lecturer — all of which
+    # had cleared the verifier on perfect-name + valid-location alone).
+    # Re-check against the full profile text (headline + bio + experience).
+    # If no signal found, downgrade to reject.
+    if result["verifier_confidence"] in ("medium", "high"):
         full_text = "\n".join([
             result.get("headline", "") or "",
             result.get("bio", "") or "",
@@ -327,10 +331,11 @@ def profile(page: Page, profile_url: str,
         ])
         ok, reason = verifier.medical_signal_in_text(full_text, ahpra_specialities)
         if ok:
-            result["medium_signal_reason"] = reason
+            result["medical_signal_reason"] = reason
         else:
+            tier = result["verifier_confidence"]
             result["verifier_confidence"] = ""
-            result["fail_reason"] = "medium_no_medical_signal"
+            result["fail_reason"] = f"{tier}_no_medical_signal"
 
     # ── 2. Recent activity ──
     handle = _extract_handle(profile_url)

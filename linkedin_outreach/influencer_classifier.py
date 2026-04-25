@@ -147,7 +147,13 @@ def classify(profile: dict[str, Any],
 
     # Short-circuit on profiler failure.
     if profiler_fail:
-        if profiler_fail == "medium_no_medical_signal":
+        # Both "medium_no_medical_signal" and "high_no_medical_signal" mean
+        # the post-scrape gate found zero medical context (added 2026-04-25
+        # after high-conf matches were leaking name twins). Treat as terminal
+        # non-influencer so the row gets logged + skipped, not flagged as
+        # error.
+        if profiler_fail in ("medium_no_medical_signal",
+                             "high_no_medical_signal"):
             out["classification"]    = "non_influencer"
             out["classifier_source"] = "heuristic"
             out["fail_reason"]       = profiler_fail

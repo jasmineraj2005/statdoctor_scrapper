@@ -111,9 +111,15 @@ VIC_HOSPITAL_TOKENS = [
     "cabrini", "epworth", "ramsay health",
     "bendigo health", "ballarat health",
     "melbourne academic centre for health", "mach-track", "mach track",
-    "university of melbourne", "monash university",
-    # Education / research that signals medical affiliation
+    # 2026-04-25: removed broad-institution tokens "university of melbourne"
+    # and "monash university" — both have ~50k staff/students, vast majority
+    # not medical (Christine Rizkallah/Senior Lecturer false-positive). Use
+    # the medical-faculty token below instead, which DOES signal a medical
+    # affiliation.
     "faculty of medicine, dentistry and health sciences",
+    "melbourne medical school", "monash medical school",
+    "doherty institute", "burnet institute", "florey institute",
+    "centre for cancer research",
 ]
 
 # Locations that LinkedIn shows without a state but that plausibly mean VIC.
@@ -159,11 +165,61 @@ VIC_SUBURB_ALLOWLIST = {
 # When the profile lists only "Australia" (no city/state), accept as a soft
 # match if the AHPRA postcode is VIC (3xxx). Low-confidence fallback.
 VIC_POSTCODE_PREFIX = "3"
-MEDICAL_KEYWORDS         = [
-    "doctor", "medical", "physician", "gp", "surgeon", "specialist",
-    "registrar", "consultant", "mbbs", "md", "anaesth", "oncol",
-    "cardiolog", "radiolog", "psychiatr", "paediatr",
+# 2026-04-25 split (v2.1.1): the previous flat list contained generic words
+# ("doctor", "consultant", "specialist", "md") that matched non-medical
+# contexts (Project Manager titles, business consultants, Managing Directors).
+# Three audit-confirmed false positives — Christopher McCormack/Project Mgr,
+# Claire Stewart/PA, Christine Rizkallah/Senior Lecturer — all cleared the
+# old list. Restructured into:
+#
+#   STRONG_MEDICAL_KEYWORDS — unambiguous; passing one of these is sufficient
+#                             evidence the LinkedIn profile is a doctor.
+#   WEAK_MEDICAL_KEYWORDS   — generic; only count when paired with a STRONG
+#                             keyword OR a SPECIALITY_KEYWORDS hit. Listed for
+#                             documentation/visibility but not used by the
+#                             post-scrape gate alone.
+#
+# verifier.medical_signal_in_text only uses STRONG. SPECIALITY_KEYWORDS is
+# also strong evidence when the AHPRA speciality matches.
+STRONG_MEDICAL_KEYWORDS = [
+    # Australian medical post-nominals
+    "mbbs", "mbchb", "mbbch", "fracp", "fracgp", "franzcp", "fracs", "frcs",
+    "frcp", "ranzcr", "ranzco", "races", "fanzca", "facd", "facrrm", "facem",
+    # Roles unambiguously medical
+    "physician", "surgeon", "registrar", "anaesthetist", "anesthetist",
+    "psychiatrist", "paediatrician", "pediatrician", "cardiologist",
+    "radiologist", "dermatologist", "neurologist", "neurosurgeon",
+    "ophthalmologist", "urologist", "oncologist", "haematologist",
+    "hematologist", "endocrinologist", "gastroenterologist", "rheumatologist",
+    "obstetrician", "gynaecologist", "gynecologist", "pathologist",
+    "intensivist", "rheumatologist", "nephrologist", "geriatrician",
+    "general practitioner", "family medicine", "emergency medicine",
+    "internal medicine", "intensive care", "palliative care",
+    # Speciality root forms (catch hyphenated/slashed variants)
+    "anaesthes", "anesthes", "oncolog", "cardiolog", "radiolog", "psychiatr",
+    "paediatr", "pediatr", "dermatolog", "ophthalmolog", "neurolog",
+    "neurosurg", "urolog", "haematolog", "hematolog", "endocrinolog",
+    "gastroenterolog", "rheumatolog", "patholog", "geriatr", "obstetr",
+    "gynaecol", "gynecol", "nephrolog",
+    # Hospital/medical-school context (when paired in headline)
+    "medical school", "school of medicine", "faculty of medicine",
+    "medical centre", "medical center", "hospital",
 ]
+
+# DEPRECATED (kept for backward-compat references only — don't use in new
+# checks). The post-scrape medical-signal gate now uses STRONG_MEDICAL_KEYWORDS.
+WEAK_MEDICAL_KEYWORDS = [
+    "doctor",      # matches "PhD doctor", "research doctor", lab "doctor"
+    "medical",     # matches "medical devices sales", "medical writer"
+    "consultant",  # business consultant
+    "specialist",  # marketing specialist, brand specialist
+    "gp",          # "GP team", "GP firm" (general partner)
+    "md",          # Managing Director
+]
+
+# Backward compatibility — many call sites still import MEDICAL_KEYWORDS.
+# Point it at the strong list so existing code automatically tightens.
+MEDICAL_KEYWORDS = STRONG_MEDICAL_KEYWORDS
 
 # Map AHPRA speciality substrings → keywords we'd expect to see in a LinkedIn
 # headline. Used as a verification booster: when the practitioner has this

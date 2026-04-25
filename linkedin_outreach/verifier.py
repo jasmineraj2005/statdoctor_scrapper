@@ -195,37 +195,92 @@ def is_active_account(profile: dict, medical_signal: bool = False) -> tuple[bool
     return True, "ok"
 
 
+def _has_dr_prefix(linkedin_name: str) -> bool:
+    return bool(re.match(r"\s*(dr|prof|a/?prof|assoc)\.?\s",
+                         (linkedin_name or "").lower()))
+
+
+def _card_has_medical_rescue(practitioner: dict, profile: dict) -> bool:
+    """A near-name candidate (Δtok=1 or sort in [85,95)) can be rescued for
+    'medium' confidence iff the search-card itself shows a medical signal:
+      - LinkedIn name carries a Dr/Prof prefix (Christine 'Tina' Rizkallah
+        case — but also any "Dr X Y" headline)
+      - Headline contains a generic medical keyword
+      - Headline contains a speciality keyword for the AHPRA speciality
+
+    Bio + experience aren't on the card; the post-scrape gate (in
+    profile_profiler) reuses the same rule against fuller text.
+    """
+    headline = profile.get("headline", "") or ""
+    if _has_dr_prefix(profile.get("name", "")):
+        return True
+    if headline_is_medical(headline):
+        return True
+    sp_ok, _ = headline_matches_speciality(
+        practitioner.get("specialities", "") or "", headline
+    )
+    return sp_ok
+
+
 def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
     """
     Full verification pipeline — returns (is_match, reason, confidence).
 
-    Three confidence tiers:
-      "high"   — location matched normally + sort_score >= NAME_HIGH_CONF_SCORE
-      "medium" — location was EMPTY, sort_score >= NAME_HIGH_CONF_SCORE, AND
-                 the headline/speciality shows a medical signal
-      ""       — rejected (includes "low": sort in [85, 95) range → reject today)
+    Confidence tiers:
+      "high"    — name passes hard gate (name_matches) AND location matches
+                  normally AND sort_score >= NAME_HIGH_CONF_SCORE
+      "medium"  — either:
+                    a. location was EMPTY + strong name (legacy empty-loc path), or
+                    b. NEW: name is near-miss (Δtok=1 OR sort in [85, 95))
+                       BUT the card shows a medical signal (Dr prefix, medical
+                       keyword in headline, or speciality keyword). Real doctors
+                       with nicknames (Christine 'Tina' Rizkallah) used to be
+                       rejected on Δtok=1 even when the headline literally said
+                       "Dr Tina Rizkallah is a Consultant Psychiatrist".
+      ""        — rejected
 
     Profile dict must have: name, location, headline, has_degree_badge,
     has_headline, has_action_button.
     """
-    name_ok, sort_s, set_s, delta = name_matches(
+    sort_s, set_s, delta = name_scores(
         practitioner["name"], profile.get("name", "")
     )
-    if not name_ok:
-        return (
-            False,
-            f"name_mismatch (sort={sort_s}, set={set_s}, Δtok={delta})",
-            "",
-        )
+    name_hard_ok = (sort_s >= config.NAME_SORT_THRESHOLD
+                    and set_s >= config.NAME_SET_THRESHOLD
+                    and delta <= config.NAME_TOKEN_DELTA_MAX)
 
-    # Tier based on primary score. Sort in [85, 95) is "low" — rejected today;
-    # kept in code as an explicit branch so future relaxations are one line.
-    if sort_s < config.NAME_HIGH_CONF_SCORE:
-        return (
-            False,
-            f"name_low_confidence (sort={sort_s}, set={set_s}, Δtok={delta})",
-            "",
+    # NEW (2026-04-25): rescue near-name matches with on-card medical signal.
+    # Triggered when:
+    #   - name fails the hard gate ONLY on Δtok (one extra/missing token), OR
+    #   - sort_score is in the "low" band [NAME_SORT_THRESHOLD, NAME_HIGH_CONF_SCORE)
+    # AND the card shows a medical signal. Caps at "medium" — caller still
+    # runs the full post-scrape gate before classifying.
+    near_miss = False
+    if not name_hard_ok:
+        near_miss_on_delta = (
+            sort_s >= config.NAME_SORT_THRESHOLD
+            and set_s >= config.NAME_SET_THRESHOLD
+            and delta == config.NAME_TOKEN_DELTA_MAX + 1
         )
+        if near_miss_on_delta and _card_has_medical_rescue(practitioner, profile):
+            near_miss = True
+        else:
+            return (
+                False,
+                f"name_mismatch (sort={sort_s}, set={set_s}, Δtok={delta})",
+                "",
+            )
+
+    if not near_miss and sort_s < config.NAME_HIGH_CONF_SCORE:
+        # Low-band rescue: sort in [85, 95) with on-card medical signal.
+        if _card_has_medical_rescue(practitioner, profile):
+            near_miss = True
+        else:
+            return (
+                False,
+                f"name_low_confidence (sort={sort_s}, set={set_s}, Δtok={delta})",
+                "",
+            )
 
     confidence = ""
     loc = (profile.get("location", "") or "").strip()
@@ -252,6 +307,12 @@ def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
             return False, f"empty_location (sort={sort_s})", ""
     else:
         confidence = "high"
+
+    # Near-miss matches (Fix A) cap at "medium" regardless of location —
+    # the only reason we accepted them is the on-card medical signal, so we
+    # still want the full post-scrape gate to confirm before connecting.
+    if near_miss and confidence == "high":
+        confidence = "medium"
 
     if config.REQUIRE_ACTIVE_ACCOUNT:
         # Medical signal in the headline bypasses `no_degree_badge` (see
