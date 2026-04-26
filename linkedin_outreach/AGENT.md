@@ -7,18 +7,27 @@ Working directory: `/Users/jasminebaldevraj/Desktop/ARPHA/statdoctor_scrapper/li
 `git log --oneline` for the last 3–5 commits so you know which step
 completed most recently.
 
-## Current state (2026-04-26)
+## Current state (2026-04-26 evening)
 
-Step 9 Day-3 complete. Connector v2 + Classifier v2.1.1 landed after a
-hard lesson: Day-3 fired 3 fully-automated connects to non-doctors
-(Project Manager, PA, Senior Lecturer) — perfect-name look-alikes that the
-v2.1 verifier accepted because (a) the medical-signal gate only ran for
-medium-confidence matches, (b) the keyword list contained dual-use words
-("doctor", "consultant", "specialist", "md"), and (c) "university of
-melbourne" was in the hospital token list. Audit found 7 of 18 existing
-influencers were FPs (6 sent — flagged in sheet, 1 caught by user).
+Day-4 scale-out underway under classifier v2.1.2. v2.1.1 over-corrected
+(batch #3 yielded 1/120 vs v2.1's 7/200) — analysis of the 21 medical-signal-gate
+rejections in batch #3 found real practitioners getting cut: VMO general
+surgery at Northern Health (no STRONG keyword for "surgery"), AHPRA-registered
+TCM Practitioner, "medical officer at Cabrini" (sort=84 just under 85 floor),
+Alfred Health intensivist with credentials in the LinkedIn "location" field
+not "headline". v2.1.2 closes those without re-introducing FPs.
+
+Day-4 batch #1 (v2.1.2) yielded 2 clean influencers, both auto-connected:
+Dr David Pilcher (Senior Intensive Care Specialist – Alfred Health) and
+Dr Dinusha Katugampalage (Consultant Psychiatrist @ Forensicare | MBBS |
+MD Psych | FRANZCP).
 
 Most recent commits (LOCAL ONLY — do not push without user approval):
+- `9fc5d5c` **classifier v2.1.2** — recover real doctors lost to v2.1.1
+            over-correction (hospital tokens in headline_is_medical,
+            sub-threshold name-rescue band [80,85), STRONG_MEDICAL +=
+            allied health + clinical-role keywords)
+- `7e1fe23` ROADMAP + AGENT — Day 2/3 outcomes + v2.1.1 + connector v2
 - `aaff844` keep audit + diagnostic scripts (_audit_influencers.py, etc.)
 - `92622c8` **classifier v2.1.1** — Fixes A/B/C in one commit, locked together
 - `c980f8e` add Connections Sent sheet tab
@@ -27,7 +36,7 @@ Most recent commits (LOCAL ONLY — do not push without user approval):
             More-menu text fallback, :visible filter on duplicate anchors
 - `ed1bac0` classifier v2.1 (300/1/drop avg_likes) + reprofile_approved.py
 
-### Days 1–3 recap
+### Days 1–4 recap
 - **Day-1 (2026-04-24):** 201 rows under v2.0 → 0 influencers (over-gating).
 - **Day-2 (2026-04-25):** 200 rows under v2.1 → 7 influencers, 0 connects
   (connector bugs). User connected manually to all 7 — 6 real, 1 FP
@@ -36,10 +45,20 @@ Most recent commits (LOCAL ONLY — do not push without user approval):
   fully-automated connects fired, **all 3 turned out to be non-doctors**:
   Christopher McCormack (Project Manager), Claire Stewart (PA), Christine
   Rizkallah (Senior Lecturer). Triggered the v2.1.1 audit + fix.
+- **Day-3 batch #3 (2026-04-26 morning, v2.1.1):** 120 rows → 1 influencer
+  (Dr David Fineberg, GP/ME Research Clinic). Yield 0.8% — too low,
+  triggered v2.1.2 fixes.
+- **Day-4 batch #1 (2026-04-26 afternoon, v2.1.2):** 120 rows → 2
+  influencers, 2 auto-connects (Dr Pilcher Alfred Health ICU,
+  Dr Katugampalage Consultant Psychiatrist Forensicare). Both clean.
+  Yield 1.7%.
 
-### Classifier v2.1.1 (active, `92622c8`)
-Hard filters unchanged from v2.1 (followers≥300, posts≥1, last_post≤90d).
-Three coupled fixes (single commit):
+### Classifier v2.1.2 (active, `9fc5d5c`)
+Hard filters unchanged (followers≥300, posts≥1, last_post≤90d). Three
+v2.1.1 fixes (A/B/C, commit `92622c8`) plus three v2.1.2 recovery fixes
+(commit `9fc5d5c`):
+
+**v2.1.1 base (still active):**
 - **Fix A** — verifier near-name rescue: Δtok=2 OR sort∈[85,95) AND on-card
   medical signal (Dr/Prof prefix, STRONG_MEDICAL keyword, or speciality
   keyword) → promote to medium instead of name-reject.
@@ -52,9 +71,21 @@ Three coupled fixes (single commit):
   longer used by gate. `VIC_HOSPITAL_TOKENS` lost broad universities,
   gained specific medical sub-units.
 
+**v2.1.2 additions (recover real-doctor recall):**
+- `headline_is_medical` ALSO checks VIC_HOSPITAL_TOKENS (was only the
+  deeper `medical_signal_in_text`). Fixes "VMO at Northern Health" /
+  "Intensivist at Alfred Health" rescue at the verifier stage.
+- New sub-threshold name rescue band [80, 85) for cards with on-card
+  medical signal — both sort and set floors relaxed to 80. Caps at
+  "medium". Fixes nickname cases ("Danny" vs "Daniel" sort=84).
+- STRONG_MEDICAL_KEYWORDS expanded with allied-health (physiotherapist,
+  TCM practitioner, psychologist, midwife, nurse practitioner, dentist,
+  pharmacist, etc.) and clinical roles (VMO, general surgery, medical
+  officer, consultant physician, staff specialist, fellow).
+
 Audit script `_audit_influencers.py` re-checks classifications.csv against
-v2.1.1; `_drive_test_missed.py` finds rejections that v2.1.1 would now
-rescue.
+current rules; `_drive_test_missed.py` finds rejections that the new
+rescue path would recover.
 
 ### Connector v2 (active, `6b1d588`)
 - Strips "Dr"/"Prof"/"A/Prof" from owner_name before formatting CONNECT_BUTTON_FMT
@@ -85,13 +116,13 @@ STATUS_SENT. Backfilled with 14 manual sends via
 
 ## YOUR NEXT STEPS IN ORDER
 
-1. **STEP 10 — Day-4 scale-out** under v2.1.1.
-   `main.py --limit 120 --connect-cap 80` (≈2hr per batch per user spec).
-   Expected ~3-5 influencers per 120 rows (lower than v2.1 yield because
-   of tighter gate). Connects fire automatically; only STRONG keyword
-   matches qualify so precision should be much higher. Until v2.1.1 has
-   logged ~30 successful real connects, surface the influencer URL list
-   to the user for sanity-check before relying on auto-send.
+1. **STEP 10 — Day-4 scale-out** continues under v2.1.2.
+   `main.py --limit 120 --connect-cap 80` per batch (≈2hr each, user spec).
+   Day-4 batch #1 yielded 2/120; batch #2+ in progress as of 2026-04-26
+   evening. ~3,200 rows remaining in subset. Always show user the
+   influencer URL list when batch finishes — they spot-check before we
+   ramp further. Two fully-clean v2.1.2 connects so far is a small sample;
+   keep watching for FP regressions for the next ~10 sends.
 
 2. **Manual FP withdrawal.** 5 sent FPs from Day-2/Day-3 to be withdrawn
    on LinkedIn (user does this): McCormack, Stewart, Rizkallah, Andrew
@@ -158,7 +189,7 @@ directory.
 | `searcher.py` | LinkedIn people-search + JS card extraction (class-agnostic) |
 | `verifier.py` | Two-scorer name matching + 3-tier confidence + post-scrape medical-signal |
 | `profile_profiler.py` | Scrapes followers / creator_mode / bio / activity. v2 bio keywords: 8 total |
-| `influencer_classifier.py` | **v2.1.1** hard filters 300/1/90d; engagement_rate soft-only; soft threshold 4 (normal) / 5 (medium); Ollama edge call; medium AND high both run medical-signal post-scrape gate |
+| `influencer_classifier.py` | **v2.1.2** hard filters 300/1/90d; engagement_rate soft-only; soft threshold 4 (normal) / 5 (medium); Ollama edge call; medium AND high both run medical-signal post-scrape gate; verifier rescues near-name (Δtok=2 or sort∈[80,95)) with medical signal |
 | `reprofile_approved.py` | One-off: re-profile+classify+connect specific URLs, bypasses is_hot. User-authorised only |
 | `_audit_influencers.py` | Re-classify existing influencers under current rules; flag FPs already sent. Run after each classifier change |
 | `_drive_test_missed.py` | Find name-rejected real doctors that the new rescue path would recover |
