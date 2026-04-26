@@ -1,0 +1,221 @@
+reporting_unit_code,name,private,closed,latitude,longitude,lhn_code,lhn_name,phn_code,phn_name
+H0385,Mater Adult Hospital,False,False,-27.485488,153.028103,LHN997,Not applicable,PHN302,Brisbane South
+H0387,Mater Mothers' Hospital,False,False,-27.485436,153.027001,LHN997,Not applicable,PHN302,Brisbane South
+H0388,The Prince Charles Hospital,False,False,-27.390497,153.021955,LHN320,Metro North (Qld),PHN301,Brisbane North
+H0390,Princess Alexandra Hospital,False,False,-27.499402,153.033542,LHN322,Metro South (Qld),PHN302,Brisbane South
+H0391,Ipswich Hospital,False,False,-27.619465,152.759313,LHN324,West Moreton,PHN304,Darling Downs and West Moreton
+H0392,Redcliffe Hospital,False,False,-27.228269,153.105245,LHN320,Metro North (Qld),PHN301,Brisbane North
+H0393,Ellen Barron Family Centre,False,False,-27.385905,153.025152,LHN321,Children's Health Queensland,PHN301,Brisbane North
+H0394,Queen Elizabeth II Jubilee Hospital,False,False,-27.559673,153.048852,LHN322,Metro South (Qld),PHN302,Brisbane South
+H0397,Redland Hospital,False,False,-27.539992,153.251379,LHN322,Metro South (Qld),PHN302,Brisbane South
+H0398,Logan Hospital,False,False,-27.670169,153.141732,LHN322,Metro South (Qld),PHN302,Brisbane South
+H0399,Caboolture Hospital,False,False,-27.080776,152.963623,LHN320,Metro North (Qld),PHN301,Brisbane North
+H0400,Beaudesert Hospital,False,False,-27.984869,153.002536,LHN322,Metro South (Qld),PHN302,Brisbane South
+H0401,Boonah Hospital,False,False,-27.999128,152.678943,LHN324,West Moreton,PHN304,Darling Downs and West Moreton
+H0402,Caloundra Hospital,False,False,-26.800582,153.119759,LHN319,Sunshine Coast,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0403,Esk Hospital,False,False,-27.240398,152.418179,LHN324,West Moreton,PHN304,Darling Downs and West Moreton
+H0404,Gatton Hospital,False,False,-27.566778,152.276269,LHN324,West Moreton,PHN304,Darling Downs and West Moreton
+H0405,Kilcoy Hospital,False,False,-26.941009,152.561495,LHN320,Metro North (Qld),PHN301,Brisbane North
+H0406,Laidley Hospital,False,False,-27.632725,152.400015,LHN324,West Moreton,PHN304,Darling Downs and West Moreton
+H0407,Maleny Hospital,False,False,-26.754893,152.844972,LHN319,Sunshine Coast,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0408,Nambour General Hospital,False,False,-26.621659,152.952249,LHN319,Sunshine Coast,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0409,Gold Coast University Hospital,False,False,-27.958896,153.381173,LHN323,Gold Coast,PHN303,Gold Coast
+H0410,Biggenden Hospital,False,False,-25.506406,152.051099,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0411,Bundaberg Base Hospital,False,False,-24.868877,152.336157,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0412,Cherbourg Hospital,False,False,-26.291519,151.956324,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0413,Childers Hospital,False,False,-25.239416,152.273286,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0414,Eidsvold Hospital,False,False,-25.382639,151.125494,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0415,Gayndah Hospital,False,False,-25.631384,151.604531,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0416,Gin Gin Hospital,False,False,-24.985707,151.953449,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0417,Gympie Hospital,False,False,-26.184353,152.658258,LHN319,Sunshine Coast,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0418,Hervey Bay Hospital,False,False,-25.298697,152.820639,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0419,Kingaroy Hospital,False,False,-26.532454,151.838307,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0420,Maryborough Hospital,False,False,-25.522131,152.689855,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0421,Monto Hospital,False,False,-24.866424,151.112501,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0423,Mundubbera Hospital,False,False,-25.587619,151.293282,LHN318,Wide Bay,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0424,Murgon Hospital,False,False,-26.239075,151.950702,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0425,Nanango Hospital,False,False,-26.666405,152.007833,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0426,Wondai Hospital,False,False,-26.323335,151.878658,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0427,Chinchilla Hospital,False,False,-26.741337,150.634939,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0428,Dalby Hospital,False,False,-27.167153,151.278905,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0429,Goondiwindi Hospital,False,False,-28.547951,150.302302,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0430,Inglewood Hospital,False,False,-28.41764722,151.0618556,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0431,Jandowae Hospital,False,False,-26.781016,151.105313,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0432,Miles Hospital,False,False,-26.658236,150.191023,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0433,Millmerran Hospital,False,False,-27.878928,151.26267,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0434,Oakey Hospital,False,False,-27.424079,151.719088,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0435,Stanthorpe Hospital,False,False,-28.660927,151.928397,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0436,Tara Hospital,False,False,-27.273674,150.456368,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0437,Taroom Hospital,False,False,-25.638818,149.798669,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0438,Texas Hospital,False,False,-28.855978,151.179481,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0439,Toowoomba Hospital,False,False,-27.569872,151.944433,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0440,Warwick Hospital,False,False,-28.224275,152.017983,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0441,Augathella Hospital,False,False,-25.796104,146.590919,LHN326,South West (Qld),PHN305,Western Queensland
+H0442,Charleville Hospital,False,False,-26.410455,146.239228,LHN326,South West (Qld),PHN305,Western Queensland
+H0443,Cunnamulla Hospital,False,False,-28.071658,145.690405,LHN326,South West (Qld),PHN305,Western Queensland
+H0444,Dirranbandi Hospital,False,False,-28.579349,148.229159,LHN326,South West (Qld),PHN305,Western Queensland
+H0445,Injune Hospital,False,False,-25.847096,148.562471,LHN326,South West (Qld),PHN305,Western Queensland
+H0446,Mitchell Hospital,False,False,-26.489913,147.972493,LHN326,South West (Qld),PHN305,Western Queensland
+H0447,Mungindi Hospital,False,False,-28.972817,148.989061,LHN326,South West (Qld),PHN305,Western Queensland
+H0448,Quilpie Hospital,False,False,-26.616519,144.274617,LHN326,South West (Qld),PHN305,Western Queensland
+H0449,Roma Hospital,False,False,-26.568828,148.775846,LHN326,South West (Qld),PHN305,Western Queensland
+H0450,St George Hospital Qld,False,False,-28.0272,148.5926833,LHN326,South West (Qld),PHN305,Western Queensland
+H0451,Surat Hospital,False,False,-27.156595,149.063787,LHN326,South West (Qld),PHN305,Western Queensland
+H0452,Alpha Hospital,False,False,-23.649039,146.632962,LHN317,Central West (Qld),PHN305,Western Queensland
+H0453,Baralaba Hospital,False,False,-24.184268,149.809586,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0454,Biloela Hospital,False,False,-24.395813,150.517491,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0455,Blackwater Hospital,False,False,-23.571873,148.878219,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0456,Emerald Hospital,False,False,-23.514826,148.154989,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0457,Gladstone Hospital,False,False,-23.850654,151.248532,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0458,Mount Morgan Hospital,False,False,-23.645094,150.392639,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0459,Moura Hospital,False,False,-24.575948,149.975999,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0460,Rockhampton Hospital,False,False,-23.379525,150.494542,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0461,Springsure Hospital,False,False,-24.120122,148.084762,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0462,Theodore Hospital,False,False,-24.943109,150.075277,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0463,Capricorn Coast Hospital,False,False,-23.143888,150.734519,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0464,Woorabinda Hospital,False,False,-24.13149167,149.4559833,LHN316,Central Queensland,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H0466,Barcaldine Hospital,False,False,-23.553316,145.293674,LHN317,Central West (Qld),PHN305,Western Queensland
+H0467,Blackall Hospital,False,False,-24.422705,145.449349,LHN317,Central West (Qld),PHN305,Western Queensland
+H0470,Longreach Hospital,False,False,-23.439033,144.260873,LHN317,Central West (Qld),PHN305,Western Queensland
+H0473,Winton Hospital,False,False,-22.381189,143.040672,LHN317,Central West (Qld),PHN305,Western Queensland
+H0476,Clermont Hospital,False,False,-22.826219,147.632174,LHN314,Mackay,PHN307,Northern Queensland
+H0477,Mackay Base Hospital,False,False,-21.145792,149.155325,LHN314,Mackay,PHN307,Northern Queensland
+H0478,Moranbah Hospital,False,False,-22.002125,148.055287,LHN314,Mackay,PHN307,Northern Queensland
+H0479,Proserpine Hospital,False,False,-20.400017,148.584976,LHN314,Mackay,PHN307,Northern Queensland
+H0480,Sarina Hospital,False,False,-21.421151,149.210268,LHN314,Mackay,PHN307,Northern Queensland
+H0481,Dysart Hospital,False,False,-22.582729,148.353044,LHN314,Mackay,PHN307,Northern Queensland
+H0482,Ayr Hospital,False,False,-19.564066,147.408821,LHN313,Townsville,PHN307,Northern Queensland
+H0483,Bowen Hospital,False,False,-20.007104,148.240327,LHN314,Mackay,PHN307,Northern Queensland
+H0484,Charters Towers Hospital,False,False,-20.076167,146.264097,LHN313,Townsville,PHN307,Northern Queensland
+H0485,Collinsville Hospital,False,False,-20.546108,147.838146,LHN314,Mackay,PHN307,Northern Queensland
+H0486,Home Hill Hospital,False,False,-19.661764,147.416759,LHN313,Townsville,PHN307,Northern Queensland
+H0487,Ingham Hospital,False,False,-18.652293,146.164222,LHN313,Townsville,PHN307,Northern Queensland
+H0488,Joyce Palmer Health Service,False,False,-18.732733,146.578731,LHN313,Townsville,PHN307,Northern Queensland
+H0489,Townsville University Hospital,False,False,-19.320683,146.762092,LHN313,Townsville,PHN307,Northern Queensland
+H0490,Royal Brisbane & Women's Hospital,False,False,-27.446972,153.027888,LHN320,Metro North (Qld),PHN301,Brisbane North
+H0491,Atherton Hospital,False,False,-17.266635,145.483177,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0492,Babinda Hospital,False,False,-17.343079,145.918908,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0493,Bamaga Hospital,False,False,-10.893996,142.385131,LHN327,Torres and Cape,PHN307,Northern Queensland
+H0494,Cairns Hospital,False,False,-16.912537,145.768522,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0496,Cooktown Hospital,False,False,-15.478067,145.249616,LHN327,Torres and Cape,PHN307,Northern Queensland
+H0500,Gordonvale Hospital,False,False,-17.087337,145.786159,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0501,Herberton Hospital,False,False,-17.379371,145.38175,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0502,Innisfail Hospital,False,False,-17.518939,146.030049,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0503,Mareeba Hospital,False,False,-16.987117,145.424468,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0504,Mossman Hospital,False,False,-16.464031,145.368025,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0506,Thursday Island Hospital,False,False,-10.588,142.21156,LHN327,Torres and Cape,PHN307,Northern Queensland
+H0507,Tully Hospital,False,False,-17.927624,145.924146,LHN312,Cairns and Hinterland,PHN307,Northern Queensland
+H0508,Weipa Hospital,False,False,-12.623419,141.881179,LHN327,Torres and Cape,PHN307,Northern Queensland
+H0516,Cloncurry Hospital,False,False,-20.704166,140.527571,LHN315,North West (Qld),PHN305,Western Queensland
+H0517,Hughenden Hospital,False,False,-20.8424,144.1892,LHN313,Townsville,PHN307,Northern Queensland
+H0518,Julia Creek Hospital,False,False,-20.656096,141.749875,LHN315,North West (Qld),PHN305,Western Queensland
+H0519,Mount Isa Base Hospital,False,False,-20.730919,139.493815,LHN315,North West (Qld),PHN305,Western Queensland
+H0520,Normanton Hospital,False,False,-17.678739,141.086425,LHN315,North West (Qld),PHN305,Western Queensland
+H0521,Richmond Hospital,False,False,-20.738726,143.150471,LHN313,Townsville,PHN307,Northern Queensland
+H0522,Mornington Island Hospital,False,False,-16.665534,139.178559,LHN315,North West (Qld),PHN305,Western Queensland
+H0525,Doomadgee Hospital,False,False,-17.942527,138.825267,LHN315,North West (Qld),PHN305,Western Queensland
+H0534,Baillie Henderson Hospital,False,False,-27.524371,151.936283,LHN325,Darling Downs,PHN304,Darling Downs and West Moreton
+H0535,Charters Towers Rehabilitation Unit,False,False,-20.076801,146.280459,LHN313,Townsville,PHN307,Northern Queensland
+H0536,Kirwan Rehabilitation Unit,False,False,-19.303796,146.731627,LHN313,Townsville,PHN307,Northern Queensland
+H0537,The Park Centre For Mental Health,False,False,-27.600413,152.910246,LHN324,West Moreton,PHN302,Brisbane South
+H0744,Robina Hospital,False,False,-28.072198,153.377284,LHN323,Gold Coast,PHN303,Gold Coast
+H0745,Queensland Children's Hospital,False,False,-27.484305,153.026717,LHN321,Children's Health Queensland,PHN302,Brisbane South
+H0750,Sunshine Coast University Hospital,False,False,-26.74681,153.113812,LHN319,Sunshine Coast,PHN306,"Central Queensland, Wide Bay and Sunshine Coast"
+H1048,Surgical Treatment and Rehabilitation Service,False,False,-27.44926,153.02611,LHN320,Metro North (Qld),PHN301,Brisbane North
+H1050,Jacaranda Place Queensland Adolescent Extended Treatment Centre,False,False,-27.38765,153.02656,LHN321,Children's Health Queensland,PHN301,Brisbane North
+H5024,Brisbane Private Hospital,True,False,-27.464756,153.022642,,,,
+H5026,Caboolture Private Hospital,True,False,-27.080318,152.963628,,,,
+H5032,Ramsay Surgical Centre Cairns,True,False,-16.918973,145.771955,,,,
+H5033,Cairns Private Hospital,True,False,-16.918854,145.772282,,,,
+H5034,Ramsay Clinic Caloundra,True,False,-26.782379,153.125534,,,,
+H5076,Eye-Tech Day Surgeries,True,False,-27.461026,153.021898,,,,
+H5077,Eye-Tech Day Surgeries Southside,True,False,-27.557642,153.082042,,,,
+H5086,Greenslopes Private Hospital,True,False,-27.513052,153.046942,,,,
+H5091,Hervey Bay Surgical Hospital,True,False,-25.287202,152.834651,,,,
+H5092,Hillcrest Rockhampton Private Hospital,True,False,-23.377595,150.496076,,,,
+H5095,St Vincent's Private Hospital [Northside],True,False,-27.390688,153.022728,,,,
+H5100,Ipswich Day Hospital,True,False,-27.6184,152.7608,,,,
+H5102,John Flynn Private Hospital,True,False,-28.153911,153.488616,,,,
+H5106,Kawana Private Hospital,True,False,-26.733825,153.122164,,,,
+H5116,Mater Children's Private Brisbane,True,False,-27.48485,153.027436,,,,
+H5117,Mater Private Hospital Townsville,True,False,-19.288482,146.786528,,,,
+H5118,Mater Misericordiae Day Unit,True,False,-21.139073,149.181984,,,,
+H5119,Mater Misericordiae Hospital Bundaberg,True,False,-24.870766,152.330412,,,,
+H5121,Mater Misericordiae Hospital Mackay,True,False,-21.129416,149.166033,,,,
+H5122,Mater Misericordiae Hospital Rockhampton,True,False,-23.398033,150.497444,,,,
+H5124,Mater Mothers' Private Brisbane,True,False,-27.485992,153.027747,,,,
+H5125,Mater Private Hospital Redland,True,False,-27.540811,153.25043,,,,
+H5126,Mater Private Hospital Brisbane,True,False,-27.483975,153.028777,,,,
+H5145,Nambour Selangor Private Hospital,True,False,-26.618265,152.955949,,,,
+H5148,Ramsay Clinic New Farm,True,False,-27.473623,153.045879,,,,
+H5150,Noosa Hospital,True,False,-26.403209,153.046309,,,,
+H5153,North West Private Hospital,True,False,-27.393992,152.992705,,,,
+H5164,Pacific Private Hospital,True,False,-27.970407,153.407829,,,,
+H5166,Peninsula Private Hospital Queensland,True,False,-27.230696,153.093087,,,,
+H5170,Pindara Day Procedure Centre,True,False,-28.008508,153.39373,,,,
+H5171,Pindara Private Hospital,True,False,-28.007076,153.393569,,,,
+H5172,Pine Rivers Private Hospital,True,False,-27.308361,152.994832,,,,
+H5176,Rivercity Private Hospital,True,False,-27.473491,152.995132,,,,
+H5180,Short Street Day Surgery,True,False,-27.970813,153.416975,,,,
+H5181,Lady Bjelke-Petersen Community Hospital,True,False,-26.543051,151.836891,,,,
+H5185,Southside Endoscopy Centre,True,False,-27.662981,153.17828,,,,
+H5188,St Andrew's Ipswich Private Hospital,True,False,-27.618799,152.763079,,,,
+H5189,St Andrew's War Memorial Hospital,True,False,-27.461224,153.021011,,,,
+H5206,St Stephen's Hospital [Hervey Bay],True,False,-25.299851,152.823273,,,,
+H5208,St Vincent's Private Hospital [Toowoomba],True,False,-27.565675,151.971551,,,,
+H5215,Sunnybank Private Hospital,True,False,-27.572541,153.061051,,,,
+H5216,Sunshine Coast Haematology and Oncology Clinic,True,False,-26.657299,153.094955,,,,
+H5234,Buderim Private Hospital,True,False,-26.683988,153.092895,,,,
+H5239,The Wesley Hospital,True,False,-27.478335,152.997971,,,,
+H5241,Toowong Private Hospital,True,False,-27.47736,152.99125,,,,
+H5242,Toowoomba Surgicentre,True,False,-27.566341,151.973785,,,,
+H5243,Townsville Day Surgery,True,False,-19.268889,146.782836,,,,
+H5261,Brisbane Endoscopy Services,True,False,-27.572418,153.061985,,,,
+H5265,St Andrew's Toowoomba Hospital,True,False,-27.539156,151.933665,,,,
+H5270,Mackay Specialist Day Hospital,True,False,-21.129471,149.16544,,,,
+H5278,Chermside Day Hospital,True,False,-27.381971,153.029423,,,,
+H5282,North Queensland Day Surgical Centre,True,False,-19.279643,146.791468,,,,
+H5285,Vision Day Surgery Rivercity,True,False,-27.473726,152.995579,,,,
+H5287,Brisbane Day Surgery,True,False,-27.4613,153.024547,,,,
+H5292,St Vincent's Private Hospital [Brisbane],True,False,-27.473334,153.03542,,,,
+H5295,Sunshine Coast University Private Hospital,True,False,-26.74422,153.114563,,,,
+H5298,Mackay Private Hospital,True,False,-21.113723,149.166763,,,,
+H5301,Nambour Day Surgery,True,False,-26.626321,152.96409,,,,
+H5310,Friendly Society Private Hospital,True,False,-24.870831,152.3429,,,,
+H5315,Buderim Gastroenterology Centre,True,False,-26.671731,153.084944,,,,
+H5323,Logan Endoscopy Services,True,False,-27.6591124,153.0387945,,,,
+H5333,Sunshine Coast Day Surgery,True,False,-26.655373,153.096157,,,,
+H5336,Gold Coast Private Hospital,True,False,-27.962084,153.385112,,,,
+H5343,The Southport Private Hospital,True,False,-27.973078,153.407852,,,,
+H5344,Westside Private Hospital,True,False,-27.491448,152.981745,,,,
+H5357,Eden Private Hospital,True,False,-26.420078,152.908844,,,,
+H5358,Robina Private Hospital,True,False,-28.071932,153.375778,,,,
+H5360,Cairns Haematology and Oncology Clinic,True,False,-16.91609,145.769684,,,,
+H5370,Belmont Private Hospital,True,False,-27.500755,153.098953,,,,
+H5374,Brisbane Day Hospital,True,False,-27.51023,153.0526,,,,
+H5391,Hummingbird House,True,False,-27.38312,153.027527,,,,
+H5393,Icon Cancer Centre Chermside,True,False,-27.38133,153.029739,,,,
+H5396,Icon Cancer Centre North Lakes,True,False,-27.24166,153.02184,,,,
+H5399,Icon Cancer Centre South Brisbane,True,False,-27.484,153.02812,,,,
+H5400,Icon Cancer Centre Southport,True,False,-27.97216,153.41107,,,,
+H5401,Icon Cancer Centre Townsville,True,False,-19.2765,146.79909,,,,
+H5402,Icon Cancer Centre Wesley,True,False,-27.47667,152.99734,,,,
+H5410,Mater Private Hospital Springfield,True,False,-27.686211,152.908676,,,,
+H5412,Miami Private Hospital,True,False,-28.063068,153.436813,,,,
+H5414,Moreton Day Hospital,True,False,-27.24131,153.020294,,,,
+H5418,Noosa Surgical and Endoscopy Centre,True,False,-26.40005,153.06491,,,,
+H5423,Northside Endoscopy Service,True,False,-27.082979,152.950165,,,,
+H5439,Spring Hill Specialist Day Hospital,True,False,-27.461082,153.021851,,,,
+H5443,Tasman Health Care Day Infusion Unit,True,False,-27.970409,153.407806,,,,
+H5447,The Wesley Centre for Hyperbaric Medicine,True,False,-27.477161,152.997803,,,,
+H5449,Vision Centre Day Surgery,True,False,-27.96982,153.409225,,,,
+H5460,Chermside Dialysis Clinic,True,False,-27.390966,153.031784,,,,
+H5465,Eastern Endoscopy Centre,True,False,-27.494314,153.213242,,,,
+H5487,Icon Cancer Centre Mackay,True,False,-21.12852,149.17295,,,,
+H5489,South Coast Digestive Diseases Centre,True,False,-28.01032,153.4034,,,,
+H5493,Clifton Co-Op Hospital Ltd,True,False,-27.931108,151.91066,,,,
+H5497,Montserrat Western Haematology and Oncology Clinic,True,False,-27.49273,152.98146,,,,
+H5505,Townsville Private Clinic,True,False,-19.25832,146.8142,,,,
+H5506,Toowoomba Hospice,True,False,-27.56745,151.93395,,,,
+H5507,Currumbin Clinic,True,False,-28.1336,153.48643,,,,
+H5510,Ramsay Clinic Cairns,True,False,-16.910395159982997,145.762216098272,,,,

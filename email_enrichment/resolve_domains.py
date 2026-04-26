@@ -127,10 +127,25 @@ LHN_DOMAINS = {
     "sydney children's hospitals network": "health.nsw.gov.au",
     "st vincent's health network": "svha.org.au",
     "justice health & forensic mental health": "health.nsw.gov.au",
-    # QLD/SA/WA/TAS/NT LHN mappings — TODO when those state pilots run.
-    # Each state's per-HHS subdomains need verification; using the umbrella
-    # state-health domain produces wrong emails (firstname.lastname@health.qld.gov.au
-    # is not a real QLD Health mailbox pattern).
+    # QLD — all 16 HHSs centralize mail at health.qld.gov.au (verified MX).
+    # Per-HHS subdomains (metronorth.health.qld.gov.au etc) have no MX.
+    "metro north (qld)": "health.qld.gov.au",
+    "metro south (qld)": "health.qld.gov.au",
+    "west moreton": "health.qld.gov.au",
+    "darling downs": "health.qld.gov.au",
+    "gold coast": "health.qld.gov.au",
+    "sunshine coast": "health.qld.gov.au",
+    "wide bay": "health.qld.gov.au",
+    "central queensland": "health.qld.gov.au",
+    "mackay": "health.qld.gov.au",
+    "townsville": "health.qld.gov.au",
+    "cairns and hinterland": "health.qld.gov.au",
+    "torres and cape": "health.qld.gov.au",
+    "north west (qld)": "health.qld.gov.au",
+    "south west (qld)": "health.qld.gov.au",
+    "central west (qld)": "health.qld.gov.au",
+    "children's health queensland": "health.qld.gov.au",
+    # SA/WA/TAS/NT — TODO when those state pilots run.
 }
 
 

@@ -1,0 +1,6000 @@
+{
+  "4000": {
+    "centroid": [
+      -27.46845,
+      153.023
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 1.34
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queensland Children's Hospital",
+        "tier": "unknown",
+        "km": 1.8
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 2.77
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 27.33
+      }
+    ]
+  },
+  "4001": {
+    "centroid": [
+      -27.60348,
+      152.82314
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ipswich Hospital",
+        "tier": "unknown",
+        "km": 6.54
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 22.3
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 25.45
+      }
+    ]
+  },
+  "4004": {
+    "centroid": [
+      -24.04527,
+      149.31659
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Woorabinda Hospital",
+        "tier": "unknown",
+        "km": 17.09
+      }
+    ]
+  },
+  "4005": {
+    "centroid": [
+      -27.4631,
+      153.04675
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 1.6
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surgical Treatment and Rehabilitation Service",
+        "tier": "unknown",
+        "km": 2.55
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 5.19
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 26.24
+      }
+    ]
+  },
+  "4006": {
+    "centroid": [
+      -27.36618,
+      153.17524
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Jacaranda Place Queensland Adolescent Extended Treatment Centre",
+        "tier": "unknown",
+        "km": 14.87
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 15.3
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 17.11
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 21.39
+      }
+    ]
+  },
+  "4007": {
+    "centroid": [
+      -27.43609,
+      153.06191
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Royal Brisbane & Women's Hospital",
+        "tier": "unknown",
+        "km": 3.57
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 4.9
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 7.77
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 23.05
+      }
+    ]
+  },
+  "4008": {
+    "centroid": [
+      -27.39755,
+      153.1365
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Jacaranda Place Queensland Adolescent Extended Treatment Centre",
+        "tier": "unknown",
+        "km": 10.91
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 11.26
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 16.28
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 19.04
+      }
+    ]
+  },
+  "4010": {
+    "centroid": [
+      -27.43324,
+      153.04354
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Royal Brisbane & Women's Hospital",
+        "tier": "unknown",
+        "km": 2.17
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 4.53
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 6.53
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 23.05
+      }
+    ]
+  },
+  "4011": {
+    "centroid": [
+      -27.41948,
+      153.05975
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Royal Brisbane & Women's Hospital",
+        "tier": "unknown",
+        "km": 4.39
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 4.86
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 8.75
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 21.25
+      }
+    ]
+  },
+  "4012": {
+    "centroid": [
+      -27.39934,
+      153.05355
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Jacaranda Place Queensland Adolescent Extended Treatment Centre",
+        "tier": "unknown",
+        "km": 2.96
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 3.19
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 10.06
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 19.15
+      }
+    ]
+  },
+  "4013": {
+    "centroid": [
+      -27.39706,
+      153.07498
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Jacaranda Place Queensland Adolescent Extended Treatment Centre",
+        "tier": "unknown",
+        "km": 4.89
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 5.21
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 11.58
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 18.58
+      }
+    ]
+  },
+  "4014": {
+    "centroid": [
+      -27.37395,
+      153.08478
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Jacaranda Place Queensland Adolescent Extended Treatment Centre",
+        "tier": "unknown",
+        "km": 5.95
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 6.4
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 14.16
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 15.95
+      }
+    ]
+  },
+  "4017": {
+    "centroid": [
+      -27.31807,
+      153.04734
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 7.85
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 8.43
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 10.72
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 18.05
+      }
+    ]
+  },
+  "4018": {
+    "centroid": [
+      -27.34907,
+      153.0318
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 4.15
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 4.71
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 14.31
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 14.49
+      }
+    ]
+  },
+  "4019": {
+    "centroid": [
+      -27.24834,
+      153.0885
+    ],
+    "candidates": [
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 2.01
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 2.78
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 17.11
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 26.69
+      }
+    ]
+  },
+  "4020": {
+    "centroid": [
+      -27.21344,
+      153.1023
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 1.67
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 2.12
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 21.22
+      }
+    ]
+  },
+  "4021": {
+    "centroid": [
+      -27.2201,
+      153.07529
+    ],
+    "candidates": [
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 2.12
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 3.1
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 19.67
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 29.28
+      }
+    ]
+  },
+  "4022": {
+    "centroid": [
+      -27.21189,
+      153.04641
+    ],
+    "candidates": [
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 5.07
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 6.1
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 20.02
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 29.55
+      }
+    ]
+  },
+  "4029": {
+    "centroid": [
+      -27.44934,
+      153.02644
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surgical Treatment and Rehabilitation Service",
+        "tier": "unknown",
+        "km": 0.03
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 2.81
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 4.08
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 25.19
+      }
+    ]
+  },
+  "4030": {
+    "centroid": [
+      -27.42687,
+      153.02968
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Royal Brisbane & Women's Hospital",
+        "tier": "unknown",
+        "km": 2.24
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 4.08
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 6.2
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 22.69
+      }
+    ]
+  },
+  "4031": {
+    "centroid": [
+      -27.40854,
+      153.0307
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 2.14
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Prince Charles Hospital",
+        "tier": "unknown",
+        "km": 2.18
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 8.03
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 20.71
+      }
+    ]
+  },
+  "4032": {
+    "centroid": [
+      -27.38561,
+      153.01945
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 0.56
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 0.65
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 10.08
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 18.7
+      }
+    ]
+  },
+  "4034": {
+    "centroid": [
+      -27.35471,
+      153.04005
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 3.77
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 4.35
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 13.94
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 14.75
+      }
+    ]
+  },
+  "4035": {
+    "centroid": [
+      -27.35602,
+      152.97908
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 5.63
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 5.78
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 13.19
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 17.92
+      }
+    ]
+  },
+  "4036": {
+    "centroid": [
+      -27.31402,
+      153.00873
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 8.16
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 8.64
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 12.46
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 17.81
+      }
+    ]
+  },
+  "4037": {
+    "centroid": [
+      -27.34113,
+      152.93652
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Prince Charles Hospital",
+        "tier": "unknown",
+        "km": 10.07
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 10.14
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 15.86
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 19.75
+      }
+    ]
+  },
+  "4051": {
+    "centroid": [
+      -27.42751,
+      153.0003
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Royal Brisbane & Women's Hospital",
+        "tier": "unknown",
+        "km": 3.48
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 4.65
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 5.16
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 23.73
+      }
+    ]
+  },
+  "4053": {
+    "centroid": [
+      -27.39957,
+      152.98725
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Prince Charles Hospital",
+        "tier": "unknown",
+        "km": 3.57
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 3.64
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 8.29
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 21.49
+      }
+    ]
+  },
+  "4054": {
+    "centroid": [
+      -27.40982,
+      152.95601
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Prince Charles Hospital",
+        "tier": "unknown",
+        "km": 6.86
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 6.92
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 8.11
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 24.08
+      }
+    ]
+  },
+  "4055": {
+    "centroid": [
+      -27.39368,
+      152.92424
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Prince Charles Hospital",
+        "tier": "unknown",
+        "km": 9.65
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 9.73
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 11.35
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 24.63
+      }
+    ]
+  },
+  "4059": {
+    "centroid": [
+      -27.45207,
+      153.00889
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surgical Treatment and Rehabilitation Service",
+        "tier": "unknown",
+        "km": 1.73
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 2.74
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 3.53
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 25.98
+      }
+    ]
+  },
+  "4060": {
+    "centroid": [
+      -27.44433,
+      152.98454
+    ],
+    "candidates": [
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 3.45
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surgical Treatment and Rehabilitation Service",
+        "tier": "unknown",
+        "km": 4.14
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 5.97
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 26.06
+      }
+    ]
+  },
+  "4061": {
+    "centroid": [
+      -27.45085,
+      152.94426
+    ],
+    "candidates": [
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 5.67
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surgical Treatment and Rehabilitation Service",
+        "tier": "unknown",
+        "km": 8.08
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 9.34
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 28.55
+      }
+    ]
+  },
+  "4064": {
+    "centroid": [
+      -27.46468,
+      152.99904
+    ],
+    "candidates": [
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 1.06
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surgical Treatment and Rehabilitation Service",
+        "tier": "unknown",
+        "km": 3.17
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 3.72
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 27.63
+      }
+    ]
+  },
+  "4065": {
+    "centroid": [
+      -27.4625,
+      152.97599
+    ],
+    "candidates": [
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 2.3
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surgical Treatment and Rehabilitation Service",
+        "tier": "unknown",
+        "km": 5.16
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 5.99
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 28.25
+      }
+    ]
+  },
+  "4066": {
+    "centroid": [
+      -27.47987,
+      152.96415
+    ],
+    "candidates": [
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 3.18
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queensland Children's Hospital",
+        "tier": "unknown",
+        "km": 6.19
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 7.07
+      }
+    ]
+  },
+  "4067": {
+    "centroid": [
+      -27.50052,
+      153.00504
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queensland Children's Hospital",
+        "tier": "unknown",
+        "km": 2.8
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 3.12
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 4.26
+      }
+    ]
+  },
+  "4068": {
+    "centroid": [
+      -27.50691,
+      152.97693
+    ],
+    "candidates": [
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 4.12
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queensland Children's Hospital",
+        "tier": "unknown",
+        "km": 5.52
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 6.87
+      }
+    ]
+  },
+  "4069": {
+    "centroid": [
+      -27.50278,
+      152.89891
+    ],
+    "candidates": [
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 10.07
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 10.91
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 13.86
+      }
+    ]
+  },
+  "4070": {
+    "centroid": [
+      -27.55994,
+      152.87114
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 5.92
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 15.57
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 18.85
+      }
+    ]
+  },
+  "4072": {
+    "centroid": [
+      -27.54896,
+      152.33009
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gatton Hospital",
+        "tier": "unknown",
+        "km": 5.66
+      }
+    ]
+  },
+  "4073": {
+    "centroid": [
+      -27.54918,
+      152.95138
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 6.99
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 9.45
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 11.82
+      }
+    ]
+  },
+  "4074": {
+    "centroid": [
+      -27.55408,
+      152.92152
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 5.27
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 11.54
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 14.38
+      }
+    ]
+  },
+  "4075": {
+    "centroid": [
+      -27.55213,
+      152.97562
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 7.27
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 8.94
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 10.56
+      }
+    ]
+  },
+  "4076": {
+    "centroid": [
+      -27.58456,
+      152.92107
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 2.06
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 14.35
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 16.74
+      }
+    ]
+  },
+  "4077": {
+    "centroid": [
+      -27.60555,
+      152.96782
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 5.7
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 14.91
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 16.14
+      }
+    ]
+  },
+  "4078": {
+    "centroid": [
+      -27.61265,
+      152.95058
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 4.2
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 16.07
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 17.61
+      }
+    ]
+  },
+  "4101": {
+    "centroid": [
+      -27.48425,
+      153.00966
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queensland Children's Hospital",
+        "tier": "unknown",
+        "km": 1.68
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 1.82
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 2.82
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 29.37
+      }
+    ]
+  },
+  "4102": {
+    "centroid": [
+      -27.49546,
+      153.0328
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 0.44
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 2.47
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 4.4
+      }
+    ]
+  },
+  "4103": {
+    "centroid": [
+      -27.51218,
+      153.02877
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 1.5
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 4.37
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 5.38
+      }
+    ]
+  },
+  "4104": {
+    "centroid": [
+      -27.51576,
+      153.01154
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 2.83
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 4.93
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 5.27
+      }
+    ]
+  },
+  "4105": {
+    "centroid": [
+      -27.53444,
+      153.01889
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 4.07
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 6.99
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 7.13
+      }
+    ]
+  },
+  "4106": {
+    "centroid": [
+      -27.55214,
+      153.00462
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 4.44
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 8.76
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 9.27
+      }
+    ]
+  },
+  "4107": {
+    "centroid": [
+      -27.55205,
+      153.03064
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 1.99
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 8.77
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 9.37
+      }
+    ]
+  },
+  "4108": {
+    "centroid": [
+      -24.94761,
+      150.6048
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Monto Hospital",
+        "tier": "unknown",
+        "km": 51.99
+      }
+    ]
+  },
+  "4109": {
+    "centroid": [
+      -27.57925,
+      153.05745
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 2.34
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 11.98
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 13.23
+      }
+    ]
+  },
+  "4110": {
+    "centroid": [
+      -26.62392,
+      152.10509
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nanango Hospital",
+        "tier": "unknown",
+        "km": 10.76
+      }
+    ]
+  },
+  "4111": {
+    "centroid": [
+      -27.55064,
+      153.05223
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 1.06
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 8.75
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 10.22
+      }
+    ]
+  },
+  "4112": {
+    "centroid": [
+      -27.61113,
+      153.08784
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 6.89
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 16.17
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 17.78
+      }
+    ]
+  },
+  "4113": {
+    "centroid": [
+      -27.59072,
+      153.07793
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 4.49
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 13.71
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 15.34
+      }
+    ]
+  },
+  "4114": {
+    "centroid": [
+      -27.65281,
+      153.11076
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 3.61
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 21.29
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 22.92
+      }
+    ]
+  },
+  "4115": {
+    "centroid": [
+      -27.64384,
+      153.0225
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 9.71
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 19.0
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 19.1
+      }
+    ]
+  },
+  "4116": {
+    "centroid": [
+      -27.63399,
+      153.05079
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 8.27
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 17.93
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 18.63
+      }
+    ]
+  },
+  "4117": {
+    "centroid": [
+      -27.64469,
+      153.08304
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 6.44
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 19.62
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 20.87
+      }
+    ]
+  },
+  "4118": {
+    "centroid": [
+      -27.67381,
+      153.02732
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 11.27
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 22.31
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 22.47
+      }
+    ]
+  },
+  "4119": {
+    "centroid": [
+      -27.6115,
+      153.10977
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 7.24
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 17.02
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 19.01
+      }
+    ]
+  },
+  "4120": {
+    "centroid": [
+      -27.50871,
+      153.04422
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 1.48
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 4.03
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 6.18
+      }
+    ]
+  },
+  "4121": {
+    "centroid": [
+      -27.52697,
+      153.05395
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 3.67
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 6.24
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 8.26
+      }
+    ]
+  },
+  "4122": {
+    "centroid": [
+      -27.54332,
+      153.08816
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 4.28
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 9.36
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 11.97
+      }
+    ]
+  },
+  "4123": {
+    "centroid": [
+      -27.58353,
+      153.11615
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queen Elizabeth II Jubilee Hospital",
+        "tier": "unknown",
+        "km": 7.14
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 14.61
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 17.04
+      }
+    ]
+  },
+  "4124": {
+    "centroid": [
+      -27.71931,
+      152.9595
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 14.08
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 27.54
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 28.36
+      }
+    ]
+  },
+  "4125": {
+    "centroid": [
+      -27.73043,
+      153.04108
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 11.96
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 28.59
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 28.89
+      }
+    ]
+  },
+  "4127": {
+    "centroid": [
+      -27.62947,
+      153.14203
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 4.53
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 20.3
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 22.55
+      }
+    ]
+  },
+  "4128": {
+    "centroid": [
+      -27.6524,
+      153.17421
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 3.76
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 24.16
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 26.55
+      }
+    ]
+  },
+  "4129": {
+    "centroid": [
+      -27.68152,
+      153.18682
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 4.62
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 27.54
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 29.82
+      }
+    ]
+  },
+  "4130": {
+    "centroid": [
+      -27.66924,
+      153.24333
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 10.01
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 29.91
+      }
+    ]
+  },
+  "4131": {
+    "centroid": [
+      -27.66991,
+      153.13607
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 0.56
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 24.0
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 25.84
+      }
+    ]
+  },
+  "4132": {
+    "centroid": [
+      -27.68106,
+      153.0844
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 5.77
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 23.6
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 24.66
+      }
+    ]
+  },
+  "4133": {
+    "centroid": [
+      -27.72384,
+      153.10266
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 7.1
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 28.63
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 29.75
+      }
+    ]
+  },
+  "4151": {
+    "centroid": [
+      -27.50081,
+      153.05861
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 2.48
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 3.82
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 6.91
+      }
+    ]
+  },
+  "4152": {
+    "centroid": [
+      -27.50135,
+      153.09681
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 6.24
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 6.81
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 10.45
+      }
+    ]
+  },
+  "4153": {
+    "centroid": [
+      -27.51003,
+      153.13143
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 9.73
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 10.31
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 14.0
+      }
+    ]
+  },
+  "4154": {
+    "centroid": [
+      -27.49069,
+      153.15873
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 10.66
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 12.32
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 16.2
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 29.63
+      }
+    ]
+  },
+  "4155": {
+    "centroid": [
+      -27.5181,
+      153.15645
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 9.67
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 12.93
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 16.62
+      }
+    ]
+  },
+  "4156": {
+    "centroid": [
+      -27.55886,
+      153.15418
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 9.81
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 15.09
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 18.28
+      }
+    ]
+  },
+  "4157": {
+    "centroid": [
+      -27.56818,
+      153.2071
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 5.37
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 19.95
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 23.35
+      }
+    ]
+  },
+  "4159": {
+    "centroid": [
+      -27.50229,
+      153.20962
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 5.88
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 17.48
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 21.35
+      }
+    ]
+  },
+  "4160": {
+    "centroid": [
+      -27.50641,
+      153.24331
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 3.82
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 20.83
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 24.71
+      }
+    ]
+  },
+  "4161": {
+    "centroid": [
+      -27.53341,
+      153.22686
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 2.53
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 20.03
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 23.76
+      }
+    ]
+  },
+  "4163": {
+    "centroid": [
+      -27.53522,
+      153.26571
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 1.51
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 23.73
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 27.51
+      }
+    ]
+  },
+  "4164": {
+    "centroid": [
+      -27.56996,
+      153.26083
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 3.46
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 24.69
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 28.26
+      }
+    ]
+  },
+  "4165": {
+    "centroid": [
+      -27.62398,
+      153.2638
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 9.42
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 28.06
+      }
+    ]
+  },
+  "4169": {
+    "centroid": [
+      -27.48418,
+      153.04098
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 1.32
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queensland Children's Hospital",
+        "tier": "unknown",
+        "km": 1.41
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 4.63
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 28.65
+      }
+    ]
+  },
+  "4170": {
+    "centroid": [
+      -27.47078,
+      153.07423
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 3.84
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Queensland Children's Hospital",
+        "tier": "unknown",
+        "km": 4.92
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 7.77
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 26.76
+      }
+    ]
+  },
+  "4171": {
+    "centroid": [
+      -23.28785,
+      150.39952
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Rockhampton Hospital",
+        "tier": "unknown",
+        "km": 14.07
+      }
+    ]
+  },
+  "4172": {
+    "centroid": [
+      -27.45877,
+      153.10333
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 6.89
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Royal Brisbane & Women's Hospital",
+        "tier": "unknown",
+        "km": 7.56
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 10.76
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 25.38
+      }
+    ]
+  },
+  "4173": {
+    "centroid": [
+      -27.47581,
+      153.12063
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 8.41
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Princess Alexandra Hospital",
+        "tier": "unknown",
+        "km": 8.98
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 12.34
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 27.39
+      }
+    ]
+  },
+  "4178": {
+    "centroid": [
+      -27.4212,
+      153.22577
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 13.45
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 19.66
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 23.45
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 24.91
+      }
+    ]
+  },
+  "4179": {
+    "centroid": [
+      -27.39082,
+      153.23404
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 16.67
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 20.86
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 22.6
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 25.28
+      }
+    ]
+  },
+  "4183": {
+    "centroid": [
+      -27.54701,
+      153.45174
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 19.77
+      }
+    ]
+  },
+  "4184": {
+    "centroid": [
+      -27.6765,
+      153.38466
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redland Hospital",
+        "tier": "unknown",
+        "km": 20.07
+      }
+    ]
+  },
+  "4205": {
+    "centroid": [
+      -27.68739,
+      153.15629
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 2.39
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 26.62
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 28.55
+      }
+    ]
+  },
+  "4207": {
+    "centroid": [
+      -27.73824,
+      153.20173
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 9.6
+      }
+    ]
+  },
+  "4208": {
+    "centroid": [
+      -27.76703,
+      153.27631
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Logan Hospital",
+        "tier": "unknown",
+        "km": 17.07
+      }
+    ]
+  },
+  "4209": {
+    "centroid": [
+      -27.8055,
+      153.39289
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 17.1
+      }
+    ]
+  },
+  "4210": {
+    "centroid": [
+      -27.93221,
+      153.27948
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 10.42
+      }
+    ]
+  },
+  "4211": {
+    "centroid": [
+      -28.03545,
+      153.24126
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 13.96
+      }
+    ]
+  },
+  "4212": {
+    "centroid": [
+      -27.87787,
+      153.35772
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 9.3
+      }
+    ]
+  },
+  "4213": {
+    "centroid": [
+      -28.1113,
+      153.31792
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 7.27
+      }
+    ]
+  },
+  "4214": {
+    "centroid": [
+      -27.96701,
+      153.36558
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 1.78
+      }
+    ]
+  },
+  "4215": {
+    "centroid": [
+      -27.96713,
+      153.39795
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 1.89
+      }
+    ]
+  },
+  "4216": {
+    "centroid": [
+      -27.83935,
+      153.41941
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 13.81
+      }
+    ]
+  },
+  "4217": {
+    "centroid": [
+      -28.00878,
+      153.4122
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 6.33
+      }
+    ]
+  },
+  "4218": {
+    "centroid": [
+      -28.03763,
+      153.41692
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 5.47
+      }
+    ]
+  },
+  "4220": {
+    "centroid": [
+      -28.08495,
+      153.43441
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 5.78
+      }
+    ]
+  },
+  "4221": {
+    "centroid": [
+      -28.12732,
+      153.45837
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 10.04
+      }
+    ]
+  },
+  "4223": {
+    "centroid": [
+      -28.19076,
+      153.41509
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 13.69
+      }
+    ]
+  },
+  "4224": {
+    "centroid": [
+      -28.15022,
+      153.48933
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 14.0
+      }
+    ]
+  },
+  "4225": {
+    "centroid": [
+      -28.16902,
+      153.52053
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 17.7
+      }
+    ]
+  },
+  "4226": {
+    "centroid": [
+      -28.06794,
+      153.40282
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 2.55
+      }
+    ]
+  },
+  "4227": {
+    "centroid": [
+      -28.10189,
+      153.41039
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 4.63
+      }
+    ]
+  },
+  "4228": {
+    "centroid": [
+      -28.18208,
+      153.37739
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 12.22
+      }
+    ]
+  },
+  "4230": {
+    "centroid": [
+      -28.07747,
+      153.38531
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Robina Hospital",
+        "tier": "unknown",
+        "km": 0.98
+      }
+    ]
+  },
+  "4270": {
+    "centroid": [
+      -27.86235,
+      153.13557
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Beaudesert Hospital",
+        "tier": "unknown",
+        "km": 18.88
+      }
+    ]
+  },
+  "4271": {
+    "centroid": [
+      -27.91838,
+      153.20147
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gold Coast University Hospital",
+        "tier": "unknown",
+        "km": 18.22
+      }
+    ]
+  },
+  "4272": {
+    "centroid": [
+      -27.9546,
+      153.18684
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Beaudesert Hospital",
+        "tier": "unknown",
+        "km": 18.41
+      }
+    ]
+  },
+  "4275": {
+    "centroid": [
+      -28.103,
+      153.13794
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Beaudesert Hospital",
+        "tier": "unknown",
+        "km": 18.69
+      }
+    ]
+  },
+  "4280": {
+    "centroid": [
+      -27.81923,
+      153.02043
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Beaudesert Hospital",
+        "tier": "unknown",
+        "km": 18.5
+      }
+    ]
+  },
+  "4285": {
+    "centroid": [
+      -28.04391,
+      152.97113
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Beaudesert Hospital",
+        "tier": "unknown",
+        "km": 7.25
+      }
+    ]
+  },
+  "4300": {
+    "centroid": [
+      -27.68385,
+      152.88605
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 9.58
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 25.74
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 27.65
+      }
+    ]
+  },
+  "4301": {
+    "centroid": [
+      -27.62939,
+      152.85809
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 6.07
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 21.99
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 24.63
+      }
+    ]
+  },
+  "4303": {
+    "centroid": [
+      -27.60459,
+      152.84019
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Park Centre For Mental Health",
+        "tier": "unknown",
+        "km": 6.92
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 21.13
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 24.16
+      }
+    ]
+  },
+  "4304": {
+    "centroid": [
+      -27.62066,
+      152.80457
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ipswich Hospital",
+        "tier": "unknown",
+        "km": 4.46
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 24.93
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Brisbane]",
+        "tier": "tertiary",
+        "km": 28.04
+      }
+    ]
+  },
+  "4305": {
+    "centroid": [
+      -27.62752,
+      152.7537
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ipswich Hospital",
+        "tier": "unknown",
+        "km": 1.05
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 29.34
+      }
+    ]
+  },
+  "4306": {
+    "centroid": [
+      -27.48983,
+      152.72797
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ipswich Hospital",
+        "tier": "unknown",
+        "km": 14.74
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 26.46
+      }
+    ]
+  },
+  "4309": {
+    "centroid": [
+      -27.98728,
+      152.52337
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Boonah Hospital",
+        "tier": "unknown",
+        "km": 15.33
+      }
+    ]
+  },
+  "4310": {
+    "centroid": [
+      -28.1214,
+      152.6006
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Boonah Hospital",
+        "tier": "unknown",
+        "km": 15.62
+      }
+    ]
+  },
+  "4311": {
+    "centroid": [
+      -27.41768,
+      152.43812
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Esk Hospital",
+        "tier": "unknown",
+        "km": 19.81
+      }
+    ]
+  },
+  "4312": {
+    "centroid": [
+      -27.25606,
+      152.48264
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Esk Hospital",
+        "tier": "unknown",
+        "km": 6.61
+      }
+    ]
+  },
+  "4313": {
+    "centroid": [
+      -27.08952,
+      152.32154
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Esk Hospital",
+        "tier": "unknown",
+        "km": 19.31
+      }
+    ]
+  },
+  "4314": {
+    "centroid": [
+      -26.86608,
+      152.13839
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nanango Hospital",
+        "tier": "unknown",
+        "km": 25.71
+      }
+    ]
+  },
+  "4340": {
+    "centroid": [
+      -27.80345,
+      152.4727
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Laidley Hospital",
+        "tier": "unknown",
+        "km": 20.29
+      }
+    ]
+  },
+  "4341": {
+    "centroid": [
+      -27.68768,
+      152.39666
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Laidley Hospital",
+        "tier": "unknown",
+        "km": 6.12
+      }
+    ]
+  },
+  "4342": {
+    "centroid": [
+      -27.54385,
+      152.37769
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Laidley Hospital",
+        "tier": "unknown",
+        "km": 10.12
+      }
+    ]
+  },
+  "4343": {
+    "centroid": [
+      -27.65607,
+      152.22462
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gatton Hospital",
+        "tier": "unknown",
+        "km": 11.16
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 26.88
+      }
+    ]
+  },
+  "4350": {
+    "centroid": [
+      -27.57631,
+      151.85269
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Toowoomba Hospital",
+        "tier": "unknown",
+        "km": 9.07
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 11.78
+      }
+    ]
+  },
+  "4352": {
+    "centroid": [
+      -27.62121,
+      151.94711
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Toowoomba Hospital",
+        "tier": "unknown",
+        "km": 5.71
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 6.63
+      }
+    ]
+  },
+  "4354": {
+    "centroid": [
+      -27.34388,
+      151.88792
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Oakey Hospital",
+        "tier": "unknown",
+        "km": 18.9
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 26.01
+      }
+    ]
+  },
+  "4355": {
+    "centroid": [
+      -27.18637,
+      152.01761
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Baillie Henderson Hospital",
+        "tier": "unknown",
+        "km": 38.43
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 42.42
+      }
+    ]
+  },
+  "4357": {
+    "centroid": [
+      -27.95765,
+      151.10387
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Millmerran Hospital",
+        "tier": "unknown",
+        "km": 17.89
+      }
+    ]
+  },
+  "4358": {
+    "centroid": [
+      -27.72755,
+      151.8812
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Toowoomba Hospital",
+        "tier": "unknown",
+        "km": 18.61
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 20.08
+      }
+    ]
+  },
+  "4359": {
+    "centroid": [
+      -27.79142,
+      152.0247
+    ],
+    "candidates": [
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 25.64
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Toowoomba Hospital",
+        "tier": "unknown",
+        "km": 25.87
+      }
+    ]
+  },
+  "4361": {
+    "centroid": [
+      -27.96521,
+      151.94828
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Warwick Hospital",
+        "tier": "unknown",
+        "km": 29.61
+      }
+    ]
+  },
+  "4362": {
+    "centroid": [
+      -28.04555,
+      151.92468
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Warwick Hospital",
+        "tier": "unknown",
+        "km": 21.88
+      }
+    ]
+  },
+  "4370": {
+    "centroid": [
+      -28.21826,
+      152.02906
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Warwick Hospital",
+        "tier": "unknown",
+        "km": 1.27
+      }
+    ]
+  },
+  "4373": {
+    "centroid": [
+      -28.3099,
+      152.37666
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Warwick Hospital",
+        "tier": "unknown",
+        "km": 36.39
+      }
+    ]
+  },
+  "4380": {
+    "centroid": [
+      -28.69598,
+      151.78979
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Stanthorpe Hospital",
+        "tier": "unknown",
+        "km": 14.07
+      }
+    ]
+  },
+  "4387": {
+    "centroid": [
+      -28.34163,
+      150.96784
+    ],
+    "candidates": [
+      {
+        "domain": "idhs.vic.gov.au",
+        "hospital": "Inglewood Hospital",
+        "tier": "unknown",
+        "km": 12.49
+      }
+    ]
+  },
+  "4390": {
+    "centroid": [
+      -28.22891,
+      150.32102
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Goondiwindi Hospital",
+        "tier": "unknown",
+        "km": 35.52
+      }
+    ]
+  },
+  "4400": {
+    "centroid": [
+      -27.4855,
+      151.8563
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Baillie Henderson Hospital",
+        "tier": "unknown",
+        "km": 9.0
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 14.44
+      }
+    ]
+  },
+  "4401": {
+    "centroid": [
+      -27.46317,
+      151.70291
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Oakey Hospital",
+        "tier": "unknown",
+        "km": 4.63
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Toowoomba]",
+        "tier": "tertiary",
+        "km": 28.84
+      }
+    ]
+  },
+  "4405": {
+    "centroid": [
+      -27.29461,
+      150.98444
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Dalby Hospital",
+        "tier": "unknown",
+        "km": 32.38
+      }
+    ]
+  },
+  "4410": {
+    "centroid": [
+      -26.74979,
+      151.10227
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Jandowae Hospital",
+        "tier": "unknown",
+        "km": 3.49
+      }
+    ]
+  },
+  "4413": {
+    "centroid": [
+      -26.5446,
+      150.60793
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Chinchilla Hospital",
+        "tier": "unknown",
+        "km": 22.04
+      }
+    ]
+  },
+  "4415": {
+    "centroid": [
+      -26.62193,
+      150.1933
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Miles Hospital",
+        "tier": "unknown",
+        "km": 4.04
+      }
+    ]
+  },
+  "4417": {
+    "centroid": [
+      -27.3482,
+      149.07017
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Surat Hospital",
+        "tier": "unknown",
+        "km": 21.31
+      }
+    ]
+  },
+  "4420": {
+    "centroid": [
+      -25.44063,
+      149.58437
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Taroom Hospital",
+        "tier": "unknown",
+        "km": 30.79
+      }
+    ]
+  },
+  "4421": {
+    "centroid": [
+      -27.32437,
+      150.4443
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Tara Hospital",
+        "tier": "unknown",
+        "km": 5.76
+      }
+    ]
+  },
+  "4454": {
+    "centroid": [
+      -25.54716,
+      148.56527
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Injune Hospital",
+        "tier": "unknown",
+        "km": 33.35
+      }
+    ]
+  },
+  "4455": {
+    "centroid": [
+      -26.73282,
+      148.69023
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Roma Hospital",
+        "tier": "unknown",
+        "km": 20.12
+      }
+    ]
+  },
+  "4465": {
+    "centroid": [
+      -26.68616,
+      147.88782
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mitchell Hospital",
+        "tier": "unknown",
+        "km": 23.39
+      }
+    ]
+  },
+  "4470": {
+    "centroid": [
+      -26.40546,
+      146.10728
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Charleville Hospital",
+        "tier": "unknown",
+        "km": 13.15
+      }
+    ]
+  },
+  "4472": {
+    "centroid": [
+      -24.78415,
+      145.14118
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Blackall Hospital",
+        "tier": "unknown",
+        "km": 50.85
+      }
+    ]
+  },
+  "4480": {
+    "centroid": [
+      -26.2485,
+      143.27416
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Quilpie Hospital",
+        "tier": "unknown",
+        "km": 107.69
+      }
+    ]
+  },
+  "4487": {
+    "centroid": [
+      -27.93119,
+      148.40851
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "St George Hospital Qld",
+        "tier": "unknown",
+        "km": 21.0
+      }
+    ]
+  },
+  "4490": {
+    "centroid": [
+      -28.41805,
+      145.59626
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Cunnamulla Hospital",
+        "tier": "unknown",
+        "km": 39.61
+      }
+    ]
+  },
+  "4500": {
+    "centroid": [
+      -27.30785,
+      152.93944
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 12.12
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 12.35
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 17.44
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 19.26
+      }
+    ]
+  },
+  "4501": {
+    "centroid": [
+      -27.27763,
+      152.9462
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Ellen Barron Family Centre",
+        "tier": "unknown",
+        "km": 14.35
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 14.67
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 15.43
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 22.34
+      }
+    ]
+  },
+  "4502": {
+    "centroid": [
+      -27.26497,
+      152.96681
+    ],
+    "candidates": [
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 13.05
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 14.28
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 15.03
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 23.39
+      }
+    ]
+  },
+  "4503": {
+    "centroid": [
+      -27.24064,
+      152.99319
+    ],
+    "candidates": [
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 9.94
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 11.16
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 16.94
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 25.92
+      }
+    ]
+  },
+  "4504": {
+    "centroid": [
+      -27.18662,
+      152.93208
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caboolture Hospital",
+        "tier": "unknown",
+        "km": 12.18
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 16.66
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 24.39
+      }
+    ]
+  },
+  "4505": {
+    "centroid": [
+      -27.14953,
+      152.98599
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caboolture Hospital",
+        "tier": "unknown",
+        "km": 7.96
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 13.92
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 27.06
+      }
+    ]
+  },
+  "4506": {
+    "centroid": [
+      -27.1284,
+      152.93629
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caboolture Hospital",
+        "tier": "unknown",
+        "km": 5.95
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 19.23
+      }
+    ]
+  },
+  "4507": {
+    "centroid": [
+      -26.98778,
+      153.12414
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caboolture Hospital",
+        "tier": "unknown",
+        "km": 18.97
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 27.19
+      }
+    ]
+  },
+  "4508": {
+    "centroid": [
+      -27.1812,
+      153.01372
+    ],
+    "candidates": [
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 9.59
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 10.46
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 23.31
+      }
+    ]
+  },
+  "4509": {
+    "centroid": [
+      -27.22733,
+      153.01557
+    ],
+    "candidates": [
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 7.67
+      },
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Redcliffe Hospital",
+        "tier": "unknown",
+        "km": 8.87
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 18.18
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 27.47
+      }
+    ]
+  },
+  "4510": {
+    "centroid": [
+      -26.4565,
+      152.36142
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nanango Hospital",
+        "tier": "unknown",
+        "km": 42.21
+      }
+    ]
+  },
+  "4511": {
+    "centroid": [
+      -27.07793,
+      153.0808
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caboolture Hospital",
+        "tier": "unknown",
+        "km": 11.61
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 17.03
+      }
+    ]
+  },
+  "4512": {
+    "centroid": [
+      -27.02248,
+      152.85831
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caboolture Hospital",
+        "tier": "unknown",
+        "km": 12.28
+      }
+    ]
+  },
+  "4514": {
+    "centroid": [
+      -26.9213,
+      152.73785
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kilcoy Hospital",
+        "tier": "unknown",
+        "km": 17.62
+      }
+    ]
+  },
+  "4515": {
+    "centroid": [
+      -26.86339,
+      152.52903
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kilcoy Hospital",
+        "tier": "unknown",
+        "km": 9.21
+      }
+    ]
+  },
+  "4518": {
+    "centroid": [
+      -26.90243,
+      152.98603
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caloundra Hospital",
+        "tier": "unknown",
+        "km": 17.44
+      }
+    ]
+  },
+  "4519": {
+    "centroid": [
+      -26.84939,
+      152.91803
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Maleny Hospital",
+        "tier": "unknown",
+        "km": 12.77
+      }
+    ]
+  },
+  "4520": {
+    "centroid": [
+      -27.31751,
+      152.81343
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "The Prince Charles Hospital",
+        "tier": "unknown",
+        "km": 22.14
+      },
+      {
+        "domain": "svha.org.au",
+        "hospital": "St Vincent's Private Hospital [Northside]",
+        "tier": "tertiary",
+        "km": 22.21
+      },
+      {
+        "domain": "visioneyeinstitute.com.au",
+        "hospital": "Vision Day Surgery Rivercity",
+        "tier": "private",
+        "km": 25.0
+      },
+      {
+        "domain": "ramsayhealth.com.au",
+        "hospital": "Peninsula Private Hospital Queensland",
+        "tier": "private",
+        "km": 29.28
+      }
+    ]
+  },
+  "4521": {
+    "centroid": [
+      -27.16977,
+      152.78617
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caboolture Hospital",
+        "tier": "unknown",
+        "km": 20.16
+      }
+    ]
+  },
+  "4550": {
+    "centroid": [
+      -26.81208,
+      152.97135
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Maleny Hospital",
+        "tier": "unknown",
+        "km": 14.06
+      }
+    ]
+  },
+  "4551": {
+    "centroid": [
+      -26.81815,
+      153.09382
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Caloundra Hospital",
+        "tier": "unknown",
+        "km": 3.23
+      }
+    ]
+  },
+  "4552": {
+    "centroid": [
+      -26.7343,
+      152.7669
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Maleny Hospital",
+        "tier": "unknown",
+        "km": 8.08
+      }
+    ]
+  },
+  "4553": {
+    "centroid": [
+      -26.7718,
+      153.01796
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sunshine Coast University Hospital",
+        "tier": "unknown",
+        "km": 9.91
+      }
+    ]
+  },
+  "4555": {
+    "centroid": [
+      -26.6917,
+      152.95452
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 7.79
+      }
+    ]
+  },
+  "4556": {
+    "centroid": [
+      -26.70038,
+      153.04978
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sunshine Coast University Hospital",
+        "tier": "unknown",
+        "km": 8.19
+      }
+    ]
+  },
+  "4557": {
+    "centroid": [
+      -26.68632,
+      153.11342
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sunshine Coast University Hospital",
+        "tier": "unknown",
+        "km": 6.73
+      }
+    ]
+  },
+  "4558": {
+    "centroid": [
+      -26.65507,
+      153.07537
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sunshine Coast University Hospital",
+        "tier": "unknown",
+        "km": 10.89
+      }
+    ]
+  },
+  "4559": {
+    "centroid": [
+      -26.66324,
+      152.96501
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 4.79
+      }
+    ]
+  },
+  "4560": {
+    "centroid": [
+      -26.63509,
+      152.91738
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 3.77
+      }
+    ]
+  },
+  "4561": {
+    "centroid": [
+      -26.53149,
+      152.96481
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 10.1
+      }
+    ]
+  },
+  "4562": {
+    "centroid": [
+      -26.50586,
+      152.80309
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 19.64
+      }
+    ]
+  },
+  "4563": {
+    "centroid": [
+      -26.42575,
+      152.90921
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 22.2
+      }
+    ]
+  },
+  "4564": {
+    "centroid": [
+      -26.61236,
+      153.07924
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 12.67
+      }
+    ]
+  },
+  "4565": {
+    "centroid": [
+      -26.16751,
+      153.04251
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gympie Hospital",
+        "tier": "unknown",
+        "km": 38.39
+      }
+    ]
+  },
+  "4566": {
+    "centroid": [
+      -26.41173,
+      153.04742
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 25.19
+      }
+    ]
+  },
+  "4567": {
+    "centroid": [
+      -26.4086,
+      153.09696
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 27.72
+      }
+    ]
+  },
+  "4568": {
+    "centroid": [
+      -26.31399,
+      152.87661
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gympie Hospital",
+        "tier": "unknown",
+        "km": 26.11
+      }
+    ]
+  },
+  "4569": {
+    "centroid": [
+      -26.33457,
+      152.82284
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gympie Hospital",
+        "tier": "unknown",
+        "km": 23.42
+      }
+    ]
+  },
+  "4570": {
+    "centroid": [
+      -26.15383,
+      152.61694
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gympie Hospital",
+        "tier": "unknown",
+        "km": 5.34
+      }
+    ]
+  },
+  "4571": {
+    "centroid": [
+      -26.21974,
+      152.93188
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gympie Hospital",
+        "tier": "unknown",
+        "km": 27.58
+      }
+    ]
+  },
+  "4572": {
+    "centroid": [
+      -26.67159,
+      153.102
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sunshine Coast University Hospital",
+        "tier": "unknown",
+        "km": 8.45
+      }
+    ]
+  },
+  "4573": {
+    "centroid": [
+      -26.51419,
+      153.06857
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nambour General Hospital",
+        "tier": "unknown",
+        "km": 16.63
+      }
+    ]
+  },
+  "4574": {
+    "centroid": [
+      -26.63037,
+      152.76113
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Maleny Hospital",
+        "tier": "unknown",
+        "km": 16.16
+      }
+    ]
+  },
+  "4575": {
+    "centroid": [
+      -26.74204,
+      153.11948
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sunshine Coast University Hospital",
+        "tier": "unknown",
+        "km": 0.77
+      }
+    ]
+  },
+  "4580": {
+    "centroid": [
+      -25.891,
+      152.92899
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gympie Hospital",
+        "tier": "unknown",
+        "km": 42.37
+      }
+    ]
+  },
+  "4581": {
+    "centroid": [
+      -25.84163,
+      153.10744
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Maryborough Hospital",
+        "tier": "unknown",
+        "km": 54.89
+      }
+    ]
+  },
+  "4600": {
+    "centroid": [
+      -26.0551,
+      152.22108
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Murgon Hospital",
+        "tier": "unknown",
+        "km": 33.87
+      }
+    ]
+  },
+  "4601": {
+    "centroid": [
+      -26.145,
+      152.01241
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Murgon Hospital",
+        "tier": "unknown",
+        "km": 12.14
+      }
+    ]
+  },
+  "4605": {
+    "centroid": [
+      -26.117,
+      151.87697
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Murgon Hospital",
+        "tier": "unknown",
+        "km": 15.44
+      }
+    ]
+  },
+  "4606": {
+    "centroid": [
+      -26.26117,
+      151.82308
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Wondai Hospital",
+        "tier": "unknown",
+        "km": 8.86
+      }
+    ]
+  },
+  "4610": {
+    "centroid": [
+      -26.5769,
+      151.52257
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kingaroy Hospital",
+        "tier": "unknown",
+        "km": 31.79
+      }
+    ]
+  },
+  "4615": {
+    "centroid": [
+      -26.65956,
+      152.01043
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Nanango Hospital",
+        "tier": "unknown",
+        "km": 0.8
+      }
+    ]
+  },
+  "4621": {
+    "centroid": [
+      -25.53583,
+      152.0428
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Biggenden Hospital",
+        "tier": "unknown",
+        "km": 3.38
+      }
+    ]
+  },
+  "4626": {
+    "centroid": [
+      -25.75828,
+      151.12293
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mundubbera Hospital",
+        "tier": "unknown",
+        "km": 25.53
+      }
+    ]
+  },
+  "4650": {
+    "centroid": [
+      -25.64189,
+      152.7858
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Maryborough Hospital",
+        "tier": "unknown",
+        "km": 16.43
+      }
+    ]
+  },
+  "4655": {
+    "centroid": [
+      -25.33984,
+      152.79231
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Hervey Bay Hospital",
+        "tier": "unknown",
+        "km": 5.39
+      }
+    ]
+  },
+  "4660": {
+    "centroid": [
+      -25.1893,
+      152.30097
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Childers Hospital",
+        "tier": "unknown",
+        "km": 6.23
+      }
+    ]
+  },
+  "4670": {
+    "centroid": [
+      -24.87955,
+      152.29274
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Bundaberg Base Hospital",
+        "tier": "unknown",
+        "km": 4.54
+      }
+    ]
+  },
+  "4671": {
+    "centroid": [
+      -25.07653,
+      151.78638
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gin Gin Hospital",
+        "tier": "unknown",
+        "km": 19.63
+      }
+    ]
+  },
+  "4674": {
+    "centroid": [
+      -24.6885,
+      151.87253
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gin Gin Hospital",
+        "tier": "unknown",
+        "km": 34.04
+      }
+    ]
+  },
+  "4677": {
+    "centroid": [
+      -24.31847,
+      151.72774
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gladstone Hospital",
+        "tier": "unknown",
+        "km": 71.22
+      }
+    ]
+  },
+  "4680": {
+    "centroid": [
+      -23.47847,
+      151.86616
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gladstone Hospital",
+        "tier": "unknown",
+        "km": 75.3
+      }
+    ]
+  },
+  "4700": {
+    "centroid": [
+      -23.18017,
+      150.95811
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Capricorn Coast Hospital",
+        "tier": "unknown",
+        "km": 23.21
+      }
+    ]
+  },
+  "4701": {
+    "centroid": [
+      -23.35594,
+      150.55565
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Rockhampton Hospital",
+        "tier": "unknown",
+        "km": 6.77
+      }
+    ]
+  },
+  "4702": {
+    "centroid": [
+      -23.43826,
+      150.67772
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Rockhampton Hospital",
+        "tier": "unknown",
+        "km": 19.8
+      }
+    ]
+  },
+  "4703": {
+    "centroid": [
+      -23.07456,
+      150.89433
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Capricorn Coast Hospital",
+        "tier": "unknown",
+        "km": 18.07
+      }
+    ]
+  },
+  "4707": {
+    "centroid": [
+      -22.51501,
+      149.23551
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Dysart Hospital",
+        "tier": "unknown",
+        "km": 90.94
+      }
+    ]
+  },
+  "4710": {
+    "centroid": [
+      -23.25722,
+      150.82635
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Capricorn Coast Hospital",
+        "tier": "unknown",
+        "km": 15.71
+      }
+    ]
+  },
+  "4713": {
+    "centroid": [
+      -24.11414,
+      149.43096
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Woorabinda Hospital",
+        "tier": "unknown",
+        "km": 3.19
+      }
+    ]
+  },
+  "4714": {
+    "centroid": [
+      -23.66268,
+      150.39491
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mount Morgan Hospital",
+        "tier": "unknown",
+        "km": 1.97
+      }
+    ]
+  },
+  "4715": {
+    "centroid": [
+      -24.39362,
+      150.45869
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Biloela Hospital",
+        "tier": "unknown",
+        "km": 5.96
+      }
+    ]
+  },
+  "4716": {
+    "centroid": [
+      -24.48347,
+      150.80605
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Biloela Hospital",
+        "tier": "unknown",
+        "km": 30.79
+      }
+    ]
+  },
+  "4718": {
+    "centroid": [
+      -24.67505,
+      149.61503
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Moura Hospital",
+        "tier": "unknown",
+        "km": 38.12
+      }
+    ]
+  },
+  "4719": {
+    "centroid": [
+      -24.99957,
+      150.21377
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Theodore Hospital",
+        "tier": "unknown",
+        "km": 15.31
+      }
+    ]
+  },
+  "4720": {
+    "centroid": [
+      -23.63223,
+      148.17893
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Emerald Hospital",
+        "tier": "unknown",
+        "km": 13.28
+      }
+    ]
+  },
+  "4721": {
+    "centroid": [
+      -22.55462,
+      147.32155
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Clermont Hospital",
+        "tier": "unknown",
+        "km": 43.9
+      }
+    ]
+  },
+  "4725": {
+    "centroid": [
+      -23.65767,
+      145.17287
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Barcaldine Hospital",
+        "tier": "unknown",
+        "km": 16.92
+      }
+    ]
+  },
+  "4730": {
+    "centroid": [
+      -23.78437,
+      143.45201
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Longreach Hospital",
+        "tier": "unknown",
+        "km": 90.92
+      }
+    ]
+  },
+  "4735": {
+    "centroid": [
+      -22.81058,
+      141.86177
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Winton Hospital",
+        "tier": "unknown",
+        "km": 130.1
+      }
+    ]
+  },
+  "4737": {
+    "centroid": [
+      -21.43004,
+      149.17807
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sarina Hospital",
+        "tier": "unknown",
+        "km": 3.48
+      }
+    ]
+  },
+  "4740": {
+    "centroid": [
+      -21.35031,
+      149.10047
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Sarina Hospital",
+        "tier": "unknown",
+        "km": 13.83
+      }
+    ]
+  },
+  "4741": {
+    "centroid": [
+      -20.8086,
+      149.2717
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mackay Base Hospital",
+        "tier": "unknown",
+        "km": 39.39
+      }
+    ]
+  },
+  "4744": {
+    "centroid": [
+      -22.01839,
+      148.04513
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Moranbah Hospital",
+        "tier": "unknown",
+        "km": 2.09
+      }
+    ]
+  },
+  "4745": {
+    "centroid": [
+      -22.49788,
+      148.25959
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Dysart Hospital",
+        "tier": "unknown",
+        "km": 13.46
+      }
+    ]
+  },
+  "4750": {
+    "centroid": [
+      -21.04257,
+      149.15228
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mackay Base Hospital",
+        "tier": "unknown",
+        "km": 11.48
+      }
+    ]
+  },
+  "4751": {
+    "centroid": [
+      -21.22186,
+      149.0407
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mackay Base Hospital",
+        "tier": "unknown",
+        "km": 14.59
+      }
+    ]
+  },
+  "4756": {
+    "centroid": [
+      -21.12633,
+      148.60968
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mackay Base Hospital",
+        "tier": "unknown",
+        "km": 56.63
+      }
+    ]
+  },
+  "4800": {
+    "centroid": [
+      -20.45579,
+      148.51547
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Proserpine Hospital",
+        "tier": "unknown",
+        "km": 9.54
+      }
+    ]
+  },
+  "4802": {
+    "centroid": [
+      -20.27107,
+      148.98904
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Proserpine Hospital",
+        "tier": "unknown",
+        "km": 44.5
+      }
+    ]
+  },
+  "4803": {
+    "centroid": [
+      -20.35407,
+      148.95882
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Proserpine Hospital",
+        "tier": "unknown",
+        "km": 39.3
+      }
+    ]
+  },
+  "4804": {
+    "centroid": [
+      -20.86795,
+      147.51846
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Collinsville Hospital",
+        "tier": "unknown",
+        "km": 48.85
+      }
+    ]
+  },
+  "4805": {
+    "centroid": [
+      -20.01661,
+      148.45799
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Bowen Hospital",
+        "tier": "unknown",
+        "km": 22.77
+      }
+    ]
+  },
+  "4807": {
+    "centroid": [
+      -19.89437,
+      147.15793
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Home Hill Hospital",
+        "tier": "unknown",
+        "km": 37.45
+      }
+    ]
+  },
+  "4810": {
+    "centroid": [
+      -19.2262,
+      146.76579
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kirwan Rehabilitation Unit",
+        "tier": "unknown",
+        "km": 9.34
+      }
+    ]
+  },
+  "4811": {
+    "centroid": [
+      -19.32311,
+      146.84033
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Townsville University Hospital",
+        "tier": "unknown",
+        "km": 8.21
+      }
+    ]
+  },
+  "4812": {
+    "centroid": [
+      -19.28664,
+      146.78772
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Townsville University Hospital",
+        "tier": "unknown",
+        "km": 4.64
+      }
+    ]
+  },
+  "4813": {
+    "centroid": [
+      -19.33893,
+      146.78637
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Townsville University Hospital",
+        "tier": "unknown",
+        "km": 3.26
+      }
+    ]
+  },
+  "4814": {
+    "centroid": [
+      -19.28582,
+      146.75475
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kirwan Rehabilitation Unit",
+        "tier": "unknown",
+        "km": 3.14
+      }
+    ]
+  },
+  "4815": {
+    "centroid": [
+      -19.4035,
+      146.69172
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Townsville University Hospital",
+        "tier": "unknown",
+        "km": 11.8
+      }
+    ]
+  },
+  "4816": {
+    "centroid": [
+      -19.73859,
+      146.7704
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Townsville University Hospital",
+        "tier": "unknown",
+        "km": 46.48
+      }
+    ]
+  },
+  "4817": {
+    "centroid": [
+      -19.3105,
+      146.65231
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kirwan Rehabilitation Unit",
+        "tier": "unknown",
+        "km": 8.36
+      }
+    ]
+  },
+  "4818": {
+    "centroid": [
+      -19.24032,
+      146.55897
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kirwan Rehabilitation Unit",
+        "tier": "unknown",
+        "km": 19.45
+      }
+    ]
+  },
+  "4819": {
+    "centroid": [
+      -19.13956,
+      146.83501
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Kirwan Rehabilitation Unit",
+        "tier": "unknown",
+        "km": 21.24
+      }
+    ]
+  },
+  "4820": {
+    "centroid": [
+      -20.29437,
+      146.2697
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Charters Towers Rehabilitation Unit",
+        "tier": "unknown",
+        "km": 24.22
+      }
+    ]
+  },
+  "4824": {
+    "centroid": [
+      -20.76831,
+      140.63413
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Cloncurry Hospital",
+        "tier": "unknown",
+        "km": 13.18
+      }
+    ]
+  },
+  "4825": {
+    "centroid": [
+      -20.97803,
+      137.71322
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mount Isa Base Hospital",
+        "tier": "unknown",
+        "km": 187.05
+      }
+    ]
+  },
+  "4830": {
+    "centroid": [
+      -17.81476,
+      138.87976
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Doomadgee Hospital",
+        "tier": "unknown",
+        "km": 15.33
+      }
+    ]
+  },
+  "4849": {
+    "centroid": [
+      -18.26565,
+      146.02793
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Tully Hospital",
+        "tier": "unknown",
+        "km": 39.15
+      }
+    ]
+  },
+  "4850": {
+    "centroid": [
+      -18.56317,
+      146.48882
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Joyce Palmer Health Service",
+        "tier": "unknown",
+        "km": 21.1
+      }
+    ]
+  },
+  "4852": {
+    "centroid": [
+      -17.83992,
+      146.09889
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Tully Hospital",
+        "tier": "unknown",
+        "km": 20.91
+      }
+    ]
+  },
+  "4854": {
+    "centroid": [
+      -18.01755,
+      145.84275
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Tully Hospital",
+        "tier": "unknown",
+        "km": 13.19
+      }
+    ]
+  },
+  "4858": {
+    "centroid": [
+      -17.62258,
+      146.07881
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Innisfail Hospital",
+        "tier": "unknown",
+        "km": 12.63
+      }
+    ]
+  },
+  "4860": {
+    "centroid": [
+      -17.52174,
+      145.89438
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Innisfail Hospital",
+        "tier": "unknown",
+        "km": 14.39
+      }
+    ]
+  },
+  "4861": {
+    "centroid": [
+      -17.35282,
+      145.87217
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Babinda Hospital",
+        "tier": "unknown",
+        "km": 5.08
+      }
+    ]
+  },
+  "4865": {
+    "centroid": [
+      -17.0782,
+      145.79142
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gordonvale Hospital",
+        "tier": "unknown",
+        "km": 1.16
+      }
+    ]
+  },
+  "4868": {
+    "centroid": [
+      -16.97975,
+      145.73182
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Cairns Hospital",
+        "tier": "unknown",
+        "km": 8.43
+      }
+    ]
+  },
+  "4869": {
+    "centroid": [
+      -17.02559,
+      145.73042
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gordonvale Hospital",
+        "tier": "unknown",
+        "km": 9.07
+      }
+    ]
+  },
+  "4870": {
+    "centroid": [
+      -16.92621,
+      145.73881
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Cairns Hospital",
+        "tier": "unknown",
+        "km": 3.51
+      }
+    ]
+  },
+  "4871": {
+    "centroid": [
+      -17.04604,
+      145.72407
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Gordonvale Hospital",
+        "tier": "unknown",
+        "km": 8.04
+      }
+    ]
+  },
+  "4872": {
+    "centroid": [
+      -17.99833,
+      145.10857
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Herberton Hospital",
+        "tier": "unknown",
+        "km": 74.66
+      }
+    ]
+  },
+  "4873": {
+    "centroid": [
+      -16.24578,
+      145.30525
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mossman Hospital",
+        "tier": "unknown",
+        "km": 25.18
+      }
+    ]
+  },
+  "4874": {
+    "centroid": [
+      -12.41308,
+      142.37426
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Weipa Hospital",
+        "tier": "unknown",
+        "km": 58.41
+      }
+    ]
+  },
+  "4875": {
+    "centroid": [
+      -9.5849,
+      143.76921
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Thursday Island Hospital",
+        "tier": "unknown",
+        "km": 203.76
+      }
+    ]
+  },
+  "4877": {
+    "centroid": [
+      -16.53529,
+      145.4676
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mossman Hospital",
+        "tier": "unknown",
+        "km": 13.25
+      }
+    ]
+  },
+  "4878": {
+    "centroid": [
+      -16.83938,
+      145.71153
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Cairns Hospital",
+        "tier": "unknown",
+        "km": 10.15
+      }
+    ]
+  },
+  "4879": {
+    "centroid": [
+      -16.78978,
+      145.66647
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Cairns Hospital",
+        "tier": "unknown",
+        "km": 17.44
+      }
+    ]
+  },
+  "4880": {
+    "centroid": [
+      -16.99201,
+      145.34566
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mareeba Hospital",
+        "tier": "unknown",
+        "km": 8.4
+      }
+    ]
+  },
+  "4881": {
+    "centroid": [
+      -17.14362,
+      145.47095
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Atherton Hospital",
+        "tier": "unknown",
+        "km": 13.74
+      }
+    ]
+  },
+  "4883": {
+    "centroid": [
+      -17.33327,
+      145.47666
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Atherton Hospital",
+        "tier": "unknown",
+        "km": 7.44
+      }
+    ]
+  },
+  "4884": {
+    "centroid": [
+      -17.27222,
+      145.65142
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Atherton Hospital",
+        "tier": "unknown",
+        "km": 17.87
+      }
+    ]
+  },
+  "4885": {
+    "centroid": [
+      -17.38419,
+      145.62414
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Atherton Hospital",
+        "tier": "unknown",
+        "km": 19.87
+      }
+    ]
+  },
+  "4888": {
+    "centroid": [
+      -17.49934,
+      145.49105
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Herberton Hospital",
+        "tier": "unknown",
+        "km": 17.67
+      }
+    ]
+  },
+  "4890": {
+    "centroid": [
+      -17.74187,
+      141.18506
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Normanton Hospital",
+        "tier": "unknown",
+        "km": 12.59
+      }
+    ]
+  },
+  "4892": {
+    "centroid": [
+      -14.6604,
+      143.3735
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Cooktown Hospital",
+        "tier": "unknown",
+        "km": 221.01
+      }
+    ]
+  },
+  "4895": {
+    "centroid": [
+      -16.07163,
+      145.26785
+    ],
+    "candidates": [
+      {
+        "domain": "health.qld.gov.au",
+        "hospital": "Mossman Hospital",
+        "tier": "unknown",
+        "km": 44.92
+      }
+    ]
+  }
+}
