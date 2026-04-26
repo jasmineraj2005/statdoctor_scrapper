@@ -200,12 +200,19 @@ class SheetsLogger:
             print(f"[sheets] ERROR connecting: {e}")
 
     def _get_or_create_tab(self, sheet, title: str, headers: list[str]):
-        """Return the worksheet for `title`; create it (with header row) if missing."""
+        """Return the worksheet for `title`; create it (with header row) if missing.
+
+        2026-04-26: create with rows=10 (was 1000). gspread.append_row writes
+        past the worksheet's pre-allocated row count when it can't detect the
+        table boundary — with rows=1000 and only 15 actual data rows, fresh
+        appends were landing at row 1001+, leaving a 985-row gap. rows=10
+        is enough for header + a few rows; gspread auto-grows on append.
+        """
         try:
             ws = sheet.worksheet(title)
         except gspread.exceptions.WorksheetNotFound:
             try:
-                ws = sheet.add_worksheet(title=title, rows=1000, cols=max(len(headers), 10))
+                ws = sheet.add_worksheet(title=title, rows=10, cols=max(len(headers), 10))
                 ws.append_row(headers, value_input_option="RAW")
                 print(f"[sheets] Created missing tab: {title}")
             except Exception as e:
