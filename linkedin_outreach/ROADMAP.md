@@ -54,9 +54,46 @@ For a new agent picking this up cold. Status as of 2026-04-21.
 | 9.5 | **Classifier v2.1** — followers≥300, posts≥1, dropped avg_likes filter | ✅ local | `ed1bac0` |
 | 9.5b | Re-profile 4 user-approved candidates — all 4 already 1st-degree | ✅ done | `ed1bac0` |
 | 9.5c | Fix already_connected false-positive + sheet relabel | ✅ local | `d8c97d4` |
-| 9 Day 2 | Staged real run — 200 rows, 25 connect cap under v2.1 | ⏳ next | — |
+| 9 Day 2 | Staged real run — 200 rows, 7 influencers, 0 connects (connector bugs) | ✅ done | — |
+| 9.6 | Connector v2 — title-prefix strip, multi-match iteration, More-menu text fallback, :visible | ✅ local | `6b1d588` |
+| 9.7 | Add Connections Sent tab + backfill 11 manual sends | ✅ local | `c980f8e` |
+| 9 Day 3 | Aggressive run — 3 connects fired automatically, all 3 turned out to be FPs | ✅ done | — |
+| 9.8 | **Classifier v2.1.1** — Fix A/B/C: medical signal required for ALL tiers, near-name rescue, STRONG vs WEAK keyword split, drop broad institution tokens | ✅ local | `92622c8` |
+| 9.8b | Audit existing 18 influencers — 7 FPs found, 6 sent, flagged in sheet (1 later confirmed real) | ✅ local | `aaff844` |
+| 10 | Day 4+ — scale-out under v2.1.1 (~3,500 rows remaining, ~120/2hr batches) | ⏳ next | — |
 
-## Classifier v2.1 (locked — replaces v2)
+## Classifier v2.1.1 (locked — replaces v2.1, 2026-04-25)
+
+Day-3 v2.1 fired 3 fully-automated connects to **non-doctors** (Christopher
+McCormack/Project Manager, Claire Stewart/PA, Christine Rizkallah/Senior
+Lecturer) because the verifier accepted perfect-name look-alikes when the
+real doctor was rejected on token strictness. Audit found 7 of the 18
+existing influencer rows were FPs. Three coupled fixes (single commit
+`92622c8`):
+
+**Fix A — verifier near-name rescue.** Δtok=2 OR sort∈[85,95) AND
+on-card medical signal (Dr/Prof prefix, MEDICAL_KEYWORD in headline, or
+SPECIALITY_KEYWORD match) → promote to `medium` instead of name-reject.
+Recovers real doctors with nicknames (Christine "Tina" Rizkallah pattern).
+
+**Fix B — universal medical-signal post-scrape gate.** Both `medium` and
+`high` confidence rows now run `medical_signal_in_text` against
+headline+bio+experience after profiling. fail_reason = `{tier}_no_medical_signal`.
+Closes the high-conf bypass that let the 3 Day-3 FPs through.
+
+**Fix C — STRONG vs WEAK keyword split.** Old MEDICAL_KEYWORDS contained
+"doctor" (matches PhD/research), "consultant" (business consultant),
+"specialist" (marketing specialist), "md" (Managing Director), "gp" (General
+Partner). Renamed to STRONG_MEDICAL_KEYWORDS — only unambiguous tokens
+(physician, surgeon, mbbs, fracp, anaesthetist, etc.) plus speciality
+roots. Old names kept as WEAK_MEDICAL_KEYWORDS but no longer used by the
+gate. VIC_HOSPITAL_TOKENS dropped "university of melbourne" + "monash
+university" (~50k staff/students each, vast majority not medical).
+
+Audit recovery test: drive_test_missed.py would now also rescue Dr Anwar Nan
++ Dr Carolyn Bosak (real GPs previously rejected on Δtok=1). Modest +2 recall.
+
+## Classifier v2.1 (superseded by v2.1.1)
 
 Day-1 real run showed v2.0 was over-gating — 0 influencers across 201 rows.
 User reviewed the 28 non-influencer near-misses (followers ≥ 300) and

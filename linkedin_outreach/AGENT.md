@@ -7,69 +7,100 @@ Working directory: `/Users/jasminebaldevraj/Desktop/ARPHA/statdoctor_scrapper/li
 `git log --oneline` for the last 3–5 commits so you know which step
 completed most recently.
 
-## Current state (2026-04-24)
+## Current state (2026-04-26)
 
-Steps 1 – 9 Day 1 complete. Classifier v2.1 landed. Day 1 real run
-produced 0 new connects (v2.0 over-gated); v2.1 re-score surfaced exactly
-the 4 profiles the user approved from the near-miss list. Most recent
-commits:
+Step 9 Day-3 complete. Connector v2 + Classifier v2.1.1 landed after a
+hard lesson: Day-3 fired 3 fully-automated connects to non-doctors
+(Project Manager, PA, Senior Lecturer) — perfect-name look-alikes that the
+v2.1 verifier accepted because (a) the medical-signal gate only ran for
+medium-confidence matches, (b) the keyword list contained dual-use words
+("doctor", "consultant", "specialist", "md"), and (c) "university of
+melbourne" was in the hospital token list. Audit found 7 of 18 existing
+influencers were FPs (6 sent — flagged in sheet, 1 caught by user).
+
+Most recent commits (LOCAL ONLY — do not push without user approval):
+- `aaff844` keep audit + diagnostic scripts (_audit_influencers.py, etc.)
+- `92622c8` **classifier v2.1.1** — Fixes A/B/C in one commit, locked together
+- `c980f8e` add Connections Sent sheet tab
 - `d8c97d4` fix already_connected false-positive + sheet relabel
+- `6b1d588` connector v2 — title-prefix strip, multi-match iteration,
+            More-menu text fallback, :visible filter on duplicate anchors
 - `ed1bac0` classifier v2.1 (300/1/drop avg_likes) + reprofile_approved.py
-- `6bbce13` spec v2 — step5 harness fixtures + ROADMAP update
-- `dd65859` spec v2 — niche engagement classifier + engagement_rate column
-- `1156c03` step-6b fix — session_limit→send_cap + profile progress print
 
-All commits from `826322a` onward are LOCAL ONLY — **do not push without
-user approval**.
+### Days 1–3 recap
+- **Day-1 (2026-04-24):** 201 rows under v2.0 → 0 influencers (over-gating).
+- **Day-2 (2026-04-25):** 200 rows under v2.1 → 7 influencers, 0 connects
+  (connector bugs). User connected manually to all 7 — 6 real, 1 FP
+  caught by user (Belinda Zhou).
+- **Day-3 (2026-04-25):** Aggressive run under v2.1+connector v2 → 3
+  fully-automated connects fired, **all 3 turned out to be non-doctors**:
+  Christopher McCormack (Project Manager), Claire Stewart (PA), Christine
+  Rizkallah (Senior Lecturer). Triggered the v2.1.1 audit + fix.
 
-### Day-1 real run (2026-04-24) results
-`main.py --limit 200 --connect-cap 10` walked 201 rows. 0 influencers, 0
-connects. Fail breakdown (under v2.0): 74% followers<500, 15%
-post_count_90d<2, ~2% avg_likes<5. User reviewed the 28 non-influencer
-rows with ≥300 followers; approved 4 (Fakhouri 7.8k fol, Alan Paul 2.6k,
-Alice Bergin 448, Amanda Osborne 379).
+### Classifier v2.1.1 (active, `92622c8`)
+Hard filters unchanged from v2.1 (followers≥300, posts≥1, last_post≤90d).
+Three coupled fixes (single commit):
+- **Fix A** — verifier near-name rescue: Δtok=2 OR sort∈[85,95) AND on-card
+  medical signal (Dr/Prof prefix, STRONG_MEDICAL keyword, or speciality
+  keyword) → promote to medium instead of name-reject.
+- **Fix B** — universal medical-signal post-scrape gate: medium AND high
+  confidence both run `medical_signal_in_text`. fail_reason =
+  `{tier}_no_medical_signal`.
+- **Fix C** — STRONG vs WEAK keyword split in config.py:
+  `STRONG_MEDICAL_KEYWORDS` only (physician, surgeon, mbbs, fracp,
+  anaesthetist, oncologist, etc.); WEAK kept for documentation but no
+  longer used by gate. `VIC_HOSPITAL_TOKENS` lost broad universities,
+  gained specific medical sub-units.
 
-### Classifier v2.1 (active)
-- `HF_FOLLOWERS_MIN = 300` (v2.0: 500)
-- `HF_POSTS_90D_MIN = 1` (v2.0: 2)
-- `HF_LAST_POST_DAYS = 90` (unchanged)
-- `HF_AVG_LIKES_MIN` **dropped** — profiler's activity-feed scrape doesn't
-  capture like counts reliably. Engagement remains a soft-score signal
-  (+3 if ≥2%, +2 if ≥1%) but not a hard gate.
-- Soft threshold unchanged: normal=4, medium=5. Ollama band: normal=2-3, medium=1-4.
+Audit script `_audit_influencers.py` re-checks classifications.csv against
+v2.1.1; `_drive_test_missed.py` finds rejections that v2.1.1 would now
+rescue.
 
-### reprofile_approved.py run (2026-04-24)
-Bypassed is_hot for the 4 user-approved profiles. 3/4 passed v2.1
-heuristic (Fakhouri soft=8, Paul soft=6, Bergin soft=6); Amanda Osborne
-landed in Ollama band (soft=3) and was overruled. Connect attempt found
-all 4 were already 1st-degree connections — user had manually connected
-between the Day-1 scrape and today. Net new connects: 0.
+### Connector v2 (active, `6b1d588`)
+- Strips "Dr"/"Prof"/"A/Prof" from owner_name before formatting CONNECT_BUTTON_FMT
+- Iterates over duplicate visible Connect anchors (top-card + sticky bar)
+  with scroll_into_view + short-timeout click
+- More-menu Connect: text-based locator fallback for empty-aria
+  `<a role="menuitem">Connect</a>` shape
+- :visible filter on CONNECT_BUTTON_FMT/FOLLOW_BUTTON_FMT
 
 ### already_connected detection fix (`d8c97d4`)
 Old `_get_relationship_label()` scanned `page.content()` for "message" —
-which matches the left-nav "Messaging" link on every profile, producing
-false-positive already_connected on any connector-failure path. Replaced
-with scoped `main button[aria-label^="Pending|Message|Following "]`
-locator checks. Also fixed sheet relabel: STATUS_ALREADY_CONNECTED now
-logs as `already_connected/skipped` instead of `connect_failed/fail`.
+matched left-nav "Messaging" link on every profile (false-positive). Now
+uses scoped `main button[aria-label^="Pending|Message|Following "]`.
+STATUS_ALREADY_CONNECTED now logs as `already_connected/skipped`.
+
+### Known intermittent issue: mid-run hangs
+3 hangs observed across the campaign. Process stays alive but log goes
+silent for hours; CPU near zero. Root cause unknown (likely page.evaluate
+or page.click without explicit timeout). Workaround: kill + restart;
+terminal-stage dedup picks up. **TODO:** add per-row signal-based
+watchdog (~3 min cap) to main.py orchestrator.
+
+### Connections Sent tab (active, `c980f8e`)
+Dedicated client-facing tab in Google Sheets with one row per actual
+connect-sent. Auto-populated from `update_connect_status` when status ==
+STATUS_SENT. Backfilled with 14 manual sends via
+`_append_manual_connects.py` (idempotent dedup).
 
 ## YOUR NEXT STEPS IN ORDER
 
-1. **STEP 9 Day 2 — v2.1 staged run.** `main.py --limit 200 --connect-cap 25`.
-   Day-1's 201 rows auto-skip via terminal-stage dedup; queue pulls fresh
-   subset rows. Expected yield ~4 influencers / 200 (2% rate) based on
-   Day-1 re-score.
-   - Monitor Ollama calls: v2.1 lowers the hard-pass bar so more rows
-     reach the soft score; medium-conf rows that pass hard + soft 1-4
-     hit the Ollama edge band.
-   - Monitor the first real Follow-primary connect attempt —
-     `MORE_MENU_CONNECT_FMT` was validated on Dawid Naude at probe time,
-     but still untested in a live run (Day-1 hit 0 influencers so no
-     Follow-primary connect fired).
+1. **STEP 10 — Day-4 scale-out** under v2.1.1.
+   `main.py --limit 120 --connect-cap 80` (≈2hr per batch per user spec).
+   Expected ~3-5 influencers per 120 rows (lower than v2.1 yield because
+   of tighter gate). Connects fire automatically; only STRONG keyword
+   matches qualify so precision should be much higher. Until v2.1.1 has
+   logged ~30 successful real connects, surface the influencer URL list
+   to the user for sanity-check before relying on auto-send.
 
-2. **STEP 10 — Scale out** after Day 2 validates. Remaining ~3,600 subset
-   rows processed in batches respecting daily cap (40 once proven; 25 for
-   now), 30k lifetime cap, 48h per-profile cool-down.
+2. **Manual FP withdrawal.** 5 sent FPs from Day-2/Day-3 to be withdrawn
+   on LinkedIn (user does this): McCormack, Stewart, Rizkallah, Andrew
+   White, Andrew Carter. Bradley Smith was originally flagged but user
+   confirmed he's real (career-pivot psychiatrist→physiotherapist).
+
+3. **Watchdog (low priority).** Per-row signal-based timeout in main.py
+   to prevent the recurring hang from costing wall-time. Add when
+   convenient.
 
 ## Upstream changes you should know about (2026-04-25)
 
@@ -127,8 +158,11 @@ directory.
 | `searcher.py` | LinkedIn people-search + JS card extraction (class-agnostic) |
 | `verifier.py` | Two-scorer name matching + 3-tier confidence + post-scrape medical-signal |
 | `profile_profiler.py` | Scrapes followers / creator_mode / bio / activity. v2 bio keywords: 8 total |
-| `influencer_classifier.py` | **v2.1** hard filters 300/1/90d; engagement_rate soft-only; soft threshold 4 (normal) / 5 (medium); Ollama edge call |
+| `influencer_classifier.py` | **v2.1.1** hard filters 300/1/90d; engagement_rate soft-only; soft threshold 4 (normal) / 5 (medium); Ollama edge call; medium AND high both run medical-signal post-scrape gate |
 | `reprofile_approved.py` | One-off: re-profile+classify+connect specific URLs, bypasses is_hot. User-authorised only |
+| `_audit_influencers.py` | Re-classify existing influencers under current rules; flag FPs already sent. Run after each classifier change |
+| `_drive_test_missed.py` | Find name-rejected real doctors that the new rescue path would recover |
+| `_append_manual_connects.py` | Backfill Connections Sent tab with manually-fired connects (idempotent dedup) |
 | `connector.py` | Top-card anchor + More-menu fallback; `SEND_WITHOUT_NOTE_BUTTON` flow |
 | `sheets_logger.py` | 3 sheet tabs + classifications.csv (v2, 16 cols) + processing_status.csv |
 | `li_selectors.py` | Semantic-only selector catalogue |
