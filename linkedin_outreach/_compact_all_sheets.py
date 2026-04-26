@@ -12,6 +12,8 @@ gap of blanks between manual + auto rows. Solution:
 """
 from __future__ import annotations
 
+from gspread.utils import rowcol_to_a1
+
 import config
 from sheets_logger import SheetsLogger
 
@@ -26,21 +28,23 @@ def compact(ws, name: str):
     if not n:
         print(f"  [skip] {name}: empty")
         return
-    print(f"  [compact] {name}: {n} non-empty (was {len(rows)} total)")
-    cols = len(rows[0])
-    target_rows = n + 100  # leave headroom for ~100 future writes
+    # Use the max row width across all non-empty rows (headers may be shorter
+    # than data rows after schema migrations).
+    cols = max(len(r) for r in non_empty)
+    last_col_a1 = rowcol_to_a1(1, cols)[:-1]  # strip the row number → "A"/"M"/"AA"
+    target_rows = n + 100
+    print(f"  [compact] {name}: {n} non-empty × {cols} cols (was {len(rows)} total)")
     # Resize FIRST so we have room to write back without errors
     ws.resize(rows=max(target_rows, 200), cols=cols)
-    # Pad each row to width=cols (clear() can leave ragged shapes)
+    # Pad each row to width=cols
     padded = [r + [""] * (cols - len(r)) for r in non_empty]
-    # Write back contiguously starting at A1
-    ws.update(values=padded, range_name=f"A1:{chr(ord('A')+cols-1)}{n}",
+    range_to_write = f"A1:{last_col_a1}{n}"
+    ws.update(values=padded, range_name=range_to_write,
               value_input_option="RAW")
-    # Now clear anything below the last written row
     if target_rows > n:
-        clear_range = f"A{n+1}:{chr(ord('A')+cols-1)}{target_rows}"
+        clear_range = f"A{n+1}:{last_col_a1}{target_rows}"
         ws.batch_clear([clear_range])
-    print(f"           → {n} rows written A1:{chr(ord('A')+cols-1)}{n}, "
+    print(f"           → {n} rows written {range_to_write}, "
           f"resized to {target_rows} rows")
 
 

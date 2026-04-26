@@ -5,7 +5,69 @@ Working directory: `/Users/jasminebaldevraj/Desktop/ARPHA/statdoctor_scrapper/em
 
 **READ `ROADMAP.md` first**, then skim `git log --oneline -10` for recent
 commits. This AGENT.md captures the current live state including work done
-today (2026-04-25) that post-dates the ROADMAP.
+on 2026-04-25/26 that post-dates the ROADMAP.
+
+## RESUME-FROM-HERE (for "pick up the word create agent.md")
+
+**Last paused:** 2026-04-26 mid-fan-out. VIC + NSW shipped; QLD ~80% complete;
+SA/WA/TAS/NT not yet started. State of play right before the pause:
+
+| State | Status | Sendable | Notes |
+|---|---|---|---|
+| VIC | ✅ COMPLETE | 18,853 / 24,997 (75.4%) | Committed; `db_ARPHA/VIC_SUMMARY.md` |
+| NSW | ✅ COMPLETE | 33,367 / 40,200 (83.0%) | Committed; `db_ARPHA/NSW_SUMMARY.md` |
+| QLD | 🔄 ~80% — GP resolver done, domain guesser + apply NOT yet run | (TBD) | `data/gp_practices_qld.csv` has 4,736 rows, 1,325 with clinic |
+| SA | ⏳ NOT STARTED | — | LHN map seeding required first |
+| WA | ⏳ NOT STARTED | — | LHN map seeding required first |
+| TAS | ⏳ NOT STARTED | — | LHN map seeding required first |
+| NT | ⏳ NOT STARTED | — | LHN map seeding required first |
+
+### What to do when resuming
+
+1. **Confirm git state** is clean / matches last pushed commit on `main`.
+2. **Finish QLD:**
+   ```bash
+   cd email_enrichment
+   ../venv/bin/python gp_domain_guesser.py --state qld > /tmp/guess_qld.log 2>&1 &
+   # ~2 hr runtime for ~1,000 unique clinic clusters.
+   # When done: re-apply, Disify any pending, write QLD_SUMMARY.md, commit.
+   ```
+3. **Then SA → WA → TAS → NT**, one state at a time. Per-state recipe:
+   ```bash
+   ../venv/bin/python fetch_aihw_hospitals.py --state {STATE}
+   # Inspect data/hospitals_{state}_raw.csv lhn_name distribution.
+   # Add LHN_DOMAINS entries in resolve_domains.py — query MX records before
+   # adding (most LHN websites have NO MX; mail centralized at state-health
+   # domain like health.{state}.gov.au).
+   ../venv/bin/python resolve_domains.py --state {STATE}
+   ../venv/bin/python build_postcode_index.py --state {STATE}
+   ../venv/bin/python gp_resolver_sitemap.py --state {STATE} --all
+   ../venv/bin/python gp_domain_guesser.py --state {STATE}
+   ../venv/bin/python apply_to_practitioners.py --state {STATE}
+   ../venv/bin/python disify_verify.py        # for any pending GP-clinic emails
+   ../venv/bin/python apply_to_practitioners.py --state {STATE}   # final
+   ```
+4. **Then national merge** (Task #6): produce `db_ARPHA/all_states_practitioners_enriched.csv`
+   deduped on AHPRA registration number.
+5. **Held design questions** (sender pipeline) — do NOT start without user
+   answering the 4 open questions in the "OPEN QUESTIONS — sender pipeline" section below.
+
+### Open questions — held by user (do not start until answered)
+
+1. Mailboxes: existing Workspace/Outlook seats, or starting fresh?
+2. Platform: Smartlead (~$40/mo, recommended) vs Instantly vs build-from-scratch?
+3. Sending domain (must be 3+ months old with DKIM/SPF/DMARC)?
+4. Single email or sequence (initial + 2 followups)?
+5. Sender name (real person at StatDoctor, or generic?)
+6. One-line value prop?
+7. AU Spam Act compliance: physical address for footer + opt-out URL?
+
+### Background processes to check on resume
+
+- Any zombie `gp_resolver_sitemap.py`, `gp_domain_guesser.py`, `disify_verify.py`,
+  `reverify_unverified.py` from before the pause? Run `ps -ef | grep -E "resolver|guesser|disify|reverify" | grep -v grep` and kill stale.
+- Halaxy index (`data/halaxy_sitemap_index.json`) is shared across states — do NOT regenerate.
+- Disify probe log (`data/disify_probe_log.csv`) is shared — trust-domain promotion relies on it.
 
 ## Current state (2026-04-26)
 

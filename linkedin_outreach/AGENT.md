@@ -7,22 +7,69 @@ Working directory: `/Users/jasminebaldevraj/Desktop/ARPHA/statdoctor_scrapper/li
 `git log --oneline` for the last 3–5 commits so you know which step
 completed most recently.
 
-## Current state (2026-04-26 evening)
+## Current state (2026-04-26 late evening)
 
 Day-4 scale-out underway under classifier v2.1.2. v2.1.1 over-corrected
-(batch #3 yielded 1/120 vs v2.1's 7/200) — analysis of the 21 medical-signal-gate
-rejections in batch #3 found real practitioners getting cut: VMO general
-surgery at Northern Health (no STRONG keyword for "surgery"), AHPRA-registered
-TCM Practitioner, "medical officer at Cabrini" (sort=84 just under 85 floor),
-Alfred Health intensivist with credentials in the LinkedIn "location" field
-not "headline". v2.1.2 closes those without re-introducing FPs.
+(batch #3 yielded 1/120 vs v2.1's 7/200). v2.1.2 closes the recall gap
+without re-introducing FPs.
 
-Day-4 batch #1 (v2.1.2) yielded 2 clean influencers, both auto-connected:
-Dr David Pilcher (Senior Intensive Care Specialist – Alfred Health) and
-Dr Dinusha Katugampalage (Consultant Psychiatrist @ Forensicare | MBBS |
-MD Psych | FRANZCP).
+### Day-4 batches under v2.1.2
+- **Batch #1** — 2 clean influencers, 2/2 auto-connected: Dr David Pilcher
+  (Senior ICU Specialist – Alfred Health), Dr Dinusha Katugampalage
+  (Consultant Psychiatrist @ Forensicare).
+- **Batch #2** — 2 clean influencers, 2/2 auto-connected: Dr Eugene Ek
+  (Orthopaedic Surgeon, Monash), Dr Edwina Wright AM (Professor @ Alfred
+  Health) — Wright was the **first v2.1.2 sub-threshold rescue in the wild**
+  (sort=89, set=100, Δtok=1).
+- **Batch #3** — 4 clean influencers, **2/4 auto-connected**, 2 errored:
+  - ✅ SENT: Dr George Koufogiannis, Dr Fiona Mary Russell
+  - ❌ ERRORED: Dr Evrard Ottmar Harris, Dr Ganesh Naidoo — **NEW failure
+    mode**: Connect button click worked, modal opened, but Send button
+    inside the modal not found. Likely LinkedIn DOM shift on the invite
+    modal (different from the prior Connect-button issue fixed in
+    connector v2). See `## Pending decision` below.
+
+Day-4 totals: **6 auto-connects sent**, 2 manual-pending (Harris, Naidoo).
+~2,789 rows still in queue (1,199 already terminal).
+
+## Pending decision (PICK UP HERE on next session)
+
+**Question:** how to handle the 2 batch-#3 modal-Send failures (Harris,
+Naidoo) and prevent recurrence in batch #4?
+
+### Option 1 — manual-first
+1. User opens the 2 URLs, clicks Connect → Send manually (30 sec total).
+2. Run `_append_manual_connects.py` to backfill the Connections Sent tab
+   with the 2 manual sends.
+3. Then debug the modal selector before launching batch #4.
+
+URLs to send manually:
+- https://www.linkedin.com/in/dr-evrard-harris-980930218
+- https://www.linkedin.com/in/ganeshnaidoo
+
+### Option 2 — fix-first
+1. Build a `_modal_send_probe.py` that opens a Connect modal on a fresh
+   non-HOT seed and dumps every button/role/aria-label inside the
+   `[role="dialog"]` overlay.
+2. Patch `li_selectors.py` SEND_WITHOUT_NOTE_BUTTON_FMT (and any related
+   modal selectors) based on the probe output.
+3. Live-test with `_connector_fix_test.py` shape against Harris + Naidoo
+   (both still HOT — wait for cool-down OR force via reprofile_approved.py).
+4. Then launch batch #4 with confidence the fix holds.
+
+**Agent recommendation:** Option 1 first (don't lose Harris/Naidoo to
+debug churn), then Option 2 before batch #4.
+
+### Other open items
+- Watchdog (low priority, deferred — recurring silent-hang failure mode).
+- Batch #4 ready when modal bug is resolved. Same params:
+  `--limit 120 --connect-cap 80`. Will walk G-H names next.
 
 Most recent commits (LOCAL ONLY — do not push without user approval):
+
+Most recent commits:
+- `bec4ea1` linkedin_outreach: prevent 985-row gap on new sheet tabs
+- `d323b12` linkedin_outreach: AGENT — v2.1.2 + Day-4 batch #1 results
 - `9fc5d5c` **classifier v2.1.2** — recover real doctors lost to v2.1.1
             over-correction (hospital tokens in headline_is_medical,
             sub-threshold name-rescue band [80,85), STRONG_MEDICAL +=
