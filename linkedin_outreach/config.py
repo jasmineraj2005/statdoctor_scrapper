@@ -195,6 +195,20 @@ STRONG_MEDICAL_KEYWORDS = [
     "intensivist", "rheumatologist", "nephrologist", "geriatrician",
     "general practitioner", "family medicine", "emergency medicine",
     "internal medicine", "intensive care", "palliative care",
+    # 2026-04-26 (v2.1.2 additions): clinical roles seen in batch #3 rejected
+    # cards (David Bird "VMO in General Surgery", Daniel Kelly TCM Practitioner,
+    # plus the Bradley Smith career-pivot case). All AHPRA-registered.
+    "general surgery", "vmo",  # Visiting Medical Officer (no other meaning in AU healthcare)
+    "medical officer", "house officer", "junior medical officer",
+    "consultant physician", "staff specialist", "clinical director",
+    "head of unit", "fellow",
+    # AHPRA-registered allied health professions
+    "physiotherapist", "physiotherapy", "psychologist",
+    "midwife", "nurse practitioner", "registered nurse",
+    "dentist", "dental surgeon", "chiropractor", "osteopath",
+    "podiatrist", "optometrist", "pharmacist",
+    "tcm practitioner", "chinese medicine practitioner",
+    "occupational therapist", "speech pathologist",
     # Speciality root forms (catch hyphenated/slashed variants)
     "anaesthes", "anesthes", "oncolog", "cardiolog", "radiolog", "psychiatr",
     "paediatr", "pediatr", "dermatolog", "ophthalmolog", "neurolog",
@@ -204,6 +218,7 @@ STRONG_MEDICAL_KEYWORDS = [
     # Hospital/medical-school context (when paired in headline)
     "medical school", "school of medicine", "faculty of medicine",
     "medical centre", "medical center", "hospital",
+    "clinic ", "clinic.",  # word-boundary-ish — avoid matching "clinical" alone
 ]
 
 # DEPRECATED (kept for backward-compat references only — don't use in new

@@ -113,8 +113,24 @@ def location_matches(suburb: str, state: str, linkedin_location: str,
 
 
 def headline_is_medical(headline: str) -> bool:
-    hl = headline.lower()
-    return any(kw in hl for kw in config.MEDICAL_KEYWORDS)
+    """Quick yes/no on whether a single headline string carries a medical
+    signal. Used at the verifier stage (search-card view) and inside the
+    on-card rescue check.
+
+    2026-04-26: also checks VIC_HOSPITAL_TOKENS (the deeper
+    `medical_signal_in_text` already did this; we now propagate it here).
+    Without this, "VMO in General Surgery at Northern Health" was failing
+    the dead_account check because no STRONG keyword matched 'surgery' (only
+    'surgeon') and the hospital token was being ignored at the card stage.
+    """
+    hl = (headline or "").lower()
+    if not hl:
+        return False
+    if any(kw in hl for kw in config.MEDICAL_KEYWORDS):
+        return True
+    if any(hosp in hl for hosp in config.VIC_HOSPITAL_TOKENS):
+        return True
+    return False
 
 
 def _speciality_keywords(specialities: str) -> list[str]:
@@ -249,20 +265,32 @@ def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
                     and set_s >= config.NAME_SET_THRESHOLD
                     and delta <= config.NAME_TOKEN_DELTA_MAX)
 
-    # NEW (2026-04-25): rescue near-name matches with on-card medical signal.
-    # Triggered when:
-    #   - name fails the hard gate ONLY on Δtok (one extra/missing token), OR
-    #   - sort_score is in the "low" band [NAME_SORT_THRESHOLD, NAME_HIGH_CONF_SCORE)
-    # AND the card shows a medical signal. Caps at "medium" — caller still
-    # runs the full post-scrape gate before classifying.
+    # 2026-04-25 (v2.1.1): rescue near-name matches with on-card medical signal.
+    # 2026-04-26 (v2.1.2): added a third rescue path — sort in [80, 85) with
+    #   medical signal. Drives off the Daniel/Danny Mann-Segal case (sort=84,
+    #   headline "medical officer at Cabrini HEALTH" — clear medical signal,
+    #   nickname caused the score, the real card lost on a one-point miss).
+    # All paths cap at "medium" — caller still runs the post-scrape gate.
     near_miss = False
+    # 2026-04-26 (v2.1.2) sub-threshold floors. Both sort and set get the
+    # relaxed [80, threshold) band when the card carries a medical signal.
+    # Daniel/Danny Mann-Segal (sort=84, set=84) was missed under v2.1.1
+    # because set_s<90; now both relax to 80.
+    NAME_SORT_LOW_FLOOR = 80
+    NAME_SET_LOW_FLOOR  = 80
     if not name_hard_ok:
         near_miss_on_delta = (
             sort_s >= config.NAME_SORT_THRESHOLD
             and set_s >= config.NAME_SET_THRESHOLD
             and delta == config.NAME_TOKEN_DELTA_MAX + 1
         )
-        if near_miss_on_delta and _card_has_medical_rescue(practitioner, profile):
+        sub_threshold_rescue = (
+            NAME_SORT_LOW_FLOOR <= sort_s < config.NAME_SORT_THRESHOLD
+            and NAME_SET_LOW_FLOOR <= set_s
+            and delta <= config.NAME_TOKEN_DELTA_MAX
+        )
+        if (near_miss_on_delta or sub_threshold_rescue) \
+                and _card_has_medical_rescue(practitioner, profile):
             near_miss = True
         else:
             return (
