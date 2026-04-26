@@ -42,7 +42,7 @@ from common import parse_name, read_csv
 THIS_DIR = Path(__file__).resolve().parent
 DATA_DIR = THIS_DIR / "data"
 SITEMAP_INDEX_JSON = DATA_DIR / "halaxy_sitemap_index.json"
-GP_PRACTICES_CSV = DATA_DIR / "gp_practices.csv"
+# gp_practices CSV is per-state — accessed via config.gp_practices_csv(state)
 
 SITEMAP_INDEX_URL = "https://www.halaxy.com/a/sitemap"
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -226,16 +226,18 @@ def fetch_profile_and_extract(sess: requests.Session, url: str) -> dict:
 
 
 # ── Resume/IO ────────────────────────────────────────────────────────────────
-def load_done() -> set[str]:
-    if not GP_PRACTICES_CSV.exists():
+def load_done(state: str) -> set[str]:
+    p = config.gp_practices_csv(state)
+    if not p.exists():
         return set()
-    with open(GP_PRACTICES_CSV, newline="", encoding="utf-8") as f:
+    with open(p, newline="", encoding="utf-8") as f:
         return {r["practitioner_id"] for r in csv.DictReader(f) if r.get("practitioner_id")}
 
 
-def append_row(row: dict) -> None:
-    exists = GP_PRACTICES_CSV.exists()
-    with open(GP_PRACTICES_CSV, "a", newline="", encoding="utf-8") as f:
+def append_row(row: dict, state: str) -> None:
+    p = config.gp_practices_csv(state)
+    exists = p.exists()
+    with open(p, "a", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         if not exists:
             w.writeheader()
@@ -256,22 +258,23 @@ def run_index_build():
     print(f"[idx] wrote {SITEMAP_INDEX_JSON}  ({SITEMAP_INDEX_JSON.stat().st_size:,} bytes)")
 
 
-def run_resolve(limit: int | None):
+def run_resolve(state: str, limit: int | None):
     index = load_index()
     if not index:
         print("[!] No sitemap index. Run --build-index first.")
         return
+    print(f"[gp] state: {state.upper()}")
     print(f"[gp] loaded sitemap index: {len(index)} unique names, "
           f"{sum(len(v) for v in index.values())} total GP URLs")
 
-    done = load_done()
-    pracs = read_csv(config.VIC_PRACTITIONERS_CSV)
+    done = load_done(state)
+    pracs = read_csv(config.practitioners_csv(state))
     candidates = [
         r for r in pracs
         if "general practice" in (r.get("speciality") or "").lower()
         and r["practitioner_id"] not in done
     ]
-    print(f"[gp] VIC GPs to resolve: {len(candidates)} (already done: {len(done)})")
+    print(f"[gp] {state.upper()} GPs to resolve: {len(candidates)} (already done: {len(done)})")
     if limit:
         candidates = candidates[:limit]
     print(f"[gp] processing {len(candidates)} this run")
@@ -297,14 +300,14 @@ def run_resolve(limit: int | None):
 
         if not first or not last:
             row["method"] = "skip_no_name"
-            append_row(row)
+            append_row(row, state)
             continue
 
         entry, match_method = find_halaxy_entry(first, last, suburb, r["name"], index)
         if not entry:
             row["method"] = "no_sitemap_match"
             stats["no_match"] += 1
-            append_row(row)
+            append_row(row, state)
             if i % 50 == 0:
                 print(f"  [{i}/{len(candidates)}] {stats}")
             continue
@@ -323,20 +326,26 @@ def run_resolve(limit: int | None):
                 stats["fetch_fail"] += 1
             else:
                 stats["no_jsonld"] += 1
-            append_row(row)
+            append_row(row, state)
             continue
 
         clinic_postcode = parsed.get("clinic_postcode", "")
-        # VIC postcodes are 3000-3999 and 8000-8999. Reject if clinic is in another state
-        # UNLESS the match method was exact (trust exact name matches even cross-state,
-        # the doctor might have relocated).
-        is_vic = (clinic_postcode[:1] in ("3", "8")) if clinic_postcode else True
-        if not is_vic and match_method != "exact":
+        # AU postcode-prefix → state map. Reject fuzzy matches whose Halaxy
+        # clinic postcode is in a different state. Trust exact name matches
+        # even cross-state (doctor may have relocated).
+        STATE_PREFIXES = {
+            "nsw": ("1", "2"), "act": ("0", "2"),
+            "vic": ("3", "8"), "qld": ("4", "9"),
+            "sa": ("5",), "wa": ("6",), "tas": ("7",), "nt": ("0",),
+        }
+        prefixes = STATE_PREFIXES.get(state, ())
+        in_state = (clinic_postcode[:1] in prefixes) if clinic_postcode else True
+        if not in_state and match_method != "exact":
             # Wrong doctor — demote to no-match
             row["method"] = "wrong_state_fuzzy_reject"
             row["notes"] += f"|halaxy_postcode={clinic_postcode}"
             stats["no_match"] += 1
-            append_row(row)
+            append_row(row, state)
             if i % 25 == 0:
                 print(f"  [{i}/{len(candidates)}] {stats}")
             continue
@@ -357,7 +366,7 @@ def run_resolve(limit: int | None):
         stats["matched"] += 1
         if row["clinic_name"]:
             stats["with_clinic"] += 1
-        append_row(row)
+        append_row(row, state)
 
         if i % 25 == 0 or i == len(candidates):
             print(f"  [{i}/{len(candidates)}] {stats}")
@@ -371,12 +380,14 @@ def main():
                     help="Phase 0: download Halaxy sitemaps and build local GP index.")
     ap.add_argument("--sample", type=int, default=10, help="Limit rows (default 10).")
     ap.add_argument("--all", action="store_true", help="Process all remaining GPs.")
+    ap.add_argument("--state", default=None, help="vic | nsw | qld | sa | wa | nt")
     args = ap.parse_args()
 
     if args.build_index:
         run_index_build()
     else:
-        run_resolve(limit=None if args.all else args.sample)
+        state = config.state_lc(args.state)
+        run_resolve(state, limit=None if args.all else args.sample)
 
 
 if __name__ == "__main__":

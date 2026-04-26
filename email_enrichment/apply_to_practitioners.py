@@ -62,10 +62,11 @@ FIELDS = [
 ]
 
 
-def _load_postcode_index():
-    if not config.POSTCODE_DOMAINS_JSON.exists():
+def _load_postcode_index(state: str | None = None):
+    p = config.postcode_domains_json(state)
+    if not p.exists():
         return {}
-    return json.loads(config.POSTCODE_DOMAINS_JSON.read_text())
+    return json.loads(p.read_text())
 
 
 def _load_domain_formats():
@@ -74,18 +75,20 @@ def _load_domain_formats():
     return json.loads(config.DOMAIN_FORMATS_JSON.read_text())
 
 
-def _load_linkedin_subset_ids() -> set[str]:
-    if not config.LINKEDIN_SUBSET_CSV.exists():
+def _load_linkedin_subset_ids(state: str | None = None) -> set[str]:
+    p = config.linkedin_subset_csv(state)
+    if not p.exists():
         return set()
-    return {r["practitioner_id"] for r in read_csv(config.LINKEDIN_SUBSET_CSV)}
+    return {r["practitioner_id"] for r in read_csv(p)}
 
 
-def _load_linkedin_classifications() -> dict[str, str]:
+def _load_linkedin_classifications(state: str | None = None) -> dict[str, str]:
     """practitioner_id → classification (influencer | non_influencer | not_found | error)."""
-    if not config.LINKEDIN_CLASSIFICATIONS_CSV.exists():
+    p = config.linkedin_classifications_csv(state)
+    if not p.exists():
         return {}
     out = {}
-    for r in read_csv(config.LINKEDIN_CLASSIFICATIONS_CSV):
+    for r in read_csv(p):
         pid = r.get("practitioner_id", "")
         cls = r.get("classification", "")
         if pid and cls:
@@ -174,10 +177,10 @@ def pick_pipeline(practitioner_id: str, in_subset: bool, li_class: str | None) -
     return "email"
 
 
-def _load_gp_clinic_lookup() -> dict:
+def _load_gp_clinic_lookup(state: str | None = None) -> dict:
     """Build practitioner_id → verified clinic domain (if any)."""
-    gp_csv = config.DATA_DIR / "gp_practices.csv"
-    domains_json = config.DATA_DIR / "gp_clinic_domains.json"
+    gp_csv = config.gp_practices_csv(state)
+    domains_json = config.gp_clinic_domains_json(state)
     if not gp_csv.exists() or not domains_json.exists():
         return {}
     domain_map = json.loads(domains_json.read_text())
@@ -234,14 +237,16 @@ def synthesise_email(practitioner: dict, postcode_index: dict, domain_formats: d
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
-def build():
-    practitioners = read_csv(config.VIC_PRACTITIONERS_CSV)
-    postcode_index = _load_postcode_index()
-    gp_clinic_domains = _load_gp_clinic_lookup()
+def build(state: str | None = None):
+    state = config.state_lc(state)
+    print(f"[apply] state: {state.upper()}")
+    practitioners = read_csv(config.practitioners_csv(state))
+    postcode_index = _load_postcode_index(state)
+    gp_clinic_domains = _load_gp_clinic_lookup(state)
     trusted_domains = _load_trusted_domains()
     domain_formats = _load_domain_formats()
-    subset_ids = _load_linkedin_subset_ids()
-    li_classifications = _load_linkedin_classifications()
+    subset_ids = _load_linkedin_subset_ids(state)
+    li_classifications = _load_linkedin_classifications(state)
     smtp = _load_smtp_results()
 
     print(f"[apply] practitioners         : {len(practitioners)}")
@@ -273,9 +278,10 @@ def build():
             entry = smtp[email]
             confidence = verdict_to_confidence(entry.get("verdict", ""))
             verified_at = entry.get("probed_at", "")
-        # Domain-trust promotion: if the row stayed unverified but its domain
-        # has been catch_all elsewhere in the log, promote to catch_all.
-        if confidence == config.CONF_UNVERIFIED and dom and dom.lower() in trusted_domains:
+        # Domain-trust promotion: if a row is pending or unverified but the
+        # domain has been catch_all elsewhere in the log, promote to catch_all.
+        # This skips a redundant Disify call — same domain → same outcome.
+        if confidence in (config.CONF_UNVERIFIED, "pending") and dom and dom.lower() in trusted_domains:
             confidence = config.CONF_CATCH_ALL
         conf_counter[confidence] += 1
 
@@ -292,14 +298,15 @@ def build():
         })
 
     # Write output
-    if config.ENRICHED_CSV.exists():
-        config.ENRICHED_CSV.unlink()
-    with open(config.ENRICHED_CSV, "w", newline="", encoding="utf-8") as f:
+    out_path = config.enriched_csv(state)
+    if out_path.exists():
+        out_path.unlink()
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, extrasaction="ignore")
         w.writeheader()
         for r in out_rows:
             w.writerow(r)
-    print(f"[apply] wrote {config.ENRICHED_CSV}")
+    print(f"[apply] wrote {out_path}")
 
     print()
     print(f"[apply] pipeline split : {dict(pipeline_counter)}")
@@ -327,4 +334,7 @@ def build():
 
 
 if __name__ == "__main__":
-    build()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--state", default=None, help="vic | nsw | qld | sa | wa | nt (default: $EE_STATE or 'vic')")
+    args = ap.parse_args()
+    build(args.state)

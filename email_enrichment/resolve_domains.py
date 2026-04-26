@@ -104,6 +104,36 @@ PRIVATE_OPERATOR_KEYWORDS = [
     ("vision day surgery", "visioneyeinstitute.com.au"),
 ]
 
+# LHN-name → domain map. AIHW gives us LHN for public hospitals — much
+# cleaner than name-based matching for non-VIC states.
+LHN_DOMAINS = {
+    # NSW — most LHD subdomains don't have MX; mail is centralized at health.nsw.gov.au
+    # except for a few with their own mail (HNEH, SVHA, SCHN, JusticeHealth).
+    "sydney": "health.nsw.gov.au",
+    "south western sydney": "health.nsw.gov.au",
+    "south eastern sydney": "health.nsw.gov.au",
+    "northern sydney": "health.nsw.gov.au",
+    "western sydney": "health.nsw.gov.au",
+    "nepean blue mountains": "health.nsw.gov.au",
+    "central coast": "health.nsw.gov.au",
+    "hunter new england": "health.nsw.gov.au",
+    "northern nsw": "health.nsw.gov.au",
+    "mid north coast": "health.nsw.gov.au",
+    "southern nsw": "health.nsw.gov.au",
+    "murrumbidgee": "health.nsw.gov.au",
+    "western nsw": "health.nsw.gov.au",
+    "far west": "health.nsw.gov.au",
+    "illawarra shoalhaven": "health.nsw.gov.au",
+    "sydney children's hospitals network": "health.nsw.gov.au",
+    "st vincent's health network": "svha.org.au",
+    "justice health & forensic mental health": "health.nsw.gov.au",
+    # QLD/SA/WA/TAS/NT LHN mappings — TODO when those state pilots run.
+    # Each state's per-HHS subdomains need verification; using the umbrella
+    # state-health domain produces wrong emails (firstname.lastname@health.qld.gov.au
+    # is not a real QLD Health mailbox pattern).
+}
+
+
 # Public / other one-off overrides (by hospital-name substring)
 PUBLIC_OVERRIDES = [
     ("royal dental hospital", "dhsv.org.au"),
@@ -125,13 +155,17 @@ PUBLIC_OVERRIDES = [
 ]
 
 
-def match_by_keyword(name: str, private: bool) -> tuple[str, str]:
+def match_by_keyword(name: str, private: bool, lhn_name: str = "") -> tuple[str, str]:
     """Returns (domain, method) by keyword match. Empty string if no match."""
     n = name.lower()
     # Public overrides first (catches edge cases regardless of private flag)
     for kw, dom in PUBLIC_OVERRIDES:
         if kw in n:
             return dom, f"public_override:{kw}"
+    # LHN match for non-VIC public hospitals (AIHW gives us the LHN field)
+    lhn_lc = (lhn_name or "").strip().lower()
+    if lhn_lc and lhn_lc in LHN_DOMAINS:
+        return LHN_DOMAINS[lhn_lc], f"lhn:{lhn_lc}"
     if private:
         for kw, dom in PRIVATE_OPERATOR_KEYWORDS:
             if kw in n:
@@ -291,12 +325,16 @@ def main():
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0, help="Only process first N AIHW rows (dry-test). 0 = all.")
+    ap.add_argument("--state", default=None)
     args = ap.parse_args()
 
-    aihw = read_csv(config.HOSPITALS_RAW_CSV)
+    state = config.state_lc(args.state)
+    print(f"[resolve] state: {state.upper()}")
+    aihw = read_csv(config.hospitals_raw_csv(state))
     if args.limit:
         aihw = aihw[: args.limit]
-    hv_map = load_healthvic_map()
+    # healthvic_directory only exists for VIC; other states fall through to keyword/DDG
+    hv_map = load_healthvic_map() if state == "vic" else {}
     print(f"[resolve] AIHW rows: {len(aihw)}, healthvic entries: {len(hv_map)}")
 
     resolved = []
@@ -317,14 +355,15 @@ def main():
             hv_name = hv_row["name"]
             stats["matched_public"] += 1
         else:
-            # Try keyword-based operator/public map BEFORE hitting DDG.
-            domain, method = match_by_keyword(name, private)
+            # Try keyword-based operator/public/LHN map BEFORE hitting DDG.
+            domain, method = match_by_keyword(name, private, lhn)
             hv_segment = ""
             hv_name = ""
             if domain:
                 stats["keyword"] = stats.get("keyword", 0) + 1
-            else:
-                # Last resort: DuckDuckGo.
+            elif state == "vic":
+                # DDG fallback only for VIC (DDG times out reliably elsewhere).
+                # For other states, accept the gap — those hospitals stay unresolved.
                 print(f"[resolve] ddg-fallback {i}/{len(aihw)}: {name}")
                 domain, method = resolve_via_ddg(name)
                 if domain:
@@ -332,6 +371,8 @@ def main():
                 else:
                     stats["unresolved"] = stats.get("unresolved", 0) + 1
                 delay(*config.HTTP_JITTER_S)
+            else:
+                stats["unresolved"] = stats.get("unresolved", 0) + 1
 
         # Apply website→mail domain remap for known "A but no MX" cases
         if domain in MAIL_DOMAIN_REMAP:
@@ -361,12 +402,12 @@ def main():
             "mx_ok": mx_ok,
         })
 
-    # Overwrite output
-    if config.HOSPITALS_CSV.exists():
-        config.HOSPITALS_CSV.unlink()
-    append_csv(resolved, config.HOSPITALS_CSV, fieldnames=FIELDS)
+    out = config.hospitals_csv(state)
+    if out.exists():
+        out.unlink()
+    append_csv(resolved, out, fieldnames=FIELDS)
     print()
-    print(f"[resolve] wrote {config.HOSPITALS_CSV}")
+    print(f"[resolve] wrote {out}")
     print(f"[resolve] stats: {stats}")
     print(f"[resolve] with domain      : {sum(1 for r in resolved if r['domain'])}/{len(resolved)}")
     print(f"[resolve] with valid MX    : {sum(1 for r in resolved if r['mx_ok'])}/{len(resolved)}")

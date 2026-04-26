@@ -47,14 +47,15 @@ def extract_mapping(unit: dict, target_type_code: str) -> tuple[str, str]:
     return "", ""
 
 
-def filter_vic_hospitals(units: list[dict]) -> list[dict]:
+def filter_state_hospitals(units: list[dict], state: str) -> list[dict]:
     rows = []
+    target = state.lower()
     for u in units:
         rut = (u.get("reporting_unit_type") or {}).get("reporting_unit_type_code")
         if rut != "H":
             continue
         state_code, _ = extract_mapping(u, "S")
-        if state_code.lower() != "vic":
+        if state_code.lower() != target:
             continue
         if u.get("closed"):
             continue
@@ -76,27 +77,27 @@ def filter_vic_hospitals(units: list[dict]) -> list[dict]:
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--state", default=None)
+    args = ap.parse_args()
+    state = config.state_lc(args.state)
+
+    print(f"[aihw] state: {state.upper()}")
     print(f"[aihw] fetching {AIHW_URL}")
     units = fetch()
     print(f"[aihw] got {len(units)} reporting units (all types, all states)")
-    vic = filter_vic_hospitals(units)
-    print(f"[aihw] filtered to {len(vic)} VIC hospitals (type=H, closed=False)")
-    # Split public/private breakdown for sanity
-    pub = sum(1 for r in vic if not r["private"])
-    pri = sum(1 for r in vic if r["private"])
+    rows = filter_state_hospitals(units, state)
+    print(f"[aihw] filtered to {len(rows)} {state.upper()} hospitals (type=H, closed=False)")
+    pub = sum(1 for r in rows if not r["private"])
+    pri = sum(1 for r in rows if r["private"])
     print(f"[aihw]   public : {pub}")
     print(f"[aihw]   private: {pri}")
-    # Overwrite (not append) — fresh snapshot each run
-    if config.HOSPITALS_RAW_CSV.exists():
-        config.HOSPITALS_RAW_CSV.unlink()
-    append_csv(vic, config.HOSPITALS_RAW_CSV, fieldnames=FIELDS)
-    print(f"[aihw] wrote {config.HOSPITALS_RAW_CSV}")
-
-    # Sanity print: 5 well-known VIC tertiaries should be present
-    names = {r["name"].lower() for r in vic}
-    for probe in ["alfred", "royal melbourne", "monash medical centre", "royal children", "st vincent"]:
-        hit = any(probe in n for n in names)
-        print(f"[aihw] sanity: '{probe}' present? {'YES' if hit else 'no'}")
+    out = config.hospitals_raw_csv(state)
+    if out.exists():
+        out.unlink()
+    append_csv(rows, out, fieldnames=FIELDS)
+    print(f"[aihw] wrote {out}")
 
 
 if __name__ == "__main__":

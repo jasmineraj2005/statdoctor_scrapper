@@ -1,0 +1,366 @@
+reporting_unit_code,name,private,closed,latitude,longitude,lhn_code,lhn_name,phn_code,phn_name
+H0013,Justice Health Services,False,False,-33.96907,151.243206,LHN119,Justice Health & Forensic Mental Health,PHN101,Central and Eastern Sydney
+H0014,The Children's Hospital at Westmead,False,False,-33.801554,150.991759,LHN117,Sydney Children's Hospitals Network,PHN103,Western Sydney
+H0015,Sydney Children's Hospital,False,False,-33.917179,151.238334,LHN117,Sydney Children's Hospitals Network,PHN101,Central and Eastern Sydney
+H0016,Sacred Heart Health Service,False,False,-33.880525,151.219237,LHN998,Unknown,PHN101,Central and Eastern Sydney
+H0017,St Vincent's Hospital [Darlinghurst],False,False,-33.879692,151.221125,LHN118,St Vincent's Health Network,PHN101,Central and Eastern Sydney
+H0018,St Joseph's Hospital,False,False,-33.848659,151.028339,LHN118,St Vincent's Health Network,PHN103,Western Sydney
+H0019,Balmain Hospital,False,False,-33.859469,151.181469,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H0020,Canterbury Hospital,False,False,-33.919592,151.098275,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H0021,Royal Prince Alfred Hospital,False,False,-33.889251,151.182926,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H0022,Tresillian Care Centres,False,False,-33.918732,151.097526,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H0023,Concord Repatriation Hospital,False,False,-33.837288,151.092664,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H0024,Royal Prince Alfred Institute of Rheumatology & Orthopaedics,False,False,-33.88828,151.180707,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H0025,Karitane,False,False,-33.879777,150.965763,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0026,Camden Hospital,False,False,-34.062702,150.693297,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0027,Fairfield Hospital,False,False,-33.860117,150.904339,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0028,Liverpool Hospital,False,False,-33.919966,150.930776,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0029,Campbelltown Hospital,False,False,-34.077651,150.806321,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0030,Bankstown Lidcombe Hospital,False,False,-33.933088,151.020823,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0031,Braeside Hospital,False,False,-33.861917,150.902192,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0032,Bowral Hospital,False,False,-34.485043,150.423796,LHN103,South Western Sydney,PHN105,South Western Sydney
+H0033,Sydney Hospital / Sydney Eye Hospital,False,False,-33.867929,151.212575,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0034,Calvary Health Care - Sydney,False,False,-33.976132,151.136206,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0035,Gower Wilson Multi Purpose Service,False,False,-31.535603,159.071307,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0036,War Memorial Hospital,False,False,-33.897496,151.253816,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0037,Prince of Wales Hospital,False,False,-33.918492,151.23938,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0038,St George Hospital NSW,False,False,-33.966969,151.133776,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0039,Sutherland Hospital,False,False,-34.037288,151.115151,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0040,Royal Hospital for Women,False,False,-33.919035,151.237938,LHN101,South Eastern Sydney,PHN101,Central and Eastern Sydney
+H0041,Bulli Hospital,False,False,-34.336667,150.907344,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0042,Coledale Hospital,False,False,-34.283797,150.950796,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0043,Kiama Hospital,False,False,-34.682937,150.850514,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0044,Milton Ulladulla Hospital,False,False,-35.317313,150.438918,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0045,Port Kembla Hospital,False,False,-34.485923,150.881778,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0046,Shoalhaven Hospital,False,False,-34.868767,150.595736,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0047,Wollongong Hospital,False,False,-34.424938,150.883451,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0048,Shellharbour Hospital,False,False,-34.558987,150.840947,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0049,Illawarra Mental Health Services,False,False,-34.42623,150.891252,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0050,David Berry Hospital,False,False,-34.775909,150.712819,LHN108,Illawarra Shoalhaven,PHN106,South Eastern NSW
+H0051,Auburn Hospital,False,False,-33.859867,151.033204,LHN104,Western Sydney,PHN103,Western Sydney
+H0052,Blacktown Hospital,False,False,-33.775552,150.917537,LHN104,Western Sydney,PHN103,Western Sydney
+H0053,Mount Druitt Hospital,False,False,-33.765929,150.829646,LHN104,Western Sydney,PHN103,Western Sydney
+H0054,Westmead Hospital,False,False,-33.804362,150.987811,LHN104,Western Sydney,PHN103,Western Sydney
+H0055,Blue Mountains Hospital,False,False,-33.705329,150.32111,LHN105,Nepean Blue Mountains,PHN104,Nepean Blue Mountains
+H0056,Nepean Hospital,False,False,-33.759865,150.712627,LHN105,Nepean Blue Mountains,PHN104,Nepean Blue Mountains
+H0057,Springwood Hospital,False,False,-33.690486,150.571129,LHN105,Nepean Blue Mountains,PHN104,Nepean Blue Mountains
+H0058,Hawkesbury Hospital,False,False,-33.610712,150.820804,LHN105,Nepean Blue Mountains,PHN104,Nepean Blue Mountains
+H0059,"Tresillian Family Care Centre, Kingswood",False,False,-33.758161,150.714392,LHN998,Unknown,PHN104,Nepean Blue Mountains
+H0060,Wentworth Psychiatric Services,False,False,-33.760249,150.712613,LHN105,Nepean Blue Mountains,PHN104,Nepean Blue Mountains
+H0061,Lithgow Hospital,False,False,-33.498751,150.127701,LHN105,Nepean Blue Mountains,PHN104,Nepean Blue Mountains
+H0062,Portland Tabulam Health Centre,False,False,-33.358415,149.978565,LHN105,Nepean Blue Mountains,PHN104,Nepean Blue Mountains
+H0063,Greenwich Hospital,False,False,-33.827329,151.183376,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0064,Neringah Hospital,False,False,-33.717856,151.114556,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0065,Hornsby Ku-ring-gai Hospital,False,False,-33.701448,151.112941,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0067,Mona Vale Hospital,False,False,-33.685353,151.306618,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0068,Royal North Shore Hospital,False,False,-33.821312,151.189735,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0069,Royal Rehabilitation Hospital,False,False,-33.821772,151.107845,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0070,Ryde Hospital,False,False,-33.795482,151.089756,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0071,Gosford Hospital,False,False,-33.419451,151.340328,LHN107,Central Coast,PHN108,Hunter New England and Central Coast
+H0072,Woy Woy Hospital,False,False,-33.496716,151.320952,LHN107,Central Coast,PHN108,Hunter New England and Central Coast
+H0073,Long Jetty Health Care Centre,False,False,-33.369012,151.468538,LHN107,Central Coast,PHN108,Hunter New England and Central Coast
+H0074,Wyong Hospital,False,False,-33.261113,151.480761,LHN107,Central Coast,PHN108,Hunter New England and Central Coast
+H0075,Armidale Hospital,False,False,-30.512726,151.655629,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0076,Barraba Multi Purpose Service,False,False,-30.382482,150.605778,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0077,Bingara Multi Purpose Service,False,False,-29.864055,150.579235,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0078,Boggabri Multi Purpose Service,False,False,-30.711502,150.040014,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0079,Glen Innes Hospital,False,False,-29.733293,151.731673,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0080,Gunnedah Hospital,False,False,-30.983146,150.251339,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0081,Guyra Multi Purpose Service,False,False,-30.213889,151.679112,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0082,Inverell Hospital,False,False,-29.770728,151.130139,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0083,Manilla Hospital,False,False,-30.745717,150.732249,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0084,Moree Hospital,False,False,-29.470678,149.839648,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0085,Narrabri Hospital,False,False,-30.325869,149.777108,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0086,Tenterfield Hospital,False,False,-29.045083,152.013552,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0087,Quirindi Hospital,False,False,-31.500345,150.676621,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0088,Tamworth Hospital,False,False,-31.074079,150.924199,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0089,Tingha Multi Purpose Service,False,False,-29.950779,151.206732,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0090,Vegetable Creek Multi Purpose Service Emmaville,False,False,-29.450547,151.599204,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0091,Walcha Multi Purpose Service,False,False,-30.987818,151.591415,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0092,Warialda Multi Purpose Service,False,False,-29.538835,150.579567,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0093,Wee Waa Hospital,False,False,-30.225439,149.448287,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0094,Werris Creek Hospital,False,False,-31.346691,150.652513,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0095,Bulahdelah Hospital,False,False,-32.403949,152.210029,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0096,Gloucester Soldiers' Memorial Hospital,False,False,-32.014787,151.958556,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0097,Manning Hospital,False,False,-31.910418,152.454485,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0098,Wingham Hospital,False,False,-31.878104,152.365179,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0099,Cessnock Hospital,False,False,-32.827754,151.348396,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0100,Dungog Hospital,False,False,-32.401948,151.746157,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0101,Kurri Kurri Hospital,False,False,-32.825017,151.463018,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0102,Maitland Hospital,False,False,-32.726723,151.545887,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0103,Merriwa Multi Purpose Service,False,False,-32.142714,150.361316,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0104,Muswellbrook Hospital,False,False,-32.264545,150.900263,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0105,Denman Multi Purpose Service,False,False,-32.389483,150.684453,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0106,Calvary Mater Newcastle,False,False,-32.899371,151.720858,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0107,Belmont Hospital,False,False,-33.024631,151.648181,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0108,"Scott Memorial Hospital, Scone",False,False,-32.051525,150.876864,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0109,Singleton Hospital,False,False,-32.567087,151.185736,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0110,"Wilson Memorial Community Hospital, Murrurundi",False,False,-31.770408,150.834764,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0111,Tomaree Community Hospital,False,False,-32.720053,152.158858,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0112,John Hunter Hospital,False,False,-32.922177,151.692438,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0113,Ballina District Hospital,False,False,-28.863525,153.564013,LHN111,Northern NSW,PHN109,North Coast
+H0116,Casino and District Memorial Hospital,False,False,-28.859839,153.035827,LHN111,Northern NSW,PHN109,North Coast
+H0117,Bonalbo Hospital,False,False,-28.733777,152.622789,LHN111,Northern NSW,PHN109,North Coast
+H0118,Grafton Base Hospital,False,False,-29.674807,152.941274,LHN111,Northern NSW,PHN109,North Coast
+H0119,Kyogle Multi Purpose Service,False,False,-28.627124,153.001742,LHN111,Northern NSW,PHN109,North Coast
+H0120,Lismore Base Hospital,False,False,-28.809191,153.291045,LHN111,Northern NSW,PHN109,North Coast
+H0121,Nimbin Multi Purpose Service,False,False,-28.597371,153.223185,LHN111,Northern NSW,PHN109,North Coast
+H0122,Maclean District Hospital,False,False,-29.454219,153.201094,LHN111,Northern NSW,PHN109,North Coast
+H0124,Murwillumbah District Hospital,False,False,-28.323417,153.400811,LHN111,Northern NSW,PHN109,North Coast
+H0125,The Tweed Hospital,False,False,-28.177216,153.545458,LHN111,Northern NSW,PHN109,North Coast
+H0126,Urbenville Multi Purpose Service,False,False,-28.471511,152.543029,LHN111,Northern NSW,PHN109,North Coast
+H0127,Riverlands Drug and Alcohol Centre,False,False,-28.80834,153.29112,LHN111,Northern NSW,PHN109,North Coast
+H0128,Bellinger River District Hospital,False,False,-30.457256,152.893209,LHN110,Mid North Coast,PHN109,North Coast
+H0129,Coffs Harbour Hospital,False,False,-30.317579,153.093667,LHN110,Mid North Coast,PHN109,North Coast
+H0130,Dorrigo Multi Purpose Service,False,False,-30.340625,152.713882,LHN110,Mid North Coast,PHN109,North Coast
+H0131,Kempsey District Hospital,False,False,-31.067841,152.820038,LHN110,Mid North Coast,PHN109,North Coast
+H0132,Macksville District Hospital,False,False,-30.713725,152.919838,LHN110,Mid North Coast,PHN109,North Coast
+H0133,Wauchope District Memorial Hospital,False,False,-31.457239,152.728131,LHN110,Mid North Coast,PHN109,North Coast
+H0134,Port Macquarie Base Hospital,False,False,-31.452336,152.878304,LHN110,Mid North Coast,PHN109,North Coast
+H0135,Batemans Bay Hospital,False,False,-35.714055,150.182375,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0136,South East Regional Hospital,False,False,-36.68905,149.858549,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0137,Bombala Multi Purpose Service,False,False,-36.917513,149.235372,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0138,Braidwood Multi Purpose Service,False,False,-35.443216,149.805302,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0139,Cooma Hospital and Health Service,False,False,-36.241389,149.130499,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0140,Crookwell District Hospital,False,False,-34.464222,149.467427,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0141,Delegate Multi Purpose Service,False,False,-37.04496,148.945958,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0142,Goulburn Base Hospital,False,False,-34.747527,149.712806,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0143,Moruya Hospital,False,False,-35.904137,150.070774,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0144,Pambula Hospital,False,False,-36.926316,149.879232,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0145,Queanbeyan Hospital,False,False,-35.347685,149.232294,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0146,Bourke Street Health Service,False,False,-34.748721,149.719321,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0147,Yass District Hospital,False,False,-34.844072,148.906427,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0149,Lake Cargelligo Multi Purpose Service,False,False,-33.292027,146.374304,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0150,Wyalong Hospital,False,False,-33.916373,147.196483,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0151,Barham Hospital,False,False,-35.623823,144.133479,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0152,Berrigan Multi Purpose Service,False,False,-35.662312,145.813035,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0153,Culcairn Multi Purpose Service,False,False,-35.667399,147.042104,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0154,Corowa Health Service,False,False,-35.993528,146.383541,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0155,Deniliquin Hospital,False,False,-35.524044,144.963301,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0156,Finley Hospital,False,False,-35.641725,145.568139,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0157,Henty Multi Purpose Service,False,False,-35.515801,147.031847,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0158,Holbrook Hospital,False,False,-35.723991,147.320276,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0159,Jerilderie Multi Purpose Service,False,False,-35.356628,145.720596,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0160,Mercy Care Hospital - Albury,False,False,-36.069221,146.916764,LHN114,Murrumbidgee,PHN205,Murray
+H0161,Urana Multi Purpose Service,False,False,-35.325419,146.267316,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0162,Tocumwal Hospital,False,False,-35.815407,145.568996,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0163,Tumbarumba Multi Purpose Service,False,False,-35.778706,148.006203,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0164,Boorowa Multi Purpose Service,False,False,-34.442822,148.727073,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0165,Mercy Care Hospital - Young,False,False,-34.321003,148.288693,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0166,Murrumburrah-Harden Hospital,False,False,-34.555254,148.360186,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0167,Young Hospital,False,False,-34.320383,148.288457,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0168,Batlow/Adelong Multi Purpose Service,False,False,-35.521951,148.147891,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0169,Griffith Base Hospital,False,False,-34.282121,146.043774,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0170,Gundagai Hospital,False,False,-35.051394,148.101764,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0171,Hay Hospital,False,False,-34.500349,144.851433,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0172,Hillston Hospital,False,False,-33.478793,145.539032,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0173,Junee Multi Purpose Service,False,False,-34.866914,147.581314,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0174,Coolamon-Ganmain Multi Purpose Service,False,False,-34.819885,147.199329,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0175,Leeton Hospital,False,False,-34.545222,146.408831,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0176,Lockhart Hospital,False,False,-35.222378,146.719064,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0177,Narrandera Hospital,False,False,-34.743181,146.547661,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0178,Temora Hospital,False,False,-34.4439423,147.5426162,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0179,Tumut Hospital,False,False,-35.307265,148.219552,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0180,Wagga Wagga Hospital,False,False,-35.118083,147.356915,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0181,Cootamundra Hospital,False,False,-34.634386,148.012796,LHN114,Murrumbidgee,PHN110,Murrumbidgee
+H0182,Bourke Multi Purpose Service,False,False,-30.092823,145.947983,LHN112,Western NSW,PHN107,Western NSW
+H0183,Brewarrina Multi Purpose Service,False,False,-29.961627,146.863796,LHN112,Western NSW,PHN107,Western NSW
+H0184,Cobar Health Service,False,False,-31.509026,145.825266,LHN112,Western NSW,PHN107,Western NSW
+H0185,Collarenebri Multi Purpose Service,False,False,-29.544889,148.581901,LHN112,Western NSW,PHN107,Western NSW
+H0186,Coolah Multi Purpose Service,False,False,-31.821473,149.710049,LHN112,Western NSW,PHN107,Western NSW
+H0187,Coonabarabran Health Service,False,False,-31.274791,149.284779,LHN112,Western NSW,PHN107,Western NSW
+H0188,Baradine Multi Purpose Service,False,False,-30.945316,149.066189,LHN112,Western NSW,PHN107,Western NSW
+H0189,Coonamble Multi Purpose Service,False,False,-30.964803,148.387527,LHN112,Western NSW,PHN107,Western NSW
+H0190,Gulargambone Multi Purpose Service,False,False,-31.329812,148.469216,LHN112,Western NSW,PHN107,Western NSW
+H0191,Dubbo Hospital,False,False,-32.239339,148.620772,LHN112,Western NSW,PHN107,Western NSW
+H0192,Dunedoo Multi Purpose Service,False,False,-32.017204,149.397366,LHN112,Western NSW,PHN107,Western NSW
+H0193,Gilgandra Multi Purpose Service,False,False,-31.704565,148.664889,LHN112,Western NSW,PHN107,Western NSW
+H0194,Gulgong Multi Purpose Service,False,False,-32.3668707,149.5218927,LHN112,Western NSW,PHN107,Western NSW
+H0195,Mudgee Health Service,False,False,-32.603229,149.588179,LHN112,Western NSW,PHN107,Western NSW
+H0196,Narromine Health Service,False,False,-32.24261,148.239201,LHN112,Western NSW,PHN107,Western NSW
+H0197,Nyngan Multi Purpose Service,False,False,-31.560024,147.208772,LHN112,Western NSW,PHN107,Western NSW
+H0198,Trangie Multi Purpose Service,False,False,-32.030813,147.976355,LHN112,Western NSW,PHN107,Western NSW
+H0199,Walgett Multipurpose Service,False,False,-30.030646,148.115959,LHN112,Western NSW,PHN107,Western NSW
+H0200,Warren Multi Purpose Service,False,False,-31.693958,147.835679,LHN112,Western NSW,PHN107,Western NSW
+H0201,Wellington Health Service,False,False,-32.549741,148.951977,LHN112,Western NSW,PHN107,Western NSW
+H0202,Lightning Ridge Multi Purpose Service,False,False,-29.429973,147.981869,LHN112,Western NSW,PHN107,Western NSW
+H0203,Lourdes Hospital Dubbo,False,False,-32.238511,148.627361,LHN112,Western NSW,PHN107,Western NSW
+H0204,Bathurst Base Hospital,False,False,-33.406512,149.572699,LHN112,Western NSW,PHN107,Western NSW
+H0205,Blayney Multi Purpose Service,False,False,-33.537728,149.248988,LHN112,Western NSW,PHN107,Western NSW
+H0206,Canowindra Soldiers Memorial Hospital,False,False,-33.557204,148.676576,LHN112,Western NSW,PHN107,Western NSW
+H0207,Condobolin Health Service,False,False,-33.082332,147.154161,LHN112,Western NSW,PHN107,Western NSW
+H0208,Cowra Health Service,False,False,-33.832137,148.692376,LHN112,Western NSW,PHN107,Western NSW
+H0209,Eugowra Memorial Multipurpose Service,False,False,-33.424421,148.366799,LHN112,Western NSW,PHN107,Western NSW
+H0210,Lachlan Health Service - Forbes,False,False,-33.396281,148.013831,LHN112,Western NSW,PHN107,Western NSW
+H0211,Grenfell Multi Purpose Service,False,False,-33.894286,148.167843,LHN112,Western NSW,PHN107,Western NSW
+H0212,Molong Health Service,False,False,-33.087622,148.859724,LHN112,Western NSW,PHN107,Western NSW
+H0213,Oberon Multi Purpose Service,False,False,-33.705249,149.853596,LHN112,Western NSW,PHN107,Western NSW
+H0214,Orange Health Service,False,False,-33.317316,149.093953,LHN112,Western NSW,PHN107,Western NSW
+H0215,Lachlan Health Service - Parkes,False,False,-33.151507,148.169757,LHN112,Western NSW,PHN107,Western NSW
+H0216,Peak Hill Multipurpose Service,False,False,-32.735907,148.199615,LHN112,Western NSW,PHN107,Western NSW
+H0217,Trundle Multi Purpose Health Service,False,False,-32.921078,147.704315,LHN112,Western NSW,PHN107,Western NSW
+H0218,Rylstone Multi Purpose Service,False,False,-32.804085,149.975652,LHN112,Western NSW,PHN107,Western NSW
+H0219,Tottenham Multipurpose Service,False,False,-32.242711,147.358031,LHN112,Western NSW,PHN107,Western NSW
+H0220,Tullamore Multi Purpose Health Service,False,False,-32.635114,147.568997,LHN112,Western NSW,PHN107,Western NSW
+H0221,Balranald Multi Purpose Service,False,False,-34.644549,143.568413,LHN115,Far West,PHN107,Western NSW
+H0222,Wentworth Hospital,False,False,-34.109983,141.922481,LHN115,Far West,PHN107,Western NSW
+H0223,Broken Hill Hospital,False,False,-31.947609,141.454703,LHN115,Far West,PHN107,Western NSW
+H0224,Wilcannia Multi Purpose Service,False,False,-31.557638,143.385336,LHN115,Far West,PHN107,Western NSW
+H0225,Thomas Walker Hospital,False,False,-33.832336,151.097897,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H0226,Cumberland Hospital,False,False,-33.80159,150.995246,LHN104,Western Sydney,PHN103,Western Sydney
+H0227,Macquarie Hospital,False,False,-33.802312,151.124818,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0228,Coral Tree Family Centre,False,False,-33.804256,151.126212,LHN106,Northern Sydney,PHN102,Northern Sydney
+H0229,Morisset Hospital,False,False,-33.128549,151.512816,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0230,Hunter New England Mental Health Service,False,False,-32.8978727,151.720669,LHN109,Hunter New England,PHN108,Hunter New England and Central Coast
+H0231,Kenmore Hospital,False,False,-34.721253,149.751344,LHN113,Southern NSW,PHN106,South Eastern NSW
+H0382,Albury Wodonga Health [Albury Campus],False,False,-36.078401,146.939146,LHN249,Albury Wodonga Health,PHN205,Murray
+H0748,Byron Central Hospital,False,False,-28.6373653,153.5558978,LHN111,Northern NSW,PHN109,North Coast
+H0753,Northern Beaches Hospital,False,False,-33.750646,151.23377,LHN106,Northern Sydney,PHN102,Northern Sydney
+H1016,Goodooga Health Service,False,False,-29.110249,147.456114,LHN112,Western NSW,PHN107,Western NSW
+H1018,Ivanhoe Hospital,False,False,-32.898193,144.298904,LHN115,Far West,PHN107,Western NSW
+H1024,Menindee Health Service,False,False,-32.390335,142.414869,LHN115,Far West,PHN107,Western NSW
+H1034,Sydney Dental Hospital,False,False,-33.884469,151.207811,LHN102,Sydney,PHN101,Central and Eastern Sydney
+H1038,Tibooburra Health Service,False,False,-29.433211,142.012817,LHN115,Far West,PHN107,Western NSW
+H1058,Adolescent and Young Adult Hospice Manly,False,False,-33.8072184775347,151.29555205904995,LHN106,Northern Sydney,PHN102,Northern Sydney
+H1064,White Cliffs Health Service,False,False,-30.8506817093521,143.08958221903492,LHN115,Far West,PHN107,Western NSW
+H5004,Aesthetic Day Surgery,True,False,-33.964843,151.135032,,,,
+H5006,Albury Wodonga Private Hospital,True,False,-36.075621,146.883177,,,,
+H5009,Armidale Private Hospital,True,False,-30.512719,151.654565,,,,
+H5013,Ballina Day Surgery,True,False,-28.870711,153.563241,,,,
+H5014,Baringa Private Hospital,True,False,-30.278813,153.102893,,,,
+H5015,Bathurst Private Hospital,True,False,-33.435215,149.589242,,,,
+H5019,Berkeley Vale Private Hospital,True,False,-33.337061,151.432784,,,,
+H5025,Brisbane Waters Private Hospital,True,False,-33.495233,151.321708,,,,
+H5036,Calvary Health Care Riverina,True,False,-35.118702,147.352811,,,,
+H5046,Campbelltown Private Hospital,True,False,-34.075607,150.804948,,,,
+H5050,Castlecrag Private Hospital,True,False,-33.801822,151.217045,,,,
+H5051,Central Coast Day Hospital,True,False,-33.439692,151.384354,,,,
+H5057,Coolenberg Day Surgery,True,False,-31.439829,152.909473,,,,
+H5062,Diagnostic Endoscopy Centre,True,False,-33.879519,151.220852,,,,
+H5065,Dudley Private Hospital,True,False,-33.282219,149.121236,,,,
+H5067,Epping Surgery Centre,True,False,-33.771132,151.083676,,,,
+H5078,Figtree Private Hospital,True,False,-34.440199,150.851024,,,,
+H5080,Forster Private Hospital,True,False,-32.188561,152.514079,,,,
+H5097,Hunter Valley Private Hospital,True,False,-32.883085,151.695054,,,,
+H5098,Hunters Hill Private Hospital,True,False,-33.835273,151.150172,,,,
+H5099,Hurstville Private,True,False,-33.962333,151.095989,,,,
+H5105,Kareena Private Hospital,True,False,-34.034986,151.114186,,,,
+H5108,Lady Davidson Private Hospital,True,False,-33.726718,151.139119,,,,
+H5109,Lake Macquarie Private Hospital,True,False,-32.981232,151.691719,,,,
+H5113,Macquarie University Hospital,True,False,-33.773484,151.117877,,,,
+H5133,Metwest Eye Centre,True,False,-33.774236,150.912421,,,,
+H5143,Mount Wilga Private Hospital,True,False,-33.692829,151.092939,,,,
+H5147,Nepean Private Hospital,True,False,-33.759775,150.715206,,,,
+H5149,Newcastle Private Hospital,True,False,-32.922537,151.698371,,,,
+H5152,North Shore Private Hospital,True,False,-33.820622,151.189159,,,,
+H5155,Ramsay Clinic Northside,True,False,-33.825156,151.188367,,,,
+H5156,Ramsay Clinic Cremorne,True,False,-33.833425,151.222886,,,,
+H5157,Ramsay Clinic Wentworthville,True,False,-33.811188,150.974575,,,,
+H5158,Norwest Private Hospital,True,False,-33.744941,150.953608,,,,
+H5159,Nowra Private Hospital,True,False,-34.893534,150.606551,,,,
+H5161,Orange Surgery Centre,True,False,-33.283027,149.102737,,,,
+H5168,Pennant Hills Day Surgery,True,False,-33.738295,151.074354,,,,
+H5173,Port Macquarie Private Hospital,True,False,-31.442073,152.909375,,,,
+H5174,Prince of Wales Private Hospital,True,False,-33.918492,151.238659,,,,
+H5184,Southern Highlands Private Hospital,True,False,-34.484223,150.422882,,,,
+H5190,St George Private Hospital,True,False,-33.966952,151.136055,,,,
+H5196,St John of God Burwood Hospital,True,False,-33.869832,151.100538,,,,
+H5200,St John of God Richmond Hospital,True,False,-33.591946,150.702473,,,,
+H5205,St Luke's Hospital,True,False,-33.874188,151.225836,,,,
+H5210,St Vincent's Private Hospital [Sydney],True,False,-33.880698,151.219462,,,,
+H5211,St Vincent's Private Hospital [Lismore],True,False,-28.819949,153.287381,,,,
+H5213,Strathfield Private Hospital,True,False,-33.872059,151.097544,,,,
+H5218,Sydney Adventist Hospital,True,False,-33.733379,151.099874,,,,
+H5219,Sydney Day Surgery - Prince Alfred,True,False,-33.8912,151.1835,,,,
+H5220,Sydney Southwest Private Hospital,True,False,-33.917876,150.927499,,,,
+H5221,Tamara Private Hospital,True,False,-31.077535,150.921764,,,,
+H5227,The Hills Clinic Kellyville,True,False,-33.716759,150.952057,,,,
+H5228,The Hills Private Hospital,True,False,-33.743476,150.9825,,,,
+H5230,Mater Hospital Sydney,True,False,-33.831152,151.201247,,,,
+H5233,The Skin Hospital [Westmead],True,False,-33.8072,150.98879,,,,
+H5235,The Sydney Clinic,True,False,-33.901383,151.260988,,,,
+H5244,Tweed Day Surgery,True,False,-28.179019,153.539989,,,,
+H5249,Warners Bay Private Hospital,True,False,-32.965262,151.641204,,,,
+H5252,Wesley Hospital Ashfield,True,False,-33.8925,151.116666,,,,
+H5253,Wesley Hospital Kogarah,True,False,-33.968262,151.12896,,,,
+H5256,Westmead Private Hospital,True,False,-33.802865,150.982382,,,,
+H5257,Westmead Rehabilitation Hospital,True,False,-33.819288,150.981059,,,,
+H5259,Wolper Jewish Hospital,True,False,-33.884118,151.240739,,,,
+H5263,Mogo Day Surgery,True,False,-35.782893,150.14387,,,,
+H5267,Ulladulla Endoscopy and Medical Centre,True,False,-35.358764,150.473481,,,,
+H5269,Waratah Private Hospital,True,False,-33.963651,151.100464,,,,
+H5283,Vision Day Surgery Hurstville,True,False,-33.966949,151.100439,,,,
+H5284,Vision Eye Institute Chatswood,True,False,-33.795181,151.187314,,,,
+H5288,The Sydney Private Hospital Incorporating the NSW Eye Centre,True,False,-33.894,151.1299,,,,
+H5291,Miranda Eye Surgical Centre,True,False,-34.03244,151.101631,,,,
+H5294,Ramsay Clinic Macarthur,True,False,-34.071999,150.816958,,,,
+H5302,San Day Surgery Hornsby,True,False,-33.701961,151.110612,,,,
+H5306,Wollongong Day Surgery,True,False,-34.42583,150.881346,,,,
+H5317,Ramsay Surgical Centre Miranda,True,False,-34.034096,151.103827,,,,
+H5324,Chatswood Private Hospital,True,False,-33.797612,151.185691,,,,
+H5325,Wollongong Private Hospital,True,False,-34.425814,150.880729,,,,
+H5329,Liverpool Eye Surgery,True,False,-33.922953,150.926861,,,,
+H5330,Coffs Day Hospital,True,False,-30.287848487105183,153.12396008152086,,,,
+H5331,Western Sydney Private Oncology and Infusion Centre,True,False,-33.802024,150.982879,,,,
+H5332,The Border Cancer Hospital,True,False,-36.078399,146.938123,,,,
+H5340,Madison Day Surgery,True,False,-33.703145,151.100395,,,,
+H5341,Chris O'Brien Lifehouse,True,False,-33.890577,151.182234,,,,
+H5345,Hirondelle Private Hospital,True,False,-33.789864,151.178696,,,,
+H5346,Mayo Private Hospital,True,False,-31.881672,152.430725,,,,
+H5347,Toronto Private Hospital,True,False,-33.015911,151.592911,,,,
+H5348,Lingard Private Hospital,True,False,-32.940395,151.755463,,,,
+H5349,Shellharbour Private Hospital,True,False,-34.55888,150.847733,,,,
+H5350,Gosford Private Hospital,True,False,-33.41861,151.349518,,,,
+H5351,Dubbo Private Hospital,True,False,-32.237087,148.621094,,,,
+H5352,Maitland Private Hospital,True,False,-32.764954,151.597672,,,,
+H5353,St. Vincent Private Community Hospital [Griffith],True,False,-34.280708,146.043716,,,,
+H5361,Northern Beaches Hospital - Private,True,False,-33.751125,151.233017,,,,
+H5367,Albury Day Surgery,True,False,-36.073689,146.883606,,,,
+H5368,Alwyn Rehabilitation Hospital,True,False,-33.882797,151.094406,,,,
+H5369,Arcadia Pittwater Private Hospital,True,False,-33.67746,151.28624,,,,
+H5372,Bondi Junction Private Hospital,True,False,-33.892315,151.24585,,,,
+H5377,Charlestown Private Hospital,True,False,-32.960152,151.697571,,,,
+H5379,City West Specialist Day Hospital,True,False,-33.801174,150.982773,,,,
+H5382,Delmar Private Hospital,True,False,-33.758137,151.288086,,,,
+H5384,Double Bay Day Hospital,True,False,-33.877689,151.243973,,,,
+H5385,East Sydney Private Hospital,True,False,-33.873741,151.215942,,,,
+H5386,Eastern Suburbs Private Hospital,True,False,-33.910378,151.245865,,,,
+H5388,Gordon Private Hospital,True,False,-33.7579,151.152664,,,,
+H5389,Healthwoods Endoscopy Centre,True,False,-33.831451,151.012466,,,,
+H5390,Holroyd Private Hospital,True,False,-33.846344,150.979233,,,,
+H5397,Icon Cancer Centre Revesby,True,False,-33.954,151.01528,,,,
+H5405,Kingsgrove Day Hospital,True,False,-33.944141,151.10199,,,,
+H5406,Lithgow Community Private Hospital,True,False,-33.49873,150.127396,,,,
+H5407,Longueville Private Hospital,True,False,-33.827408,151.169769,,,,
+H5409,Manly Waters Private Hospital,True,False,-33.80521,151.284576,,,,
+H5417,Newcastle Endoscopy Centre,True,False,-32.963131,151.697693,,,,
+H5420,North Shore Specialist Day Hospital,True,False,-33.823719,151.187088,,,,
+H5421,GenesisCare North Shore,True,False,-33.82391,151.192963,,,,
+H5424,Norwest Day Hospital,True,False,-33.74477,150.95385,,,,
+H5430,President Private Hospital,True,False,-34.036575,151.079224,,,,
+H5432,Rosemont Endoscopy Centre,True,False,-34.42527,150.876984,,,,
+H5434,Sight Foundation Theatre,True,False,-33.867722,151.212891,,,,
+H5438,Southside Cancer Care Centre,True,False,-34.03405,151.104065,,,,
+H5441,Sydney Day Hospital,True,False,-33.869579,151.212708,,,,
+H5442,Sydney Day Surgery,True,False,-33.87644,151.22098,,,,
+H5448,Tuggerah Lakes Private Hospital,True,False,-33.262482,151.48143,,,,
+H5456,Bankstown Day Hospital,True,False,-33.914394,151.035324,,,,
+H5471,Insight Private Hospital,True,False,-36.081795,146.910431,,,,
+H5473,Lakeview Private Hospital,True,False,-33.730782,150.963165,,,,
+H5479,Newcastle Dialysis Clinic,True,False,-32.92661,151.76479,,,,
+H5480,Regional Imaging Cardiovascular Centre,True,False,-35.119236,147.352814,,,,
+H5483,Sydney Retina Clinic & Day Surgery,True,False,-33.866261,151.211792,,,,
+H5484,The Cataract Clinic (Aust),True,False,-33.84087,151.209396,,,,
+H5485,The Roseberry Eye Specialist Centre,True,False,-33.922691,151.207275,,,,
+H5486,The Skin Hospital [Darlinghurst],True,False,-33.87913,151.21524,,,,
+H5488,Minchinbury Community Private Hospital,True,False,-33.781006,150.828522,,,,
+H5494,Cosmos Cosmetic Day Surgery,True,False,-33.91281,151.23944,,,,
+H5501,Warringah Day Surgery,True,False,-33.76499,151.26805,,,,
+H5503,St John of God Hawkesbury District Health Service (Private),True,False,-33.610756,150.820755,,,,
+H5508,South Coast Private Hospital,True,False,-34.425977,150.890393,,,,
+H5512,Ramsay Surgical Centre Coffs Harbour,True,False,-30.30038559312085,153.1157974763174,,,,
+H5513,Ramsay Clinic Thirroul,True,False,-34.31051884173526,150.91772245465557,,,,
+H5516,Dee Why Endoscopy Unit,True,False,-33.755,151.284,,,,
+H5517,Riverina Day Surgery,True,False,-35.121,147.354,,,,
+H5523,Somerset Private Hospital,True,False,-33.761,150.715,,,,
+H5524,Sydney Surgical Centre,True,False,-33.916,151.24,,,,

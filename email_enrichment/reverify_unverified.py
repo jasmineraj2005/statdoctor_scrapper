@@ -5,25 +5,31 @@ and appends a fresh row to disify_probe_log.csv. apply_to_practitioners.py
 picks the latest verified_at per email, so results auto-upgrade.
 """
 from __future__ import annotations
+import argparse
 import asyncio
 import csv
 from pathlib import Path
 
+import config
 import disify_verify as dv
-
-THIS_DIR = Path(__file__).resolve().parent
-ENRICHED_CSV = THIS_DIR.parent / "db_ARPHA" / "vic_practitioners_enriched.csv"
 
 
 async def main():
-    import sys
-    batch_size = int(sys.argv[1]) if len(sys.argv) > 1 else 2000
+    ap = argparse.ArgumentParser()
+    ap.add_argument("batch_size", nargs="?", type=int, default=2000,
+                    help="Max rows to process this run (default 2000).")
+    ap.add_argument("--state", default=None, help="vic | nsw | qld | sa | wa | nt")
+    args = ap.parse_args()
+    batch_size = args.batch_size
+    state = config.state_lc(args.state)
+    enriched = config.enriched_csv(state)
+    print(f"[reverify] state: {state.upper()}  enriched: {enriched}")
 
     # Tune for single-IP rate-limit avoidance
     dv.CONCURRENCY = 2
     dv.JITTER_S = 3.0
 
-    with open(ENRICHED_CSV, newline="", encoding="utf-8") as f:
+    with open(enriched, newline="", encoding="utf-8") as f:
         targets = [
             {"practitioner_id": r["practitioner_id"], "email": r["candidate_email"]}
             for r in csv.DictReader(f)

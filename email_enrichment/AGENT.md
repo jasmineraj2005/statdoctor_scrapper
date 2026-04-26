@@ -7,9 +7,48 @@ Working directory: `/Users/jasminebaldevraj/Desktop/ARPHA/statdoctor_scrapper/em
 commits. This AGENT.md captures the current live state including work done
 today (2026-04-25) that post-dates the ROADMAP.
 
-## Current state (2026-04-25)
+## Current state (2026-04-26)
 
-**Pipeline rebuilt end-to-end with major scope changes. All local, no remote push.**
+**VIC frozen (18,853 sendable / 75.4%). NSW pilot in progress. Pipeline now
+state-parametric — runs any state via `--state {vic|nsw|qld|sa|wa|nt}`.**
+
+### Latest run (NSW pilot, 2026-04-26)
+
+- 40,200 NSW practitioners; **32,713 catch_all (81.4%)** with GP domain
+  guesser still running (~400/2,000 clinic clusters).
+- NSW catches more emails than VIC because NSW Health centralises mail at
+  `health.nsw.gov.au` — one trusted domain covers ~29,633 hospital staff.
+- Trust-domain promotion is critical: a single `health.nsw.gov.au` Disify
+  call avoided ~29,000 redundant API calls (would've been 13+ hrs of
+  rate-limit-safe Disify; now ~0 seconds).
+- ETA full NSW finish (after domain guesser): ~2 hrs more for ~1,000 GP clinic emails.
+
+### State parametrization (2026-04-26)
+
+All scripts now accept `--state` and resolve per-state paths via
+`config.<resource>_csv(state)` / `config.<resource>_json(state)`. Defaults to
+`$EE_STATE` env var or `vic`. Cross-state caches (Disify log, domain
+formats, Halaxy sitemap index) stay shared across states — that's why
+trust-domain works so well at scale.
+
+| Resource | Per-state path |
+|---|---|
+| Practitioners CSV | `db_ARPHA/{state}_practitioners.csv` |
+| Enriched CSV | `db_ARPHA/{state}_practitioners_enriched.csv` |
+| Hospital list | `email_enrichment/data/hospitals_{state}.csv` |
+| Postcode index | `email_enrichment/data/postcode_domains_{state}.json` |
+| GP practices | `email_enrichment/data/gp_practices_{state}.csv` |
+| GP clinic domains | `email_enrichment/data/gp_clinic_domains_{state}.json` |
+| Disify log | `email_enrichment/data/disify_probe_log.csv` (SHARED) |
+| Halaxy index | `email_enrichment/data/halaxy_sitemap_index.json` (SHARED) |
+| Domain formats | `email_enrichment/data/domain_formats.json` (SHARED) |
+
+`resolve_domains.py` carries an `LHN_DOMAINS` map (Local Health Network → mail
+domain). Currently NSW is fully populated. **Each new state needs its LHN
+mappings added before the pipeline can produce hospital emails.** AIHW gives us
+the LHN field on each public hospital — populate the map by querying real MX
+records (NOT by guessing — most LHN websites have no MX, mail is centralized at
+the state-health domain).
 
 ### Big changes since ROADMAP.md was last written
 
@@ -90,26 +129,30 @@ Step 6     apply_to_practitioners.py → db_ARPHA/vic_practitioners_enriched.csv
 
 ## YOUR NEXT STEPS IN ORDER
 
-1. **Wait for jobs A & C to finish**, then re-run `apply_to_practitioners.py` to
-   pick up all fresh Disify results + clinic data.
+1. **Wait for NSW gp_domain_guesser to finish** (~2 hrs at start of this turn),
+   then `python apply_to_practitioners.py --state nsw` to absorb the new clinic
+   emails and (likely) push past 33,500 catch_all.
 
-2. **Wire GP clinic emails into `apply_to_practitioners.py`.** After C finishes,
-   `data/gp_clinic_domains.json` contains per-clinic verified domains. Extend
-   `synthesise_email()`: if row is GP, look up clinic in gp_practices.csv, then
-   look up resolved domain in gp_clinic_domains.json, synthesize
-   `firstname.lastname@clinic_domain`. Fall back to `gp_unresolved` when no
-   verified domain. Re-run Disify on the new synthesized emails.
+2. **Verify a sample of NSW emails actually deliver.** We trust-domain promoted
+   ~29,633 health.nsw.gov.au emails based on a SINGLE Disify call confirming
+   the domain accepts mail. Spot-check 5-10 random NSW catch_all emails before
+   client handoff — if any bounce, the trust-domain heuristic needs tightening.
 
-3. **Freeze VIC deliverable.** Final `vic_practitioners_enriched.csv` + one-page
-   client summary with reachability column (linkedin / email / both / none). Commit, hold push.
+3. **Freeze NSW deliverable.** Same shape as VIC: `nsw_practitioners_enriched.csv`
+   + `db_ARPHA/NSW_SUMMARY.md`. Commit, hold push.
 
-4. **NSW pilot.** Run the full pipeline on NSW (largest state; if it breaks on
-   scale or a state-specific quirk, we find out once). Compare catch_all rate to
-   VIC baseline. Then fan out QLD/SA/WA/NT in parallel.
+4. **Add LHN_DOMAINS for QLD/SA/WA/TAS/NT.** Each state needs LHN→mail-domain
+   mapped before its pipeline can produce hospital emails. AIHW gives you the
+   `lhn_name` field. **Do NOT guess** — query MX records first, then add.
+   Pattern observed in NSW: state-health centralized domain (e.g.
+   `health.qld.gov.au`) usually wins; per-LHD subdomains usually have no MX.
 
-5. **National merge.** `all_states_practitioners_enriched.csv` deduped on AHPRA
-   registration number. Cross-reference against LinkedIn classification output
-   so no practitioner is double-contacted across channels.
+5. **Fan out QLD/SA/WA/NT** in parallel after each LHN map is populated.
+
+6. **National merge** — `db_ARPHA/all_states_practitioners_enriched.csv`,
+   deduped on `practitioner_id` (AHPRA registration number). Some practitioners
+   hold multi-state registration; pick the row whose `pipeline=email` has
+   `email_confidence=catch_all` if available, else the LinkedIn pipeline row.
 
 ## HARD RULES
 

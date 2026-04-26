@@ -20,8 +20,10 @@ import requests
 from bs4 import BeautifulSoup
 
 THIS_DIR = Path(__file__).resolve().parent
-GP_PRACTICES_CSV = THIS_DIR / "data" / "gp_practices.csv"
-CLINIC_DOMAINS_JSON = THIS_DIR / "data" / "gp_clinic_domains.json"
+import sys
+sys.path.insert(0, str(THIS_DIR))
+import config as _cfg
+# Per-state paths via config.gp_practices_csv(state) / config.gp_clinic_domains_json(state)
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 
@@ -160,8 +162,8 @@ def verify_domain_for_clinic(domain: str, clinic_name: str, suburb: str) -> tupl
     return False, "http_fail"
 
 
-def load_clusters() -> dict[tuple, list[dict]]:
-    rows = list(csv.DictReader(open(GP_PRACTICES_CSV)))
+def load_clusters(state: str) -> dict[tuple, list[dict]]:
+    rows = list(csv.DictReader(open(_cfg.gp_practices_csv(state))))
     clusters: dict[tuple, list[dict]] = defaultdict(list)
     for r in rows:
         if r["method"] != "halaxy_sitemap" or not r["clinic_name"]:
@@ -174,11 +176,19 @@ def load_clusters() -> dict[tuple, list[dict]]:
 
 
 def main():
-    clusters = load_clusters()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--state", default=None)
+    args = ap.parse_args()
+    state = _cfg.state_lc(args.state)
+    print(f"[guess] state: {state.upper()}")
+
+    clusters = load_clusters(state)
     print(f"[guess] unique clinic clusters: {len(clusters)}")
 
-    if CLINIC_DOMAINS_JSON.exists():
-        known = json.loads(CLINIC_DOMAINS_JSON.read_text())
+    out_json = _cfg.gp_clinic_domains_json(state)
+    if out_json.exists():
+        known = json.loads(out_json.read_text())
     else:
         known = {}
     print(f"[guess] already resolved: {len(known)}")
@@ -226,10 +236,10 @@ def main():
         known[key] = record
 
         if i % 25 == 0 or i == len(clusters):
-            CLINIC_DOMAINS_JSON.write_text(json.dumps(known, indent=2))
+            out_json.write_text(json.dumps(known, indent=2))
             print(f"  [{i}/{len(clusters)}] {stats}")
 
-    CLINIC_DOMAINS_JSON.write_text(json.dumps(known, indent=2))
+    out_json.write_text(json.dumps(known, indent=2))
     print(f"\n[guess] DONE. {stats}")
 
 

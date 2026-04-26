@@ -58,13 +58,13 @@ def haversine_km(lat1, lon1, lat2, lon2) -> float:
     return 2 * R * math.asin(math.sqrt(h))
 
 
-def load_vic_postcode_centroids() -> dict[str, tuple[float, float]]:
-    """Mean lat/lon across all suburbs per VIC postcode."""
+def load_state_postcode_centroids(state: str) -> dict[str, tuple[float, float]]:
+    """Mean lat/lon across all suburbs for the given state's postcodes."""
     lats, lons = defaultdict(list), defaultdict(list)
     with open(AU_POSTCODES_CSV, encoding="utf-8") as f:
         r = csv.DictReader(f)
         for row in r:
-            if (row.get("state") or "").upper() != "VIC":
+            if (row.get("state") or "").upper() != state.upper():
                 continue
             pc = row.get("postcode", "").strip()
             if not pc or not pc.isdigit():
@@ -81,15 +81,15 @@ def load_vic_postcode_centroids() -> dict[str, tuple[float, float]]:
     return {pc: (sum(lats[pc]) / len(lats[pc]), sum(lons[pc]) / len(lons[pc])) for pc in lats}
 
 
-def load_practitioner_postcodes() -> set[str]:
-    """All unique postcodes that appear in our VIC practitioner file.
+def load_practitioner_postcodes(state: str) -> set[str]:
+    """All unique postcodes that appear in the state's practitioner file.
     Prefers postcode_searched; falls back to parsing a 4-digit postcode from
     the location field (many rows have postcode_searched corrupted to 'AB' etc).
     """
     import re
     pc_re = re.compile(r"\b(\d{4})\b")
     pcs = set()
-    with open(config.VIC_PRACTITIONERS_CSV, encoding="utf-8") as f:
+    with open(config.practitioners_csv(state), encoding="utf-8") as f:
         r = csv.DictReader(f)
         for row in r:
             ps = (row.get("postcode_searched") or "").strip()
@@ -103,9 +103,9 @@ def load_practitioner_postcodes() -> set[str]:
     return pcs
 
 
-def load_hospitals() -> list[dict]:
+def load_hospitals(state: str) -> list[dict]:
     hospitals = []
-    for r in read_csv(config.HOSPITALS_CSV):
+    for r in read_csv(config.hospitals_csv(state)):
         if r["mx_ok"].lower() != "true":
             continue
         try:
@@ -123,14 +123,16 @@ def load_hospitals() -> list[dict]:
     return hospitals
 
 
-def build():
-    centroids = load_vic_postcode_centroids()
-    print(f"[postcode] VIC postcode centroids: {len(centroids)}")
+def build(state: str | None = None):
+    state = config.state_lc(state)
+    print(f"[postcode] state: {state.upper()}")
+    centroids = load_state_postcode_centroids(state)
+    print(f"[postcode] state postcode centroids: {len(centroids)}")
 
-    practitioner_pcs = load_practitioner_postcodes()
+    practitioner_pcs = load_practitioner_postcodes(state)
     print(f"[postcode] Practitioner postcodes to index: {len(practitioner_pcs)}")
 
-    hospitals = load_hospitals()
+    hospitals = load_hospitals(state)
     print(f"[postcode] MX-valid hospitals          : {len(hospitals)}")
 
     index = {}
@@ -179,8 +181,9 @@ def build():
     print(f"[postcode]   no-centroid (skipped): {no_centroid}")
     print(f"[postcode]   no-hospital-within-30km, relaxed to 60km: {no_hospital_within_30}")
 
-    config.POSTCODE_DOMAINS_JSON.write_text(json.dumps(index, indent=2))
-    print(f"[postcode] wrote {config.POSTCODE_DOMAINS_JSON}")
+    out_path = config.postcode_domains_json(state)
+    out_path.write_text(json.dumps(index, indent=2))
+    print(f"[postcode] wrote {out_path}")
     return index
 
 
@@ -208,5 +211,10 @@ def sanity_spotcheck(index: dict):
 
 
 if __name__ == "__main__":
-    idx = build()
-    sanity_spotcheck(idx)
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--state", default=None)
+    args = ap.parse_args()
+    idx = build(args.state)
+    if (args.state or config.DEFAULT_STATE).lower() == "vic":
+        sanity_spotcheck(idx)
