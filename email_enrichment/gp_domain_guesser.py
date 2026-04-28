@@ -90,7 +90,9 @@ def candidate_domains(clinic_name: str, suburb: str) -> list[str]:
         seen.add(c)
         for tld in TLDS:
             out.append(c + tld)
-    return out
+    # Cap to first 15 — the tail (e.g. distinctive[:2]+"medicalpractice")
+    # almost never wins and dominates wallclock when MX lookups pile up.
+    return out[:15]
 
 
 # DNS cache so repeated lookups are free
@@ -209,7 +211,11 @@ def main():
         domains = candidate_domains(name, suburb)
         record["tried_domains"] = domains
         resolved = False
+        cluster_deadline = time.monotonic() + 30  # per-cluster wallclock budget
         for d in domains:
+            if time.monotonic() > cluster_deadline:
+                record["evidence"] = (record["evidence"] or "") + " [budget]"
+                break
             if not has_mx(d):
                 continue
             matched, evidence = verify_domain_for_clinic(d, name, suburb)

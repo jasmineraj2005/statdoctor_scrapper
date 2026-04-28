@@ -16,7 +16,7 @@ SA/WA/TAS/NT not yet started. State of play right before the pause:
 |---|---|---|---|
 | VIC | ✅ COMPLETE | 18,853 / 24,997 (75.4%) | Committed; `db_ARPHA/VIC_SUMMARY.md` |
 | NSW | ✅ COMPLETE | 33,367 / 40,200 (83.0%) | Committed; `db_ARPHA/NSW_SUMMARY.md` |
-| QLD | 🔄 ~80% — GP resolver done, domain guesser + apply NOT yet run | (TBD) | `data/gp_practices_qld.csv` has 4,736 rows, 1,325 with clinic |
+| QLD | 🔄 mid-run — domain guesser at 450/1121 clusters (patched 2026-04-28); apply NOT yet run | (TBD) | `data/gp_practices_qld.csv` has 4,736 rows, 1,325 with clinic |
 | SA | ⏳ NOT STARTED | — | LHN map seeding required first |
 | WA | ⏳ NOT STARTED | — | LHN map seeding required first |
 | TAS | ⏳ NOT STARTED | — | LHN map seeding required first |
@@ -28,8 +28,11 @@ SA/WA/TAS/NT not yet started. State of play right before the pause:
 2. **Finish QLD:**
    ```bash
    cd email_enrichment
-   ../venv/bin/python gp_domain_guesser.py --state qld > /tmp/guess_qld.log 2>&1 &
-   # ~2 hr runtime for ~1,000 unique clinic clusters.
+   nohup ../venv/bin/python -u gp_domain_guesser.py --state qld > /tmp/guess_qld.log 2>&1 &
+   # NOTE: `-u` is mandatory — without it stdout is block-buffered when
+   # redirected and you can't tell if the run is hung or just quiet.
+   # Expected runtime with the 2026-04-28 patch (15-candidate cap + 30s
+   # per-cluster budget): ~30-90 min for ~1,121 clusters.
    # When done: re-apply, Disify any pending, write QLD_SUMMARY.md, commit.
    ```
 3. **Then SA → WA → TAS → NT**, one state at a time. Per-state recipe:
@@ -142,6 +145,27 @@ the state-health domain).
    (`medical`, `clinic`, `gp `, `medicare`, etc.). "health" alone is disallowed —
    too generic, causes false positives on suburb-tourism / corporate-health sites.
    Output: `data/gp_clinic_domains.json`.
+
+   **Throughput patch (2026-04-28, QLD run).** Before the patch, the QLD tail
+   collapsed from ~15 clusters/min to ~0.4/min (~28 hr remaining ETA at cluster
+   425/1121). Two changes restored throughput without giving up real matches:
+
+   - `candidate_domains()` now returns `out[:15]`. Without the cap, long clinic
+     names produced up to ~12 stems × 5 TLDs = 60 candidates per cluster — the
+     tail variants (e.g. `distinctive[:2]+"medicalpractice"`) almost never win
+     and dominate wallclock when MX lookups stack up. First 15 covers the
+     winners; the rest is FP risk anyway given precision-first.
+   - Per-cluster wallclock budget of **30s** in the main loop. After the budget
+     fires, we save the best `mx_only` record (if any) and move on, with
+     `evidence` suffixed `[budget]` so we can find them later.
+
+   **Always launch with `python -u`** — without it, stdout is block-buffered when
+   redirected to a file and the `[i/N] {stats}` progress lines don't appear until
+   the buffer fills. This burned ~30 min of "is it hung or just quiet?" diagnosis.
+
+   Resume is idempotent: kill the script and the saved JSON is reloaded as
+   `known` on the next run, skipping all already-resolved clusters. Restart cost
+   is zero — no rework.
 
 5. **Postcode index bug fix** (`build_postcode_index.py`). Previously seeded only from
    `postcode_searched` column, which is corrupted to 2-char alpha codes (`AB`, `AC`)
