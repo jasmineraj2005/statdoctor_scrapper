@@ -145,7 +145,32 @@ LHN_DOMAINS = {
     "south west (qld)": "health.qld.gov.au",
     "central west (qld)": "health.qld.gov.au",
     "children's health queensland": "health.qld.gov.au",
-    # SA/WA/TAS/NT — TODO when those state pilots run.
+    # SA — all LHNs centralize at sahealth.sa.gov.au (verified MX 2026-04-28).
+    # SA Health LHN subdomains (e.g. cahlnsahealthnetwork) have no MX.
+    "central adelaide": "sahealth.sa.gov.au",
+    "northern adelaide": "sahealth.sa.gov.au",
+    "southern adelaide": "sahealth.sa.gov.au",
+    "women's and children's health network (sa)": "sahealth.sa.gov.au",
+    "barossa hills fleurieu": "sahealth.sa.gov.au",
+    "yorke and northern": "sahealth.sa.gov.au",
+    "riverland mallee coorong": "sahealth.sa.gov.au",
+    "eyre and far north": "sahealth.sa.gov.au",
+    "limestone coast": "sahealth.sa.gov.au",
+    "flinders and upper north": "sahealth.sa.gov.au",
+    # WA — all metros + WA Country Health Service centralize at health.wa.gov.au
+    # (verified MX 2026-04-28). Per-metro subdomains have no MX.
+    "north metropolitan health service (wa)": "health.wa.gov.au",
+    "east metropolitan health service (wa)": "health.wa.gov.au",
+    "south metropolitan health service (wa)": "health.wa.gov.au",
+    "child adolescent health service (wa)": "health.wa.gov.au",
+    "wa country health service": "health.wa.gov.au",
+    # TAS — single Tasmanian Health Service. health.tas.gov.au has MX (verified
+    # MX 2026-04-28); ths.tas.gov.au also has MX but health.tas.gov.au is
+    # the canonical Department of Health domain.
+    "tasmanian health service": "health.tas.gov.au",
+    # NT — single NTRHS. health.nt.gov.au has no MX; nt.gov.au does
+    # (verified MX 2026-04-28). NT Health staff use @nt.gov.au addresses.
+    "nt regional health services (ntrhs)": "nt.gov.au",
 }
 
 
