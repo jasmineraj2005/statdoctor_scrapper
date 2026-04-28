@@ -1,0 +1,102 @@
+reporting_unit_code,name,private,latitude,longitude,lhn_name,phn_name,health_service_name,domain,tier,resolution_method,mx_ok
+H0538,Hampstead Rehabilitation Centre,False,-34.860704,138.620381,Central Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:central adelaide,True
+H0539,The Queen Elizabeth Hospital,False,-34.884179,138.534039,Central Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:central adelaide,True
+H0540,Royal Adelaide Hospital,False,-34.920973,138.587393,Central Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:central adelaide,True
+H0541,Lyell McEwin Hospital,False,-34.747607,138.664798,Northern Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:northern adelaide,True
+H0542,Modbury Hospital,False,-34.834166,138.690505,Northern Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:northern adelaide,True
+H0543,Pregnancy Advisory Centre,False,-34.87999,138.542962,Central Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:central adelaide,True
+H0544,St Margaret's Hospital,False,-34.846418,138.480466,Central Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:central adelaide,True
+H0545,Women's and Children's Hospital,False,-34.911444,138.599631,Women's and Children's Health Network (SA),Adelaide,,sahealth.sa.gov.au,unknown,lhn:women's and children's health network (sa),True
+H0546,Wudinna Hospital,False,-33.050274,135.466983,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0547,Cleve District Hospital and Aged Care,False,-33.697779,136.494162,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0548,Cowell District Hospital and Aged Care,False,-33.685299,136.921405,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0549,Cummins and District Memorial Hospital,False,-34.264155,135.73316,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0550,Elliston Hospital,False,-33.647912,134.892443,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0551,Kimba District Hospital and Aged Care,False,-33.143552,136.416013,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0552,Ceduna District Health Service,False,-32.119099,133.672317,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0553,Port Lincoln Health Service,False,-34.72408,135.850201,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0554,Streaky Bay Hospital,False,-32.792776,134.217524,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0555,Tumby Bay Hospital and Health Services,False,-34.372292,136.103932,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0556,Gumeracha District Soldiers' Memorial Hospital,False,-34.826269,138.881575,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0557,Kangaroo Island Health Service,False,-35.652693,137.641289,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0558,Karoonda and District Soldiers' Memorial Hospital,False,-35.094226,139.889429,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0559,Lameroo District Health Service,False,-35.328203,140.514643,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0560,Tailem Bend District Hospital,False,-35.254803,139.452692,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0561,Mannum District Hospital,False,-34.916481,139.308614,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0562,Meningie and Districts Memorial Hospital and Health Services,False,-35.693212,139.335565,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0563,Mount Barker District Soldiers' Memorial Hospital,False,-35.081813,138.870277,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0564,Mount Pleasant District Hospital,False,-34.773855,139.054212,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0565,Murray Bridge Soldiers' Memorial Hospital,False,-35.128911,139.280462,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0566,Pinnaroo Soldiers' Memorial Hospital,False,-35.257499,140.902447,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0567,South Coast District Hospital,False,-35.561171,138.606447,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0568,Strathalbyn and District Health Service,False,-35.257674,138.893558,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0569,Booleroo Centre District Hospital and Health Services,False,-32.877911,138.350958,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0570,Crystal Brook and District Hospital,False,-33.354297,138.213243,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0571,Jamestown Hospital and Health Service,False,-33.212265,138.616249,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0572,Laura and District Hospital,False,-33.174925,138.298687,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0573,Orroroo and District Health Service,False,-32.738519,138.607206,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0574,Peterborough Soldiers' Memorial Hospital,False,-32.980786,138.830344,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0575,Port Broughton and District Hospital and Health Service,False,-33.601287,137.934379,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0576,Port Pirie Regional Health Service,False,-33.177339,138.005533,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0577,McLaren Vale & Districts War Memorial Hospital Inc,False,-35.221405,138.544962,Southern Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:southern adelaide,True
+H0578,Coober Pedy Hospital and Health Service,False,-29.004893,134.762066,Eyre and Far North,Country SA,,sahealth.sa.gov.au,unknown,lhn:eyre and far north,True
+H0579,Hawker Memorial Hospital,False,-31.893389,138.427841,Flinders and Upper North,Country SA,,sahealth.sa.gov.au,unknown,lhn:flinders and upper north,True
+H0583,Port Augusta Hospital and Regional Health Services,False,-32.509417,137.776279,Flinders and Upper North,Country SA,,sahealth.sa.gov.au,unknown,lhn:flinders and upper north,True
+H0584,Quorn Health Service,False,-32.350917,138.038138,Flinders and Upper North,Country SA,,sahealth.sa.gov.au,unknown,lhn:flinders and upper north,True
+H0585,Roxby Downs Health Service,False,-30.562778,136.894261,Flinders and Upper North,Country SA,,sahealth.sa.gov.au,unknown,lhn:flinders and upper north,True
+H0587,Whyalla Hospital and Health Services,False,-33.033977,137.577559,Flinders and Upper North,Country SA,,sahealth.sa.gov.au,unknown,lhn:flinders and upper north,True
+H0588,Barmera Health Service,False,-34.249146,140.471706,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0589,Riverland General Hospital,False,-34.276054,140.600984,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0590,Loxton Hospital Complex,False,-34.454695,140.564296,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0591,Renmark Paringa District Hospital,False,-34.164836,140.745205,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0592,Waikerie Health Service,False,-34.182447,139.984917,Riverland Mallee Coorong,Country SA,,sahealth.sa.gov.au,unknown,lhn:riverland mallee coorong,True
+H0593,Bordertown Memorial Hospital,False,-36.312133,140.766438,Limestone Coast,Country SA,,sahealth.sa.gov.au,unknown,lhn:limestone coast,True
+H0594,Kingston Soldiers' Memorial Hospital,False,-36.835501,139.848763,Limestone Coast,Country SA,,sahealth.sa.gov.au,unknown,lhn:limestone coast,True
+H0595,Millicent and District Hospital and Health Service,False,-37.598354,140.358924,Limestone Coast,Country SA,,sahealth.sa.gov.au,unknown,lhn:limestone coast,True
+H0596,Mount Gambier and Districts Health Service,False,-37.805003,140.786662,Limestone Coast,Country SA,,sahealth.sa.gov.au,unknown,lhn:limestone coast,True
+H0597,Naracoorte Health Service,False,-36.966849,140.743693,Limestone Coast,Country SA,,sahealth.sa.gov.au,unknown,lhn:limestone coast,True
+H0598,Penola War Memorial Hospital,False,-37.382873,140.836465,Limestone Coast,Country SA,,sahealth.sa.gov.au,unknown,lhn:limestone coast,True
+H0600,Flinders Medical Centre,False,-35.022229,138.569439,Southern Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:southern adelaide,True
+H0602,Noarlunga Hospital,False,-35.139879,138.500218,Southern Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:southern adelaide,True
+H0603,Gawler Health Service,False,-34.593743,138.755044,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0604,Angaston District Hospital,False,-34.503549,139.054715,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0605,Balaklava Soldiers' Memorial District Hospital,False,-34.139594,138.419596,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0606,Burra Hospital,False,-33.685486,138.934577,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0607,Clare Hospital,False,-33.829588,138.614416,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0608,Eudunda Hospital,False,-34.175482,139.090586,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0609,Kapunda Hospital,False,-34.330289,138.921679,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0610,Central Yorke Peninsula Hospital (Maitland),False,-34.370494,137.673947,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0611,Riverton District Soldiers' Memorial Hospital,False,-34.160353,138.742657,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0612,Snowtown Hospital and Health Service,False,-33.786936,138.212768,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0613,Southern Yorke Peninsula Health Service (Yorketown),False,-35.020989,137.604939,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0614,Tanunda War Memorial Hospital,False,-34.528082,138.960859,Barossa Hills Fleurieu,Country SA,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H0615,Northern Yorke Peninsula Health Service (Wallaroo),False,-33.927738,137.636783,Yorke and Northern,Country SA,,sahealth.sa.gov.au,unknown,lhn:yorke and northern,True
+H0618,Glenside Health Services,False,-34.943429,138.627714,Central Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:central adelaide,True
+H1051,James Nash House,False,-34.849781,138.637283,Northern Adelaide,Adelaide,,sahealth.sa.gov.au,unknown,lhn:northern adelaide,True
+H1053,Glenside Rural & Remote,False,-34.943985126600744,138.628775249745,Barossa Hills Fleurieu,Adelaide,,sahealth.sa.gov.au,unknown,lhn:barossa hills fleurieu,True
+H5002,Adelaide Day Surgery Pty Ltd,True,-34.922409,138.588817,,,,,private,,False
+H5003,Adelaide Eye & Laser Centre,True,-34.94042,138.6215,,,,,private,,False
+H5010,Ashford Hospital,True,-34.948142,138.576725,,,,,private,,False
+H5035,Calvary Central Districts Hospital,True,-34.75542,138.656221,,,,,private,,False
+H5042,Calvary North Adelaide Hospital,True,-34.910003,138.589095,,,,,private,,False
+H5079,Flinders Private Hospital,True,-35.020629,138.568089,,,,,private,,False
+H5087,Griffith Rehabilitation Hospital,True,-35.010285,138.523859,,,,,private,,False
+H5186,SPORTSMED SA Hospital & Day Surgery,True,-34.913521,138.624987,,,,,private,,False
+H5187,St Andrew's Hospital,True,-34.934224,138.614963,,,,,private,,False
+H5212,Stirling Hospital,True,-35.007274,138.714859,,,,,private,,False
+H5232,The Memorial Hospital,True,-34.912733,138.599385,,,,,private,,False
+H5254,Western Hospital,True,-34.909971,138.49966,,,,,private,,False
+H5260,Adelaide Surgicentre,True,-34.917691,138.621022,,,,,private,,False
+H5275,Burnside War Memorial Hospital,True,-34.927126,138.638878,,,,,private,,False
+H5277,Glenelg Community Hospital Inc,True,-34.990189,138.512321,,,,,private,,False
+H5364,Calvary Adelaide Hospital,True,-34.9276,138.6113,,,,,private,,False
+H5373,Brighton Dialysis Clinic,True,-35.008746,138.52224,,,,,private,,False
+H5403,Icon Cancer Centre Windsor Gardens,True,-34.86247,138.64977,,,,,private,,False
+H5419,North Eastern Community Hospital,True,-34.882549,138.661331,,,,,private,,False
+H5422,Northern Endoscopy Centre,True,-34.78167,138.651093,,,,,private,,False
+H5426,Payneham Dialysis Clinic,True,-34.896931,138.639603,,,,,private,,False
+H5437,Southern Endoscopy Centre,True,-34.999512,138.521179,,,,,private,,False
+H5453,Windsor Gardens Day Surgery,True,-34.862469,138.649765,,,,,private,,False
+H5470,Icon Cancer Centre Adelaide,True,-34.948662,138.570786,,,,,private,,False
+H5511,Ramsay Clinic Adelaide,True,-34.9065815076291,138.61316316975868,,,,,private,,False
+H5521,Glenelg Day Surgery,True,-34.978,138.517,,,,,private,,False

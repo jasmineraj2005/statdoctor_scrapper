@@ -16,11 +16,11 @@ SA/WA/TAS/NT not yet started. State of play right before the pause:
 |---|---|---|---|
 | VIC | ✅ COMPLETE | 18,853 / 24,997 (75.4%) | Committed; `db_ARPHA/VIC_SUMMARY.md` |
 | NSW | ✅ COMPLETE | 33,367 / 40,200 (83.0%) | Committed; `db_ARPHA/NSW_SUMMARY.md` |
-| QLD | 🔄 mid-run — domain guesser at 450/1121 clusters (patched 2026-04-28); apply NOT yet run | (TBD) | `data/gp_practices_qld.csv` has 4,736 rows, 1,325 with clinic |
-| SA | ⏳ NOT STARTED | — | LHN map seeding required first |
-| WA | ⏳ NOT STARTED | — | LHN map seeding required first |
-| TAS | ⏳ NOT STARTED | — | LHN map seeding required first |
-| NT | ⏳ NOT STARTED | — | LHN map seeding required first |
+| QLD | ✅ COMPLETE | 22,317 / 27,032 (82.6%) | Committed (2026-04-28); `db_ARPHA/QLD_SUMMARY.md` |
+| SA  | ✅ COMPLETE | 10,008 / 11,927 (83.9%) | Committed (2026-04-28); `db_ARPHA/SA_SUMMARY.md` |
+| WA  | ⏳ NOT STARTED | — | hospitals + postcode index + LHN map pre-staged in working tree |
+| TAS | ⏳ NOT STARTED | — | hospitals + postcode index + LHN map pre-staged in working tree |
+| NT  | ⏳ NOT STARTED | — | hospitals + postcode index + LHN map pre-staged in working tree |
 
 ### What to do when resuming
 
@@ -47,7 +47,14 @@ SA/WA/TAS/NT not yet started. State of play right before the pause:
    ../venv/bin/python gp_resolver_sitemap.py --state {STATE} --all
    ../venv/bin/python gp_domain_guesser.py --state {STATE}
    ../venv/bin/python apply_to_practitioners.py --state {STATE}
-   ../venv/bin/python disify_verify.py        # for any pending GP-clinic emails
+   # ⚠ TRUST-DOMAIN SEED: if the state-health centralized domain (e.g.
+   # sahealth.sa.gov.au) has zero catch_all entries in disify_probe_log.csv,
+   # the first apply will leave thousands of rows "pending" because
+   # _load_trusted_domains() can't promote a domain it has never seen.
+   # FIX: probe ONE email on that domain first (one-off Disify call,
+   # append a catch_all row to disify_probe_log.csv), then re-apply.
+   # Avoids ~10k redundant Disify calls. See SA_SUMMARY.md "Methodology".
+   ../venv/bin/python disify_verify.py        # for any remaining GP-clinic emails
    ../venv/bin/python apply_to_practitioners.py --state {STATE}   # final
    ```
 4. **Then national merge** (Task #6): produce `db_ARPHA/all_states_practitioners_enriched.csv`
