@@ -29,10 +29,29 @@ import argparse
 import os
 import random
 import re
+import signal
 import time
 
 import pandas as pd
 from playwright.sync_api import sync_playwright
+
+
+# ── Per-row watchdog (AGENT.md TODO) ─────────────────────────────────────────
+# 3 mid-run hangs observed in one Day-4 session (2026-04-28): each frozen at a
+# Playwright call without an explicit timeout. SIGALRM raises RowTimeoutError
+# after WATCHDOG_PER_ROW_SEC, the phase-1 loop catches it, skips the row, tries
+# to recover the page, and continues. Three consecutive timeouts → phase 1
+# bails (the page is presumed dead).
+WATCHDOG_PER_ROW_SEC      = 180
+WATCHDOG_CONSEC_BAIL      = 3
+
+
+class RowTimeoutError(Exception):
+    pass
+
+
+def _row_timeout_handler(signum, frame):
+    raise RowTimeoutError(f"row exceeded {WATCHDOG_PER_ROW_SEC}s watchdog cap")
 
 import config
 import auth
@@ -495,14 +514,43 @@ def run(args):
             return
 
         # ── Phase 1 — profile + classify entire queue, accumulate candidates ──
+        # Per-row watchdog: SIGALRM fires after WATCHDOG_PER_ROW_SEC, raising
+        # RowTimeoutError out of whichever Playwright call is hung. Caught,
+        # logged, recovery-navigated, and we move to the next row.
+        signal.signal(signal.SIGALRM, _row_timeout_handler)
+        consec_timeouts = 0
         pending: list[dict] = []
         for idx, pr in enumerate(queue):
+            signal.alarm(WATCHDOG_PER_ROW_SEC)
             try:
-                res = _profile_and_classify(page, pr, logger)
-            except RateLimitError as e:
-                print(f"\n[main] RATE LIMIT: {e}. Stopping phase 1.")
-                logger.set_stage(pr, STAGE_ERROR)
-                break
+                try:
+                    res = _profile_and_classify(page, pr, logger)
+                    consec_timeouts = 0
+                except RateLimitError as e:
+                    print(f"\n[main] RATE LIMIT: {e}. Stopping phase 1.")
+                    logger.set_stage(pr, STAGE_ERROR)
+                    break
+                except RowTimeoutError as e:
+                    consec_timeouts += 1
+                    print(f"\n[main] WATCHDOG: {pr.get('practitioner_id','?')} "
+                          f"{pr.get('name','?')} hung — {e}. Skipping "
+                          f"(consec={consec_timeouts}).")
+                    logger.set_stage(pr, STAGE_SKIPPED,
+                                     detail="watchdog: per-row timeout")
+                    if consec_timeouts >= WATCHDOG_CONSEC_BAIL:
+                        print(f"\n[main] WATCHDOG: {WATCHDOG_CONSEC_BAIL} "
+                              f"consecutive timeouts — page presumed dead. "
+                              f"Stopping phase 1.")
+                        break
+                    # Best-effort page recovery so the next row has a clean slate.
+                    try:
+                        page.goto("https://www.linkedin.com/feed/",
+                                  wait_until="domcontentloaded", timeout=15_000)
+                    except Exception as recovery_err:
+                        print(f"  recovery navigation failed: {recovery_err}")
+                    res = {"terminal_stage": STAGE_SKIPPED, "pending": None}
+            finally:
+                signal.alarm(0)
 
             if res["pending"]:
                 res["pending"]["_idx"] = idx
