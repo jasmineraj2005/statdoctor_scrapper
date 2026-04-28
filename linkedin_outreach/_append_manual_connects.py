@@ -40,6 +40,11 @@ MANUAL_SENDS = [
     ("MED0001185743", "bradley-smith-4665441a9",              "2026-04-25 16:00:00", "Day-3 manual"),
     ("MED0001176335", "belinda-campbell-887a5242",            "2026-04-25 16:00:00", "Day-3 manual"),
     # NOT sent: MED0001204669 (Belinda Zhou) — user reviewed, not in medical field
+    # Day-4 batch #3 (2026-04-26 evening) — connector errored "no send button found"
+    # in modal; user confirmed both are 1st-degree on follow-up. Likely modal DOM
+    # shift that caused our SEND_WITHOUT_NOTE_BUTTON selector to miss.
+    ("MED0002163343", "dr-evrard-harris-980930218",            "2026-04-26 21:33:09", "Day-4 batch #3 — modal-Send selector miss; already 1st-degree on check"),
+    ("MED0000977011", "ganeshnaidoo",                          "2026-04-26 21:33:36", "Day-4 batch #3 — modal-Send selector miss; already 1st-degree on check"),
 ]
 
 
