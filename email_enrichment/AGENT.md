@@ -20,7 +20,9 @@ SA/WA/TAS/NT not yet started. State of play right before the pause:
 | SA  | ✅ COMPLETE | 10,008 / 11,927 (83.9%) | Committed (2026-04-28); `db_ARPHA/SA_SUMMARY.md` |
 | WA  | ✅ COMPLETE | 13,724 / 16,591 (82.7%) | Committed (2026-04-29); `db_ARPHA/WA_SUMMARY.md` |
 | TAS | ✅ COMPLETE |  3,418 /  4,193 (81.5%) | Committed (2026-04-29); `db_ARPHA/TAS_SUMMARY.md` |
-| NT  | ⏳ NOT STARTED | — | hospitals + postcode index + LHN map pre-staged in working tree |
+| NT  | ✅ COMPLETE |  1,569 /  1,897 (82.7%) | Committed (2026-04-29); `db_ARPHA/NT_SUMMARY.md` |
+
+**ALL 7 STATES COMPLETE.** National total: **103,256 sendable / 126,837 practitioners (81.4%)**. Next: national merge (Task #6) — produce `db_ARPHA/all_states_practitioners_enriched.csv` deduped on AHPRA registration number.
 
 ### What to do when resuming
 

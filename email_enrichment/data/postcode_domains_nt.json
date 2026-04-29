@@ -1,0 +1,436 @@
+{
+  "0800": {
+    "centroid": [
+      -12.45868,
+      130.83668
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Royal Darwin Hospital",
+        "tier": "unknown",
+        "km": 12.44
+      }
+    ]
+  },
+  "0810": {
+    "centroid": [
+      -12.3798,
+      130.86849
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Royal Darwin Hospital",
+        "tier": "unknown",
+        "km": 3.03
+      }
+    ]
+  },
+  "0811": {
+    "centroid": [
+      -12.38181,
+      130.86624
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Royal Darwin Hospital",
+        "tier": "unknown",
+        "km": 3.35
+      }
+    ]
+  },
+  "0812": {
+    "centroid": [
+      -12.39642,
+      130.91519
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Royal Darwin Hospital",
+        "tier": "unknown",
+        "km": 5.79
+      }
+    ]
+  },
+  "0820": {
+    "centroid": [
+      -12.42711,
+      130.87334
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Royal Darwin Hospital",
+        "tier": "unknown",
+        "km": 7.98
+      }
+    ]
+  },
+  "0822": {
+    "centroid": [
+      -11.76997,
+      130.62946
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Royal Darwin Hospital",
+        "tier": "unknown",
+        "km": 70.68
+      }
+    ]
+  },
+  "0828": {
+    "centroid": [
+      -12.43202,
+      130.93207
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 9.2
+      }
+    ]
+  },
+  "0829": {
+    "centroid": [
+      -12.45763,
+      130.95977
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 5.23
+      }
+    ]
+  },
+  "0830": {
+    "centroid": [
+      -12.47928,
+      130.97335
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 3.41
+      }
+    ]
+  },
+  "0832": {
+    "centroid": [
+      -12.50343,
+      130.97746
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 4.3
+      }
+    ]
+  },
+  "0834": {
+    "centroid": [
+      -12.54686,
+      131.02349
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 8.25
+      }
+    ]
+  },
+  "0835": {
+    "centroid": [
+      -12.47608,
+      131.02299
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 2.01
+      }
+    ]
+  },
+  "0836": {
+    "centroid": [
+      -12.55604,
+      131.10804
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 14.4
+      }
+    ]
+  },
+  "0839": {
+    "centroid": [
+      -12.52001,
+      131.0402
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 6.33
+      }
+    ]
+  },
+  "0845": {
+    "centroid": [
+      -13.04512,
+      131.03848
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 63.49
+      }
+    ]
+  },
+  "0846": {
+    "centroid": [
+      -13.2103,
+      131.095
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Palmerston Regional Hospital",
+        "tier": "unknown",
+        "km": 82.34
+      }
+    ]
+  },
+  "0847": {
+    "centroid": [
+      -14.01212,
+      131.75915
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Katherine Hospital",
+        "tier": "unknown",
+        "km": 72.87
+      }
+    ]
+  },
+  "0850": {
+    "centroid": [
+      -14.40915,
+      132.28591
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Katherine Hospital",
+        "tier": "unknown",
+        "km": 3.64
+      }
+    ]
+  },
+  "0852": {
+    "centroid": [
+      -16.4311,
+      130.89873
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Katherine Hospital",
+        "tier": "unknown",
+        "km": 265.96
+      }
+    ]
+  },
+  "0853": {
+    "centroid": [
+      -14.54463,
+      132.39812
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Katherine Hospital",
+        "tier": "unknown",
+        "km": 17.94
+      }
+    ]
+  },
+  "0854": {
+    "centroid": [
+      -16.28728,
+      136.36665
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Tennant Creek Hospital",
+        "tier": "unknown",
+        "km": 439.05
+      }
+    ]
+  },
+  "0860": {
+    "centroid": [
+      -19.6413,
+      134.1736
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Tennant Creek Hospital",
+        "tier": "unknown",
+        "km": 1.57
+      }
+    ]
+  },
+  "0870": {
+    "centroid": [
+      -23.70222,
+      133.86486
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Alice Springs Hospital",
+        "tier": "unknown",
+        "km": 1.4
+      }
+    ]
+  },
+  "0871": {
+    "centroid": [
+      -21.94951,
+      131.29881
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Alice Springs Hospital",
+        "tier": "unknown",
+        "km": 328.63
+      }
+    ]
+  },
+  "0872": {
+    "centroid": [
+      -22.11632,
+      131.35978
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Alice Springs Hospital",
+        "tier": "unknown",
+        "km": 312.66
+      }
+    ]
+  },
+  "0873": {
+    "centroid": [
+      -23.74471,
+      133.90501
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Alice Springs Hospital",
+        "tier": "unknown",
+        "km": 5.13
+      }
+    ]
+  },
+  "0874": {
+    "centroid": [
+      -23.68502,
+      133.89988
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Alice Springs Hospital",
+        "tier": "unknown",
+        "km": 3.2
+      }
+    ]
+  },
+  "0880": {
+    "centroid": [
+      -12.06062,
+      136.60613
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Gove Hospital",
+        "tier": "unknown",
+        "km": 23.3
+      }
+    ]
+  },
+  "0881": {
+    "centroid": [
+      -11.67037,
+      136.82486
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Gove Hospital",
+        "tier": "unknown",
+        "km": 57.57
+      }
+    ]
+  },
+  "0885": {
+    "centroid": [
+      -13.85079,
+      136.42007
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Gove Hospital",
+        "tier": "unknown",
+        "km": 189.13
+      }
+    ]
+  },
+  "0886": {
+    "centroid": [
+      -13.13118,
+      132.56337
+    ],
+    "candidates": [
+      {
+        "domain": "nt.gov.au",
+        "hospital": "Katherine Hospital",
+        "tier": "unknown",
+        "km": 148.79
+      }
+    ]
+  }
+}
