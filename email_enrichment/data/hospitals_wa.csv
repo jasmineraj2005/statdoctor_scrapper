@@ -1,0 +1,142 @@
+reporting_unit_code,name,private,latitude,longitude,lhn_name,phn_name,health_service_name,domain,tier,resolution_method,mx_ok
+H0012,State Forensic Mental Health Service,False,-31.960937,115.788431,North Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:north metropolitan health service (wa),True
+H0620,King Edward Memorial Hospital,False,-31.950093,115.818576,North Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:north metropolitan health service (wa),True
+H0621,Sir Charles Gairdner Hospital,False,-31.968291,115.815467,North Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:north metropolitan health service (wa),True
+H0623,Selby Authorised Lodge,False,-31.958204,115.80199,North Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:north metropolitan health service (wa),True
+H0624,Osborne Park Hospital,False,-31.885976,115.804717,North Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:north metropolitan health service (wa),True
+H0626,Kalamunda Hospital,False,-31.966471,116.060267,East Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:east metropolitan health service (wa),True
+H0627,"Next Step Drug And Alcohol Services, East Perth",False,-31.953405,115.869171,East Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:east metropolitan health service (wa),True
+H0628,Joondalup Health Campus (Public),False,-31.738788,115.771737,North Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:north metropolitan health service (wa),True
+H0632,Royal Perth Hospital Wellington Street Campus,False,-31.954242,115.8663,East Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:east metropolitan health service (wa),True
+H0633,Fremantle Hospital and Health Service,False,-32.058263,115.751448,South Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:south metropolitan health service (wa),True
+H0635,Armadale-Kelmscott Memorial Hospital,False,-32.133212,116.020023,East Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:east metropolitan health service (wa),True
+H0636,Bentley Health Service,False,-32.005332,115.927922,East Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:east metropolitan health service (wa),True
+H0637,Rockingham General Hospital,False,-32.291359,115.770899,South Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:south metropolitan health service (wa),True
+H0638,Murray District Hospital,False,-32.639709,115.871589,South Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:south metropolitan health service (wa),True
+H0639,Peel Health Campus,False,-32.532573,115.763504,South Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:south metropolitan health service (wa),True
+H0642,Fitzroy Crossing Hospital,False,-18.191439,125.562765,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0643,Halls Creek Hospital,False,-18.226008,127.666046,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0644,Broome Hospital,False,-17.960975,122.236289,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0645,Derby Hospital,False,-17.306339,123.633399,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0646,Wyndham Hospital,False,-15.477793,128.127772,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0647,Kununurra Hospital,False,-15.775404,128.734229,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0648,Hedland Health Campus,False,-20.413541,118.598178,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0649,Onslow Hospital,False,-21.643238,115.115389,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0650,Roebourne Hospital,False,-20.776317,117.143955,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0651,Tom Price Hospital,False,-22.695367,117.790271,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0652,Newman Hospital,False,-23.354824,119.736503,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0653,Paraburdoo Hospital,False,-23.203031,117.670633,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0655,Carnarvon Hospital,False,-24.886592,113.658993,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0656,Exmouth Hospital,False,-21.928276,114.119882,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0657,Geraldton Hospital,False,-28.782808,114.610844,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0658,Meekatharra Hospital,False,-26.591366,118.491861,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0659,Morawa Health Service,False,-29.212897,116.002986,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0660,Mullewa Health Service,False,-28.535991,115.510017,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0661,Northampton Kalbarri Health Service,False,-28.351194,114.635119,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0662,North Midlands Health Service,False,-29.534221,115.759184,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0663,Kalbarri Health Centre,False,-27.712843,114.161574,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0664,Dongara Eneabba Mingenew Health Service,False,-29.265173,114.934179,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0665,Lake Grace Hospital,False,-33.102524,118.452658,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0666,Merredin Hospital,False,-31.485204,118.276491,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0667,Narrogin Hospital,False,-32.937341,117.168459,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0668,Northam Hospital,False,-31.649582,116.657681,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0669,Wagin Hospital,False,-33.304662,117.347319,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0670,York Hospital,False,-31.894392,116.757416,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0671,Beverley Hospital,False,-32.102825,116.922962,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0672,Boddington Hospital,False,-32.803715,116.475774,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0673,Bruce Rock Memorial Hospital,False,-31.873038,118.146414,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0674,Corrigin Hospital,False,-32.324419,117.878816,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0676,Dalwallinu Hospital,False,-30.277229,116.656544,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0677,Dumbleyung Memorial Hospital,False,-33.310409,117.740499,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0678,Kellerberrin Memorial Hospital,False,-31.628902,117.716531,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0679,Goomalling Hospital,False,-31.303928,116.831102,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0680,Kondinin Hospital,False,-32.488949,118.265439,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0681,Kununoppin Health Service,False,-31.109682,117.922889,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0682,Moora Hospital,False,-30.639557,116.001119,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0683,Narembeen Memorial Hospital,False,-32.061618,118.391289,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0684,Pingelly Health Centre,False,-32.533042,117.089789,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0685,Southern Cross Hospital,False,-31.230709,119.337829,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0686,Wongan Hills Hospital,False,-30.894159,116.724843,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0687,Wyalkatchem-Koorda and Districts Hospital,False,-31.176246,117.386212,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0688,Quairading Hospital,False,-32.014481,117.402627,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0689,Esperance Hospital,False,-33.856188,121.892205,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0690,Kalgoorlie Health Campus,False,-30.740839,121.470122,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0691,Laverton Hospital,False,-28.626817,122.399861,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0692,Leonora Hospital,False,-28.894319,121.337492,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0693,Norseman Hospital,False,-32.198566,121.767663,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0694,Albany Hospital,False,-35.003407,117.904468,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0695,Denmark Hospital and Health Service,False,-34.955911730999226,117.3578578079285,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0696,Katanning Hospital,False,-33.683032,117.563409,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0697,Gnowangerup Hospital,False,-33.930469,118.002927,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0698,Plantagenet Hospital,False,-34.626092,117.654561,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0699,Ravensthorpe Health Centre,False,-33.584918,120.045461,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0700,Kojonup Hospital,False,-33.829481,117.152903,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0701,Augusta Hospital,False,-34.305814,115.157983,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0702,Bunbury Hospital,False,-33.366986,115.648183,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0703,Busselton Health Campus,False,-33.654351,115.319581,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0704,Collie Hospital,False,-33.351403,116.162223,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0705,Margaret River Hospital,False,-33.952162,115.071229,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0706,Donnybrook Hospital,False,-33.576942,115.816547,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0707,Harvey Hospital,False,-33.077554,115.896749,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0708,Nannup Hospital,False,-33.982797,115.76723,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0709,Pemberton Hospital,False,-34.444875,116.031954,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0710,Boyup Brook Soldiers Memorial Hospital,False,-33.839231,116.390639,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0711,Warren Hospital,False,-34.240969,116.154112,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0712,Bridgetown Hospital,False,-33.951681,116.132183,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H0713,Graylands Selby-Lemnos and Special Care Health Service,False,-31.961447,115.790855,North Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:north metropolitan health service (wa),True
+H0746,Fiona Stanley Hospital,False,-32.07012,115.846909,South Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:south metropolitan health service (wa),True
+H0747,St John of God Midland Public Hospital,False,-31.8948318,116.008852,East Metropolitan Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:east metropolitan health service (wa),True
+H0751,Perth Children's Hospital,False,-31.969503,115.817165,Child Adolescent Health Service (WA),Perth North,,health.wa.gov.au,unknown,lhn:child adolescent health service (wa),True
+H0752,Karratha Health Campus,False,-20.732208,116.839511,WA Country Health Service,Country WA,,health.wa.gov.au,unknown,lhn:wa country health service,True
+H1063,St James Transitional Care Unit,False,-31.99598590315838,115.91010368689118,East Metropolitan Health Service (WA),Perth South,,health.wa.gov.au,unknown,lhn:east metropolitan health service (wa),True
+H5011,Attadale Rehabilitation Hospital,True,-32.029729,115.810669,,,,,private,,False
+H5021,Bethesda Hospital,True,-31.986967,115.778484,,,,,private,,False
+H5055,Colin Street Day Hospital,True,-31.949358,115.841569,,,,,private,,False
+H5085,Glengarry Private Hospital,True,-31.834253,115.784826,,,,,private,,False
+H5094,Hollywood Private Hospital,True,-31.969693,115.809148,,,,,private,,False
+H5103,Joondalup Health Campus (Private),True,-31.738788,115.77034,,,,,private,,False
+H5131,St John of God Mt Lawley Hospital,True,-31.936721,115.884926,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5142,Mount Hospital,True,-31.958534,115.845401,,,,,private,,False
+H5162,Oxford Day Surgery and Dermatology,True,-31.922727,115.841536,,,,,private,,False
+H5169,Perth Clinic,True,-31.950874,115.843266,,,,,private,,False
+H5195,St John of God Bunbury Hospital,True,-33.365947,115.648869,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5198,St John of God Geraldton Hospital,True,-28.784383,114.616439,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5199,St John of God Murdoch Hospital,True,-32.067919,115.844659,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5201,St John of God Subiaco Hospital,True,-31.941246,115.826282,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5214,Subiaco Private Hospital,True,-31.9434,115.826,,,,,private,,False
+H5247,Waikiki Private Hospital,True,-32.310552,115.763147,,,,,private,,False
+H5258,Westminster Day Surgery,True,-31.862769,115.829163,,,,,private,,False
+H5290,Walcott Street Surgical Centre,True,-31.936554,115.874141,,,,,private,,False
+H5293,South Perth Hospital,True,-31.988465,115.862816,,,,,private,,False
+H5334,St John of God Midland Private Hospital,True,-31.8946106,116.0074802,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5365,Albany Community Hospice,True,-35.00322,117.904381,,,,,private,,False
+H5366,Albany Day Hospital,True,-35.016312,117.89196,,,,,private,,False
+H5375,Cambridge Day Surgery,True,-31.940639,115.824883,,,,,private,,False
+H5378,Churchill Day Surgery,True,-31.94771,115.831169,,,,,private,,False
+H5381,Craigie Day Surgery,True,-31.78446,115.765938,,,,,private,,False
+H5395,Icon Cancer Centre Midland,True,-31.89424,116.00531,,,,,private,,False
+H5398,Icon Cancer Centre Rockingham,True,-32.28745,115.74693,,,,,private,,False
+H5404,Kings Park Day Hospital,True,-31.950455,115.836075,,,,,private,,False
+H5411,McCourt Street Day Surgery,True,-31.94138,115.827957,,,,,private,,False
+H5415,Murdoch Surgicentre,True,-32.067791,115.844986,,,,,private,,False
+H5427,Perth Day Surgery Centre,True,-31.940439,115.82608,,,,,private,,False
+H5428,Perth Dermatology Clinic,True,-31.944691,115.863998,,,,,private,,False
+H5429,Perth Eye Hospital,True,-31.949883,115.83976,,,,,private,,False
+H5431,Rockingham Dialysis Clinic,True,-32.283241,115.746452,,,,,private,,False
+H5440,Stirling Dialysis Clinic,True,-31.88913,115.808022,,,,,private,,False
+H5446,The Park Private Hospital,True,-31.93434,115.874382,,,,,private,,False
+H5451,West Leederville Private Hospital,True,-31.94294,115.82798,,,,,private,,False
+H5458,Bunbury Day Hospital,True,-33.340477,115.639557,,,,,private,,False
+H5459,Cannington Dialysis Clinic,True,-32.016842,115.934967,,,,,private,,False
+H5474,Lions Eye Institute Day Surgery Centre,True,-31.96793,115.814934,,,,,private,,False
+H5477,Midland Dialysis Clinic,True,-31.88781,116.00413,,,,,private,,False
+H5478,Western Haematology and Oncology Clinics,True,-31.94462,115.84181,,,,,private,,False
+H5481,Southbank Day Surgery,True,-31.975916,115.871857,,,,,private,,False
+H5482,Spearwood Dialysis Clinic,True,-32.09556,115.78343,,,,,private,,False
+H5491,St John of God Subiaco Eye Hospital,True,-31.94045,115.82416,,,,sjog.org.au,private,operator_kw:st john of god,True
+H5492,West Coast Endoscopy Centre,True,-31.73946,115.76764,,,,,private,,False
+H5495,Genesis Cancer Care Fiona Stanley,True,-31.941799,115.822639,,,,,private,,False
+H5496,GI Clinic Perth,True,-32.04477,115.81263,,,,,private,,False
+H5502,Genesis Cancer Care Shenton House Joondalup,True,-31.74084,115.77066,,,,,private,,False
+H5504,Marian Centre,True,-31.9405,115.82337,,,,,private,,False
+H5509,Abbotsford Private Hospital,True,-31.94091,115.83768,,,,,private,,False

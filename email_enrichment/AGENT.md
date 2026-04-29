@@ -18,7 +18,7 @@ SA/WA/TAS/NT not yet started. State of play right before the pause:
 | NSW | ✅ COMPLETE | 33,367 / 40,200 (83.0%) | Committed; `db_ARPHA/NSW_SUMMARY.md` |
 | QLD | ✅ COMPLETE | 22,317 / 27,032 (82.6%) | Committed (2026-04-28); `db_ARPHA/QLD_SUMMARY.md` |
 | SA  | ✅ COMPLETE | 10,008 / 11,927 (83.9%) | Committed (2026-04-28); `db_ARPHA/SA_SUMMARY.md` |
-| WA  | ⏳ NOT STARTED | — | hospitals + postcode index + LHN map pre-staged in working tree |
+| WA  | ✅ COMPLETE | 13,724 / 16,591 (82.7%) | Committed (2026-04-29); `db_ARPHA/WA_SUMMARY.md` |
 | TAS | ⏳ NOT STARTED | — | hospitals + postcode index + LHN map pre-staged in working tree |
 | NT  | ⏳ NOT STARTED | — | hospitals + postcode index + LHN map pre-staged in working tree |
 
