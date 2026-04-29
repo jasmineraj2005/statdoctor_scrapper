@@ -238,6 +238,43 @@ def _card_has_medical_rescue(practitioner: dict, profile: dict) -> bool:
     return sp_ok
 
 
+def verify_profile_with_signal(practitioner: dict, profile: dict) -> tuple[bool, str, str, int]:
+    """Wrapper around verify_profile that also reports medical-signal strength
+    of the search-card headline. Used by searcher to rank multiple same-name
+    matches: higher signal wins, then original LinkedIn rank breaks ties.
+
+    Signal scale:
+      0  no medical signal in headline
+      1  headline_is_medical (medical keyword OR VIC hospital token in headline)
+      2  same as 1 PLUS headline matches the AHPRA speciality keyword
+
+    Failure path always returns signal=0 (irrelevant — caller filters on is_match).
+
+    Why this exists: 2026-04-29 audit of 16 high-confidence rejections showed
+    6 of 8 inspected were wrong-person namesakes (e.g., "Helen Hsu, Whitehorse
+    Council" matched in place of Dr Helen Hsu). The first-result-wins logic
+    in searcher.py picked the namesake; the actual doctor at Result 3+ was
+    never evaluated. Ranking by medical-signal-in-headline lets the searcher
+    prefer the doctor without requiring a hard filter that would reject sparse
+    legitimate headlines.
+    """
+    is_match, reason, confidence = verify_profile(practitioner, profile)
+    if not is_match:
+        return is_match, reason, confidence, 0
+    headline = (profile.get("headline", "") or "")
+    is_medical = headline_is_medical(headline)
+    sp_ok, _ = headline_matches_speciality(
+        practitioner.get("specialities", ""), headline
+    )
+    if is_medical and sp_ok:
+        signal = 2
+    elif is_medical:
+        signal = 1
+    else:
+        signal = 0
+    return is_match, reason, confidence, signal
+
+
 def verify_profile(practitioner: dict, profile: dict) -> tuple[bool, str, str]:
     """
     Full verification pipeline — returns (is_match, reason, confidence).
