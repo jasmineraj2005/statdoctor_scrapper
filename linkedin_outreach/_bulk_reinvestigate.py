@@ -67,8 +67,11 @@ def _build_pool() -> list[dict]:
     """Load the recovery pool: non_influencer + *_no_medical_signal +
     followers>=300. Returns rows from classifications.csv enriched with
     the prior URL we'd already matched (so we can detect no-progress repeats).
+
+    Dedupes by practitioner_id (classifications.csv is append-only — repeated
+    runs leave multiple rows per pid; we keep the one with max follower_count).
     """
-    out = []
+    by_pid: dict[str, tuple[dict, int]] = {}
     with open(CLASSIFICATIONS_CSV) as f:
         for r in csv.DictReader(f):
             if r["classification"] != "non_influencer":
@@ -81,12 +84,18 @@ def _build_pool() -> list[dict]:
                 fc = 0
             if fc < 300:
                 continue
-            out.append({
-                "practitioner_id": r["practitioner_id"],
-                "prior_url":       r["linkedin_url"],
-                "prior_followers": fc,
-                "prior_fail":      r["fail_reason"],
-            })
+            pid = r["practitioner_id"]
+            if pid not in by_pid or by_pid[pid][1] < fc:
+                by_pid[pid] = (r, fc)
+    out = [
+        {
+            "practitioner_id": r["practitioner_id"],
+            "prior_url":       r["linkedin_url"],
+            "prior_followers": fc,
+            "prior_fail":      r["fail_reason"],
+        }
+        for r, fc in by_pid.values()
+    ]
     out.sort(key=lambda x: -x["prior_followers"])
     return out
 
@@ -99,12 +108,15 @@ def _load_subset_meta() -> dict[str, dict]:
     return out
 
 
-def run(limit: int | None, dry_run: bool):
+def run(limit: int | None, skip: int, dry_run: bool):
     if dry_run:
         config.DRY_RUN = True
         print("[bulk-reinvestigate] DRY RUN — connector will early-return.")
 
     pool = _build_pool()
+    if skip:
+        pool = pool[skip:]
+        print(f"[bulk-reinvestigate] --skip {skip}: starting from candidate #{skip+1}")
     if limit:
         pool = pool[:limit]
     if not pool:
@@ -225,7 +237,10 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--limit", type=int, default=None,
                    help="Re-investigate only the first N candidates (sorted by follower count desc).")
+    p.add_argument("--skip", type=int, default=0,
+                   help="Skip the first N candidates before applying --limit. "
+                        "Use to chunk large pools across runs.")
     p.add_argument("--dry-run", action="store_true",
                    help="Profile + classify only; connector early-returns.")
     args = p.parse_args()
-    run(args.limit, args.dry_run)
+    run(args.limit, args.skip, args.dry_run)
