@@ -1,0 +1,784 @@
+practitioner_id,first,last,suburb,postcode,halaxy_url,halaxy_specialty,clinic_name,clinic_phone,clinic_street,clinic_suburb,clinic_postcode,method,scraped_at,notes
+MED0002312980,eloise,roffe,Hobart,7000,https://www.halaxy.com/profile/dr-richard-roffe/gp-general-practitioner/318804,gp-general-practitioner,North Hobart Medical Centre,6231 0318,408 Elizabeth St North Hobart,Hobart,7000,halaxy_sitemap,2026-04-29T12:51:53,match=last_unique
+MED0002636371,ruba,alobaidy,Hobart,7000,,,,,,,,no_sitemap_match,2026-04-29T12:51:55,
+MED0002222446,mitchell,netherton,Hobart,7000,,,,,,,,no_sitemap_match,2026-04-29T12:51:55,
+MED0001366216,ian,visagie,Hobart,7000,https://www.halaxy.com/profile/dr-stefan-visagie/gp-general-practitioner/326274,gp-general-practitioner,John Street Medical Centre,03 6229 1987,5 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:51:55,match=token:stefan|suburb_mismatch:ahpra=Hobart/halaxy=Kingston
+MED0001219966,emily,ware,Hobart,7000,https://www.halaxy.com/profile/dr-emily-ware/gp-general-practitioner/327311,gp-general-practitioner,Grosvenor Street General Practice,6224 1944,57 Grosvenor Street,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:51:57,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Sandy Bay
+MED0001666053,katherine,witheridge,Hobart,7000,,,,,,,,no_sitemap_match,2026-04-29T12:51:59,
+MED0001933197,peter,loudon,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:51:59,
+MED0001378677,spencer,young,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:51:59,
+MED0001378685,jenelle,cullen,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:51:59,
+MED0001347844,robert,white,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:51:59,
+MED0001347919,robert,walters,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:51:59,
+MED0001388541,robin,dubow,Sandy Bay,7005,https://www.halaxy.com/profile/dr-robin-dubow/gp-general-practitioner/328961,gp-general-practitioner,Rosny Doctors,6244 1058,7 Ross Avenue,Rosny Park,7018,halaxy_sitemap,2026-04-29T12:51:59,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Rosny Park
+MED0001811567,sarah,till,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:01,
+MED0000939791,john,faulkner,Sandy Bay,7005,https://www.halaxy.com/profile/dr-hector-faulkner/gp-general-practitioner/332275,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:52:01,match=last_unique|halaxy_postcode=6333
+MED0001935078,jiyi,cheong,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:03,
+MED0001371044,jill,rogers,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:03,
+MED0000938979,cornelius,o'neill,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:03,
+MED0001808638,alessandra,kraft,Sandy Bay,7005,https://www.halaxy.com/profile/dr-alessandra-kraft/gp-general-practitioner/320887,gp-general-practitioner,Dr Foster and Associates,Not available,207 Spencer Street,Bunbury,65230,halaxy_sitemap,2026-04-29T12:52:03,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Bunbury
+MED0001171457,jerzy,tarnawski,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:05,
+MED0001363558,marguerite,broadby,Sandy Bay,7005,https://www.halaxy.com/profile/dr-marguerite-broadby/gp-general-practitioner/332213,gp-general-practitioner,Sandy Bay Clinic,03 6223 6822,270 Sandy Bay Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:52:05,match=exact
+MED0001385244,ian,hoyle,Sandy Bay,7005,https://www.halaxy.com/profile/dr-ian-hoyle/gp-general-practitioner/322882,gp-general-practitioner,General Practice Plus,6223 5533,30A Cascade Rd,South Hobart,7004,halaxy_sitemap,2026-04-29T12:52:07,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=South Hobart
+MED0001392627,lilian,samson,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:09,
+MED0000943412,sara,maloney,Sandy Bay,7005,https://www.halaxy.com/profile/dr-sara-maloney/gp-general-practitioner/326399,gp-general-practitioner,Rosny Doctors,03 6244 1058,7 Ross Avenue,Rosny Park,7018,halaxy_sitemap,2026-04-29T12:52:09,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Rosny Park
+MED0001396670,nina,rosewell,Sandy Bay,7005,https://www.halaxy.com/profile/dr-nina-rosewell/gp-general-practitioner/326098,gp-general-practitioner,Nina Rosewell,03 6224 1944,57 Grosvenor Street,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:52:10,match=exact
+MED0001350511,richard,roffe,Sandy Bay,7005,https://www.halaxy.com/profile/dr-richard-roffe/gp-general-practitioner/318804,gp-general-practitioner,North Hobart Medical Centre,6231 0318,408 Elizabeth St North Hobart,Hobart,7000,halaxy_sitemap,2026-04-29T12:52:12,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Hobart
+MED0001674052,rekha,ratnagobal,Sandy Bay,7005,https://www.halaxy.com/profile/dr-rekna-ratnagobal/gp-general-practitioner/329045,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:52:14,match=last_unique|suburb_mismatch:ahpra=Sandy Bay/halaxy=Kingston
+MED0001385200,karen,gartlan,Sandy Bay,7005,https://www.halaxy.com/profile/dr-karen-gartlan/gp-general-practitioner/323108,gp-general-practitioner,Barrack Street Practice Propriety Ltd,03 6223 1055,5a Barrack St,Hobart,7000,halaxy_sitemap,2026-04-29T12:52:16,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Hobart
+MED0001375295,nicholas,cooling,Sandy Bay,7005,https://www.halaxy.com/profile/dr-scott-cooling/gp-general-practitioner/320478,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:52:17,match=last_unique|halaxy_postcode=4703
+MED0001640704,anna,hoogland,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:19,
+MED0001371880,tomas,mcardle,Sandy Bay,7005,https://www.halaxy.com/profile/dr-tomas-mcardle/gp-general-practitioner/326306,gp-general-practitioner,Bayside Medical Centre,03 6225 3858,7 Beach Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:52:19,match=exact
+MED0001076586,benjamin,clark,Sandy Bay,7005,https://www.halaxy.com/profile/dr-benjamin-clark/gp-general-practitioner/334556,gp-general-practitioner,Family Practice Unit,Not available,1009 Lower North East Road,Highbury,5089,halaxy_sitemap,2026-04-29T12:52:21,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Highbury
+MED0001602498,thomas,little,Sandy Bay,7005,https://www.halaxy.com/profile/dr-juliette-little/gp-general-practitioner/317417,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:52:23,match=last_unique|halaxy_postcode=2010
+MED0001360924,jonathan,isles,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:24,
+MED0001335632,robert,simpson,Sandy Bay,7005,https://www.halaxy.com/profile/dr-robert-simpson/gp-general-practitioner/326291,gp-general-practitioner,Oatlands Surgery,03 6254 5030,13 Chruch Street,Oatlands,7120,halaxy_sitemap,2026-04-29T12:52:24,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Oatlands
+MED0000943577,tristan,johnson,Sandy Bay,7005,https://www.halaxy.com/profile/dr-tristan-johnson/gp-general-practitioner/326389,gp-general-practitioner,Snug Medical Centre,03 6267 9221,7 Beach Road,Snug,7054,halaxy_sitemap,2026-04-29T12:52:26,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Snug
+MED0002087455,chi,lau,Sandy Bay,7005,https://www.halaxy.com/profile/dr-chi-ming-lau/gp-general-practitioner/356787,gp-general-practitioner,Derwent Valley Medical Centre,03 6261 1399,11 Burnett Street,NEW NORFOLK,7140,halaxy_sitemap,2026-04-29T12:52:28,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=NEW NORFOLK
+MED0001392740,richard,ralph,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:30,
+MED0000943406,jeffery,halliday,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:30,
+MED0000983146,daniel,kulbac,Sandy Bay,7005,https://www.halaxy.com/profile/dr-daniel-kulbac/gp-general-practitioner/356140,gp-general-practitioner,Augusta Road Medical Centre,6278 1744,120 Augusta Road,Lenah Valley,7008,halaxy_sitemap,2026-04-29T12:52:30,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Lenah Valley
+MED0001403156,john,madden,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:31,
+MED0001669769,tristan,yolland,Sandy Bay,7005,https://www.halaxy.com/profile/dr-sarah-yolland/gp-general-practitioner/356623,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:52:31,match=last_unique|halaxy_postcode=2289
+MED0001388589,daniel,rimmer,Sandy Bay,7005,https://www.halaxy.com/profile/dr-danny-rimmer/gp-general-practitioner/317916,gp-general-practitioner,"Drs Salter, Skeat And Rimmer",6223 3133,203 Macquarie st,Hobart,7000,halaxy_sitemap,2026-04-29T12:52:33,match=last_unique|suburb_mismatch:ahpra=Sandy Bay/halaxy=Hobart
+MED0001631654,richard,hargreaves,Sandy Bay,7005,https://www.halaxy.com/profile/dr-richard-hargreaves/gp-general-practitioner/335175,gp-general-practitioner,7Springs Medical Practice,07 4529 2777,881 Ruthven St,Toowoomba,4350,halaxy_sitemap,2026-04-29T12:52:35,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Toowoomba
+MED0001353186,paul,thompson,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:36,
+MED0001604390,marika,pietrus,Sandy Bay,7005,https://www.halaxy.com/profile/dr-marika-pietrus/gp-general-practitioner/351574,gp-general-practitioner,Hopkins Street Medical Clinic,03 6228 2200,67 Hopkins Street,Moonah,7009,halaxy_sitemap,2026-04-29T12:52:36,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Moonah
+MED0000941400,sou,gouy,Sandy Bay,7005,https://www.halaxy.com/profile/dr-sou-gouy/gp-general-practitioner/329097,gp-general-practitioner,Sandy Bay Clinic,03 6223 6822,270 Sandy Bay Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:52:38,match=exact
+MED0001912982,elinor,kitson,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:39,
+MED0001640190,vaishali,bhalerao,Sandy Bay,7005,https://www.halaxy.com/profile/dr-vaishali-bhalerao/gp-general-practitioner/316835,gp-general-practitioner,Mercy Hospital for Woman,03 8458 4408,Studley Road,Heidelberg,3084,halaxy_sitemap,2026-04-29T12:52:39,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Heidelberg
+MED0001396585,fiona,scott,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:41,
+MED0001676223,ruth,charlton,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:41,
+MED0001917034,hana,scorey,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:41,
+MED0001360883,susan,hampton,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:41,
+MED0001408898,elizabeth,monks,Sandy Bay,7005,https://www.halaxy.com/profile/dr-elizabeth-monks/gp-general-practitioner/326411,gp-general-practitioner,Long Beach Medical Centre,03 6225 5155,3 Beach Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:52:41,match=exact
+MED0001659272,sarah,yolland,Sandy Bay,7005,https://www.halaxy.com/profile/dr-sarah-yolland/gp-general-practitioner/356623,gp-general-practitioner,Kotara Family Practice,02 4956 0888,Shop 1001/3 Westfield Shopping Centre Corner Park Avenue & Northcott Drive,Kotara,2289,halaxy_sitemap,2026-04-29T12:52:42,match=exact|suburb_mismatch:ahpra=Sandy Bay/halaxy=Kotara
+MED0000939018,misha,johnson,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:44,
+MED0004023205,melanie,sprengers,Sandy Bay,7005,,,,,,,,no_sitemap_match,2026-04-29T12:52:44,
+MED0002311210,fiona,beer,Lutana,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:44,
+MED0001342755,james,conroy,Moonah,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:44,
+MED0001209417,jianwei,wang,Moonah,7009,https://www.halaxy.com/profile/dr-jianwei-victor-wang/gp-general-practitioner/326367,gp-general-practitioner,Stoke Street Family Medical Centre,03 6228 7841,3 Stoke Street,New Town,7008,halaxy_sitemap,2026-04-29T12:52:44,match=exact|suburb_mismatch:ahpra=Moonah/halaxy=New Town
+MED0000944557,luke,craig,Moonah,7009,https://www.halaxy.com/profile/dr-luke-craig/gp-general-practitioner/326382,gp-general-practitioner,Hopkins Street Medical Centre,03 6228 2200,67 Hopkins Street,Moonah,7009,halaxy_sitemap,2026-04-29T12:52:45,match=exact
+MED0000975225,alicia,gauden,Moonah,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:47,
+MED0002468177,tolulope,bamidele,Moonah,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:47,
+MED0001930289,andrew,thompson,Moonah,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:47,
+MED0001388515,arjun,caemmerer,Moonah,7009,https://www.halaxy.com/profile/dr-arjun-von-caemmerer/gp-general-practitioner/328622,gp-general-practitioner,Hopkins Street Medical Clinic,6228 2200,67 Hopkins St,Moonah,7009,halaxy_sitemap,2026-04-29T12:52:47,match=exact
+MED0000988667,katherine,beales,Moonah,7009,https://www.halaxy.com/profile/dr-katherine-beales/gp-general-practitioner/321774,gp-general-practitioner,Evans Street Clinic,Not available,Po Box 567,Sunbury,3429,halaxy_sitemap,2026-04-29T12:52:49,match=exact|suburb_mismatch:ahpra=Moonah/halaxy=Sunbury
+MED0001375394,hamley,perry,Moonah,7009,https://www.halaxy.com/profile/dr-hamley-perry/gp-general-practitioner/326344,gp-general-practitioner,Hopkins Street Medical Centre,03 6228 2200,67 Hopkins Street,Moonah,7009,halaxy_sitemap,2026-04-29T12:52:51,match=exact
+MED0000939818,mojca,winani,Moonah,7009,https://www.halaxy.com/profile/dr-mojca-winani/gp-general-practitioner/351365,gp-general-practitioner,Wellness Medical,03 6231 1555,156 Warwick Street West,Hobart,7000,halaxy_sitemap,2026-04-29T12:52:52,match=exact|suburb_mismatch:ahpra=Moonah/halaxy=Hobart
+MED0001926361,bhavana,mirpuri,Moonah,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:54,
+MED0001185146,angela,forrest,Derwent Park,7009,https://www.halaxy.com/profile/dr-sallie-forrest/gp-general-practitioner/324501,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:52:54,match=last_unique|halaxy_postcode=6056
+MED0001385195,jillian,camier,Derwent Park,7009,https://www.halaxy.com/profile/dr-jill-camier/gp-general-practitioner/326374,gp-general-practitioner,Amiens Clinic,03 6272 8869,254 Main Road,Derwent Park,7009,halaxy_sitemap,2026-04-29T12:52:56,match=last_unique
+MED0001663636,renae,vardi,Derwent Park,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:57,
+MED0002311279,lachlan,grueber,Derwent Park,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:57,
+MED0000940542,helen,allison,Derwent Park,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:57,
+MED0002061323,clive,reekie,Derwent Park,7009,,,,,,,,no_sitemap_match,2026-04-29T12:52:57,
+MED0000938202,wojtek,majchrzak,Derwent Park,7009,https://www.halaxy.com/profile/dr-wojtek-majchrzak/gp-general-practitioner/326349,gp-general-practitioner,Amiens Clinic,03 6272 8869,254 Main Road,Derwent Park,7009,halaxy_sitemap,2026-04-29T12:52:57,match=exact
+MED0000998304,mark,rathbone,Lindisfarne,7015,https://www.halaxy.com/profile/dr-megan-rathbone/gp-general-practitioner/326137,gp-general-practitioner,Burnie GP Super Clinic,03 6433 9999,52-56 Bass Highway,Cooee,7320,halaxy_sitemap,2026-04-29T12:52:59,match=last_unique|suburb_mismatch:ahpra=Lindisfarne/halaxy=Cooee
+MED0002146019,sophie,briggs,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:00,
+MED0001755828,peter,dick,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:00,
+MED0000944556,hannah,kelly,Lindisfarne,7015,https://www.halaxy.com/profile/dr-hannah-kelly/gp-general-practitioner/326412,gp-general-practitioner,The Lindisfarne clinic,03 6243 8611,30 Lincoln Street,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:53:00,match=exact
+MED0001658232,amanda-jane,felmingham,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:02,
+MED0001780278,nidhi,verma,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:02,
+MED0002882466,ruben,burvenich,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:02,
+MED0002311120,taylor,smith,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:02,
+MED0001756047,latika,verma,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:02,
+MED0001404342,graeme,scarr,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:02,
+MED0001331764,derek,mitchell,Lindisfarne,7015,https://www.halaxy.com/profile/dr-derek-mitchell/gp-general-practitioner/324814,gp-general-practitioner,Eastern Shore Medical Centre,6243 8000,31 Lincoln St,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:53:02,match=exact
+MED0001381798,hilary,bower,Lindisfarne,7015,https://www.halaxy.com/profile/dr-hilary-bower/gp-general-practitioner/326360,gp-general-practitioner,Hilary Bower,03 6243 0122,15 Franklin Street,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:53:04,match=exact
+MED0001672777,hannah,jackson,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:06,
+MED0001780262,cassandra,upston,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:06,
+MED0000941308,mark,nelson,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:06,
+MED0001585608,ritesh,gupta,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:06,
+MED0002238191,nicholas,carr,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:06,
+MED0001347866,kannimangalam,krishna,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:06,
+MED0001610015,ayush,srivastava,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:06,
+MED0001608258,adrian,cakra,Lindisfarne,7015,https://www.halaxy.com/profile/dr-adrian-cakra/gp-general-practitioner/333363,gp-general-practitioner,Family Doctor Serice,03 6343 5556,137 Hobart Road,Kings Meadows,7249,halaxy_sitemap,2026-04-29T12:53:06,match=exact|suburb_mismatch:ahpra=Lindisfarne/halaxy=Kings Meadows
+MED0000982267,hailey,woolveridge,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:07,
+MED0001602160,emma,foster,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:07,
+MED0002311322,alexander,johnson,Lindisfarne,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:07,
+MED0000939772,kelly,shaw,Geilston Bay,7015,,,,,,,,no_sitemap_match,2026-04-29T12:53:07,
+MED0001388527,beth,mulligan,Geilston Bay,7015,https://www.halaxy.com/profile/dr-craig-mulligan/gp-general-practitioner/316319,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:07,match=last_unique|halaxy_postcode=3805
+MED0001668172,tien,nguyen,Risdon Vale,7016,https://www.halaxy.com/profile/dr-duc-nguyen/gp-general-practitioner/330638,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:09,match=token:duc|halaxy_postcode=3193
+MED0001637927,david,onu,Risdon Vale,7016,,,,,,,,no_sitemap_match,2026-04-29T12:53:11,
+MED0002439009,lewis,waight,Rokeby,7019,,,,,,,,no_sitemap_match,2026-04-29T12:53:11,
+MED0001378669,shaunagh,jones,Rokeby,7019,https://www.halaxy.com/profile/dr-shaunagh-jones/gp-general-practitioner/326321,gp-general-practitioner,Knopwood Medical Centre,03 6247 1019,46 South Arm Road,Rokeby,7019,halaxy_sitemap,2026-04-29T12:53:11,match=exact
+MED0001802426,shaun,thayer,Rokeby,7019,,,,,,,,no_sitemap_match,2026-04-29T12:53:13,
+MED0001669363,sangeetha,thummala,Rokeby,7019,,,,,,,,no_sitemap_match,2026-04-29T12:53:13,
+MED0001366283,timothy,jackson,Rokeby,7019,,,,,,,,no_sitemap_match,2026-04-29T12:53:13,
+MED0001055592,ian,paterson,Sandford,7020,,,,,,,,no_sitemap_match,2026-04-29T12:53:13,
+MED0001156880,christina,carroll,Sandford,7020,,,,,,,,no_sitemap_match,2026-04-29T12:53:13,
+MED0001156876,david,harwood,Sandford,7020,,,,,,,,no_sitemap_match,2026-04-29T12:53:13,
+MED0001603495,madelaine,hanson,Cremorne,7024,https://www.halaxy.com/profile/dr-madelaine-hanson/gp-general-practitioner/320934,gp-general-practitioner,Lauderdale Doctors Surgery,03 6282 1333,444 South Arm Road,Lauderdale,7021,halaxy_sitemap,2026-04-29T12:53:13,match=exact|suburb_mismatch:ahpra=Cremorne/halaxy=Lauderdale
+MED0000979702,madeleine,wilcock,Richmond,7025,,,,,,,,no_sitemap_match,2026-04-29T12:53:15,
+MED0001685589,elizabeth,bates,Richmond,7025,https://www.halaxy.com/profile/dr-glen-bates/gp-general-practitioner/316333,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:15,match=last_unique|halaxy_postcode=3134
+MED0001351371,jennifer,graff,Nubeena,7184,,,,,,,,no_sitemap_match,2026-04-29T12:53:17,
+MED0000944803,jennifer,conway,Nubeena,7184,https://www.halaxy.com/profile/dr-jennifer-conway/gp-general-practitioner/321927,gp-general-practitioner,Main Street Medical Centre,Not available,289 Main Street,Lilydale,3140,halaxy_sitemap,2026-04-29T12:53:17,match=exact|suburb_mismatch:ahpra=Nubeena/halaxy=Lilydale
+MED0002637773,patricia,muddiman,Mowbray,7248,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0001350432,andrew,jackson,Mowbray,7248,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0001392608,meredith,clezy,Mowbray,7248,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0000943470,jane,hampson,Mowbray,7248,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0001548291,alison,timms,Invermay,7248,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0002033913,arya,shahrdami,Invermay,7248,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0001403091,susan,basson,Invermay,7248,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0001375397,paul,scott,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:18,
+MED0001396656,amanda,harman,Riverside,7250,https://www.halaxy.com/profile/dr-amanda-harman/gp-general-practitioner/323319,gp-general-practitioner,West Tamar Health,03 6327 2947,1 Windsor Drive,Riverside,7250,halaxy_sitemap,2026-04-29T12:53:18,match=exact
+MED0001381809,david,cooke,Riverside,7250,https://www.halaxy.com/profile/dr-david-cooke/gp-general-practitioner/319553,gp-general-practitioner,Lighthouse Beach Medical Centre,02 6582 0104,40 Watonga Street,Port Macquarie,2444,halaxy_sitemap,2026-04-29T12:53:21,match=exact|suburb_mismatch:ahpra=Riverside/halaxy=Port Macquarie
+MED0001358064,helen,dixon,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:22,
+MED0002076645,madelaine,comfort,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:22,
+MED0001388590,kathryn,roberts,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:22,
+MED0001366237,janette,radford,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:22,
+MED0002141433,danielle,payne,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:22,
+MED0002104449,gordon,orr,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:22,
+MED0000944669,matthew,fassett,Riverside,7250,https://www.halaxy.com/profile/dr-matthew-fassett/gp-general-practitioner/328889,gp-general-practitioner,Prospect Medical Centre,03 6344 7991,4 Trotters Lane,Prospect,7250,halaxy_sitemap,2026-04-29T12:53:22,match=exact|suburb_mismatch:ahpra=Riverside/halaxy=Prospect
+MED0001674531,boon,sie,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:24,
+MED0002147227,sarah,nuttall,Riverside,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:24,
+MED0001585253,maria,venter,Trevallyn,7250,https://www.halaxy.com/profile/dr-maria-mia-venter/gp-general-practitioner/320298,gp-general-practitioner,West Tamar Health,03 6327 2947,1 Windsor Drive,Riverside,7250,halaxy_sitemap,2026-04-29T12:53:24,match=exact|suburb_mismatch:ahpra=Trevallyn/halaxy=Riverside
+MED0001805154,sophie,main,Trevallyn,7250,https://www.halaxy.com/profile/dr-carmen-main/gp-general-practitioner/317403,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:25,match=last_unique|halaxy_postcode=4171
+MED0001674238,nicholas,stacey,Trevallyn,7250,https://www.halaxy.com/profile/dr-nicholas-stacey/gp-general-practitioner/322779,gp-general-practitioner,Newstead Medical,03 6331 1088,165 Elphin Road,Newstead,7250,halaxy_sitemap,2026-04-29T12:53:27,match=exact|suburb_mismatch:ahpra=Trevallyn/halaxy=Newstead
+MED0001323357,susan,gelston,Trevallyn,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:29,
+MED0001869385,amanda,clifford,Launceston,7250,https://www.halaxy.com/profile/dr-glenn-clifford/gp-general-practitioner/1761619,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:29,match=last_unique|halaxy_postcode=4010
+MED0000952439,elizabeth,cutfield,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:31,
+MED0001675986,sana,mahmud,Launceston,7250,https://www.halaxy.com/profile/dr-arsalan-mahmud/gp-general-practitioner/354788,gp-general-practitioner,Mowbray Medical,Not available,3/282 Invermay Road,MOWBRAY,7248,halaxy_sitemap,2026-04-29T12:53:31,match=token:arsalan|suburb_mismatch:ahpra=Launceston/halaxy=MOWBRAY
+MED0001674226,kate,scoles,Launceston,7250,https://www.halaxy.com/profile/dr-lynn-scoles/gp-general-practitioner/316597,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:33,match=last_unique|halaxy_postcode=3802
+MED0001206340,kyan,ahdieh,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:34,
+MED0002271658,divya,singh,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:34,
+MED0000951248,jo-anne,grey,Launceston,7250,https://www.halaxy.com/profile/dr-jo-anne-grey/gp-general-practitioner/325039,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:34,match=token:jo|halaxy_postcode=4169
+MED0001897088,warwick,lawson,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:36,
+MED0000944696,jerome,wilson,Launceston,7250,https://www.halaxy.com/profile/dr-jerome-muir-wilson/gp-general-practitioner/357696,gp-general-practitioner,Launceston Medical Centre,03 6331 1088,247 Wellington Street,Launceston,7250,halaxy_sitemap,2026-04-29T12:53:36,match=exact
+MED0001870298,georgia,bavin,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:38,
+MED0002173073,henda,hendawitharana,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:38,
+MED0001993876,sarah,anthony,Launceston,7250,https://www.halaxy.com/profile/dr-sarah-anthony/gp-general-practitioner/1566151,gp-general-practitioner,Dr Sarah Anthony,0461 362 503,20 Yorktown Square,Launceston,7250,halaxy_sitemap,2026-04-29T12:53:38,match=exact
+MED0001686588,charmi,vithanarachchi,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:40,
+MED0001674205,katherine,moore,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:40,
+MED0001638756,preeti,deshpande,Launceston,7250,,,,,,,,no_sitemap_match,2026-04-29T12:53:40,
+MED0001076587,alexandra,newfield,West Launceston,7250,https://www.halaxy.com/profile/dr-a-newfield/gp-general-practitioner/361507,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:40,match=initial|halaxy_postcode=2525
+MED0002022099,ikechi,gbenimacho,George Town,7253,https://www.halaxy.com/profile/dr-ikechi-gbenimacho/gp-general-practitioner/357729,gp-general-practitioner,George Town Medical Centre,03 6382 4333,49 Anne Street,George Town,7253,halaxy_sitemap,2026-04-29T12:53:42,match=exact
+MED0001358079,philip,dawson,George Town,7253,,,,,,,,no_sitemap_match,2026-04-29T12:53:44,
+MED0000950949,caroline,mooney,George Town,7253,https://www.halaxy.com/profile/dr-alison-mooney/gp-general-practitioner/325730,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:44,match=last_unique|halaxy_postcode=2315
+MED0001347912,timothy,mooney,George Town,7253,https://www.halaxy.com/profile/dr-alison-mooney/gp-general-practitioner/325730,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:46,match=last_unique|halaxy_postcode=2315
+MED0001362621,geoffrey,madden,George Town,7253,,,,,,,,no_sitemap_match,2026-04-29T12:53:48,
+MED0001350481,neil,filgate,Relbia,7258,https://www.halaxy.com/profile/dr-neil-filgate/gp-general-practitioner/322798,gp-general-practitioner,Summerdale Medical Practice,03 6344 7177,Cnr Peel & Stanley Streets,Summerhill,7250,halaxy_sitemap,2026-04-29T12:53:48,match=exact|suburb_mismatch:ahpra=Relbia/halaxy=Summerhill
+MED0002194714,aruna,arachchige,Scottsdale,7260,https://www.halaxy.com/profile/dr-aruna-mitiyamulle-arachchige/gp-general-practitioner/319902,gp-general-practitioner,Bay Medical Centre,07 5529 1966,Shop 44A Runaway Bay Shopping Village Lae drive,Runaway Bay,4216,halaxy_sitemap,2026-04-29T12:53:50,match=exact|suburb_mismatch:ahpra=Scottsdale/halaxy=Runaway Bay
+MED0001381179,claire,dunlop,Scottsdale,7260,,,,,,,,no_sitemap_match,2026-04-29T12:53:52,
+MED0000941305,gretchen,stone,Scottsdale,7260,https://www.halaxy.com/profile/dr-gretchen-stone/gp-general-practitioner/320462,gp-general-practitioner,Scottsdale Doctors Surgery,03 6352 2522,2 Fosters Rd,Scottsdale,7260,halaxy_sitemap,2026-04-29T12:53:52,match=exact
+MED0001822862,fearon,kelly,Scottsdale,7260,https://www.halaxy.com/profile/dr-fearon-kelly/gp-general-practitioner/321194,gp-general-practitioner,Goolum Goolum Aboriginal Coo Ltd,03 5381 6333,Po Box 523,Horsham,3400,halaxy_sitemap,2026-04-29T12:53:54,match=exact|suburb_mismatch:ahpra=Scottsdale/halaxy=Horsham
+MED0001774599,andrey,yuvchenko,Lilydale,7268,,,,,,,,no_sitemap_match,2026-04-29T12:53:55,
+MED0000949548,aamir,mahmood,Lilydale,7268,https://www.halaxy.com/profile/dr-aamir-mahmood/gp-general-practitioner/330446,gp-general-practitioner,Deloraine Medical Centre,03 6362 2266,22 Tower Hill Street,Deloraine,7304,halaxy_sitemap,2026-04-29T12:53:55,match=exact|suburb_mismatch:ahpra=Lilydale/halaxy=Deloraine
+MED0000944616,meredith,webb,Beaconsfield,7270,,,,,,,,no_sitemap_match,2026-04-29T12:53:58,
+MED0002160026,prashanth,gangapuram,Beaconsfield,7270,,,,,,,,no_sitemap_match,2026-04-29T12:53:58,
+MED0001120472,rosemary,lee,Clarence Point,7270,https://www.halaxy.com/profile/dr-r-lee/gp-general-practitioner/359853,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:53:58,match=initial|halaxy_postcode=2050
+MED0001854019,edward,ioussov,Legana,7277,https://www.halaxy.com/profile/dr-edward-ioussov/gp-general-practitioner/357697,gp-general-practitioner,Evandale Doctors Surgery,03 6391 8855,8a High Street,Evandale,7212,halaxy_sitemap,2026-04-29T12:54:00,match=exact|suburb_mismatch:ahpra=Legana/halaxy=Evandale
+MED0001774029,wellalagoda,nanayakkara,Legana,7277,https://www.halaxy.com/profile/dr-abhaya-nanayakkara/gp-general-practitioner/325411,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:01,match=token:abhaya|halaxy_postcode=3023
+MED0001915723,lioudmila,ioussov,Legana,7277,https://www.halaxy.com/profile/dr-lioudmila-ioussov/gp-general-practitioner/326607,gp-general-practitioner,Westbury Doctors Surgery,03 6393 2083,86 Meander Valley Rd,Westbury,7303,halaxy_sitemap,2026-04-29T12:54:03,match=exact|suburb_mismatch:ahpra=Legana/halaxy=Westbury
+MED0002137243,guy,abell,Sorell,AB,,,,,,,,no_sitemap_match,2026-04-29T12:54:04,
+MED0002068219,bruno,caballero,Ulverstone,AB,,,,,,,,no_sitemap_match,2026-04-29T12:54:04,
+MED0001863619,david,abbott,Newstead,AB,,,,,,,,no_sitemap_match,2026-04-29T12:54:04,
+MED0002145197,kieran,roach,New Norfolk,AC,,,,,,,,no_sitemap_match,2026-04-29T12:54:04,
+MED0001656707,tomasz,kaczor,Hobart,AC,https://www.halaxy.com/profile/dr-tom-kaczor/gp-general-practitioner/323766,gp-general-practitioner,Knopwood Medical Centre,6247 1019,46 South Arm Rd,Rokeby,7019,halaxy_sitemap,2026-04-29T12:54:04,match=last_unique|suburb_mismatch:ahpra=Hobart/halaxy=Rokeby
+MED0001381867,scott,macrossan,South Hobart,AC,https://www.halaxy.com/profile/dr-scott-macrossan/gp-general-practitioner/324412,gp-general-practitioner,Salamanca Medical Centre,03 6223 8181,Salamanca Medical Centre,Battery Point,7004,halaxy_sitemap,2026-04-29T12:54:05,match=exact|suburb_mismatch:ahpra=South Hobart/halaxy=Battery Point
+MED0001378664,graeme,bleach,Hobart,AC,https://www.halaxy.com/profile/dr-graeme-bleach/gp-general-practitioner/325663,gp-general-practitioner,Eastern Shore Medical Centre,03 6243 8788,31 Lincoln st,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:54:07,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Lindisfarne
+MED0002137910,daniel,lack,Launceston,AC,https://www.halaxy.com/profile/dr-jessica-lack/gp-general-practitioner/324194,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:09,match=last_unique|halaxy_postcode=2444
+MED0001679167,thomas,roach,TAS,AC,,,,,,,,no_sitemap_match,2026-04-29T12:54:10,
+MED0001408868,johan,louw,Devonport,AC,,,,,,,,no_sitemap_match,2026-04-29T12:54:10,
+MED0002063451,chathura,jinadasa,Bellerive,AD,https://www.halaxy.com/profile/dr-lakmali-jinadasa/gp-general-practitioner/321090,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:10,match=last_unique|halaxy_postcode=3058
+MED0002223325,malcolm,braddock,South Arm,AD,,,,,,,,no_sitemap_match,2026-04-29T12:54:12,
+MED0001780316,carlin,white,Launceston,AD,https://www.halaxy.com/profile/dr-carlin-white/gp-general-practitioner/329510,gp-general-practitioner,Northern Midlands Medical Services,03 6391 1170,28 George St,Longford,7301,halaxy_sitemap,2026-04-29T12:54:12,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Longford
+MED0001363580,joe,tempone,Summerhill,AE,https://www.halaxy.com/profile/dr-joe-tempone/gp-general-practitioner/324100,gp-general-practitioner,Summerdale Medical Practice,03 6344 7177,Cnr Peel & Stanley St,Launceston,7250,halaxy_sitemap,2026-04-29T12:54:14,match=exact|suburb_mismatch:ahpra=Summerhill/halaxy=Launceston
+MED0001999636,herman,shoemaker,Hobart,AE,,,,,,,,no_sitemap_match,2026-04-29T12:54:16,
+MED0001648912,chidinma,esomeju,Devonport,AE,,,,,,,,no_sitemap_match,2026-04-29T12:54:16,
+MED0001665612,jonathan,choong,Howrah,AE,,,,,,,,no_sitemap_match,2026-04-29T12:54:16,
+MED0001952185,chukwuemeka,okorafo,Burnie,AF,,,,,,,,no_sitemap_match,2026-04-29T12:54:16,
+MED0001396580,timothy,baghurst,Lenah Valley,AG,https://www.halaxy.com/profile/dr-timothy-baghurst/gp-general-practitioner/326333,gp-general-practitioner,Timothy Baghurst,03 6249 2179,711 Main Road,Berriedale,7011,halaxy_sitemap,2026-04-29T12:54:16,match=exact|suburb_mismatch:ahpra=Lenah Valley/halaxy=Berriedale
+MED0002043248,chaminda,udawattage,Glenorchy,AG,,,,,,,,no_sitemap_match,2026-04-29T12:54:17,
+MED0001392739,roger,mulcahy,South Hobart,AH,https://www.halaxy.com/profile/dr-roger-mulcahy/gp-general-practitioner/326276,gp-general-practitioner,Roger Mulcahy,03 6229 3434,52 Channel Highway,Kingston,7050,halaxy_sitemap,2026-04-29T12:54:17,match=exact|suburb_mismatch:ahpra=South Hobart/halaxy=Kingston
+MED0002148252,khaled,ibrahim,Latrobe,AH,,,,,,,,no_sitemap_match,2026-04-29T12:54:19,
+MED0001355434,andrew,fair,Newstead,AI,https://www.halaxy.com/profile/dr-colin-fair/gp-general-practitioner/326859,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:19,match=last_unique|halaxy_postcode=2282
+MED0002108037,osiomah,omogbai-musa,Latrobe,AI,,,,,,,,no_sitemap_match,2026-04-29T12:54:21,
+MED0000942287,mirza,baig,Devonport,AI,https://www.halaxy.com/profile/dr-mirza-salman-baig/gp-general-practitioner/318839,gp-general-practitioner,VHealth Plus,02 8188 2299,280 Pitt Street,Sydney,2000,halaxy_sitemap,2026-04-29T12:54:21,match=exact|suburb_mismatch:ahpra=Devonport/halaxy=Sydney
+MED0001185641,oliver,haisken,Perth,AI,,,,,,,,no_sitemap_match,2026-04-29T12:54:23,
+MED0000939028,mariusz,rybak,Bellerive,AK,https://www.halaxy.com/profile/dr-mariusz-rybak/gp-general-practitioner/329759,gp-general-practitioner,The Lindisfarne Clinic,03 6243 8611,30 Lincoln Street,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:54:23,match=exact|suburb_mismatch:ahpra=Bellerive/halaxy=Lindisfarne
+MED0001673677,robert,blakesley,Lenah Valley,AK,https://www.halaxy.com/profile/dr-robert-blakesley/gp-general-practitioner/326368,gp-general-practitioner,Knopwood Medical Centre,03 6247 1019,46 South Arm Road,Rokeby,7019,halaxy_sitemap,2026-04-29T12:54:24,match=exact|suburb_mismatch:ahpra=Lenah Valley/halaxy=Rokeby
+MED0000940504,waheed,tamimi,Somerset,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:26,
+MED0002295025,eusha,kamal,Summerhill,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:26,
+MED0002442651,jarrod,walker,Longford,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:26,
+MED0001853540,james,hall,Hobart,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:26,
+MED0001381860,david,dalton,Sorell,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:26,
+MED0001360914,john,ballantyne,Prospect,AL,https://www.halaxy.com/profile/dr-john-ballantyne/gp-general-practitioner/324095,gp-general-practitioner,John Ballantyne,03 6344 7991,4 Trotters Lane,Prospect,7250,halaxy_sitemap,2026-04-29T12:54:26,match=exact
+MED0001055158,mark,baldock,Hobart,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:28,
+MED0000942260,michael,smallwood,Launceston,AL,https://www.halaxy.com/profile/dr-michael-smallwood/gp-general-practitioner/324122,gp-general-practitioner,Tremaur Medical Centre,03 6331 1055,67 Elphin Road,Launceston,7250,halaxy_sitemap,2026-04-29T12:54:28,match=exact
+MED0001860970,tristan,mcalpine,New Town,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:29,
+MED0002075479,philip,gale,West Hobart,AL,https://www.halaxy.com/profile/dr-c-john-gale/gp-general-practitioner/320844,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:29,match=last_unique|halaxy_postcode=2870
+MED0001408866,edmund,albert,Latrobe,AL,https://www.halaxy.com/profile/mr-george-albert/gp-general-practitioner/327342,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:31,match=token:george|halaxy_postcode=2529
+MED0001353187,charles,walker,Norwood,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:33,
+MED0001388597,christopher,walsh,South Hobart,AL,,,,,,,,no_sitemap_match,2026-04-29T12:54:33,
+MED0001340374,robert,hamilton,Margate,AM,,,,,,,,no_sitemap_match,2026-04-29T12:54:33,
+MED0001385131,ross,lamplugh,West Ulverstone,AM,,,,,,,,no_sitemap_match,2026-04-29T12:54:33,
+MED0001820042,hettiarachchilage,ramasinghe,East Devonport,AM,,,,,,,,no_sitemap_match,2026-04-29T12:54:33,
+MED0001353159,geoffrey,chapman,South Hobart,AN,,,,,,,,no_sitemap_match,2026-04-29T12:54:33,
+MED0000943396,george,chandler,Devonport,AN,,,,,,,,no_sitemap_match,2026-04-29T12:54:33,
+MED0001871637,timothy,vandenberg,Hobart,AN,https://www.halaxy.com/profile/dr-hein-vandenberg/gp-general-practitioner/323844,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:33,match=last_unique|halaxy_postcode=2103
+MED0001853670,timothy,andrewartha,Smithton,AN,https://www.halaxy.com/profile/dr-jessie-andrewartha/gp-general-practitioner/355758,gp-general-practitioner,Saunders Street Clinic,03 6442 1700,PO Box 780,Wynyard,7325,halaxy_sitemap,2026-04-29T12:54:35,match=last_unique|suburb_mismatch:ahpra=Smithton/halaxy=Wynyard
+MED0000975609,ronald,cassano,Cooee,AN,https://www.halaxy.com/profile/dr-ronald-cassano/gp-general-practitioner/350610,gp-general-practitioner,Ronald Cassano,Not available,Level 4/107 Latrobe Tce,Paddington,4064,halaxy_sitemap,2026-04-29T12:54:38,match=exact|suburb_mismatch:ahpra=Cooee/halaxy=Paddington
+MED0000941370,richard,bryant,South Hobart,AN,https://www.halaxy.com/profile/dr-richard-bryant/gp-general-practitioner/326350,gp-general-practitioner,City Doctors and Travel Clinic,03 6231 3003,93 Collins Street,Hobart,7000,halaxy_sitemap,2026-04-29T12:54:39,match=exact
+MED0001408825,james,berryman,Wynyard,AN,https://www.halaxy.com/profile/dr-gary-berryman/gp-general-practitioner/334188,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:54:41,match=last_unique|halaxy_postcode=3083
+MED0001711378,thirunavukkarasu,thirukkumaran,Cooee,AN,,,,,,,,no_sitemap_match,2026-04-29T12:54:42,
+MED0002071019,warrick,manning,Hobart,AN,,,,,,,,no_sitemap_match,2026-04-29T12:54:42,
+MED0001663510,delfin,sansom,New Town,AN,,,,,,,,no_sitemap_match,2026-04-29T12:54:42,
+MED0001763458,gonzalo,angulo-aponte,New Norfolk,AP,,,,,,,,no_sitemap_match,2026-04-29T12:54:42,
+MED0002074854,bennett,naprasnik,Franklin,AP,,,,,,,,no_sitemap_match,2026-04-29T12:54:42,
+MED0001392738,jedrek,marek,Berriedale,AR,,,,,,,,no_sitemap_match,2026-04-29T12:54:42,
+MED0001371831,timothy,barnes,New Town,AR,https://www.halaxy.com/profile/dr-timothy-barnes/gp-general-practitioner/330389,gp-general-practitioner,Holdsworth House Medical Practice,02 9331 7228,"Level 3, 26 College street",Sydney,2010,halaxy_sitemap,2026-04-29T12:54:42,match=exact|suburb_mismatch:ahpra=New Town/halaxy=Sydney
+MED0000942190,toby,gardner,Newstead,AR,https://www.halaxy.com/profile/dr-toby-gardner/gp-general-practitioner/318857,gp-general-practitioner,Newstead Medical,03 6331 1088,165 Elphin Rd,Newstead,7250,halaxy_sitemap,2026-04-29T12:54:45,match=exact
+MED0000941406,damon,richardson,Alonnah,AR,https://www.halaxy.com/profile/dr-damon-richardson/gp-general-practitioner/326357,gp-general-practitioner,Stoke Street Family Medical Centre,03 6228 7841,3 Stoke Street,New Town,7008,halaxy_sitemap,2026-04-29T12:54:46,match=exact|suburb_mismatch:ahpra=Alonnah/halaxy=New Town
+MED0001360920,andrew,clarke,Exeter,AR,,,,,,,,no_sitemap_match,2026-04-29T12:54:48,
+MED0001366287,michael,mccarthy,South Hobart,AR,,,,,,,,no_sitemap_match,2026-04-29T12:54:48,
+MED0000939786,renier,swart,New Norfolk,AR,,,,,,,,no_sitemap_match,2026-04-29T12:54:48,
+MED0001676224,jacob,charlton,New Town,AR,,,,,,,,no_sitemap_match,2026-04-29T12:54:48,
+MED0001913681,krishan,nandasiri,Devonport,AS,https://www.halaxy.com/profile/dr-krishan-nandasiri/gp-general-practitioner/360069,gp-general-practitioner,Deloraine Medical,03 6362 2266,22 Tower Hill Rd,Deloraine,7304,halaxy_sitemap,2026-04-29T12:54:48,match=exact|suburb_mismatch:ahpra=Devonport/halaxy=Deloraine
+MED0001636122,don,wijayasinghe,Burnie,AS,,,,,,,,no_sitemap_match,2026-04-29T12:54:50,
+MED0000943327,ali,kidmas,East Launceston,AS,https://www.halaxy.com/profile/dr-ali-kidmas/gp-general-practitioner/318905,gp-general-practitioner,Dr J P Henley,03 6334 5500,"Suite 7, QV Centre, 7 High St",Launceston,7250,halaxy_sitemap,2026-04-29T12:54:50,match=exact
+MED0001408864,philip,cassidy,Launceston,AS,,,,,,,,no_sitemap_match,2026-04-29T12:54:51,
+MED0001675469,nathan,lucas,Summerhill,AS,https://www.halaxy.com/profile/dr-nathan-lucas/gp-general-practitioner/325072,gp-general-practitioner,Summerdale Medical Practice,03 6344 7177,Cnr Peel & Stanley Streets,Summerhill,7250,halaxy_sitemap,2026-04-29T12:54:51,match=exact
+MED0001360904,johann,haas,Rosny Park,AS,https://www.halaxy.com/profile/dr-ebi-haas/gp-general-practitioner/317821,gp-general-practitioner,Ebi Haas,03 6231 4109,107 Newdegate St,West hobart,7000,halaxy_sitemap,2026-04-29T12:54:53,match=last_unique|suburb_mismatch:ahpra=Rosny Park/halaxy=West hobart
+MED0001360917,steven,bassett,Norwood,AS,https://www.halaxy.com/profile/dr-steven-bassett/gp-general-practitioner/324098,gp-general-practitioner,The Norwood Medical Centre,03 6344 8444,212 Penquite Road,Norwood,7250,halaxy_sitemap,2026-04-29T12:54:55,match=exact
+MED0001656650,richard,shanasy,Cooee,AS,,,,,,,,no_sitemap_match,2026-04-29T12:54:57,
+MED0002562305,luke,heathcote,Youngtown,AT,,,,,,,,no_sitemap_match,2026-04-29T12:54:57,
+MED0000944636,napthruchandra,tillekeratne,Launceston,AT,https://www.halaxy.com/profile/dr-n-kshemendra-tillekeratne/gp-general-practitioner/324086,gp-general-practitioner,Deloraine Medical Centre,03 6362 3333,22 Tower Hill Street,Deloraine,7304,halaxy_sitemap,2026-04-29T12:54:57,match=initial|suburb_mismatch:ahpra=Launceston/halaxy=Deloraine
+MED0002568704,samuel,atkins,Park Grove,AT,,,,,,,,no_sitemap_match,2026-04-29T12:54:59,
+MED0001400101,nicholas,atwell,Sorell,AT,https://www.halaxy.com/profile/dr-nick-atwell/gp-general-practitioner/326312,gp-general-practitioner,Sorell Family Practice,03 6265 2341,42 Cole Street,Sorell,7172,halaxy_sitemap,2026-04-29T12:54:59,match=last_unique
+MED0000972877,gary,heathcote,Cygnet,AT,,,,,,,,no_sitemap_match,2026-04-29T12:55:01,
+MED0002117876,samarasinghege,ratnayake,Somerset,AT,,,,,,,,no_sitemap_match,2026-04-29T12:55:02,
+MED0001349907,peter,baratosy,South Hobart,AT,https://www.halaxy.com/profile/dr-peter-baratosy/gp-general-practitioner/326640,gp-general-practitioner,Kingborough Medical Centre,6229 3434,9-11 John St,Kingston,7050,halaxy_sitemap,2026-04-29T12:55:02,match=exact|suburb_mismatch:ahpra=South Hobart/halaxy=Kingston
+MED0002275938,parth,patel,Howrah,AT,,,,,,,,no_sitemap_match,2026-04-29T12:55:03,
+MED0002764426,pierre,receveaux,Bellerive,AU,,,,,,,,no_sitemap_match,2026-04-29T12:55:03,
+MED0002023411,john,laughlin,Huonville,AU,,,,,,,,no_sitemap_match,2026-04-29T12:55:03,
+MED0002230594,wesley,saunders,Kingston,AU,https://www.halaxy.com/profile/dr-dr-paul-saunders/gp-general-practitioner/323845,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:03,match=last_unique|halaxy_postcode=2100
+MED0000986046,clive,strauss,Kingston,AU,https://www.halaxy.com/profile/dr-karen-strauss/gp-general-practitioner/328308,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:05,match=last_unique|halaxy_postcode=2022
+MED0001363520,john,saul,TAS,AU,https://www.halaxy.com/profile/dr-john-saul/gp-general-practitioner/323118,gp-general-practitioner,Lauderdale Doctors surgery,6282 1333,444 South Arm Rd,Lauderdale,7021,halaxy_sitemap,2026-04-29T12:55:07,match=exact|suburb_mismatch:ahpra=TAS/halaxy=Lauderdale
+MED0001363562,john,davis,Sorell,AV,,,,,,,,no_sitemap_match,2026-04-29T12:55:08,
+MED0001321478,geoffrey,davidson,Triabunna,AV,,,,,,,,no_sitemap_match,2026-04-29T12:55:08,
+MED0001932830,patrick,davoren,Bellerive,AV,https://www.halaxy.com/profile/dr-mark-davoren/gp-general-practitioner/321699,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:08,match=last_unique|halaxy_postcode=4053
+MED0002138372,addison,davis,Devonport,AV,,,,,,,,no_sitemap_match,2026-04-29T12:55:11,
+MED0001400046,calin,pava,Devonport,AV,,,,,,,,no_sitemap_match,2026-04-29T12:55:11,
+MED0001997671,aaron,hawkins,Deloraine,AW,,,,,,,,no_sitemap_match,2026-04-29T12:55:11,
+MED0000936078,timothy,shaw,East Launceston,AW,https://www.halaxy.com/profile/dr-timothy-shaw/gp-general-practitioner/324120,gp-general-practitioner,Caledonian Medical Centre,03 6331 2722,56 Invermay Road,Invermay,7249,halaxy_sitemap,2026-04-29T12:55:11,match=exact|suburb_mismatch:ahpra=East Launceston/halaxy=Invermay
+MED0002009804,naing,kyaw,Cooee,AW,,,,,,,,no_sitemap_match,2026-04-29T12:55:13,
+MED0001863952,michael,frawley,St Helens,AW,,,,,,,,no_sitemap_match,2026-04-29T12:55:13,
+MED0001190174,scott,finlayson,Hobart,AY,https://www.halaxy.com/profile/dr-robert-finlayson/gp-general-practitioner/323967,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:13,match=last_unique|halaxy_postcode=2010
+MED0000970168,jeffrey,ayton,Kingston,AY,,,,,,,,no_sitemap_match,2026-04-29T12:55:14,
+MED0001926651,cameron,hayes,Longford,AY,https://www.halaxy.com/profile/dr-cameron-hayes/gp-general-practitioner/357293,gp-general-practitioner,Longford Medical Centre,03 6391 1170,28 George Street,Longford,7301,halaxy_sitemap,2026-04-29T12:55:14,match=exact
+MED0001788969,ian,barnes,Lenah Valley,BA,,,,,,,,no_sitemap_match,2026-04-29T12:55:17,
+MED0002199690,vitalii,tcyba,Ulverstone,BA,,,,,,,,no_sitemap_match,2026-04-29T12:55:17,
+MED0002047450,christopher,barter,Hobart,BA,,,,,,,,no_sitemap_match,2026-04-29T12:55:17,
+MED0001399125,edwin,barui,Deloraine,BA,,,,,,,,no_sitemap_match,2026-04-29T12:55:17,
+MED0001926342,mark,barrenger,Sorell,BA,,,,,,,,no_sitemap_match,2026-04-29T12:55:17,
+MED0002346389,veditha,banduwardana,Devonport,BA,,,,,,,,no_sitemap_match,2026-04-29T12:55:17,
+MED0001935053,graham,hubbard,Norwood,BA,,,,,,,,no_sitemap_match,2026-04-29T12:55:17,
+MED0000944672,roger,booth,Howrah,BD,https://www.halaxy.com/profile/dr-r-stewart-booth/gp-general-practitioner/328810,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:17,match=initial|halaxy_postcode=3585
+MED0001350502,gregory,pitt,New Town,BD,,,,,,,,no_sitemap_match,2026-04-29T12:55:18,
+MED0001353106,gregory,booth,Kempton,BD,,,,,,,,no_sitemap_match,2026-04-29T12:55:18,
+MED0001333745,ian,beltz,Glenorchy,BE,https://www.halaxy.com/profile/dr-ian-beltz/gp-general-practitioner/326338,gp-general-practitioner,Glenorchy Medical Centre,03 6274 0800,346 Main Road,Glenorchy,7010,halaxy_sitemap,2026-04-29T12:55:18,match=exact
+MED0001342764,richard,ostberg,Rosny Park,BE,https://www.halaxy.com/profile/dr-julie-ostberg/gp-general-practitioner/324118,gp-general-practitioner,Summerdale Medical Practice,Not available,Cnr Peel and Stanley,Summerhill,7250,halaxy_sitemap,2026-04-29T12:55:20,match=last_unique|suburb_mismatch:ahpra=Rosny Park/halaxy=Summerhill
+MED0002001618,adam,woodberry,Summerhill,BE,,,,,,,,no_sitemap_match,2026-04-29T12:55:22,
+MED0002148060,james,robinson,Kingston,BI,https://www.halaxy.com/profile/dr-j-mark-robinson/gp-general-practitioner/335139,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:22,match=initial|halaxy_postcode=3053
+MED0001347917,vernon,powell,Hobart,BL,,,,,,,,no_sitemap_match,2026-04-29T12:55:24,
+MED0000941196,barrie,leon,East Launceston,BL,https://www.halaxy.com/profile/dr-noel-leon/gp-general-practitioner/316195,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:24,match=last_unique|halaxy_postcode=3206
+MED0000943476,graham,poole,Newstead,BL,,,,,,,,no_sitemap_match,2026-04-29T12:55:25,
+MED0000938990,julian,henley,East Launceston,BL,,,,,,,,no_sitemap_match,2026-04-29T12:55:25,
+MED0001375323,paul,hanson,Newstead,BL,https://www.halaxy.com/profile/dr-paul-hanson/gp-general-practitioner/317594,gp-general-practitioner,Newstead Medical,6331 1088,165 Elphin Road,Newstead,7250,halaxy_sitemap,2026-04-29T12:55:25,match=exact
+MED0001670854,adam,bowman,Hobart,BO,https://www.halaxy.com/profile/dr-adam-bowman/gp-general-practitioner/354701,gp-general-practitioner,Neutral bay Medical Practice,9909 1444,"First Floor, Suite 102 156 Military Rd",Neutral Bay,2089,halaxy_sitemap,2026-04-29T12:55:27,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Neutral Bay
+MED0002065605,samuel,brandsema,Ulverstone,BR,,,,,,,,no_sitemap_match,2026-04-29T12:55:29,
+MED0001122889,darren,briggs,Cambridge,BR,,,,,,,,no_sitemap_match,2026-04-29T12:55:29,
+MED0000971746,anthony,brown,Bicheno,BR,,,,,,,,no_sitemap_match,2026-04-29T12:55:29,
+MED0001783468,jeffrey,power,Latrobe,BR,https://www.halaxy.com/profile/dr-vicki-power/gp-general-practitioner/322296,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:29,match=last_unique|halaxy_postcode=2070
+MED0001944591,lucas,parry,Longford,BR,,,,,,,,no_sitemap_match,2026-04-29T12:55:30,
+MED0002324430,didula,kadupitige,Sorell,BR,,,,,,,,no_sitemap_match,2026-04-29T12:55:30,
+MED0001399092,patrick,buxton,Hobart,BU,https://www.halaxy.com/profile/dr-grant-buxton/gp-general-practitioner/325648,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:30,match=last_unique|halaxy_postcode=6112
+MED0004024205,david,burton,Lauderdale,BU,,,,,,,,no_sitemap_match,2026-04-29T12:55:32,
+MED0001369209,keith,mcarthur,Burnie,CA,,,,,,,,no_sitemap_match,2026-04-29T12:55:32,
+MED0001869721,michael,scanlon,Claremont,CA,https://www.halaxy.com/profile/dr-bart-scanlon/gp-general-practitioner/359947,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:32,match=last_unique|halaxy_postcode=2304
+MED0002005116,brodie,carlon,Bellerive,CA,,,,,,,,no_sitemap_match,2026-04-29T12:55:33,
+MED0002509937,joshua,perrett,Shearwater,CA,,,,,,,,no_sitemap_match,2026-04-29T12:55:33,
+MED0001375294,keith,miller,Kingston,CD,,,,,,,,no_sitemap_match,2026-04-29T12:55:33,
+MED0001993640,sai,tip,Launceston,CE,,,,,,,,no_sitemap_match,2026-04-29T12:55:33,
+MED0001705837,anandakumaresan,pemmulu,Hobart,CE,https://www.halaxy.com/profile/dr-anandakumaresan-pemmulu/gp-general-practitioner/358462,gp-general-practitioner,Brighton Family Medical Centre,03 6268 1077,1 Bedford Street,Brighton,7030,halaxy_sitemap,2026-04-29T12:55:33,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Brighton
+MED0000943385,cyril,latt,Oatlands,CE,,,,,,,,no_sitemap_match,2026-04-29T12:55:35,
+MED0001353174,gerard,mcgushin,Oatlands,CG,,,,,,,,no_sitemap_match,2026-04-29T12:55:35,
+MED0001070055,derek,christian,Kingston,CH,https://www.halaxy.com/profile/dr-derek-christian/gp-general-practitioner/318216,gp-general-practitioner,The Lindisfarne Clinic,6243 8611,30 Lincoln St,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:55:35,match=exact|suburb_mismatch:ahpra=Kingston/halaxy=Lindisfarne
+MED0002060428,william,upcher,Hobart,CH,,,,,,,,no_sitemap_match,2026-04-29T12:55:37,
+MED0001350507,glenn,richardson,Launceston,CH,,,,,,,,no_sitemap_match,2026-04-29T12:55:37,
+MED0002147786,alexander,zucchi,Sorell,CH,,,,,,,,no_sitemap_match,2026-04-29T12:55:37,
+MED0001403079,scott,mckeown,Hobart,CK,,,,,,,,no_sitemap_match,2026-04-29T12:55:37,
+MED0001378647,stephen,tredinnick,Launceston,CK,https://www.halaxy.com/profile/dr-stephen-tredinnick/gp-general-practitioner/324088,gp-general-practitioner,Launceston After Hours Medical Service,03 6331 4588,50A Frankland St,Launceston,7250,halaxy_sitemap,2026-04-29T12:55:37,match=exact
+MED0001926750,thomas,luckman,Rosny Park,CK,,,,,,,,no_sitemap_match,2026-04-29T12:55:39,
+MED0001794823,robert,vickers,Oyster Cove,CK,https://www.halaxy.com/profile/dr-robert-vickers/gp-general-practitioner/352846,gp-general-practitioner,Dangar Medical Practice,02 6571 2713,33 Dangar Road,Singleton,2330,halaxy_sitemap,2026-04-29T12:55:39,match=exact|suburb_mismatch:ahpra=Oyster Cove/halaxy=Singleton
+MED0001930698,cameron,mcclure,Newstead,CL,,,,,,,,no_sitemap_match,2026-04-29T12:55:41,
+MED0001602550,simon,mccluskey,Cygnet,CL,https://www.halaxy.com/profile/dr-simon-mccluskey/gp-general-practitioner/319411,gp-general-practitioner,King Street General Practice,4929 5691,5/133 King Street,Newcastle,2300,halaxy_sitemap,2026-04-29T12:55:41,match=exact|suburb_mismatch:ahpra=Cygnet/halaxy=Newcastle
+MED0001360921,philip,clarke,Launceston,CL,https://www.halaxy.com/profile/dr-philip-clarke/gp-general-practitioner/318369,gp-general-practitioner,Hallett Cove Corner Surgery,08 8322 2077,"Unit 5 & 6, 10 Ramrod Ave",Hallett Cove,5158,halaxy_sitemap,2026-04-29T12:55:42,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Hallett Cove
+MED0001871182,jonathan,lloyd,TAS,CN,,,,,,,,no_sitemap_match,2026-04-29T12:55:44,
+MED0001856213,cormac,keane,Newstead,CN,https://www.halaxy.com/profile/dr-kieran-keane/gp-general-practitioner/316410,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:44,match=last_unique|halaxy_postcode=3028
+MED0001406000,gianni,fantini,Howrah,CN,https://www.halaxy.com/profile/dr-gianni-fantini/gp-general-practitioner/326260,gp-general-practitioner,Greenpoint Medical Services,03 6263 7349,9-11 Hurst Street,Bridgewater,7030,halaxy_sitemap,2026-04-29T12:55:46,match=exact|suburb_mismatch:ahpra=Howrah/halaxy=Bridgewater
+MED0001340317,roger,cox,Blackmans Bay,CO,,,,,,,,no_sitemap_match,2026-04-29T12:55:48,
+MED0001892525,daryl,o'connor,Smithton,CO,,,,,,,,no_sitemap_match,2026-04-29T12:55:48,
+MED0001192033,mark,mccoid,South Hobart,CO,https://www.halaxy.com/profile/dr-mark-mccoid/gp-general-practitioner/328625,gp-general-practitioner,Bayside Medical Practice,6225 3858,7 Beach Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:55:48,match=exact|suburb_mismatch:ahpra=South Hobart/halaxy=Sandy Bay
+MED0001125750,john,coleridge,Launceston,CO,https://www.halaxy.com/profile/dr-john-coleridge/gp-general-practitioner/321483,gp-general-practitioner,Arc Women'S Wellness,03 9537 3600,30 Carlisle St,St Kilda,3182,halaxy_sitemap,2026-04-29T12:55:50,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=St Kilda
+MED0001369218,russell,cooper,Fern Tree,CO,,,,,,,,no_sitemap_match,2026-04-29T12:55:51,
+MED0002315557,thomas,creedy,Launceston,CR,,,,,,,,no_sitemap_match,2026-04-29T12:55:51,
+MED0000935893,rohan,kerr,Claremont,CR,https://www.halaxy.com/profile/dr-rohan-kerr/gp-general-practitioner/327960,gp-general-practitioner,Claremont Village Medical Centre,6249 1311,PO Box 200,Claremont,7011,halaxy_sitemap,2026-04-29T12:55:51,match=exact
+MED0000940486,christopher,kear,Devonport,CR,,,,,,,,no_sitemap_match,2026-04-29T12:55:52,
+MED0000940568,rowan,mcswan,Battery Point,CS,https://www.halaxy.com/profile/dr-rowan-mcswan/gp-general-practitioner/354673,gp-general-practitioner,General Practice +,03 6223 5533,30A Cascade Road,South Hobart,7004,halaxy_sitemap,2026-04-29T12:55:52,match=exact|suburb_mismatch:ahpra=Battery Point/halaxy=South Hobart
+MED0001266254,khalaf,haddadin,Hobart,DA,,,,,,,,no_sitemap_match,2026-04-29T12:55:53,
+MED0001938958,teck,teh,Kings Meadows,DA,,,,,,,,no_sitemap_match,2026-04-29T12:55:53,
+MED0002065727,terry,lu,Launceston,DA,,,,,,,,no_sitemap_match,2026-04-29T12:55:53,
+MED0001325140,douglas,dow,Burnie,DA,,,,,,,,no_sitemap_match,2026-04-29T12:55:53,
+MED0002260943,weeraddana,silva,Latrobe,DE,https://www.halaxy.com/profile/dr-de-silva/gp-general-practitioner/320299,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:53,match=token:de|halaxy_postcode=2086
+MED0000952572,werner,heidegger,St Helens,DE,,,,,,,,no_sitemap_match,2026-04-29T12:55:55,
+MED0001544674,peter,dewing,Latrobe,DE,,,,,,,,no_sitemap_match,2026-04-29T12:55:55,
+MED0000944549,bastian,seidel,Huonville,DE,https://www.halaxy.com/profile/dr-bastian-seidel/gp-general-practitioner/324502,gp-general-practitioner,Huon Valley Health Centre,6264 2800,85 Main Rd,Huonville,7109,halaxy_sitemap,2026-04-29T12:55:55,match=exact
+MED0001615839,sooriya,wijewardena,Deloraine,DE,,,,,,,,no_sitemap_match,2026-04-29T12:55:57,
+MED0001540950,john,dewing,Hobart,DE,,,,,,,,no_sitemap_match,2026-04-29T12:55:57,
+MED0001660312,christopher,holden,Launceston,DE,https://www.halaxy.com/profile/dr-luke-holden/gp-general-practitioner/327768,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:55:57,match=last_unique|halaxy_postcode=3121
+MED0002203743,chandra,wijewardhane,South Burnie,DH,,,,,,,,no_sitemap_match,2026-04-29T12:55:59,
+MED0002226590,james,tan,Wynyard,DN,https://www.halaxy.com/profile/dr-james-tan/gp-general-practitioner/361662,gp-general-practitioner,Newstead Medical,6331 1088,165 Elphin Road,Newstead,7250,halaxy_sitemap,2026-04-29T12:55:59,match=exact|suburb_mismatch:ahpra=Wynyard/halaxy=Newstead
+MED0000944631,sirikkatuge,fernando,Latrobe,DO,https://www.halaxy.com/profile/dr-krishantha-fernando/gp-general-practitioner/326100,gp-general-practitioner,Latrobe Family Medical Practice,03 6426 1141,45B Gilbert Street,Latrobe,7307,halaxy_sitemap,2026-04-29T12:56:01,match=token:krishantha
+MED0002291045,ivan,perez,Cambridge,DO,,,,,,,,no_sitemap_match,2026-04-29T12:56:03,
+MED0002140827,benjamin,dodds,Deloraine,DO,https://www.halaxy.com/profile/dr-paul-dodds/gp-general-practitioner/323812,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:03,match=last_unique|halaxy_postcode=3707
+MED0001338015,paul,dorney,Hobart,DO,https://www.halaxy.com/profile/dr-shane-dorney/gp-general-practitioner/326315,gp-general-practitioner,Shane Dorney,03 6225 3811,3 Long Point Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:56:05,match=token:shane|suburb_mismatch:ahpra=Hobart/halaxy=Sandy Bay
+MED0001986147,avin,fernando,Devonport,DO,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0001677727,thomas,toro,Battery Point,DR,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0001378731,peter,reynolds,Lenah Valley,DS,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0000938980,david,woods,Cressy,DS,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0002475148,chukwuma,ndupu,Glenorchy,DU,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0001381797,richard,pearson,Kings Meadows,EA,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0001672122,daniel,mealey,Richmond,EA,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0002116609,okpachu,echikwonye,Shearwater,EC,,,,,,,,no_sitemap_match,2026-04-29T12:56:07,
+MED0001865010,jason,jeffery,Newstead,EF,https://www.halaxy.com/profile/dr-jason-jeffery/gp-general-practitioner/360729,gp-general-practitioner,Longford Medical Centre,6391 1170,28 George Street,Longford,7301,halaxy_sitemap,2026-04-29T12:56:07,match=exact|suburb_mismatch:ahpra=Newstead/halaxy=Longford
+MED0001840008,sabastine,onwuegbuzie,Kingston,EG,,,,,,,,no_sitemap_match,2026-04-29T12:56:09,
+MED0001123566,tobias,ekins,Bridgewater,EK,https://www.halaxy.com/profile/dr-tobias-patrick-ekins/gp-general-practitioner/329913,gp-general-practitioner,Sorell Family Practice,03 6265 2341,Shop 11 - 12 Cole Street,Sorell,7172,halaxy_sitemap,2026-04-29T12:56:09,match=exact|suburb_mismatch:ahpra=Bridgewater/halaxy=Sorell
+MED0001375386,philip,murrell,Lenah Valley,EL,https://www.halaxy.com/profile/dr-phillip-murrell/gp-general-practitioner/326329,gp-general-practitioner,West Hobart Medical Centre,03 6231 5100,111 Hill Street,West Hobart,7000,halaxy_sitemap,2026-04-29T12:56:11,match=last_unique|suburb_mismatch:ahpra=Lenah Valley/halaxy=West Hobart
+MED0001360929,christopher,luttrell,Launceston,EL,,,,,,,,no_sitemap_match,2026-04-29T12:56:12,
+MED0000982368,rodney,gangell,Snug,EL,https://www.halaxy.com/profile/dr-andrew-gangell/gp-general-practitioner/325245,gp-general-practitioner,Sorell Family Practice,6265 2341,11/12 Cole St,Sorell,7172,halaxy_sitemap,2026-04-29T12:56:12,match=last_unique|suburb_mismatch:ahpra=Snug/halaxy=Sorell
+MED0001369230,stanley,emmett,Ulverstone,EM,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0001392723,james,freeman,TAS,EM,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0001853661,jason,lemon,Huonville,EM,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0000939041,graham,stevens,Bellerive,EN,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0001047564,harold,jenner,Hobart,EN,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0001867249,james,green,New Norfolk,EN,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0002183501,mark,green,Bicheno,EN,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0001926593,anthony,rengel,Kingston,EN,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0002069586,malhaar,ner,Dover,ER,,,,,,,,no_sitemap_match,2026-04-29T12:56:14,
+MED0001353158,graeme,jones,Kingston,ES,https://www.halaxy.com/profile/dr-graeme-jones/gp-general-practitioner/320866,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John St,Kingston,7050,halaxy_sitemap,2026-04-29T12:56:14,match=exact
+MED0001601072,jeremy,jones,Deloraine,ES,,,,,,,,no_sitemap_match,2026-04-29T12:56:16,
+MED0001264567,christopher,hughes,Burnie,ES,,,,,,,,no_sitemap_match,2026-04-29T12:56:16,
+MED0001385225,david,knowles,Howrah,ES,https://www.halaxy.com/profile/dr-john-knowles/gp-general-practitioner/320094,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:16,match=token:john|halaxy_postcode=3038
+MED0001350485,christopher,hughes,Flowerpot,ES,,,,,,,,no_sitemap_match,2026-04-29T12:56:18,
+MED0001358129,stuart,guest,Launceston,ES,,,,,,,,no_sitemap_match,2026-04-29T12:56:18,
+MED0001656706,timothy,jones,Lauderdale,ES,,,,,,,,no_sitemap_match,2026-04-29T12:56:18,
+MED0001337983,frank,meumann,Hobart,EU,,,,,,,,no_sitemap_match,2026-04-29T12:56:18,
+MED0001673636,robert,evans,Latrobe,EV,,,,,,,,no_sitemap_match,2026-04-29T12:56:18,
+MED0000938987,serguei,kisselev,Sheffield,EV,https://www.halaxy.com/profile/dr-serguei-kisselev/gp-general-practitioner/324114,gp-general-practitioner,Lilydale GP clinic,Not available,172 Snake Track,North Lilydale,7268,halaxy_sitemap,2026-04-29T12:56:18,match=exact|suburb_mismatch:ahpra=Sheffield/halaxy=North Lilydale
+MED0001355458,peter,sexton,Rosny Park,EX,https://www.halaxy.com/profile/dr-peter-sexton/gp-general-practitioner/326387,gp-general-practitioner,Clarence GP Super Clinic,03 6282 1400,16-22 Bayfield Street,Rosny,7018,halaxy_sitemap,2026-04-29T12:56:20,match=exact
+MED0000944559,samuel,maloney,Hobart,EY,,,,,,,,no_sitemap_match,2026-04-29T12:56:21,
+MED0000943503,edward,foley,Bellerive,EY,https://www.halaxy.com/profile/dr-edward-foley/gp-general-practitioner/326392,gp-general-practitioner,Bellerive Quay Surgery,03 6282 1333,48 Cambridge Road,Bellerive,7018,halaxy_sitemap,2026-04-29T12:56:21,match=exact
+MED0000958483,christopher,whitney,Rosebery,EY,https://www.halaxy.com/profile/dr-wendy-whitney/gp-general-practitioner/354790,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:23,match=last_unique|halaxy_postcode=3111
+MED0001366278,john,farmer,South Hobart,FA,,,,,,,,no_sitemap_match,2026-04-29T12:56:25,
+MED0001405024,viney,joshi,Launceston,FN,,,,,,,,no_sitemap_match,2026-04-29T12:56:25,
+MED0001935972,john,oxford,Huonville,FO,,,,,,,,no_sitemap_match,2026-04-29T12:56:25,
+MED0002845850,edward,ford,Kingston,FO,,,,,,,,no_sitemap_match,2026-04-29T12:56:25,
+MED0001675706,michael,fox,St Helens,FO,,,,,,,,no_sitemap_match,2026-04-29T12:56:25,
+MED0001646468,jeffrey,lifshen,Launceston,FS,https://www.halaxy.com/profile/dr-jeff-lifshen/gp-general-practitioner/329091,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:25,match=last_unique|halaxy_postcode=6225
+MED0001396606,andrew,grove,Swansea,FS,https://www.halaxy.com/profile/dr-andrew-grove/gp-general-practitioner/329343,gp-general-practitioner,Swansea General Practice,03 6257 8205,37 Wellington St,Swansea,7190,halaxy_sitemap,2026-04-29T12:56:27,match=exact
+MED0000939035,peter,rogers,East Launceston,GE,,,,,,,,no_sitemap_match,2026-04-29T12:56:29,
+MED0000942230,phillip,pullinger,Alonnah,GE,https://www.halaxy.com/profile/dr-phill-pullinger/gp-general-practitioner/326419,gp-general-practitioner,Huon Valley Health Centre,03 6264 2800,85 Main Road,Huonville,7109,halaxy_sitemap,2026-04-29T12:56:29,match=last_unique|suburb_mismatch:ahpra=Alonnah/halaxy=Huonville
+MED0002314856,upali,arachchige,Deloraine,GE,,,,,,,,no_sitemap_match,2026-04-29T12:56:30,
+MED0002144934,jeremy,yang,Newstead,GE,https://www.halaxy.com/profile/dr-j-yang/gp-general-practitioner/351285,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:30,match=initial|halaxy_postcode=3135
+MED0001612310,marcus,gurgius,North Hobart,GI,https://www.halaxy.com/profile/dr-mina-gurgius/gp-general-practitioner/355455,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:33,match=token:mina|halaxy_postcode=3331
+MED0001851722,magnus,agomuo,Glenorchy,GO,,,,,,,,no_sitemap_match,2026-04-29T12:56:34,
+MED0002247099,carsten,grimm,Lenah Valley,GR,https://www.halaxy.com/profile/dr-suzette-grimm/gp-general-practitioner/324169,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:34,match=last_unique|halaxy_postcode=2234
+MED0000950175,suresh,sharma,Devonport,HA,,,,,,,,no_sitemap_match,2026-04-29T12:56:36,
+MED0000935906,jehan,phillips,Newstead,HI,,,,,,,,no_sitemap_match,2026-04-29T12:56:36,
+MED0001378723,andrew,hutchinson,Claremont,HI,,,,,,,,no_sitemap_match,2026-04-29T12:56:36,
+MED0001403145,justin,chipman,Ulverstone,HI,https://www.halaxy.com/profile/dr-justin-chipman/gp-general-practitioner/328384,gp-general-practitioner,Patrick Street Clinic - Penguin,03 6437 0955,19 Ironcliffe Rd,Penguin,7316,halaxy_sitemap,2026-04-29T12:56:36,match=exact|suburb_mismatch:ahpra=Ulverstone/halaxy=Penguin
+MED0000941401,jonathan,how,Bellerive,HI,,,,,,,,no_sitemap_match,2026-04-29T12:56:38,
+MED0001870121,matthew,johnson,Summerhill,HN,,,,,,,,no_sitemap_match,2026-04-29T12:56:38,
+MED0000941311,winston,johnson,Triabunna,HN,https://www.halaxy.com/profile/dr-harry-johnson/gp-general-practitioner/334370,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:38,match=token:harry|halaxy_postcode=2022
+MED0001656693,william,johnson,Claremont,HN,,,,,,,,no_sitemap_match,2026-04-29T12:56:40,
+MED0000944802,alexander,john,Whitemark,HN,,,,,,,,no_sitemap_match,2026-04-29T12:56:40,
+MED0000940778,christopher,hopwood,Kings Meadows,HO,,,,,,,,no_sitemap_match,2026-04-29T12:56:40,
+MED0002327784,vincent,horton,Shearwater,HO,https://www.halaxy.com/profile/dr-graeme-horton/gp-general-practitioner/321836,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:40,match=last_unique|halaxy_postcode=2289
+MED0001662298,ashwin,koshy,Latrobe,HY,https://www.halaxy.com/profile/dr-ann-koshy/gp-general-practitioner/355291,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:42,match=last_unique|halaxy_postcode=2300
+MED0001995931,bradley,williams,Wynyard,IA,,,,,,,,no_sitemap_match,2026-04-29T12:56:43,
+MED0001598655,roger,skierka,Howrah,IE,https://www.halaxy.com/profile/dr-roger-skierka/gp-general-practitioner/318491,gp-general-practitioner,Scottsdale Doctors Surgery,03 6352 2522,2 Fosters Rd,Scottsdale,7260,halaxy_sitemap,2026-04-29T12:56:43,match=exact|suburb_mismatch:ahpra=Howrah/halaxy=Scottsdale
+MED0001358134,timothy,ikin,Kingston,IK,,,,,,,,no_sitemap_match,2026-04-29T12:56:45,
+MED0001403121,james,wilson,Burnie,IL,,,,,,,,no_sitemap_match,2026-04-29T12:56:45,
+MED0001178040,john,kruimink,South Hobart,IM,https://www.halaxy.com/profile/dr-john-kruimink/gp-general-practitioner/326416,gp-general-practitioner,General Practice Plus,03 6223 5533,30a Cascade Road,South Hobart,7004,halaxy_sitemap,2026-04-29T12:56:45,match=exact
+MED0001400024,rupert,stirling,East Launceston,IN,https://www.halaxy.com/profile/dr-jessamy-stirling/gp-general-practitioner/323342,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:46,match=last_unique|halaxy_postcode=6027
+MED0001926672,daniel,kirk,Newstead,IR,,,,,,,,no_sitemap_match,2026-04-29T12:56:48,
+MED0001371806,simon,morris,Prospect,IS,,,,,,,,no_sitemap_match,2026-04-29T12:56:48,
+MED0000943566,william,smith,Bothwell,IT,,,,,,,,no_sitemap_match,2026-04-29T12:56:48,
+MED0001403122,patrick,o'sullivan,Dover,IV,,,,,,,,no_sitemap_match,2026-04-29T12:56:48,
+MED0001405929,brian,nolan,West Hobart,LA,https://www.halaxy.com/profile/dr-brian-nolan/gp-general-practitioner/326379,gp-general-practitioner,City Doctors and Travel Clinic,03 6231 3003,93 Collins Street,Hobart,7000,halaxy_sitemap,2026-04-29T12:56:48,match=exact
+MED0000965234,andrew,nolan,Ulverstone,LA,https://www.halaxy.com/profile/dr-andrew-nolan/gp-general-practitioner/324112,gp-general-practitioner,Parkview Medical Practice,03 6331 9833,17 Brisbane Street,Launceston,7250,halaxy_sitemap,2026-04-29T12:56:50,match=exact|suburb_mismatch:ahpra=Ulverstone/halaxy=Launceston
+MED0000939019,michael,lees,Oatlands,LE,,,,,,,,no_sitemap_match,2026-04-29T12:56:52,
+MED0002072460,robert,luelf,Brighton,LF,,,,,,,,no_sitemap_match,2026-04-29T12:56:52,
+MED0001366277,andrew,elkerton,Bellerive,LK,https://www.halaxy.com/profile/dr-andrew-elkerton/gp-general-practitioner/326265,gp-general-practitioner,Augusta Road Medical Centre,03 6278 1744,120 Augusta Road,Lenah Valley,7008,halaxy_sitemap,2026-04-29T12:56:52,match=exact|suburb_mismatch:ahpra=Bellerive/halaxy=Lenah Valley
+MED0001933115,brogan,logan,Hobart,LO,https://www.halaxy.com/profile/dr-mika-logan/gp-general-practitioner/334172,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:56:53,match=last_unique|halaxy_postcode=5092
+MED0000943281,olawole,olomola,Burnie,LO,,,,,,,,no_sitemap_match,2026-04-29T12:56:55,
+MED0001780020,james,luttrell,Launceston,LU,https://www.halaxy.com/profile/dr-james-luttrell/gp-general-practitioner/327400,gp-general-practitioner,Toronto-Teralba GP Pty Ltd,4959 1288,132 Brighton Ave,Toronto,2283,halaxy_sitemap,2026-04-29T12:56:55,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Toronto
+MED0001400077,terence,lyons,Franklin,LY,,,,,,,,no_sitemap_match,2026-04-29T12:56:56,
+MED0001997887,michael,lynch,South Hobart,LY,,,,,,,,no_sitemap_match,2026-04-29T12:56:56,
+MED0001929353,alastair,nairn,Ulverstone,NA,,,,,,,,no_sitemap_match,2026-04-29T12:56:56,
+MED0001783867,josh,anand,Prospect,NA,,,,,,,,no_sitemap_match,2026-04-29T12:56:56,
+MED0002074160,charles,rose,New Norfolk,OS,,,,,,,,no_sitemap_match,2026-04-29T12:56:56,
+MED0001350513,donald,rose,Summerhill,OS,https://www.halaxy.com/profile/dr-donald-rose/gp-general-practitioner/324091,gp-general-practitioner,Summerdale Medical Practice,03 6344 7177,cnr Peel and Stanley st,Launceston,7250,halaxy_sitemap,2026-04-29T12:56:56,match=exact|suburb_mismatch:ahpra=Summerhill/halaxy=Launceston
+MED0001342693,michael,tooth,Hobart,OT,https://www.halaxy.com/profile/dr-michael-tooth/gp-general-practitioner/328066,gp-general-practitioner,Sandy Bay clinic,6223 6822,57 Grosvenor Street,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:56:58,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Sandy Bay
+MED0002068303,lawrence,owen,New Norfolk,OW,,,,,,,,no_sitemap_match,2026-04-29T12:57:00,
+MED0001396667,matthew,poxon,Cygnet,OX,,,,,,,,no_sitemap_match,2026-04-29T12:57:00,
+MED0000989451,mark,ryan,Hobart,RN,,,,,,,,no_sitemap_match,2026-04-29T12:57:00,
+MED0001371847,david,dry,Ulverstone,RY,,,,,,,,no_sitemap_match,2026-04-29T12:57:00,
+MED0002018738,mohammed,syed,Newstead,SD,,,,,,,,no_sitemap_match,2026-04-29T12:57:00,
+MED0000970183,roland,watzl,Hobart,TZ,https://www.halaxy.com/profile/dr-roland-watzl/gp-general-practitioner/326331,gp-general-practitioner,Brighton Doctors,03 6268 0758,39 Main Road,Brighton,7030,halaxy_sitemap,2026-04-29T12:57:00,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Brighton
+MED0001602312,richard,ward,Hobart,WA,,,,,,,,no_sitemap_match,2026-04-29T12:57:01,
+MED0002341159,karunanayakalage,samarabandu,Somerset,AB,,,,,,,,no_sitemap_match,2026-04-29T12:57:01,
+MED0001780282,rebekah,webb,Latrobe,AB,,,,,,,,no_sitemap_match,2026-04-29T12:57:01,
+MED0001863885,meredith,stronach,Lenah Valley,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:01,
+MED0001628395,geraldine,carrick,Franklin,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:01,
+MED0001403126,catherine,deacon,Tolmans Hill,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:02,
+MED0002147229,felicity,acheson,Newstead,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:02,
+MED0001853701,sally,peacock,Cambridge,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:02,
+MED0001780153,annika,roach,Lenah Valley,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:02,
+MED0001392534,bridget,mccormack,Kingston,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:02,
+MED0002235876,emily,mackrill,Launceston,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:02,
+MED0001375391,gabrielle,peacock,Hobart,AC,,,,,,,,no_sitemap_match,2026-04-29T12:57:02,
+MED0001674224,jessica,shady,Kingston,AD,https://www.halaxy.com/profile/dr-jessica-shady/gp-general-practitioner/323739,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:57:02,match=exact
+MED0000943317,jayasekara,jinadasa,Ulverstone,AD,https://www.halaxy.com/profile/dr-lakmali-jinadasa/gp-general-practitioner/321090,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:04,match=last_unique|halaxy_postcode=3058
+MED0001547077,dora,conrady,Huonville,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:06,
+MED0001331784,geeta,lad,Blackmans Bay,AD,https://www.halaxy.com/profile/dr-geeta-lad/gp-general-practitioner/326256,gp-general-practitioner,Blackmans Bay Shopping Centre,03 6229 4111,PO Box 40,Blackmans Bay,7052,halaxy_sitemap,2026-04-29T12:57:06,match=exact
+MED0001333779,catherine,mayhead,Hobart,AD,https://www.halaxy.com/profile/dr-catherine-mayhead/gp-general-practitioner/319628,gp-general-practitioner,Barrack St Medical Practice,03 6223 1055,5a Barrack St,Hobart,7000,halaxy_sitemap,2026-04-29T12:57:07,match=exact
+MED0001631856,christine,barstad,South Burnie,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:09,
+MED0001811789,julie,hadzic,TAS,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:09,
+MED0001378716,jo-anne,graddon,Lenah Valley,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:09,
+MED0000941420,rachel,bradley,New Town,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:09,
+MED0001673686,juliana,ahmad,Lenah Valley,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:09,
+MED0002071403,jessica,radvan,Lenah Valley,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:09,
+MED0002034955,norhalisa,termidzi,Latrobe,AD,,,,,,,,no_sitemap_match,2026-04-29T12:57:09,
+MED0002005308,brittany,birrell,South Hobart,AD,https://www.halaxy.com/profile/dr-john-birrell/gp-general-practitioner/322422,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:09,match=last_unique|halaxy_postcode=2074
+MED0000935983,emma,carmichael,TAS,AE,https://www.halaxy.com/profile/dr-emma-carmichael/gp-general-practitioner/322961,gp-general-practitioner,Davey Street Medical Centre,6223 6223,25 Davey Street,Hobart,7000,halaxy_sitemap,2026-04-29T12:57:10,match=exact|suburb_mismatch:ahpra=TAS/halaxy=Hobart
+MED0000944609,aye,thwe,Launceston,AE,https://www.halaxy.com/profile/dr-aye-thwe/gp-general-practitioner/352817,gp-general-practitioner,Victoria Point Medical & Dental Centre,3401 9555,Cnr Cleveland-Redland Bay Road & Colburn Avenue,Victoria Point,4165,halaxy_sitemap,2026-04-29T12:57:12,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Victoria Point
+MED0002188270,phyu,oo,Wynyard,AE,,,,,,,,no_sitemap_match,2026-04-29T12:57:14,
+MED0001617787,anna,kingshott,Howrah,AE,https://www.halaxy.com/profile/dr-anna-kingshott/gp-general-practitioner/321630,gp-general-practitioner,Family Medical Centre,03 9744 6222,"94 O\'Shannasy St.,",Sunbury,3429,halaxy_sitemap,2026-04-29T12:57:14,match=exact|suburb_mismatch:ahpra=Howrah/halaxy=Sunbury
+MED0001381864,suellen,young,Glenorchy,AE,https://www.halaxy.com/profile/dr-suellen-young/gp-general-practitioner/329763,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:57:15,match=exact|suburb_mismatch:ahpra=Glenorchy/halaxy=Kingston
+MED0001219248,joanne,chaffey,Ulverstone,AF,https://www.halaxy.com/profile/dr-joanne-chaffey/gp-general-practitioner/329938,gp-general-practitioner,Peel Health Care,Not available,103 Peel Street,West Tamworth,2340,halaxy_sitemap,2026-04-29T12:57:17,match=exact|suburb_mismatch:ahpra=Ulverstone/halaxy=West Tamworth
+MED0002175757,alison,heaford,Hobart,AF,,,,,,,,no_sitemap_match,2026-04-29T12:57:19,
+MED0002147198,rachel,stafford,TAS,AF,https://www.halaxy.com/profile/dr-elissa-stafford/gp-general-practitioner/321955,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:19,match=last_unique|halaxy_postcode=3070
+MED0000944678,stephanie,hey,Wynyard,AF,,,,,,,,no_sitemap_match,2026-04-29T12:57:20,
+MED0000938206,kendra,krushka,Hobart,AF,,,,,,,,no_sitemap_match,2026-04-29T12:57:20,
+MED0000943335,karen,magraith,South Hobart,AG,,,,,,,,no_sitemap_match,2026-04-29T12:57:20,
+MED0001848645,madhuri,vithanage,Glenorchy,AG,https://www.halaxy.com/profile/dr-kasun-vithanage/gp-general-practitioner/352706,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:20,match=last_unique|halaxy_postcode=3149
+MED0001366273,rachel,gaggin,Penguin,AG,https://www.halaxy.com/profile/dr-rachel-gaggin/gp-general-practitioner/356935,gp-general-practitioner,Rachel Gaggin,6437 2508,Penguin General Practice 107 Main Road,PENGUIN,7316,halaxy_sitemap,2026-04-29T12:57:21,match=exact
+MED0000943410,hoda,taheri,New Town,AH,https://www.halaxy.com/profile/dr-hoda-taheri/gp-general-practitioner/326370,gp-general-practitioner,Hopkins Street Medical Centre,03 6228 2200,67 Hopkins Street,Moonah,7009,halaxy_sitemap,2026-04-29T12:57:23,match=exact|suburb_mismatch:ahpra=New Town/halaxy=Moonah
+MED0001548443,julie,graham,Hobart,AH,,,,,,,,no_sitemap_match,2026-04-29T12:57:26,
+MED0002073788,nicole,randriamahefa,Cygnet,AH,,,,,,,,no_sitemap_match,2026-04-29T12:57:26,
+MED0002068265,katherine,maher,New Norfolk,AH,,,,,,,,no_sitemap_match,2026-04-29T12:57:26,
+MED0001603079,meagan,campain,Newstead,AI,,,,,,,,no_sitemap_match,2026-04-29T12:57:26,
+MED0001392769,juliet,tait,North Hobart,AI,https://www.halaxy.com/profile/dr-juliet-tait/gp-general-practitioner/1537081,gp-general-practitioner,Viv Health,Not available,Viv Health,Ingleside,2101,halaxy_sitemap,2026-04-29T12:57:26,match=exact|suburb_mismatch:ahpra=North Hobart/halaxy=Ingleside
+MED0001995932,keira,nair,Summerhill,AI,,,,,,,,no_sitemap_match,2026-04-29T12:57:27,
+MED0001853636,edwina,mountain,Kingston,AI,https://www.halaxy.com/profile/dr-edwina-mountain/gp-general-practitioner/353541,gp-general-practitioner,Medical on Macquarie,03 6223 3133,203 Macquarie Street,Hobart,7000,halaxy_sitemap,2026-04-29T12:57:27,match=exact|suburb_mismatch:ahpra=Kingston/halaxy=Hobart
+MED0001366298,vinithra,naiker,Devonport,AI,,,,,,,,no_sitemap_match,2026-04-29T12:57:29,
+MED0000944542,virginia,baird,Hobart,AI,,,,,,,,no_sitemap_match,2026-04-29T12:57:29,
+MED0001213278,megan,baker,Hobart,AK,,,,,,,,no_sitemap_match,2026-04-29T12:57:29,
+MED0001626033,nishanthie,pakshaweera,Exeter,AK,https://www.halaxy.com/profile/dr-nishanthie-pakshaweera/gp-general-practitioner/319040,gp-general-practitioner,Guardian Medical Sanctuary Lakes,9395 6333,33/300 Point Cook Road,Point Cook,3030,halaxy_sitemap,2026-04-29T12:57:29,match=exact|suburb_mismatch:ahpra=Exeter/halaxy=Point Cook
+MED0001363579,paivi,bakker,Hobart,AK,,,,,,,,no_sitemap_match,2026-04-29T12:57:31,
+MED0001794866,amy,noakes,Hobart,AK,,,,,,,,no_sitemap_match,2026-04-29T12:57:31,
+MED0001704737,samarasinghege,ratnayake,Devonport,AK,https://www.halaxy.com/profile/dr-himali-ratnayake/gp-general-practitioner/325825,gp-general-practitioner,Valley Road Medical Centre,03 6424 7598,37 Valley Road,Devonport,7310,halaxy_sitemap,2026-04-29T12:57:31,match=token:himali
+MED0001664894,monisha,lalji,Latrobe,AL,https://www.halaxy.com/profile/dr-monisha-lalji/gp-general-practitioner/328865,gp-general-practitioner,Banyo Clinic,07 3267 5088,183 Tufnell Road,Banyo,4014,halaxy_sitemap,2026-04-29T12:57:33,match=exact|suburb_mismatch:ahpra=Latrobe/halaxy=Banyo
+MED0002057134,sylwia,zala,Huonville,AL,,,,,,,,no_sitemap_match,2026-04-29T12:57:34,
+MED0001663553,tanya,ronaldson,Devonport,AL,,,,,,,,no_sitemap_match,2026-04-29T12:57:35,
+MED0002061557,hannah,gale,South Hobart,AL,https://www.halaxy.com/profile/dr-c-john-gale/gp-general-practitioner/320844,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:35,match=last_unique|halaxy_postcode=2870
+MED0001132963,nisha,kendall,Battery Point,AL,https://www.halaxy.com/profile/dr-barbara-kendall/gp-general-practitioner/326953,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:37,match=last_unique|halaxy_postcode=2100
+MED0001369267,lucy,alexander,Claremont,AL,https://www.halaxy.com/profile/dr-lucy-alexander/gp-general-practitioner/326400,gp-general-practitioner,Claremont Village Medical Centre,03 6249 1311,PO Box 200,Claremont,7011,halaxy_sitemap,2026-04-29T12:57:38,match=exact
+MED0001408852,kristen,fitzgerald,South Hobart,AL,,,,,,,,no_sitemap_match,2026-04-29T12:57:40,
+MED0002070971,bruni,gale,Claremont,AL,https://www.halaxy.com/profile/dr-c-john-gale/gp-general-practitioner/320844,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:40,match=last_unique|halaxy_postcode=2870
+MED0002223084,mrunmayee,bhalerao,Hobart,AL,https://www.halaxy.com/profile/dr-vaishali-bhalerao/gp-general-practitioner/316835,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:42,match=last_unique|halaxy_postcode=3084
+MED0001673691,katherine,bendall,Kingston,AL,https://www.halaxy.com/profile/dr-katherine-bendall/gp-general-practitioner/327293,gp-general-practitioner,Lauderdale Doctors Surgery,03 6282 1333,444 South Arm Rd,Lauderdale,7021,halaxy_sitemap,2026-04-29T12:57:44,match=exact|suburb_mismatch:ahpra=Kingston/halaxy=Lauderdale
+MED0000975374,ekaterina,malchukova,Hobart,AL,https://www.halaxy.com/profile/dr-ekaterina-malchukova/gp-general-practitioner/351001,gp-general-practitioner,Kingborough Medical Centre,Not available,9-11 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:57:45,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Kingston
+MED0001375359,lynda,aldridge,Upper Burnie,AL,,,,,,,,no_sitemap_match,2026-04-29T12:57:47,
+MED0002066659,ebony,alexander,Sorell,AL,,,,,,,,no_sitemap_match,2026-04-29T12:57:47,
+MED0001863441,peta,gardam,Hobart,AM,,,,,,,,no_sitemap_match,2026-04-29T12:57:47,
+MED0002030694,chiranthi,kariyawasam,Launceston,AM,,,,,,,,no_sitemap_match,2026-04-29T12:57:47,
+MED0000944980,emily,isham,Hobart,AM,https://www.halaxy.com/profile/dr-emily-isham/gp-general-practitioner/317820,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John St,Kingston,7050,halaxy_sitemap,2026-04-29T12:57:47,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Kingston
+MED0001995937,emily,ingram,Launceston,AM,,,,,,,,no_sitemap_match,2026-04-29T12:57:49,
+MED0001684287,alice,frampton,Howrah,AM,https://www.halaxy.com/profile/dr-alice-frampton/gp-general-practitioner/318213,gp-general-practitioner,Clarence Gp Super Clinic,03 6282 1400,16-22 Bayfield St,Rosny Park,7018,halaxy_sitemap,2026-04-29T12:57:49,match=exact|suburb_mismatch:ahpra=Howrah/halaxy=Rosny Park
+MED0001390997,frances,ramsay,Hobart,AM,https://www.halaxy.com/profile/dr-p-ramsay/gp-general-practitioner/321074,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:50,match=last_unique|halaxy_postcode=2759
+MED0001152949,alison,williams,Taranna,AM,,,,,,,,no_sitemap_match,2026-04-29T12:57:52,
+MED0004024948,katherine,shearman,Hobart,AN,https://www.halaxy.com/profile/dr-sue-shearman/gp-general-practitioner/317864,gp-general-practitioner,John Street Medical Centre,03 6229 1987,5 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:57:52,match=last_unique|suburb_mismatch:ahpra=Hobart/halaxy=Kingston
+MED0001935093,alice,stoneman,Howrah,AN,https://www.halaxy.com/profile/dr-alice-stoneman/gp-general-practitioner/354397,gp-general-practitioner,Knopwood Medical Centre,6247 1019,46 South Arm Road,Rokeby,7019,halaxy_sitemap,2026-04-29T12:57:54,match=exact|suburb_mismatch:ahpra=Howrah/halaxy=Rokeby
+MED0002062311,claire,breda,Brighton,AN,,,,,,,,no_sitemap_match,2026-04-29T12:57:55,
+MED0000938962,debra,chandler,Penguin,AN,,,,,,,,no_sitemap_match,2026-04-29T12:57:55,
+MED0001378725,nerrelie,cann,Ulverstone,AN,https://www.halaxy.com/profile/dr-rachel-cann/gp-general-practitioner/316294,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:55,match=last_unique|halaxy_postcode=3161
+MED0002197714,lucy,donnan,South Hobart,AN,,,,,,,,no_sitemap_match,2026-04-29T12:57:57,
+MED0000943258,colette,mcclean,Hobart,AN,https://www.halaxy.com/profile/dr-colette-mcclean/gp-general-practitioner/326262,gp-general-practitioner,Bayside Medical Centre,03 6225 3858,7 Beach Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:57:57,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Sandy Bay
+MED0002011856,catherine,stephan,Lenah Valley,AN,https://www.halaxy.com/profile/dr-marcel-stephan/gp-general-practitioner/317577,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:57:58,match=last_unique|halaxy_postcode=5009
+MED0001371805,maxine,glanger,South Launceston,AN,,,,,,,,no_sitemap_match,2026-04-29T12:58:01,
+MED0001940780,abby,chapman,Latrobe,AN,,,,,,,,no_sitemap_match,2026-04-29T12:58:01,
+MED0001200323,michelle,hannan,Cambridge,AN,https://www.halaxy.com/profile/dr-melissa-hannan/gp-general-practitioner/330631,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:01,match=last_unique|halaxy_postcode=6102
+MED0001602553,selena,saykao,New Town,AO,,,,,,,,no_sitemap_match,2026-04-29T12:58:02,
+MED0001381831,sally,chapman,Howrah,AP,https://www.halaxy.com/profile/dr-sally-chapman/gp-general-practitioner/327313,gp-general-practitioner,Clarence GP Super Clinic,6282 1400,16 Bayfield Street,Rosny Park,7018,halaxy_sitemap,2026-04-29T12:58:02,match=exact|suburb_mismatch:ahpra=Howrah/halaxy=Rosny Park
+MED0000939015,hannah,chapman,Hobart,AP,,,,,,,,no_sitemap_match,2026-04-29T12:58:04,
+MED0001673718,abby,rundle,South Hobart,AP,,,,,,,,no_sitemap_match,2026-04-29T12:58:04,
+MED0001366204,helen,parkes,Newstead,AR,https://www.halaxy.com/profile/dr-helen-parkes/gp-general-practitioner/317480,gp-general-practitioner,Newstead Medical,6331 1088,165 Elphin Road,Newstead,7250,halaxy_sitemap,2026-04-29T12:58:04,match=exact
+MED0002010194,grace,stearnes,Lauderdale,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:06,
+MED0001388505,susan,shearman,Kingston,AR,https://www.halaxy.com/profile/dr-sue-shearman/gp-general-practitioner/317864,gp-general-practitioner,John Street Medical Centre,03 6229 1987,5 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:58:06,match=last_unique
+MED0001392765,janette,gartlan,South Hobart,AR,https://www.halaxy.com/profile/dr-karen-gartlan/gp-general-practitioner/323108,gp-general-practitioner,Barrack Street Practice Propriety Ltd,03 6223 1055,5a Barrack St,Hobart,7000,halaxy_sitemap,2026-04-29T12:58:08,match=last_unique
+MED0001405999,jane,edwards,Smithton,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:09,
+MED0001379568,dominique,carroll,Latrobe,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:09,
+MED0001209945,sandra,clarke,Hobart,AR,https://www.halaxy.com/profile/dr-sandra-clarke/gp-general-practitioner/320162,gp-general-practitioner,Greenmeadows Medical Centre,02 5525 1111,152 Greenmeadows Drive,Port Macquarie,2444,halaxy_sitemap,2026-04-29T12:58:09,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Port Macquarie
+MED0002147780,gabrielle,reardon,Howrah,AR,https://www.halaxy.com/profile/dr-sarah-reardon/gp-general-practitioner/359555,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:11,match=last_unique|halaxy_postcode=6056
+MED0000936056,melinda,giffard,Hobart,AR,https://www.halaxy.com/profile/dr-melinda-giffard/gp-general-practitioner/326369,gp-general-practitioner,Rosny Doctors,03 6244 1058,7 Ross Avenue,Rosny Park,7018,halaxy_sitemap,2026-04-29T12:58:13,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Rosny Park
+MED0001602512,stacey,carlton,Hobart,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0002185378,dhanesha,gunawardena,Burnie,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0001652330,laura,edwards,Hobart,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0002000303,natasha,harney,Hobart,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0001780067,clair,mccartney,Hobart,AR,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0002886367,stephanie,das,South Hobart,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0002440266,philippa,eastwood,Newstead,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0001628377,robyn,thomas,Hobart,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0001853692,samantha,cassidy,Newstead,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0001603027,anthea,dallas,Hobart,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:15,
+MED0000942186,sonista,jasal,New Town,AS,https://www.halaxy.com/profile/dr-sonista-jasal/gp-general-practitioner/326363,gp-general-practitioner,Stoke Street Family Medical Centre,03 6228 7841,3 Stoke Street,New Town,7008,halaxy_sitemap,2026-04-29T12:58:15,match=exact
+MED0002149787,julia,last,Lenah Valley,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:17,
+MED0001853664,jessie,andrewartha,Wynyard,AS,https://www.halaxy.com/profile/dr-jessie-andrewartha/gp-general-practitioner/355758,gp-general-practitioner,Saunders Street Clinic,03 6442 1700,PO Box 780,Wynyard,7325,halaxy_sitemap,2026-04-29T12:58:17,match=exact
+MED0001674072,frances,rose,Howrah,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:18,
+MED0002064755,jessie,ling,Kingston,AS,,,,,,,,no_sitemap_match,2026-04-29T12:58:18,
+MED0001396664,robyn,mathews,Bellerive,AT,https://www.halaxy.com/profile/dr-robert-mathews/gp-general-practitioner/324132,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:18,match=last_unique|halaxy_postcode=2229
+MED0000940495,bridgette,watts,Bridgewater,AT,https://www.halaxy.com/profile/dr-bridgette-watts/gp-general-practitioner/326326,gp-general-practitioner,Greenpoint Medical Services,03 6263 7349,9-11 Hurst Street,Bridgewater,7030,halaxy_sitemap,2026-04-29T12:58:19,match=exact
+MED0000944955,shaista,patel,Cambridge,AT,https://www.halaxy.com/profile/dr-shaista-patel/gp-general-practitioner/352903,gp-general-practitioner,Richmond Medical Centre,Not available,23 Bathurst Street,Richmond,7025,halaxy_sitemap,2026-04-29T12:58:21,match=exact|suburb_mismatch:ahpra=Cambridge/halaxy=Richmond
+MED0002148255,sharon,fitzpatrick,Summerhill,AT,,,,,,,,no_sitemap_match,2026-04-29T12:58:23,
+MED0001371870,michele,gauden,Sorell,AU,https://www.halaxy.com/profile/dr-michele-gauden/gp-general-practitioner/326292,gp-general-practitioner,Sorell Family Practice,03 6265 2341,42 Cole Street,Sorell,7172,halaxy_sitemap,2026-04-29T12:58:23,match=exact
+MED0001661088,nicole,davies,Howrah,AV,,,,,,,,no_sitemap_match,2026-04-29T12:58:24,
+MED0001605929,kaylee,davie,St Helens,AV,https://www.halaxy.com/profile/dr-janet-davie/gp-general-practitioner/335234,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:24,match=last_unique|halaxy_postcode=5092
+MED0001171790,lynne,davies,Whitemark,AV,,,,,,,,no_sitemap_match,2026-04-29T12:58:26,
+MED0001197871,monica,hargrave,Kingston,AV,https://www.halaxy.com/profile/dr-monica-hargrave/gp-general-practitioner/327364,gp-general-practitioner,General Practice Plus Cascade Road,03 6223 5533,30A Cascade Road,South Hobart,7004,halaxy_sitemap,2026-04-29T12:58:26,match=exact|suburb_mismatch:ahpra=Kingston/halaxy=South Hobart
+MED0002279478,brittany,weaver,Battery Point,AV,https://www.halaxy.com/profile/dr-john-weaver/gp-general-practitioner/333197,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:27,match=last_unique|halaxy_postcode=5000
+MED0001378729,alison,whishaw,West Ulverstone,AW,,,,,,,,no_sitemap_match,2026-04-29T12:58:28,
+MED0001857879,sarvin,randhawa,Wynyard,AW,,,,,,,,no_sitemap_match,2026-04-29T12:58:28,
+MED0001281252,violet,maxwell,Launceston,AX,,,,,,,,no_sitemap_match,2026-04-29T12:58:28,
+MED0000943328,anna,mckinlay,Hobart,AY,https://www.halaxy.com/profile/dr-anna-mckinlay/gp-general-practitioner/326420,gp-general-practitioner,The Lindisfarne Clinic,03 6243 8611,30 Lincoln Street,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:58:28,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Lindisfarne
+MED0001997087,hannah,barry,TAS,BA,,,,,,,,no_sitemap_match,2026-04-29T12:58:30,
+MED0001300193,elizabeth,bois,Kingston,BA,,,,,,,,no_sitemap_match,2026-04-29T12:58:30,
+MED0001999114,franziska,poke,Parklands,BC,,,,,,,,no_sitemap_match,2026-04-29T12:58:30,
+MED0001853684,cathryn,kube,Cambridge,BE,,,,,,,,no_sitemap_match,2026-04-29T12:58:30,
+MED0001378738,tania,winzenberg,Hobart,BE,,,,,,,,no_sitemap_match,2026-04-29T12:58:30,
+MED0001779345,emma,beddows,Burnie,BE,https://www.halaxy.com/profile/dr-emma-beddows/gp-general-practitioner/325881,gp-general-practitioner,Patrick Street Clinic,03 6425 1611,6 Patrick Street,Ulverstone,7310,halaxy_sitemap,2026-04-29T12:58:30,match=exact|suburb_mismatch:ahpra=Burnie/halaxy=Ulverstone
+MED0001403163,alexandra,roberts,Lenah Valley,BE,,,,,,,,no_sitemap_match,2026-04-29T12:58:32,
+MED0001340375,julie,ostberg,Newstead,BE,https://www.halaxy.com/profile/dr-julie-ostberg/gp-general-practitioner/324118,gp-general-practitioner,Summerdale Medical Practice,Not available,Cnr Peel and Stanley,Summerhill,7250,halaxy_sitemap,2026-04-29T12:58:32,match=exact|suburb_mismatch:ahpra=Newstead/halaxy=Summerhill
+MED0002327258,tennessee,berryman,Wynyard,BE,https://www.halaxy.com/profile/dr-gary-berryman/gp-general-practitioner/334188,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:33,match=last_unique|halaxy_postcode=3083
+MED0002308934,jessica,roberts,Launceston,BE,,,,,,,,no_sitemap_match,2026-04-29T12:58:35,
+MED0001191791,verity,robin,Rosny Park,BI,,,,,,,,no_sitemap_match,2026-04-29T12:58:35,
+MED0001606333,elisabeth,robin,Ulverstone,BI,https://www.halaxy.com/profile/dr-elisabeth-robin/gp-general-practitioner/328181,gp-general-practitioner,Patrick Street Clinic,03 6425 1611,6 Patrick Street,Ulverstone,7315,halaxy_sitemap,2026-04-29T12:58:35,match=exact
+MED0000940572,jennifer,robinson,Claremont,BI,https://www.halaxy.com/profile/dr-j-mark-robinson/gp-general-practitioner/335139,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:36,match=initial|halaxy_postcode=3053
+MED0001186280,renee,bilkey,Upper Burnie,BI,,,,,,,,no_sitemap_match,2026-04-29T12:58:38,
+MED0002194356,isabel,pemble,Howrah,BL,,,,,,,,no_sitemap_match,2026-04-29T12:58:38,
+MED0001369250,alison,bleaney,Binalong Bay,BL,https://www.halaxy.com/profile/dr-alison-bleaney/gp-general-practitioner/322623,gp-general-practitioner,Medical One Moonee Ponds,03 8325 1111,14 Pascoe Vale Road,Moonee Ponds,3039,halaxy_sitemap,2026-04-29T12:58:38,match=exact|suburb_mismatch:ahpra=Binalong Bay/halaxy=Moonee Ponds
+MED0001669543,polly,shepherd,Hobart,BL,,,,,,,,no_sitemap_match,2026-04-29T12:58:40,
+MED0001865035,bailey,dunn,Kingston,BL,https://www.halaxy.com/profile/dr-bailey-dunn/gp-general-practitioner/356393,gp-general-practitioner,John Street Medical Centre,6229 1987,5 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:58:40,match=exact
+MED0000940491,arati,debnath,Prospect Vale,BN,,,,,,,,no_sitemap_match,2026-04-29T12:58:42,
+MED0001400030,christine,boyce,Lenah Valley,BO,https://www.halaxy.com/profile/dr-christine-boyce/gp-general-practitioner/326261,gp-general-practitioner,Augusta Road Medical Centre,03 6278 1744,120 Augusta Road,Lenah Valley,7008,halaxy_sitemap,2026-04-29T12:58:42,match=exact
+MED0002157931,sarah,lovibond,Bonnet Hill,BO,,,,,,,,no_sitemap_match,2026-04-29T12:58:44,
+MED0000951107,jessica,kneebone,Hobart,BO,https://www.halaxy.com/profile/dr-kirsty-kneebone/gp-general-practitioner/320241,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:44,match=last_unique|halaxy_postcode=5075
+MED0000936041,rachael,boland,Howrah,BO,,,,,,,,no_sitemap_match,2026-04-29T12:58:45,
+MED0000954311,catherine,browne,New Town,BR,https://www.halaxy.com/profile/dr-catherine-browne/gp-general-practitioner/326108,gp-general-practitioner,Teneriffe Family Doctors,07 3852 4299,Gasworks Plaza A3/76 Skyring Terrace,Newstead,4006,halaxy_sitemap,2026-04-29T12:58:45,match=exact|suburb_mismatch:ahpra=New Town/halaxy=Newstead
+MED0001191392,aileen,bruyn,Hobart,BR,https://www.halaxy.com/profile/dr-anne-de-bruyn/gp-general-practitioner/326342,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T12:58:47,match=token:anne|suburb_mismatch:ahpra=Hobart/halaxy=Kingston
+MED0000936079,amy,o'brien,Battery Point,BR,,,,,,,,no_sitemap_match,2026-04-29T12:58:48,
+MED0001335686,catherine,broun,Devonport,BR,,,,,,,,no_sitemap_match,2026-04-29T12:58:48,
+MED0001995928,katelyn,brooks,Brighton,BR,https://www.halaxy.com/profile/dr-emma-brooks/gp-general-practitioner/332332,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:48,match=last_unique|halaxy_postcode=3155
+MED0000973563,erin,bryce,Cygnet,BR,,,,,,,,no_sitemap_match,2026-04-29T12:58:50,
+MED0001396649,karen,brook,New Town,BR,https://www.halaxy.com/profile/dr-emma-brook/gp-general-practitioner/351754,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:50,match=last_unique|halaxy_postcode=5067
+MED0001853679,emma,mortyn,Huonville,BR,https://www.halaxy.com/profile/dr-emma-mortyn/gp-general-practitioner/354989,gp-general-practitioner,Sorell Family Practice,03 6265 2341,Shop 11 12 Cole Street,Sorell,7172,halaxy_sitemap,2026-04-29T12:58:52,match=exact|suburb_mismatch:ahpra=Huonville/halaxy=Sorell
+MED0002143584,samantha,gibson-smith,New Norfolk,BS,,,,,,,,no_sitemap_match,2026-04-29T12:58:53,
+MED0000953986,louise,butler,Huonville,BU,https://www.halaxy.com/profile/dr-ann-butler/gp-general-practitioner/321713,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:58:53,match=token:ann|halaxy_postcode=4605
+MED0000936065,sarah,burbury,Brighton,BU,,,,,,,,no_sitemap_match,2026-04-29T12:58:55,
+MED0000936011,natalie,burch,Launceston,BU,https://www.halaxy.com/profile/dr-natalie-burch/gp-general-practitioner/318508,gp-general-practitioner,Scottsdale Doctors Surgery,03 6352 2522,2 Fosters Rd,Scottsdale,7260,halaxy_sitemap,2026-04-29T12:58:55,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Scottsdale
+MED0001399362,tania,burgess,Granton,BU,,,,,,,,no_sitemap_match,2026-04-29T12:58:57,
+MED0000938134,camilla,byrne,Swansea,BY,,,,,,,,no_sitemap_match,2026-04-29T12:58:57,
+MED0002147228,emma,byard,Lenah Valley,BY,,,,,,,,no_sitemap_match,2026-04-29T12:58:57,
+MED0000983480,anna,carswell,Norwood,CA,https://www.halaxy.com/profile/dr-anna-carswell/gp-general-practitioner/353101,gp-general-practitioner,Goondiwindi Medical Centre,07 4671 1444,49 Bowen Street,Goondiwindi,4390,halaxy_sitemap,2026-04-29T12:58:57,match=exact|suburb_mismatch:ahpra=Norwood/halaxy=Goondiwindi
+MED0001543420,lucy,carter,South Hobart,CA,,,,,,,,no_sitemap_match,2026-04-29T12:58:59,
+MED0001119881,rosemary,duncan,Shearwater,CA,,,,,,,,no_sitemap_match,2026-04-29T12:58:59,
+MED0002067642,amy,lim,Bellerive,CA,,,,,,,,no_sitemap_match,2026-04-29T12:58:59,
+MED0000938208,katie,pullinger,Hobart,CD,https://www.halaxy.com/profile/dr-phill-pullinger/gp-general-practitioner/326419,gp-general-practitioner,Huon Valley Health Centre,03 6264 2800,85 Main Road,Huonville,7109,halaxy_sitemap,2026-04-29T12:58:59,match=last_unique|suburb_mismatch:ahpra=Hobart/halaxy=Huonville
+MED0001667277,hannah,wintergreen,Huonville,CD,,,,,,,,no_sitemap_match,2026-04-29T12:59:00,
+MED0000943573,allison,johnson,Wynyard,CD,,,,,,,,no_sitemap_match,2026-04-29T12:59:00,
+MED0001673717,rachael,foster,Hobart,CD,,,,,,,,no_sitemap_match,2026-04-29T12:59:00,
+MED0001656637,georgina,alexander,Lenah Valley,CD,https://www.halaxy.com/profile/dr-georgina-alexander/gp-general-practitioner/327391,gp-general-practitioner,Sorell Family Practice,03 6265 2341,"Shop 11, 12 Cole Street",Sorell,7172,halaxy_sitemap,2026-04-29T12:59:00,match=exact|suburb_mismatch:ahpra=Lenah Valley/halaxy=Sorell
+MED0000944784,clare,cerchez,Launceston,CE,https://www.halaxy.com/profile/dr-clare-cerchez/gp-general-practitioner/317592,gp-general-practitioner,Parkview Medical Practice,6331 9833,17 Brisbane Street,Launceston,7250,halaxy_sitemap,2026-04-29T12:59:02,match=exact
+MED0001403097,doris,ng,Rosny,CE,,,,,,,,no_sitemap_match,2026-04-29T12:59:04,
+MED0001852331,margaret,o'connell,Kingston,CE,,,,,,,,no_sitemap_match,2026-04-29T12:59:04,
+MED0001937996,tricia,siu,Summerhill,CE,,,,,,,,no_sitemap_match,2026-04-29T12:59:04,
+MED0000936001,miriam,tan,South Arm,CE,https://www.halaxy.com/profile/dr-siew-li-tan/gp-general-practitioner/320698,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:04,match=token:siew|halaxy_postcode=3056
+MED0002141367,heather,mcgushin,Hobart,CG,,,,,,,,no_sitemap_match,2026-04-29T12:59:05,
+MED0000944692,angela,retchford,Bridgewater,CH,https://www.halaxy.com/profile/dr-angela-retchford/gp-general-practitioner/326317,gp-general-practitioner,Geeveston Surgery,03 6297 1903,19 Arve Road,Geeveston,7116,halaxy_sitemap,2026-04-29T12:59:05,match=exact|suburb_mismatch:ahpra=Bridgewater/halaxy=Geeveston
+MED0001618255,anna,mcculloch,South Hobart,CH,,,,,,,,no_sitemap_match,2026-04-29T12:59:07,
+MED0000977616,carla,cheyne,Hobart,CH,https://www.halaxy.com/profile/dr-carla-cheyne/gp-general-practitioner/324101,gp-general-practitioner,Augusta Road Medical Centre,03 6278 1744,120 Augusta Road,Lenhah Valley,7008,halaxy_sitemap,2026-04-29T12:59:07,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Lenhah Valley
+MED0001163784,jennifer,koch,Deloraine,CH,https://www.halaxy.com/profile/dr-jenni-koch/gp-general-practitioner/328180,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:09,match=last_unique|halaxy_postcode=3939
+MED0001219168,tanya,francis,Hobart,CI,https://www.halaxy.com/profile/dr-tanya-francis/gp-general-practitioner/326415,gp-general-practitioner,Cambridge Road Surgery,03 6245 0777,112 Cambridge Rd,Bellerive,7018,halaxy_sitemap,2026-04-29T12:59:11,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Bellerive
+MED0002143618,zoe,dodge,New Norfolk,CI,,,,,,,,no_sitemap_match,2026-04-29T12:59:13,
+MED0001937318,julia,kilpatrick,Lenah Valley,CK,,,,,,,,no_sitemap_match,2026-04-29T12:59:13,
+MED0002069846,charlotte,mckenzie,Ulverstone,CK,,,,,,,,no_sitemap_match,2026-04-29T12:59:13,
+MED0000943222,allison,turnock,Hobart,CK,,,,,,,,no_sitemap_match,2026-04-29T12:59:13,
+MED0001603132,megan,mckeown,Hobart,CK,https://www.halaxy.com/profile/dr-megan-mckeown/gp-general-practitioner/1540601,gp-general-practitioner,Highland Rural Health,Not available,PO Box 6,New Town,7008,halaxy_sitemap,2026-04-29T12:59:13,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=New Town
+MED0001602551,rhea,psereckis,Hobart,CK,,,,,,,,no_sitemap_match,2026-04-29T12:59:15,
+MED0001185079,sarah,lockley,Taroona,CK,https://www.halaxy.com/profile/dr-sarah-lockley/gp-general-practitioner/326807,gp-general-practitioner,MLC Medical Centre,02 9232 5477,Suite 1003 MLC Centre,Sydney,2000,halaxy_sitemap,2026-04-29T12:59:15,match=exact|suburb_mismatch:ahpra=Taroona/halaxy=Sydney
+MED0002235566,sara,mckenzie,Kingston,CK,https://www.halaxy.com/profile/dr-l-mckenzie/gp-general-practitioner/360722,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:16,match=token_initial:l|halaxy_postcode=2034
+MED0001220493,rebecca,storck,Launceston,CK,,,,,,,,no_sitemap_match,2026-04-29T12:59:18,
+MED0000939729,linda,clow,Lenah Valley,CL,https://www.halaxy.com/profile/dr-linda-clow/gp-general-practitioner/334804,gp-general-practitioner,Lenah Valley medical Centre,03 6228 0243,95 Augusta Road,Lenah Valley,7008,halaxy_sitemap,2026-04-29T12:59:18,match=exact
+MED0000944572,lisa,clarke,Hobart,CL,,,,,,,,no_sitemap_match,2026-04-29T12:59:20,
+MED0004020141,kirsten,mclean,Brighton,CL,,,,,,,,no_sitemap_match,2026-04-29T12:59:20,
+MED0000944906,nerida,kelly,Burnie,CL,,,,,,,,no_sitemap_match,2026-04-29T12:59:20,
+MED0001128873,jennifer,connor,Hobart,CL,https://www.halaxy.com/profile/dr-jennifer-connor/gp-general-practitioner/317852,gp-general-practitioner,Grosvenor Street general practice,03 6224 1944,57 Grosvenor Street,Sandy Bay,7005,halaxy_sitemap,2026-04-29T12:59:20,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Sandy Bay
+MED0001602381,kelly,verdouw,Sorell,CL,,,,,,,,no_sitemap_match,2026-04-29T12:59:22,
+MED0002146715,gemma,dwyer,New Norfolk,CM,,,,,,,,no_sitemap_match,2026-04-29T12:59:22,
+MED0001385211,jane,cooper,Devonport,CO,,,,,,,,no_sitemap_match,2026-04-29T12:59:22,
+MED0001403144,anna,chilcott,Snug,CO,https://www.halaxy.com/profile/dr-anna-chilcott/gp-general-practitioner/326279,gp-general-practitioner,Snug Medical Centre,03 6267 9221,7 Beach Road,Snug,7054,halaxy_sitemap,2026-04-29T12:59:22,match=exact
+MED0002065281,danielle,collins,Devonport,CO,https://www.halaxy.com/profile/dr-danielle-collins/gp-general-practitioner/334559,gp-general-practitioner,Morphettville Medical Centre,Not available,520 Anzac Highway,Glenelg,5045,halaxy_sitemap,2026-04-29T12:59:24,match=exact|suburb_mismatch:ahpra=Devonport/halaxy=Glenelg
+MED0001385221,stephanie,cooper,Bellerive,CO,,,,,,,,no_sitemap_match,2026-04-29T12:59:26,
+MED0000968782,emilie,willcox,Whitemark,CO,https://www.halaxy.com/profile/dr-jeff-willcox/gp-general-practitioner/321614,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:26,match=last_unique|halaxy_postcode=3053
+MED0001667100,meg,creely,New Town,CR,,,,,,,,no_sitemap_match,2026-04-29T12:59:28,
+MED0000954436,elizabeth,grey,TAS,CR,https://www.halaxy.com/profile/dr-jo-anne-grey/gp-general-practitioner/325039,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:28,match=last_unique|halaxy_postcode=4169
+MED0001853643,samantha,goss,North Hobart,CS,https://www.halaxy.com/profile/dr-david-goss/gp-general-practitioner/325114,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:30,match=last_unique|halaxy_postcode=4566
+MED0001853648,emily,goss,East Launceston,CS,https://www.halaxy.com/profile/dr-david-goss/gp-general-practitioner/325114,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:31,match=last_unique|halaxy_postcode=4566
+MED0001674910,claire,cugley,Launceston,CU,,,,,,,,no_sitemap_match,2026-04-29T12:59:33,
+MED0001371849,helene,curtis,Claremont,CU,https://www.halaxy.com/profile/dr-helene-curtis/gp-general-practitioner/350596,gp-general-practitioner,Claremont Village Medical Centre,6249 1311,PO Box 200,Claremont,7011,halaxy_sitemap,2026-04-29T12:59:33,match=exact
+MED0001406016,hannah,stoddart,Claremont,DA,https://www.halaxy.com/profile/dr-hannah-stoddart/gp-general-practitioner/356573,gp-general-practitioner,Claremont Village Medical Centre,03 6249 1311,PO Box 200,Claremont,7011,halaxy_sitemap,2026-04-29T12:59:35,match=exact
+MED0001385212,rebecca,daniels,New Town,DA,https://www.halaxy.com/profile/dr-rebecca-daniels/gp-general-practitioner/326267,gp-general-practitioner,Glenorchy Medical Centre,03 6272 5222,3/346 Main Road,Glenorchy,7010,halaxy_sitemap,2026-04-29T12:59:37,match=exact|suburb_mismatch:ahpra=New Town/halaxy=Glenorchy
+MED0002071512,gabrielle,rooy,Devonport,DA,https://www.halaxy.com/profile/dr-clare-van-rooy/gp-general-practitioner/320428,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:38,match=last_unique|halaxy_postcode=2264
+MED0000943468,annamarie,vries,Kingston,DA,https://www.halaxy.com/profile/dr-de-vries/gp-general-practitioner/324911,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:40,match=token:de|halaxy_postcode=2777
+MED0001396671,de-arne,yearsley,Bellerive,DA,https://www.halaxy.com/profile/dr-de-arne-yearsley/gp-general-practitioner/317893,gp-general-practitioner,Bellerive Quay Surgery,6282 1333,48 Cambridge Rd,Bellerive,7018,halaxy_sitemap,2026-04-29T12:59:41,match=token:de
+MED0000941288,victoria,ludeke,Rosny Park,DE,https://www.halaxy.com/profile/dr-victoria-ludeke/gp-general-practitioner/327317,gp-general-practitioner,Clarence GP Super Clinic,03 6282 1400,16 - 22 Bayfield Street,Rosny,7018,halaxy_sitemap,2026-04-29T12:59:43,match=exact
+MED0001075416,celia,tildesley,South Hobart,DE,,,,,,,,no_sitemap_match,2026-04-29T12:59:44,
+MED0001887598,mary,lumsden,Brighton,DE,https://www.halaxy.com/profile/dr-mary-lumsden/gp-general-practitioner/336013,gp-general-practitioner,Brighton Family Medical Centre,03 6268 1077,1 Bedford Street,Brighton,7030,halaxy_sitemap,2026-04-29T12:59:44,match=exact
+MED0002062700,bronwyn,tidey,Hobart,DE,,,,,,,,no_sitemap_match,2026-04-29T12:59:46,
+MED0002233625,tavia,goodison,Launceston,DF,,,,,,,,no_sitemap_match,2026-04-29T12:59:46,
+MED0001876379,cassall,wedgwood,Cambridge,DG,,,,,,,,no_sitemap_match,2026-04-29T12:59:46,
+MED0001396645,susan,hodgman,Bellerive,DG,https://www.halaxy.com/profile/dr-susan-hodgman/gp-general-practitioner/326394,gp-general-practitioner,Collinst St General Practice,03 6223 3355,Level 3 117 Collins Street,Hobart,7000,halaxy_sitemap,2026-04-29T12:59:46,match=exact|suburb_mismatch:ahpra=Bellerive/halaxy=Hobart
+MED0001677955,jane,dhann,Newstead,DH,https://www.halaxy.com/profile/dr-jane-dhann/gp-general-practitioner/332538,gp-general-practitioner,Jane Dhann,07 3861 4455,"Platinum Medical Centre, 10 Banfield St",Chermside,4032,halaxy_sitemap,2026-04-29T12:59:48,match=exact|suburb_mismatch:ahpra=Newstead/halaxy=Chermside
+MED0000941402,amy,edler,Hobart,DL,https://www.halaxy.com/profile/dr-amy-edler/gp-general-practitioner/326358,gp-general-practitioner,Greenpoint Medical Services,03 6263 7349,9-11 Hurst Street,Bridgewater,7030,halaxy_sitemap,2026-04-29T12:59:50,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Bridgewater
+MED0001929409,josephine,woodman,Upper Burnie,DM,https://www.halaxy.com/profile/dr-lynn-woodman/gp-general-practitioner/318647,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:51,match=last_unique|halaxy_postcode=4509
+MED0001602177,deanna,devers,Claremont,DN,https://www.halaxy.com/profile/dr-deanna-devers/gp-general-practitioner/318215,gp-general-practitioner,The Lindisfarne Clinic,6243 8611,30 Lincoln St,Lindisfarne,7015,halaxy_sitemap,2026-04-29T12:59:53,match=exact|suburb_mismatch:ahpra=Claremont/halaxy=Lindisfarne
+MED0001375377,dianne,king,New Town,DN,https://www.halaxy.com/profile/dr-margaret-king/gp-general-practitioner/322226,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:55,match=token:margaret|halaxy_postcode=4558
+MED0001219146,alice,downie,Norwood,DN,,,,,,,,no_sitemap_match,2026-04-29T12:59:56,
+MED0001408893,diane,hintum,Launceston,DN,https://www.halaxy.com/profile/dr-diane-hintum/gp-general-practitioner/324092,gp-general-practitioner,Summerdale Medical Practice,03 6344 7177,cnr Peel and Stanley Streets,Launceston,7250,halaxy_sitemap,2026-04-29T12:59:56,match=exact
+MED0001605120,pushpani,fernando,Latrobe,DO,https://www.halaxy.com/profile/dr-k-fernando/gp-general-practitioner/362023,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T12:59:58,match=token_initial:k|halaxy_postcode=3844
+MED0001664500,elen,o'donnell,Launceston,DO,,,,,,,,no_sitemap_match,2026-04-29T13:00:00,
+MED0001585744,brooke,sheldon,Launceston,DO,https://www.halaxy.com/profile/dr-paul-sheldon/gp-general-practitioner/317639,gp-general-practitioner,,,,,,halaxy_no_jsonld,2026-04-29T13:00:00,match=last_unique
+MED0001370983,roslyn,loudon,TAS,DO,https://www.halaxy.com/profile/dr-roslyn-loudon/gp-general-practitioner/327612,gp-general-practitioner,Burleigh West Medical Centre,07 5535 0681,138 West Burleigh Road,Burleigh Heads,4220,halaxy_sitemap,2026-04-29T13:00:03,match=exact|suburb_mismatch:ahpra=TAS/halaxy=Burleigh Heads
+MED0001379552,heidi,dreiling,Swan Bay,DR,https://www.halaxy.com/profile/dr-heidi-dreiling/gp-general-practitioner/318904,gp-general-practitioner,Dr J P Henley,03 6334 5500,"Suite 7, QV Centre, 7 High St",Launceston,7250,halaxy_sitemap,2026-04-29T13:00:07,match=exact|suburb_mismatch:ahpra=Swan Bay/halaxy=Launceston
+MED0001375355,merran,dyer,Sheffield,DR,,,,,,,,no_sitemap_match,2026-04-29T13:00:09,
+MED0001200544,sarah,edwards,Howrah,DS,https://www.halaxy.com/profile/dr-p-edwards/gp-general-practitioner/321570,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:09,match=token_initial:p|halaxy_postcode=3000
+MED0000940508,alison,edwards,Hobart,DS,,,,,,,,no_sitemap_match,2026-04-29T13:00:11,
+MED0001400114,rachel,goodwin,Kingston,DW,,,,,,,,no_sitemap_match,2026-04-29T13:00:11,
+MED0002073462,catherine,kennedy,Cygnet,DY,,,,,,,,no_sitemap_match,2026-04-29T13:00:11,
+MED0001756894,ruth,kearon,Hobart,EA,,,,,,,,no_sitemap_match,2026-04-29T13:00:11,
+MED0001388586,catherine,jeanneret,Bellerive,EA,https://www.halaxy.com/profile/dr-cath-jeanneret/gp-general-practitioner/322621,gp-general-practitioner,Lauderdale Doctors surgery,03 6282 1333,444 South Arm Road,Lauderdale,7021,halaxy_sitemap,2026-04-29T13:00:11,match=last_unique|suburb_mismatch:ahpra=Bellerive/halaxy=Lauderdale
+MED0001371873,elizabeth,webber,Hobart,EB,https://www.halaxy.com/profile/dr-elizabeth-webber/gp-general-practitioner/326280,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T13:00:14,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Kingston
+MED0001403101,robyn,giec,Hobart,EC,,,,,,,,no_sitemap_match,2026-04-29T13:00:15,
+MED0000942346,jaclyn,o'keefe,Launceston,EF,,,,,,,,no_sitemap_match,2026-04-29T13:00:15,
+MED0001780240,eliza,reid,New Town,EI,,,,,,,,no_sitemap_match,2026-04-29T13:00:15,
+MED0000944670,alexandra,seidel,Huonville,EI,https://www.halaxy.com/profile/dr-bastian-seidel/gp-general-practitioner/324502,gp-general-practitioner,Huon Valley Health Centre,6264 2800,85 Main Rd,Huonville,7109,halaxy_sitemap,2026-04-29T13:00:15,match=last_unique
+MED0000974367,monica,mylek-simpson,Kingston Beach,EK,,,,,,,,no_sitemap_match,2026-04-29T13:00:17,
+MED0001347841,krystyna,wnekowski,Hobart,EK,,,,,,,,no_sitemap_match,2026-04-29T13:00:17,
+MED0000940580,victoria,whelan,Howrah,EL,https://www.halaxy.com/profile/dr-victoria-whelan/gp-general-practitioner/358780,gp-general-practitioner,Eastern Shore Doctors,6282 1333,444 South Arm Road,Lauderdale,7021,halaxy_sitemap,2026-04-29T13:00:17,match=exact|suburb_mismatch:ahpra=Howrah/halaxy=Lauderdale
+MED0001388598,nicolle,elkerton,South Hobart,EL,https://www.halaxy.com/profile/dr-andrew-elkerton/gp-general-practitioner/326265,gp-general-practitioner,Augusta Road Medical Centre,03 6278 1744,120 Augusta Road,Lenah Valley,7008,halaxy_sitemap,2026-04-29T13:00:19,match=last_unique|suburb_mismatch:ahpra=South Hobart/halaxy=Lenah Valley
+MED0001675046,sarah,freeman,Hobart,EM,,,,,,,,no_sitemap_match,2026-04-29T13:00:21,
+MED0001526942,joanne,green,Kingston,EN,https://www.halaxy.com/profile/dr-joanne-green/gp-general-practitioner/326347,gp-general-practitioner,Kingborough Medical Centre,03 6229 3434,9-11 John Street,Kingston,7050,halaxy_sitemap,2026-04-29T13:00:21,match=exact
+MED0000943243,kathryn,ogden,Launceston,EN,https://www.halaxy.com/profile/dr-edward-ogden/gp-general-practitioner/321828,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:23,match=last_unique|halaxy_postcode=3109
+MED0001378727,louise,owen,Hobart,EN,,,,,,,,no_sitemap_match,2026-04-29T13:00:24,
+MED0002308310,krystal,green,Devonport,EN,https://www.halaxy.com/profile/dr-krystal-green/gp-general-practitioner/1444511,gp-general-practitioner,Collected Minds GP,03 5753 6621,PO Box 308,Mansfield,3724,halaxy_sitemap,2026-04-29T13:00:24,match=exact|suburb_mismatch:ahpra=Devonport/halaxy=Mansfield
+MED0001206296,emma,green,Norwood,EN,,,,,,,,no_sitemap_match,2026-04-29T13:00:26,
+MED0001369235,patricia,shephard,TAS,EP,https://www.halaxy.com/profile/dr-patricia-shephard/gp-general-practitioner/326288,gp-general-practitioner,Barrack Street Practice,03 6223 1055,5a Barrack Street,Hobart,7000,halaxy_sitemap,2026-04-29T13:00:26,match=exact|suburb_mismatch:ahpra=TAS/halaxy=Hobart
+MED0001656711,sarah,shepherd,Launceston,EP,https://www.halaxy.com/profile/dr-sarah-shepherd/gp-general-practitioner/319159,gp-general-practitioner,Newstead Medical,03 6331 1088,165 Elphin Rd,Newstead,7250,halaxy_sitemap,2026-04-29T13:00:28,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Newstead
+MED0000942224,deborah,peters,Battery Point,ER,https://www.halaxy.com/profile/dr-deborah-peters/gp-general-practitioner/326397,gp-general-practitioner,City Doctors and Travel Clinic,03 6231 3003,188 Collins Street,Hobart,7000,halaxy_sitemap,2026-04-29T13:00:30,match=exact|suburb_mismatch:ahpra=Battery Point/halaxy=Hobart
+MED0001396646,christine,chuter,Hobart,ER,https://www.halaxy.com/profile/dr-christine-chuter/gp-general-practitioner/326407,gp-general-practitioner,Rosny Doctors,03 6244 1058,7 Ross Avenue,Rosny Park,7018,halaxy_sitemap,2026-04-29T13:00:32,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Rosny Park
+MED0001685661,jayasuriya,perera,Somerset,ER,https://www.halaxy.com/profile/dr-thanuja-perera/gp-general-practitioner/330327,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:34,match=token:thanuja|halaxy_postcode=3064
+MED0001355437,leanne,jones,East Launceston,ES,,,,,,,,no_sitemap_match,2026-04-29T13:00:35,
+MED0001375385,luz,montes,South Hobart,ES,,,,,,,,no_sitemap_match,2026-04-29T13:00:35,
+MED0001400118,faline,howes,Hobart,ES,,,,,,,,no_sitemap_match,2026-04-29T13:00:35,
+MED0000942259,catrina,leesong,Launceston,ES,,,,,,,,no_sitemap_match,2026-04-29T13:00:35,
+MED0001834790,sara,freshney,Launceston,ES,https://www.halaxy.com/profile/dr-rebecca-freshney/gp-general-practitioner/335267,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:35,match=last_unique|halaxy_postcode=4570
+MED0000944812,annabelle,nones,Launceston,ES,,,,,,,,no_sitemap_match,2026-04-29T13:00:37,
+MED0000943535,jennifer,presser,Rosny Park,ES,,,,,,,,no_sitemap_match,2026-04-29T13:00:37,
+MED0001661633,jenna,joester,Hobart,ES,,,,,,,,no_sitemap_match,2026-04-29T13:00:37,
+MED0001792685,sally,street,Latrobe,ET,,,,,,,,no_sitemap_match,2026-04-29T13:00:37,
+MED0001661790,ingrid,smethurst,Cygnet,ET,,,,,,,,no_sitemap_match,2026-04-29T13:00:37,
+MED0000957363,anna,seth,North Hobart,ET,https://www.halaxy.com/profile/dr-anna-seth/gp-general-practitioner/352824,gp-general-practitioner,John Street Medical Centre,6229 1987,5 John St,Kingston,7050,halaxy_sitemap,2026-04-29T13:00:37,match=exact|suburb_mismatch:ahpra=North Hobart/halaxy=Kingston
+MED0000940581,emma,wherrett,Kingston,ET,,,,,,,,no_sitemap_match,2026-04-29T13:00:39,
+MED0001396625,caroline,stewart,Kings Meadows,EW,,,,,,,,no_sitemap_match,2026-04-29T13:00:39,
+MED0000936060,vanessa,hewson,Cygnet,EW,,,,,,,,no_sitemap_match,2026-04-29T13:00:39,
+MED0001602210,claire,hewer,Hobart,EW,,,,,,,,no_sitemap_match,2026-04-29T13:00:39,
+MED0001193606,angela,lewis,Cygnet,EW,,,,,,,,no_sitemap_match,2026-04-29T13:00:39,
+MED0001602495,meredith,stewart,Devonport,EW,,,,,,,,no_sitemap_match,2026-04-29T13:00:39,
+MED0000939806,natalie,hopley,Prospect,EY,https://www.halaxy.com/profile/dr-n-hopley/gp-general-practitioner/317476,gp-general-practitioner,Prospect Medical Centre,633447991,4 Trotters Lane,Prospect,7250,halaxy_sitemap,2026-04-29T13:00:39,match=initial
+MED0001674075,catherine,woolley,Howrah,EY,,,,,,,,no_sitemap_match,2026-04-29T13:00:40,
+MED0001677066,rose,tilsley,Launceston,EY,https://www.halaxy.com/profile/dr-rose-tilsley/gp-general-practitioner/319350,gp-general-practitioner,West Tamar Health,Not available,1 Windsor Drive,Riverside,7250,halaxy_sitemap,2026-04-29T13:00:40,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Riverside
+MED0002071324,erin,o'hare,Huonville,FD,,,,,,,,no_sitemap_match,2026-04-29T13:00:42,
+MED0001928828,karinna,fyfe,Newstead,FE,https://www.halaxy.com/profile/dr-elyse-fyfe/gp-general-practitioner/359547,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:42,match=last_unique|halaxy_postcode=2519
+MED0001347907,fiona,joske,Longford,FN,https://www.halaxy.com/profile/dr-fiona-joske/gp-general-practitioner/333214,gp-general-practitioner,Northern Midlands Medical Services,03 6391 1170,28 George St,Longford,7301,halaxy_sitemap,2026-04-29T13:00:44,match=exact
+MED0001406017,jessica,strugnell,Lenah Valley,GN,,,,,,,,no_sitemap_match,2026-04-29T13:00:45,
+MED0001880561,nia,owens,TAS,GN,,,,,,,,no_sitemap_match,2026-04-29T13:00:45,
+MED0000942299,jane,gorman,Hobart,GO,,,,,,,,no_sitemap_match,2026-04-29T13:00:45,
+MED0001660027,rebecca,grant,New Town,GR,,,,,,,,no_sitemap_match,2026-04-29T13:00:45,
+MED0001375376,kathleen,greenhill,Hobart,GR,,,,,,,,no_sitemap_match,2026-04-29T13:00:45,
+MED0001347868,claire,kingston,Norwood,GS,https://www.halaxy.com/profile/dr-claire-kingston/gp-general-practitioner/329923,gp-general-practitioner,Kings Meadows Medical Centre,03 6344 5722,86C Hobart Road,Kings Meadows,7249,halaxy_sitemap,2026-04-29T13:00:45,match=exact|suburb_mismatch:ahpra=Norwood/halaxy=Kings Meadows
+MED0002065500,isabel,illingworth,Summerhill,GW,,,,,,,,no_sitemap_match,2026-04-29T13:00:47,
+MED0002146902,miranda,hann,Hobart,HA,https://www.halaxy.com/profile/dr-jennifer-hann/gp-general-practitioner/318014,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:47,match=last_unique|halaxy_postcode=4122
+MED0001794897,marissa,harpur,Sorell,HA,https://www.halaxy.com/profile/dr-tim-harpur/gp-general-practitioner/322331,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:49,match=last_unique|halaxy_postcode=2099
+MED0002327461,frankie,whitwell,South Hobart,HI,,,,,,,,no_sitemap_match,2026-04-29T13:00:50,
+MED0001867432,jessica,shill,Huonville,HI,https://www.halaxy.com/profile/dr-jessica-shill/gp-general-practitioner/356050,gp-general-practitioner,South Coast Medical,03 5988 8604,2841 Pt Nepean Rd,Blairgowrie,3942,halaxy_sitemap,2026-04-29T13:00:50,match=exact|suburb_mismatch:ahpra=Huonville/halaxy=Blairgowrie
+MED0000941306,susan,shires,Ulverstone,HI,,,,,,,,no_sitemap_match,2026-04-29T13:00:52,
+MED0001400115,anna,how,Mount Stuart,HI,https://www.halaxy.com/profile/dr-anna-how/gp-general-practitioner/326328,gp-general-practitioner,Augusta Road Medical Centre,03 6278 1744,120 Augusta Road,Lenah Valley,7008,halaxy_sitemap,2026-04-29T13:00:52,match=exact|suburb_mismatch:ahpra=Mount Stuart/halaxy=Lenah Valley
+MED0000944553,joanna,howe,Lenah Valley,HI,,,,,,,,no_sitemap_match,2026-04-29T13:00:55,
+MED0001890920,amber,muller,Sorell,HL,,,,,,,,no_sitemap_match,2026-04-29T13:00:55,
+MED0001665444,katrina,tellesson,Launceston,HL,https://www.halaxy.com/profile/dr-katrina-tellesson/gp-general-practitioner/326133,gp-general-practitioner,Saunders Street Clinic,03 6442 1700,37 Jackson Street,Wynyard,7325,halaxy_sitemap,2026-04-29T13:00:55,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Wynyard
+MED0001857994,gillian,mee,Lenah Valley,HM,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0001853663,sarah,thompson,Lenah Valley,HO,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0001664381,catherine,horan,New Town,HO,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0001665593,rebecca,shugg,Devonport,HU,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0001388594,alison,thurstans,Howrah,HU,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0002423024,dilani,wijesooriya,South Burnie,IJ,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0001353189,anne,wilson,Summerhill,IL,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0001732613,stephanie,mills,Kingston,IL,,,,,,,,no_sitemap_match,2026-04-29T13:00:56,
+MED0000991765,denise,wild,Claremont,IL,https://www.halaxy.com/profile/dr-d-wild/gp-general-practitioner/321613,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:00:56,match=initial|halaxy_postcode=3000
+MED0000944767,seonaid,simpson,Launceston,IM,,,,,,,,no_sitemap_match,2026-04-29T13:00:57,
+MED0001950701,hangidi,idirimanna,Devonport,IM,,,,,,,,no_sitemap_match,2026-04-29T13:00:57,
+MED0001674038,rachel,nimmo,Hobart,IM,,,,,,,,no_sitemap_match,2026-04-29T13:00:57,
+MED0001780252,margaux,smolinski,Launceston,IN,https://www.halaxy.com/profile/dr-margaux-smolinski/gp-general-practitioner/318764,gp-general-practitioner,Scottsdale Doctors Surgery,03 6352 2522,2 Fosters Rd,Scottsdale,7260,halaxy_sitemap,2026-04-29T13:00:57,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Scottsdale
+MED0000942192,elizabeth,elliott,South Hobart,IO,,,,,,,,no_sitemap_match,2026-04-29T13:00:59,
+MED0001993126,shanna,morris,Kingston,IS,,,,,,,,no_sitemap_match,2026-04-29T13:00:59,
+MED0001602349,jennifer,misson,Hobart,IS,https://www.halaxy.com/profile/dr-jennifer-misson/gp-general-practitioner/360075,gp-general-practitioner,Sandy Bay Clinic,6223 6822,270 Sandy Bay Road,Sandy Bay,7005,halaxy_sitemap,2026-04-29T13:00:59,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Sandy Bay
+MED0001217103,elspeth,harrison,Ulverstone,IS,,,,,,,,no_sitemap_match,2026-04-29T13:01:01,
+MED0001355460,felicity,wivell,Newstead,IV,https://www.halaxy.com/profile/dr-felicity-wivell/gp-general-practitioner/317604,gp-general-practitioner,Newstead Medical,6331 1088,165 Elphin Road,Newstead,7250,halaxy_sitemap,2026-04-29T13:01:01,match=exact
+MED0001179072,kieran,nixon,Rosny Park,IX,https://www.halaxy.com/profile/dr-kieran-nixon/gp-general-practitioner/326694,gp-general-practitioner,Pymble family Doctos,8405 3900,99-101 Grandview St,Pymble,,halaxy_sitemap,2026-04-29T13:01:03,match=exact|suburb_mismatch:ahpra=Rosny Park/halaxy=Pymble
+MED0001355440,susan,lizner,Sorell,IZ,https://www.halaxy.com/profile/dr-susan-lizner/gp-general-practitioner/326362,gp-general-practitioner,Sorell Medical Practice,03 6265 2341,Shop 11 12 Cole Street,Sorell,7172,halaxy_sitemap,2026-04-29T13:01:05,match=exact
+MED0002142255,elizabeth,jenkins,Hobart,JE,,,,,,,,no_sitemap_match,2026-04-29T13:01:06,
+MED0001656963,marita,jones,Lauderdale,JO,https://www.halaxy.com/profile/dr-marita-jones/gp-general-practitioner/322625,gp-general-practitioner,Huon Valley Health Centre,6264 2800,85 Main Rd,Huonville,7109,halaxy_sitemap,2026-04-29T13:01:07,match=exact|suburb_mismatch:ahpra=Lauderdale/halaxy=Huonville
+MED0001371827,alison,kinnane,South Hobart,KI,,,,,,,,no_sitemap_match,2026-04-29T13:01:08,
+MED0001074297,katherine,kloza,Kingston,KL,,,,,,,,no_sitemap_match,2026-04-29T13:01:08,
+MED0000939000,sarah,sparks,Hobart,KS,,,,,,,,no_sitemap_match,2026-04-29T13:01:08,
+MED0000942228,columbine,mullins,Rosny Park,LI,https://www.halaxy.com/profile/dr-columbine-mullins/gp-general-practitioner/326366,gp-general-practitioner,Greenpoint Medical Services,03 6263 7349,9-11 Hurst Street,Bridgewater,7050,halaxy_sitemap,2026-04-29T13:01:09,match=exact|suburb_mismatch:ahpra=Rosny Park/halaxy=Bridgewater
+MED0001366282,madeleine,lovell,Rosny Park,LO,https://www.halaxy.com/profile/dr-madeleine-lovell/gp-general-practitioner/326295,gp-general-practitioner,Rosny Doctors,03 6244 1058,7 Ross Avenue,Rosny Park,7018,halaxy_sitemap,2026-04-29T13:01:11,match=exact
+MED0002148398,esther,long,Huonville,LO,,,,,,,,no_sitemap_match,2026-04-29T13:01:12,
+MED0000989820,elizabeth,lord,Launceston,LO,https://www.halaxy.com/profile/dr-elizabeth-lord/gp-general-practitioner/327519,gp-general-practitioner,Longford Medical Centre,03 6391 1170,28 George Street,Longford,7301,halaxy_sitemap,2026-04-29T13:01:12,match=exact|suburb_mismatch:ahpra=Launceston/halaxy=Longford
+MED0001404608,rosalette,prinsloo,Kings Meadows,LO,,,,,,,,no_sitemap_match,2026-04-29T13:01:13,
+MED0001674208,catherine,moult,Glenorchy,LT,https://www.halaxy.com/profile/dr-catherine-moult/gp-general-practitioner/323896,gp-general-practitioner,Wynlorel General Practice,9509 4488,1368 High Street,Malvern,3144,halaxy_sitemap,2026-04-29T13:01:13,match=exact|suburb_mismatch:ahpra=Glenorchy/halaxy=Malvern
+MED0001208210,cassandra,worme,Hobart,LZ,https://www.halaxy.com/profile/dr-cassandra-worme/gp-general-practitioner/328737,gp-general-practitioner,Cassandra Worme,5432 6001,Elmore Medical Practice 46-48 Jeffrey Street,Elmore,3558,halaxy_sitemap,2026-04-29T13:01:15,match=exact|suburb_mismatch:ahpra=Hobart/halaxy=Elmore
+MED0001781312,catherine,oermann,Kingston,MA,https://www.halaxy.com/profile/dr-catherine-oermann/gp-general-practitioner/332864,gp-general-practitioner,Berri Medical Clinic,08 8582 2855,Cornwall Street,Berri,5343,halaxy_sitemap,2026-04-29T13:01:17,match=exact|suburb_mismatch:ahpra=Kingston/halaxy=Berri
+MED0001780078,rebekah,moore,Kings Meadows,MO,https://www.halaxy.com/profile/dr-r-moore/gp-general-practitioner/321595,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:01:18,match=initial|halaxy_postcode=3068
+MED0000944717,isobel,morse,Launceston,MO,,,,,,,,no_sitemap_match,2026-04-29T13:01:20,
+MED0001928018,sarah,henderson,Lenah Valley,ND,,,,,,,,no_sitemap_match,2026-04-29T13:01:20,
+MED0001381869,joanne,young,Kingston,NG,,,,,,,,no_sitemap_match,2026-04-29T13:01:20,
+MED0002072558,sacha,rose,Hobart,OS,,,,,,,,no_sitemap_match,2026-04-29T13:01:20,
+MED0000943346,bianca,perera,Newstead,PE,https://www.halaxy.com/profile/dr-bianca-perera/gp-general-practitioner/358353,gp-general-practitioner,Encompass Medical Centre,8545 9955,533 Bleckburn Rd,Mt Waverly,3149,halaxy_sitemap,2026-04-29T13:01:20,match=exact|suburb_mismatch:ahpra=Newstead/halaxy=Mt Waverly
+MED0001619284,hannah,ward,Hobart,RD,,,,,,,,no_sitemap_match,2026-04-29T13:01:22,
+MED0002329964,helena,ward,Montello,RN,,,,,,,,no_sitemap_match,2026-04-29T13:01:22,
+MED0001358158,arlene,suttar,West Hobart,SU,https://www.halaxy.com/profile/dr-arlene-suttar/gp-general-practitioner/326325,gp-general-practitioner,West Hobart Medical Centre,03 6231 5100,111 Hill Street,West Hobart,7000,halaxy_sitemap,2026-04-29T13:01:22,match=exact
