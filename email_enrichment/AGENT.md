@@ -3,66 +3,43 @@
 You are the email enrichment agent for the ARPHA statdoctor scraper.
 Working directory: `/Users/jasminebaldevraj/Desktop/ARPHA/statdoctor_scrapper/email_enrichment`
 
-**READ `ROADMAP.md` first**, then skim `git log --oneline -10` for recent
-commits. This AGENT.md captures the current live state including work done
-on 2026-04-25/26 that post-dates the ROADMAP.
+**READ `README.md` first** for an overview written for someone who didn't
+live through the fanout. Then skim `git log --oneline -15` for recent
+commits. This AGENT.md is the *operational* counterpart — what's currently
+in flight, recent gotchas, and what to do next.
 
-## RESUME-FROM-HERE (for "pick up the word create agent.md")
+## RESUME-FROM-HERE
 
-**Last paused:** 2026-04-26 mid-fan-out. VIC + NSW shipped; QLD ~80% complete;
-SA/WA/TAS/NT not yet started. State of play right before the pause:
+**Last updated:** 2026-04-29 — all-states fanout complete and pushed via
+PR #1 (`email_enrichment/all-states-fanout` → `main`).
 
 | State | Status | Sendable | Notes |
 |---|---|---|---|
-| VIC | ✅ COMPLETE | 18,853 / 24,997 (75.4%) | Committed; `db_ARPHA/VIC_SUMMARY.md` |
-| NSW | ✅ COMPLETE | 33,367 / 40,200 (83.0%) | Committed; `db_ARPHA/NSW_SUMMARY.md` |
-| QLD | ✅ COMPLETE | 22,317 / 27,032 (82.6%) | Committed (2026-04-28); `db_ARPHA/QLD_SUMMARY.md` |
-| SA  | ✅ COMPLETE | 10,008 / 11,927 (83.9%) | Committed (2026-04-28); `db_ARPHA/SA_SUMMARY.md` |
-| WA  | ✅ COMPLETE | 13,724 / 16,591 (82.7%) | Committed (2026-04-29); `db_ARPHA/WA_SUMMARY.md` |
-| TAS | ✅ COMPLETE |  3,418 /  4,193 (81.5%) | Committed (2026-04-29); `db_ARPHA/TAS_SUMMARY.md` |
-| NT  | ✅ COMPLETE |  1,569 /  1,897 (82.7%) | Committed (2026-04-29); `db_ARPHA/NT_SUMMARY.md` |
+| VIC | ✅ COMPLETE | 18,853 / 24,997 (75.4%) | `db_ARPHA/VIC_SUMMARY.md` |
+| NSW | ✅ COMPLETE | 33,367 / 40,200 (83.0%) | `db_ARPHA/NSW_SUMMARY.md` |
+| QLD | ✅ COMPLETE | 22,317 / 27,032 (82.6%) | `db_ARPHA/QLD_SUMMARY.md` |
+| SA  | ✅ COMPLETE | 10,008 / 11,927 (83.9%) | `db_ARPHA/SA_SUMMARY.md` |
+| WA  | ✅ COMPLETE | 13,724 / 16,591 (82.7%) | `db_ARPHA/WA_SUMMARY.md` |
+| TAS | ✅ COMPLETE |  3,418 /  4,193 (81.5%) | `db_ARPHA/TAS_SUMMARY.md` |
+| NT  | ✅ COMPLETE |  1,569 /  1,897 (82.7%) | `db_ARPHA/NT_SUMMARY.md` |
 
-**ALL 7 STATES COMPLETE.** National total: **103,256 sendable / 126,837 practitioners (81.4%)**. Next: national merge (Task #6) — produce `db_ARPHA/all_states_practitioners_enriched.csv` deduped on AHPRA registration number.
+**ALL 7 STATES COMPLETE.** National total: **103,256 sendable / 126,837
+practitioners (81.4%)**.
 
-### What to do when resuming
+### What's next
 
-1. **Confirm git state** is clean / matches last pushed commit on `main`.
-2. **Finish QLD:**
-   ```bash
-   cd email_enrichment
-   nohup ../venv/bin/python -u gp_domain_guesser.py --state qld > /tmp/guess_qld.log 2>&1 &
-   # NOTE: `-u` is mandatory — without it stdout is block-buffered when
-   # redirected and you can't tell if the run is hung or just quiet.
-   # Expected runtime with the 2026-04-28 patch (15-candidate cap + 30s
-   # per-cluster budget): ~30-90 min for ~1,121 clusters.
-   # When done: re-apply, Disify any pending, write QLD_SUMMARY.md, commit.
-   ```
-3. **Then SA → WA → TAS → NT**, one state at a time. Per-state recipe:
-   ```bash
-   ../venv/bin/python fetch_aihw_hospitals.py --state {STATE}
-   # Inspect data/hospitals_{state}_raw.csv lhn_name distribution.
-   # Add LHN_DOMAINS entries in resolve_domains.py — query MX records before
-   # adding (most LHN websites have NO MX; mail centralized at state-health
-   # domain like health.{state}.gov.au).
-   ../venv/bin/python resolve_domains.py --state {STATE}
-   ../venv/bin/python build_postcode_index.py --state {STATE}
-   ../venv/bin/python gp_resolver_sitemap.py --state {STATE} --all
-   ../venv/bin/python gp_domain_guesser.py --state {STATE}
-   ../venv/bin/python apply_to_practitioners.py --state {STATE}
-   # ⚠ TRUST-DOMAIN SEED: if the state-health centralized domain (e.g.
-   # sahealth.sa.gov.au) has zero catch_all entries in disify_probe_log.csv,
-   # the first apply will leave thousands of rows "pending" because
-   # _load_trusted_domains() can't promote a domain it has never seen.
-   # FIX: probe ONE email on that domain first (one-off Disify call,
-   # append a catch_all row to disify_probe_log.csv), then re-apply.
-   # Avoids ~10k redundant Disify calls. See SA_SUMMARY.md "Methodology".
-   ../venv/bin/python disify_verify.py        # for any remaining GP-clinic emails
-   ../venv/bin/python apply_to_practitioners.py --state {STATE}   # final
-   ```
-4. **Then national merge** (Task #6): produce `db_ARPHA/all_states_practitioners_enriched.csv`
-   deduped on AHPRA registration number.
-5. **Held design questions** (sender pipeline) — do NOT start without user
-   answering the 4 open questions in the "OPEN QUESTIONS — sender pipeline" section below.
+1. **National merge** — produce `db_ARPHA/all_states_practitioners_enriched.csv`
+   deduped on AHPRA `practitioner_id`. Some practitioners hold multi-state
+   registration; pick the row whose `pipeline=email` has
+   `email_confidence=catch_all` if available, else the LinkedIn pipeline
+   row. Not yet built — held pending user direction.
+2. **Sender pipeline design** — blocked on the user answering the open
+   questions in the "Held design questions" section below. Do NOT start
+   building before they're answered.
+3. **Re-run a state** (e.g. after a fresh AHPRA scrape) — see
+   `README.md` "Run a new state (or re-run an existing one)" for the
+   end-to-end recipe. The trust-domain seed pattern is a critical
+   pre-step; it lives there too.
 
 ### Open questions — held by user (do not start until answered)
 
@@ -77,9 +54,13 @@ SA/WA/TAS/NT not yet started. State of play right before the pause:
 ### Background processes to check on resume
 
 - Any zombie `gp_resolver_sitemap.py`, `gp_domain_guesser.py`, `disify_verify.py`,
-  `reverify_unverified.py` from before the pause? Run `ps -ef | grep -E "resolver|guesser|disify|reverify" | grep -v grep` and kill stale.
+  `reverify_unverified.py` from before the pause? Run `ps -ef | grep -E "resolver|guesser|disify|reverify" | grep -v grep` and kill stale. (Currently: none expected — fanout is done.)
 - Halaxy index (`data/halaxy_sitemap_index.json`) is shared across states — do NOT regenerate.
 - Disify probe log (`data/disify_probe_log.csv`) is shared — trust-domain promotion relies on it.
+- All four `_seed_{state}` rows in the Disify log (one per state-health
+  centralized domain seeded during the fanout) must be preserved. They
+  are what makes trust-domain promotion work on a re-apply without
+  re-Disifying ~80k emails.
 
 ## Current state (2026-04-26)
 
