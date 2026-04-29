@@ -1,0 +1,15 @@
+reporting_unit_code,name,private,closed,latitude,longitude,lhn_code,lhn_name,phn_code,phn_name
+H0714,Royal Hobart Hospital,False,False,-42.880028,147.330136,LHN604,Tasmanian Health Service,PHN601,Tasmania
+H0721,Launceston General Hospital,False,False,-41.446634,147.142059,LHN604,Tasmanian Health Service,PHN601,Tasmania
+H0731,North West Regional Hospital,False,False,-41.048385,145.880842,LHN604,Tasmanian Health Service,PHN601,Tasmania
+H0735,Mersey Community Hospital,False,False,-41.229052,146.422445,LHN604,Tasmanian Health Service,PHN601,Tasmania
+H5037,Calvary - Lenah Valley Hospital,True,False,-42.866099,147.303614,,,,
+H5038,Calvary - St John's Hospital,True,False,-42.895314,147.305975,,,,
+H5039,Calvary - St Luke's Hospital,True,False,-41.433895,147.149521,,,,
+H5040,Calvary - St Vincent's Hospital,True,False,-41.441013,147.141308,,,,
+H5093,Hobart Private Hospital,True,False,-42.880752,147.329886,,,,
+H5191,St Helen's Private Hospital,True,False,-42.886839,147.325791,,,,
+H5225,The Eye Hospital,True,False,-41.444592,147.141609,,,,
+H5229,The Hobart Clinic,True,False,-42.905613,147.435278,,,,
+H5359,North West Private Hospital (Tas),True,False,-41.0453,145.878784,,,,
+H5394,Icon Cancer Centre Hobart,True,False,-42.88067,147.32385,,,,

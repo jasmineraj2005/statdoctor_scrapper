@@ -1,0 +1,15 @@
+reporting_unit_code,name,private,latitude,longitude,lhn_name,phn_name,health_service_name,domain,tier,resolution_method,mx_ok
+H0714,Royal Hobart Hospital,False,-42.880028,147.330136,Tasmanian Health Service,Tasmania,,health.tas.gov.au,unknown,lhn:tasmanian health service,True
+H0721,Launceston General Hospital,False,-41.446634,147.142059,Tasmanian Health Service,Tasmania,,health.tas.gov.au,unknown,lhn:tasmanian health service,True
+H0731,North West Regional Hospital,False,-41.048385,145.880842,Tasmanian Health Service,Tasmania,,health.tas.gov.au,unknown,lhn:tasmanian health service,True
+H0735,Mersey Community Hospital,False,-41.229052,146.422445,Tasmanian Health Service,Tasmania,,health.tas.gov.au,unknown,lhn:tasmanian health service,True
+H5037,Calvary - Lenah Valley Hospital,True,-42.866099,147.303614,,,,,private,,False
+H5038,Calvary - St John's Hospital,True,-42.895314,147.305975,,,,,private,,False
+H5039,Calvary - St Luke's Hospital,True,-41.433895,147.149521,,,,,private,,False
+H5040,Calvary - St Vincent's Hospital,True,-41.441013,147.141308,,,,,tertiary,,False
+H5093,Hobart Private Hospital,True,-42.880752,147.329886,,,,,private,,False
+H5191,St Helen's Private Hospital,True,-42.886839,147.325791,,,,,private,,False
+H5225,The Eye Hospital,True,-41.444592,147.141609,,,,,private,,False
+H5229,The Hobart Clinic,True,-42.905613,147.435278,,,,,private,,False
+H5359,North West Private Hospital (Tas),True,-41.0453,145.878784,,,,,private,,False
+H5394,Icon Cancer Centre Hobart,True,-42.88067,147.32385,,,,,private,,False

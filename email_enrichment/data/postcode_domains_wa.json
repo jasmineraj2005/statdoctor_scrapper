@@ -1,0 +1,3564 @@
+{
+  "6000": {
+    "centroid": [
+      -31.94876,
+      115.85991
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Royal Perth Hospital Wellington Street Campus",
+        "tier": "unknown",
+        "km": 0.86
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 2.71
+      }
+    ]
+  },
+  "6001": {
+    "centroid": [
+      -31.99212,
+      115.76323
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "State Forensic Mental Health Service",
+        "tier": "unknown",
+        "km": 4.2
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 8.13
+      }
+    ]
+  },
+  "6003": {
+    "centroid": [
+      -31.93927,
+      115.86914
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 1.52
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Next Step Drug And Alcohol Services, East Perth",
+        "tier": "unknown",
+        "km": 1.57
+      }
+    ]
+  },
+  "6004": {
+    "centroid": [
+      -31.95693,
+      115.8746
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Next Step Drug And Alcohol Services, East Perth",
+        "tier": "unknown",
+        "km": 0.65
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 2.45
+      }
+    ]
+  },
+  "6005": {
+    "centroid": [
+      -31.95707,
+      115.8369
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "King Edward Memorial Hospital",
+        "tier": "unknown",
+        "km": 1.89
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Hospital",
+        "tier": "private",
+        "km": 2.02
+      }
+    ]
+  },
+  "6006": {
+    "centroid": [
+      -31.92934,
+      115.85291
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Hospital",
+        "tier": "private",
+        "km": 2.84
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Royal Perth Hospital Wellington Street Campus",
+        "tier": "unknown",
+        "km": 3.04
+      }
+    ]
+  },
+  "6007": {
+    "centroid": [
+      -31.93567,
+      115.83433
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Hospital",
+        "tier": "private",
+        "km": 0.98
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "King Edward Memorial Hospital",
+        "tier": "unknown",
+        "km": 2.19
+      }
+    ]
+  },
+  "6008": {
+    "centroid": [
+      -31.9566,
+      115.81143
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Selby Authorised Lodge",
+        "tier": "unknown",
+        "km": 0.91
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 2.16
+      }
+    ]
+  },
+  "6009": {
+    "centroid": [
+      -31.98579,
+      115.80469
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Perth Children's Hospital",
+        "tier": "unknown",
+        "km": 2.16
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Hospital",
+        "tier": "private",
+        "km": 5.36
+      }
+    ]
+  },
+  "6010": {
+    "centroid": [
+      -31.97165,
+      115.77639
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "State Forensic Mental Health Service",
+        "tier": "unknown",
+        "km": 1.65
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 5.69
+      }
+    ]
+  },
+  "6011": {
+    "centroid": [
+      -31.99637,
+      115.75765
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "State Forensic Mental Health Service",
+        "tier": "unknown",
+        "km": 4.89
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 8.83
+      }
+    ]
+  },
+  "6012": {
+    "centroid": [
+      -32.01598,
+      115.7634
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fremantle Hospital and Health Service",
+        "tier": "unknown",
+        "km": 4.84
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 9.59
+      }
+    ]
+  },
+  "6014": {
+    "centroid": [
+      -31.93639,
+      115.80817
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 1.58
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "King Edward Memorial Hospital",
+        "tier": "unknown",
+        "km": 1.81
+      }
+    ]
+  },
+  "6015": {
+    "centroid": [
+      -31.93845,
+      115.76468
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "State Forensic Mental Health Service",
+        "tier": "unknown",
+        "km": 3.36
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 5.62
+      }
+    ]
+  },
+  "6016": {
+    "centroid": [
+      -31.92122,
+      115.83118
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 2.24
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "King Edward Memorial Hospital",
+        "tier": "unknown",
+        "km": 3.42
+      }
+    ]
+  },
+  "6017": {
+    "centroid": [
+      -31.90836,
+      115.81456
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 2.66
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 3.68
+      }
+    ]
+  },
+  "6018": {
+    "centroid": [
+      -31.89196,
+      115.78682
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 1.82
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 6.44
+      }
+    ]
+  },
+  "6019": {
+    "centroid": [
+      -31.90733,
+      115.76918
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 4.11
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 6.36
+      }
+    ]
+  },
+  "6020": {
+    "centroid": [
+      -31.8527,
+      115.7654
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 5.24
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 11.22
+      }
+    ]
+  },
+  "6021": {
+    "centroid": [
+      -31.87167,
+      115.81193
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 1.73
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 7.73
+      }
+    ]
+  },
+  "6022": {
+    "centroid": [
+      -31.852,
+      115.80924
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 3.8
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 9.94
+      }
+    ]
+  },
+  "6023": {
+    "centroid": [
+      -31.83447,
+      115.77403
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 6.42
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 12.7
+      }
+    ]
+  },
+  "6024": {
+    "centroid": [
+      -31.83489,
+      115.80307
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 5.68
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 11.91
+      }
+    ]
+  },
+  "6025": {
+    "centroid": [
+      -31.79583,
+      115.75441
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 6.55
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 17.38
+      }
+    ]
+  },
+  "6026": {
+    "centroid": [
+      -31.80171,
+      115.79983
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 7.48
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 15.6
+      }
+    ]
+  },
+  "6027": {
+    "centroid": [
+      -31.76335,
+      115.75641
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 3.09
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 20.71
+      }
+    ]
+  },
+  "6028": {
+    "centroid": [
+      -31.73372,
+      115.74765
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 2.35
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 24.1
+      }
+    ]
+  },
+  "6029": {
+    "centroid": [
+      -31.8769,
+      115.75569
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 4.74
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 9.58
+      }
+    ]
+  },
+  "6030": {
+    "centroid": [
+      -31.68734,
+      115.71168
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 8.06
+      }
+    ]
+  },
+  "6031": {
+    "centroid": [
+      -31.69254,
+      115.77214
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 5.14
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 28.0
+      }
+    ]
+  },
+  "6032": {
+    "centroid": [
+      -31.64323,
+      115.74887
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 10.84
+      }
+    ]
+  },
+  "6035": {
+    "centroid": [
+      -31.52472,
+      115.7299
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 24.13
+      }
+    ]
+  },
+  "6036": {
+    "centroid": [
+      -31.64938,
+      115.70986
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 11.54
+      }
+    ]
+  },
+  "6037": {
+    "centroid": [
+      -31.48847,
+      115.61611
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 31.49
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 53.97
+      }
+    ]
+  },
+  "6038": {
+    "centroid": [
+      -32.28915,
+      115.72305
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 4.5
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 27.13
+      }
+    ]
+  },
+  "6044": {
+    "centroid": [
+      -30.97285,
+      115.42466
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Moora Hospital",
+        "tier": "unknown",
+        "km": 66.37
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 114.07
+      }
+    ]
+  },
+  "6050": {
+    "centroid": [
+      -31.93057,
+      115.87186
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 1.41
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Next Step Drug And Alcohol Services, East Perth",
+        "tier": "unknown",
+        "km": 2.55
+      }
+    ]
+  },
+  "6051": {
+    "centroid": [
+      -31.93811,
+      115.89959
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 1.39
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Next Step Drug And Alcohol Services, East Perth",
+        "tier": "unknown",
+        "km": 3.34
+      }
+    ]
+  },
+  "6052": {
+    "centroid": [
+      -31.91546,
+      115.88398
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 2.37
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Next Step Drug And Alcohol Services, East Perth",
+        "tier": "unknown",
+        "km": 4.44
+      }
+    ]
+  },
+  "6053": {
+    "centroid": [
+      -31.92086,
+      115.91485
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 3.33
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Next Step Drug And Alcohol Services, East Perth",
+        "tier": "unknown",
+        "km": 5.63
+      }
+    ]
+  },
+  "6054": {
+    "centroid": [
+      -31.9018,
+      115.94257
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 6.18
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 6.3
+      }
+    ]
+  },
+  "6055": {
+    "centroid": [
+      -31.85176,
+      115.98469
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 5.23
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 5.3
+      }
+    ]
+  },
+  "6056": {
+    "centroid": [
+      -31.8384,
+      116.0261
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 6.48
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 6.49
+      }
+    ]
+  },
+  "6057": {
+    "centroid": [
+      -31.94994,
+      116.00424
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalamunda Hospital",
+        "tier": "unknown",
+        "km": 5.6
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 6.16
+      }
+    ]
+  },
+  "6058": {
+    "centroid": [
+      -31.98524,
+      116.00669
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalamunda Hospital",
+        "tier": "unknown",
+        "km": 5.47
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 10.08
+      }
+    ]
+  },
+  "6059": {
+    "centroid": [
+      -31.88286,
+      115.86173
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 5.39
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 6.38
+      }
+    ]
+  },
+  "6060": {
+    "centroid": [
+      -31.90142,
+      115.84258
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 3.97
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 4.67
+      }
+    ]
+  },
+  "6061": {
+    "centroid": [
+      -31.86411,
+      115.84348
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 4.39
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 8.68
+      }
+    ]
+  },
+  "6062": {
+    "centroid": [
+      -31.88632,
+      115.89088
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 5.63
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Next Step Drug And Alcohol Services, East Perth",
+        "tier": "unknown",
+        "km": 7.74
+      }
+    ]
+  },
+  "6063": {
+    "centroid": [
+      -31.86287,
+      115.94001
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 7.28
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 7.41
+      }
+    ]
+  },
+  "6064": {
+    "centroid": [
+      -31.83533,
+      115.8491
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 7.02
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 11.77
+      }
+    ]
+  },
+  "6065": {
+    "centroid": [
+      -31.69444,
+      115.84533
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 8.53
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 27.02
+      }
+    ]
+  },
+  "6066": {
+    "centroid": [
+      -31.84269,
+      115.89651
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 9.92
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 10.51
+      }
+    ]
+  },
+  "6069": {
+    "centroid": [
+      -31.77303,
+      116.00503
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 13.52
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 13.55
+      }
+    ]
+  },
+  "6070": {
+    "centroid": [
+      -31.92904,
+      116.07927
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalamunda Hospital",
+        "tier": "unknown",
+        "km": 4.53
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 7.78
+      }
+    ]
+  },
+  "6071": {
+    "centroid": [
+      -31.88909,
+      116.10043
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 8.67
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 8.8
+      }
+    ]
+  },
+  "6073": {
+    "centroid": [
+      -31.94935,
+      116.28143
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalamunda Hospital",
+        "tier": "unknown",
+        "km": 20.95
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 26.56
+      }
+    ]
+  },
+  "6076": {
+    "centroid": [
+      -32.10896,
+      116.20826
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 17.93
+      }
+    ]
+  },
+  "6078": {
+    "centroid": [
+      -31.69444,
+      115.84533
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 8.53
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 27.02
+      }
+    ]
+  },
+  "6081": {
+    "centroid": [
+      -31.87605,
+      116.14607
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalamunda Hospital",
+        "tier": "unknown",
+        "km": 12.91
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 13.25
+      }
+    ]
+  },
+  "6082": {
+    "centroid": [
+      -31.73837,
+      116.29571
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 32.21
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 32.3
+      }
+    ]
+  },
+  "6083": {
+    "centroid": [
+      -31.79305,
+      116.19664
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 21.04
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 21.14
+      }
+    ]
+  },
+  "6084": {
+    "centroid": [
+      -31.62202,
+      116.07283
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 30.93
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 30.93
+      }
+    ]
+  },
+  "6090": {
+    "centroid": [
+      -31.86259,
+      115.89425
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 8.29
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Osborne Park Hospital",
+        "tier": "unknown",
+        "km": 8.85
+      }
+    ]
+  },
+  "6100": {
+    "centroid": [
+      -31.97173,
+      115.89603
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St James Transitional Care Unit",
+        "tier": "unknown",
+        "km": 3.01
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 4.03
+      }
+    ]
+  },
+  "6101": {
+    "centroid": [
+      -31.98525,
+      115.90858
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St James Transitional Care Unit",
+        "tier": "unknown",
+        "km": 1.2
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 5.84
+      }
+    ]
+  },
+  "6102": {
+    "centroid": [
+      -32.00468,
+      115.90806
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St James Transitional Care Unit",
+        "tier": "unknown",
+        "km": 0.99
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 7.87
+      }
+    ]
+  },
+  "6103": {
+    "centroid": [
+      -31.96036,
+      115.91346
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 3.76
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St James Transitional Care Unit",
+        "tier": "unknown",
+        "km": 3.97
+      }
+    ]
+  },
+  "6104": {
+    "centroid": [
+      -31.9655,
+      115.97763
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 6.45
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 8.37
+      }
+    ]
+  },
+  "6105": {
+    "centroid": [
+      -31.95388,
+      115.96329
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 6.62
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 7.64
+      }
+    ]
+  },
+  "6106": {
+    "centroid": [
+      -31.99208,
+      115.94556
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 2.22
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 8.4
+      }
+    ]
+  },
+  "6107": {
+    "centroid": [
+      -32.01766,
+      115.96714
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 3.94
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 11.88
+      }
+    ]
+  },
+  "6108": {
+    "centroid": [
+      -32.06089,
+      115.95358
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 6.63
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 10.29
+      }
+    ]
+  },
+  "6109": {
+    "centroid": [
+      -32.0399,
+      116.01317
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 8.91
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 16.16
+      }
+    ]
+  },
+  "6110": {
+    "centroid": [
+      -32.07854,
+      116.0086
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 6.17
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 15.49
+      }
+    ]
+  },
+  "6111": {
+    "centroid": [
+      -32.09971,
+      116.12496
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 10.56
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 25.35
+      }
+    ]
+  },
+  "6112": {
+    "centroid": [
+      -32.1579,
+      115.99722
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 3.49
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 17.51
+      }
+    ]
+  },
+  "6121": {
+    "centroid": [
+      -32.20893,
+      115.91646
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 12.88
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 17.08
+      }
+    ]
+  },
+  "6122": {
+    "centroid": [
+      -32.22172,
+      116.0072
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 9.92
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 22.95
+      }
+    ]
+  },
+  "6123": {
+    "centroid": [
+      -32.29518,
+      115.98589
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 18.29
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 28.55
+      }
+    ]
+  },
+  "6125": {
+    "centroid": [
+      -32.36443,
+      115.90128
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 14.7
+      }
+    ]
+  },
+  "6147": {
+    "centroid": [
+      -32.04377,
+      115.94135
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 4.46
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 9.5
+      }
+    ]
+  },
+  "6148": {
+    "centroid": [
+      -32.03018,
+      115.92469
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bentley Health Service",
+        "tier": "unknown",
+        "km": 2.78
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 8.63
+      }
+    ]
+  },
+  "6149": {
+    "centroid": [
+      -32.06494,
+      115.85868
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 1.25
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 1.36
+      }
+    ]
+  },
+  "6150": {
+    "centroid": [
+      -32.06168,
+      115.83361
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 1.25
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 1.57
+      }
+    ]
+  },
+  "6151": {
+    "centroid": [
+      -31.9822,
+      115.86948
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Royal Perth Hospital Wellington Street Campus",
+        "tier": "unknown",
+        "km": 3.12
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Mt Lawley Hospital",
+        "tier": "private",
+        "km": 5.26
+      }
+    ]
+  },
+  "6152": {
+    "centroid": [
+      -32.00851,
+      115.87006
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St James Transitional Care Unit",
+        "tier": "unknown",
+        "km": 4.02
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 7.03
+      }
+    ]
+  },
+  "6153": {
+    "centroid": [
+      -32.02436,
+      115.83752
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 4.89
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 5.16
+      }
+    ]
+  },
+  "6154": {
+    "centroid": [
+      -32.04006,
+      115.82599
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 3.56
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 3.88
+      }
+    ]
+  },
+  "6155": {
+    "centroid": [
+      -32.0615,
+      115.89078
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 4.24
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 4.4
+      }
+    ]
+  },
+  "6156": {
+    "centroid": [
+      -32.03954,
+      115.80023
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fremantle Hospital and Health Service",
+        "tier": "unknown",
+        "km": 5.05
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 5.24
+      }
+    ]
+  },
+  "6157": {
+    "centroid": [
+      -32.03823,
+      115.78373
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fremantle Hospital and Health Service",
+        "tier": "unknown",
+        "km": 3.77
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 6.62
+      }
+    ]
+  },
+  "6158": {
+    "centroid": [
+      -32.03854,
+      115.76656
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fremantle Hospital and Health Service",
+        "tier": "unknown",
+        "km": 2.61
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 8.05
+      }
+    ]
+  },
+  "6159": {
+    "centroid": [
+      -32.03522,
+      115.75031
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fremantle Hospital and Health Service",
+        "tier": "unknown",
+        "km": 2.56
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 9.61
+      }
+    ]
+  },
+  "6160": {
+    "centroid": [
+      -32.05407,
+      115.75454
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fremantle Hospital and Health Service",
+        "tier": "unknown",
+        "km": 0.55
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 8.63
+      }
+    ]
+  },
+  "6162": {
+    "centroid": [
+      -32.06877,
+      115.75902
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fremantle Hospital and Health Service",
+        "tier": "unknown",
+        "km": 1.37
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 8.07
+      }
+    ]
+  },
+  "6163": {
+    "centroid": [
+      -32.08667,
+      115.80166
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 4.56
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 4.64
+      }
+    ]
+  },
+  "6164": {
+    "centroid": [
+      -32.13021,
+      115.85744
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 6.75
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 7.03
+      }
+    ]
+  },
+  "6165": {
+    "centroid": [
+      -32.19598,
+      115.79943
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 10.94
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 14.86
+      }
+    ]
+  },
+  "6166": {
+    "centroid": [
+      -32.15229,
+      115.78976
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 10.6
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 10.71
+      }
+    ]
+  },
+  "6167": {
+    "centroid": [
+      -32.22366,
+      115.83531
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 9.66
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 17.34
+      }
+    ]
+  },
+  "6168": {
+    "centroid": [
+      -32.28196,
+      115.75773
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 1.62
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 25.17
+      }
+    ]
+  },
+  "6169": {
+    "centroid": [
+      -32.3385,
+      115.76395
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 5.28
+      }
+    ]
+  },
+  "6170": {
+    "centroid": [
+      -32.26564,
+      115.83597
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 6.75
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 22.0
+      }
+    ]
+  },
+  "6171": {
+    "centroid": [
+      -32.32886,
+      115.83326
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 7.19
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 29.04
+      }
+    ]
+  },
+  "6172": {
+    "centroid": [
+      -32.37547,
+      115.75315
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 9.5
+      }
+    ]
+  },
+  "6173": {
+    "centroid": [
+      -32.40741,
+      115.75791
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Rockingham General Hospital",
+        "tier": "unknown",
+        "km": 12.96
+      }
+    ]
+  },
+  "6174": {
+    "centroid": [
+      -32.42656,
+      115.76022
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Peel Health Campus",
+        "tier": "unknown",
+        "km": 11.79
+      }
+    ]
+  },
+  "6176": {
+    "centroid": [
+      -32.42167,
+      115.81432
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Peel Health Campus",
+        "tier": "unknown",
+        "km": 13.22
+      }
+    ]
+  },
+  "6180": {
+    "centroid": [
+      -32.55798,
+      115.72829
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Peel Health Campus",
+        "tier": "unknown",
+        "km": 4.35
+      }
+    ]
+  },
+  "6208": {
+    "centroid": [
+      -32.63062,
+      115.84759
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Murray District Hospital",
+        "tier": "unknown",
+        "km": 2.46
+      }
+    ]
+  },
+  "6210": {
+    "centroid": [
+      -32.55798,
+      115.72829
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Peel Health Campus",
+        "tier": "unknown",
+        "km": 4.35
+      }
+    ]
+  },
+  "6211": {
+    "centroid": [
+      -32.60721,
+      115.70694
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Peel Health Campus",
+        "tier": "unknown",
+        "km": 9.85
+      }
+    ]
+  },
+  "6215": {
+    "centroid": [
+      -32.85381,
+      115.89672
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Murray District Hospital",
+        "tier": "unknown",
+        "km": 23.92
+      }
+    ]
+  },
+  "6220": {
+    "centroid": [
+      -33.03122,
+      116.02978
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Harvey Hospital",
+        "tier": "unknown",
+        "km": 13.43
+      }
+    ]
+  },
+  "6225": {
+    "centroid": [
+      -33.35257,
+      116.20489
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Collie Hospital",
+        "tier": "unknown",
+        "km": 3.96
+      }
+    ]
+  },
+  "6230": {
+    "centroid": [
+      -33.34108,
+      115.6492
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Bunbury Hospital",
+        "tier": "private",
+        "km": 2.77
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bunbury Hospital",
+        "tier": "unknown",
+        "km": 2.88
+      }
+    ]
+  },
+  "6232": {
+    "centroid": [
+      -33.31663,
+      115.70426
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Bunbury Hospital",
+        "tier": "private",
+        "km": 7.52
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bunbury Hospital",
+        "tier": "unknown",
+        "km": 7.65
+      }
+    ]
+  },
+  "6233": {
+    "centroid": [
+      -33.27903,
+      115.71443
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Bunbury Hospital",
+        "tier": "private",
+        "km": 11.42
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bunbury Hospital",
+        "tier": "unknown",
+        "km": 11.56
+      }
+    ]
+  },
+  "6236": {
+    "centroid": [
+      -33.41044,
+      115.82892
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Bunbury Hospital",
+        "tier": "private",
+        "km": 17.43
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bunbury Hospital",
+        "tier": "unknown",
+        "km": 17.46
+      }
+    ]
+  },
+  "6237": {
+    "centroid": [
+      -33.47599,
+      115.67406
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bunbury Hospital",
+        "tier": "unknown",
+        "km": 12.36
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Bunbury Hospital",
+        "tier": "private",
+        "km": 12.46
+      }
+    ]
+  },
+  "6239": {
+    "centroid": [
+      -33.56487,
+      115.92393
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Donnybrook Hospital",
+        "tier": "unknown",
+        "km": 10.04
+      }
+    ]
+  },
+  "6244": {
+    "centroid": [
+      -33.76389,
+      116.51544
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Boyup Brook Soldiers Memorial Hospital",
+        "tier": "unknown",
+        "km": 14.25
+      }
+    ]
+  },
+  "6253": {
+    "centroid": [
+      -33.77394,
+      116.03654
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bridgetown Hospital",
+        "tier": "unknown",
+        "km": 21.65
+      }
+    ]
+  },
+  "6255": {
+    "centroid": [
+      -33.9716,
+      116.15538
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bridgetown Hospital",
+        "tier": "unknown",
+        "km": 3.08
+      }
+    ]
+  },
+  "6258": {
+    "centroid": [
+      -34.31282,
+      116.40218
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Warren Hospital",
+        "tier": "unknown",
+        "km": 24.15
+      }
+    ]
+  },
+  "6271": {
+    "centroid": [
+      -33.62118,
+      115.61567
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Donnybrook Hospital",
+        "tier": "unknown",
+        "km": 19.24
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Bunbury Hospital",
+        "tier": "private",
+        "km": 28.55
+      }
+    ]
+  },
+  "6275": {
+    "centroid": [
+      -34.0553,
+      115.62652
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Nannup Hospital",
+        "tier": "unknown",
+        "km": 15.27
+      }
+    ]
+  },
+  "6280": {
+    "centroid": [
+      -33.72873,
+      115.30474
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Busselton Health Campus",
+        "tier": "unknown",
+        "km": 8.38
+      }
+    ]
+  },
+  "6281": {
+    "centroid": [
+      -33.61079,
+      115.0768
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Busselton Health Campus",
+        "tier": "unknown",
+        "km": 22.99
+      }
+    ]
+  },
+  "6284": {
+    "centroid": [
+      -33.85759,
+      115.18868
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Margaret River Hospital",
+        "tier": "unknown",
+        "km": 15.1
+      }
+    ]
+  },
+  "6285": {
+    "centroid": [
+      -33.93983,
+      115.25255
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Margaret River Hospital",
+        "tier": "unknown",
+        "km": 16.78
+      }
+    ]
+  },
+  "6290": {
+    "centroid": [
+      -34.29383,
+      115.14223
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Augusta Hospital",
+        "tier": "unknown",
+        "km": 1.97
+      }
+    ]
+  },
+  "6302": {
+    "centroid": [
+      -31.89641,
+      116.73884
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "York Hospital",
+        "tier": "unknown",
+        "km": 1.77
+      }
+    ]
+  },
+  "6304": {
+    "centroid": [
+      -32.17661,
+      116.76028
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Beverley Hospital",
+        "tier": "unknown",
+        "km": 17.38
+      }
+    ]
+  },
+  "6308": {
+    "centroid": [
+      -32.57901,
+      116.66524
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Boddington Hospital",
+        "tier": "unknown",
+        "km": 30.64
+      }
+    ]
+  },
+  "6312": {
+    "centroid": [
+      -32.97912,
+      117.30686
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Narrogin Hospital",
+        "tier": "unknown",
+        "km": 13.72
+      }
+    ]
+  },
+  "6317": {
+    "centroid": [
+      -33.64736,
+      117.73891
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Katanning Hospital",
+        "tier": "unknown",
+        "km": 16.72
+      }
+    ]
+  },
+  "6324": {
+    "centroid": [
+      -34.61829,
+      117.78147
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Plantagenet Hospital",
+        "tier": "unknown",
+        "km": 11.64
+      }
+    ]
+  },
+  "6326": {
+    "centroid": [
+      -34.76936,
+      117.78534
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Plantagenet Hospital",
+        "tier": "unknown",
+        "km": 19.92
+      }
+    ]
+  },
+  "6330": {
+    "centroid": [
+      -34.90544,
+      117.86329
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Albany Hospital",
+        "tier": "unknown",
+        "km": 11.52
+      }
+    ]
+  },
+  "6333": {
+    "centroid": [
+      -34.89784,
+      117.17081
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Denmark Hospital and Health Service",
+        "tier": "unknown",
+        "km": 18.23
+      }
+    ]
+  },
+  "6335": {
+    "centroid": [
+      -33.86902,
+      118.11278
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Gnowangerup Hospital",
+        "tier": "unknown",
+        "km": 12.23
+      }
+    ]
+  },
+  "6346": {
+    "centroid": [
+      -33.31907,
+      120.34901
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Ravensthorpe Health Centre",
+        "tier": "unknown",
+        "km": 40.83
+      }
+    ]
+  },
+  "6348": {
+    "centroid": [
+      -33.88131,
+      120.14577
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Ravensthorpe Health Centre",
+        "tier": "unknown",
+        "km": 34.24
+      }
+    ]
+  },
+  "6353": {
+    "centroid": [
+      -33.13138,
+      118.51034
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Lake Grace Hospital",
+        "tier": "unknown",
+        "km": 6.26
+      }
+    ]
+  },
+  "6367": {
+    "centroid": [
+      -32.42265,
+      118.35194
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kondinin Hospital",
+        "tier": "unknown",
+        "km": 10.96
+      }
+    ]
+  },
+  "6369": {
+    "centroid": [
+      -32.02368,
+      118.80645
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Narembeen Memorial Hospital",
+        "tier": "unknown",
+        "km": 39.36
+      }
+    ]
+  },
+  "6390": {
+    "centroid": [
+      -32.80544,
+      116.41337
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Boddington Hospital",
+        "tier": "unknown",
+        "km": 5.84
+      }
+    ]
+  },
+  "6395": {
+    "centroid": [
+      -33.88515,
+      117.06528
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kojonup Hospital",
+        "tier": "unknown",
+        "km": 10.19
+      }
+    ]
+  },
+  "6401": {
+    "centroid": [
+      -31.63964,
+      116.6755
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Northam Hospital",
+        "tier": "unknown",
+        "km": 2.02
+      }
+    ]
+  },
+  "6407": {
+    "centroid": [
+      -31.65114,
+      117.22206
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Quairading Hospital",
+        "tier": "unknown",
+        "km": 43.85
+      }
+    ]
+  },
+  "6415": {
+    "centroid": [
+      -31.48122,
+      118.28998
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Merredin Hospital",
+        "tier": "unknown",
+        "km": 1.35
+      }
+    ]
+  },
+  "6418": {
+    "centroid": [
+      -31.89554,
+      118.1626
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Bruce Rock Memorial Hospital",
+        "tier": "unknown",
+        "km": 2.93
+      }
+    ]
+  },
+  "6426": {
+    "centroid": [
+      -30.3613,
+      119.31127
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Southern Cross Hospital",
+        "tier": "unknown",
+        "km": 96.71
+      }
+    ]
+  },
+  "6430": {
+    "centroid": [
+      -30.61266,
+      121.44655
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalgoorlie Health Campus",
+        "tier": "unknown",
+        "km": 14.43
+      }
+    ]
+  },
+  "6431": {
+    "centroid": [
+      -30.40364,
+      122.68388
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalgoorlie Health Campus",
+        "tier": "unknown",
+        "km": 122.1
+      }
+    ]
+  },
+  "6432": {
+    "centroid": [
+      -30.87101,
+      121.54178
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalgoorlie Health Campus",
+        "tier": "unknown",
+        "km": 16.01
+      }
+    ]
+  },
+  "6437": {
+    "centroid": [
+      -27.68439,
+      120.5298
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Leonora Hospital",
+        "tier": "unknown",
+        "km": 156.06
+      }
+    ]
+  },
+  "6440": {
+    "centroid": [
+      -26.16894,
+      125.73316
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Laverton Hospital",
+        "tier": "unknown",
+        "km": 427.72
+      }
+    ]
+  },
+  "6443": {
+    "centroid": [
+      -32.39502,
+      123.74419
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Norseman Hospital",
+        "tier": "unknown",
+        "km": 187.05
+      }
+    ]
+  },
+  "6450": {
+    "centroid": [
+      -33.40115,
+      122.21113
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Esperance Hospital",
+        "tier": "unknown",
+        "km": 58.58
+      }
+    ]
+  },
+  "6485": {
+    "centroid": [
+      -31.18472,
+      117.38106
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Wyalkatchem-Koorda and Districts Hospital",
+        "tier": "unknown",
+        "km": 1.06
+      }
+    ]
+  },
+  "6489": {
+    "centroid": [
+      -31.12327,
+      117.94562
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kununoppin Health Service",
+        "tier": "unknown",
+        "km": 2.64
+      }
+    ]
+  },
+  "6502": {
+    "centroid": [
+      -31.29756,
+      116.18427
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Northam Hospital",
+        "tier": "unknown",
+        "km": 59.56
+      }
+    ]
+  },
+  "6503": {
+    "centroid": [
+      -31.23741,
+      115.82111
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 55.95
+      }
+    ]
+  },
+  "6504": {
+    "centroid": [
+      -31.31079,
+      116.0423
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Joondalup Health Campus (Public)",
+        "tier": "unknown",
+        "km": 54.06
+      }
+    ]
+  },
+  "6510": {
+    "centroid": [
+      -30.70115,
+      116.09027
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Moora Hospital",
+        "tier": "unknown",
+        "km": 10.94
+      }
+    ]
+  },
+  "6516": {
+    "centroid": [
+      -30.22554,
+      115.20926
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Moora Hospital",
+        "tier": "unknown",
+        "km": 88.79
+      }
+    ]
+  },
+  "6519": {
+    "centroid": [
+      -29.5143,
+      115.59771
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "North Midlands Health Service",
+        "tier": "unknown",
+        "km": 15.78
+      }
+    ]
+  },
+  "6525": {
+    "centroid": [
+      -29.32732,
+      115.09807
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Dongara Eneabba Mingenew Health Service",
+        "tier": "unknown",
+        "km": 17.33
+      }
+    ]
+  },
+  "6530": {
+    "centroid": [
+      -28.79597,
+      114.80773
+    ],
+    "candidates": [
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Geraldton Hospital",
+        "tier": "private",
+        "km": 18.69
+      },
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Geraldton Hospital",
+        "tier": "unknown",
+        "km": 19.24
+      }
+    ]
+  },
+  "6532": {
+    "centroid": [
+      -28.44089,
+      115.00459
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Northampton Kalbarri Health Service",
+        "tier": "unknown",
+        "km": 37.49
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Geraldton Hospital",
+        "tier": "private",
+        "km": 53.8
+      }
+    ]
+  },
+  "6536": {
+    "centroid": [
+      -27.54184,
+      114.37968
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalbarri Health Centre",
+        "tier": "unknown",
+        "km": 28.69
+      }
+    ]
+  },
+  "6556": {
+    "centroid": [
+      -31.86059,
+      116.31025
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kalamunda Hospital",
+        "tier": "unknown",
+        "km": 26.37
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 28.84
+      }
+    ]
+  },
+  "6558": {
+    "centroid": [
+      -31.77145,
+      116.31339
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "St John of God Midland Public Hospital",
+        "tier": "unknown",
+        "km": 31.87
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 31.98
+      }
+    ]
+  },
+  "6562": {
+    "centroid": [
+      -31.74619,
+      116.47343
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Northam Hospital",
+        "tier": "unknown",
+        "km": 20.48
+      }
+    ]
+  },
+  "6566": {
+    "centroid": [
+      -31.48485,
+      116.38064
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Northam Hospital",
+        "tier": "unknown",
+        "km": 32.01
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Midland Private Hospital",
+        "tier": "private",
+        "km": 57.64
+      }
+    ]
+  },
+  "6567": {
+    "centroid": [
+      -31.45921,
+      116.41996
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Northam Hospital",
+        "tier": "unknown",
+        "km": 30.91
+      }
+    ]
+  },
+  "6623": {
+    "centroid": [
+      -29.02168,
+      116.12046
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Morawa Health Service",
+        "tier": "unknown",
+        "km": 24.13
+      }
+    ]
+  },
+  "6638": {
+    "centroid": [
+      -28.61245,
+      118.15757
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Morawa Health Service",
+        "tier": "unknown",
+        "km": 220.08
+      }
+    ]
+  },
+  "6642": {
+    "centroid": [
+      -25.72034,
+      118.57472
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Meekatharra Hospital",
+        "tier": "unknown",
+        "km": 97.21
+      }
+    ]
+  },
+  "6646": {
+    "centroid": [
+      -25.91272,
+      121.21491
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Meekatharra Hospital",
+        "tier": "unknown",
+        "km": 281.84
+      }
+    ]
+  },
+  "6701": {
+    "centroid": [
+      -24.73455,
+      115.15198
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Carnarvon Hospital",
+        "tier": "unknown",
+        "km": 151.63
+      }
+    ]
+  },
+  "6707": {
+    "centroid": [
+      -22.26503,
+      113.95479
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Exmouth Hospital",
+        "tier": "unknown",
+        "km": 41.13
+      }
+    ]
+  },
+  "6710": {
+    "centroid": [
+      -22.13346,
+      115.44897
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Onslow Hospital",
+        "tier": "unknown",
+        "km": 64.47
+      }
+    ]
+  },
+  "6714": {
+    "centroid": [
+      -21.14506,
+      116.34993
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Karratha Health Campus",
+        "tier": "unknown",
+        "km": 68.5
+      }
+    ]
+  },
+  "6716": {
+    "centroid": [
+      -21.60532,
+      116.31199
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Karratha Health Campus",
+        "tier": "unknown",
+        "km": 111.43
+      }
+    ]
+  },
+  "6718": {
+    "centroid": [
+      -20.9715,
+      117.74097
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Roebourne Hospital",
+        "tier": "unknown",
+        "km": 65.72
+      }
+    ]
+  },
+  "6721": {
+    "centroid": [
+      -20.7108,
+      118.44172
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Hedland Health Campus",
+        "tier": "unknown",
+        "km": 36.85
+      }
+    ]
+  },
+  "6722": {
+    "centroid": [
+      -20.40785,
+      118.60667
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Hedland Health Campus",
+        "tier": "unknown",
+        "km": 1.09
+      }
+    ]
+  },
+  "6725": {
+    "centroid": [
+      -18.77336,
+      122.75379
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Broome Hospital",
+        "tier": "unknown",
+        "km": 105.56
+      }
+    ]
+  },
+  "6726": {
+    "centroid": [
+      -17.95018,
+      122.19642
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Broome Hospital",
+        "tier": "unknown",
+        "km": 4.38
+      }
+    ]
+  },
+  "6728": {
+    "centroid": [
+      -17.19253,
+      124.52668
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Derby Hospital",
+        "tier": "unknown",
+        "km": 95.7
+      }
+    ]
+  },
+  "6740": {
+    "centroid": [
+      -14.96269,
+      128.39719
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Wyndham Hospital",
+        "tier": "unknown",
+        "km": 64.16
+      }
+    ]
+  },
+  "6743": {
+    "centroid": [
+      -16.99077,
+      129.50325
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Kununurra Hospital",
+        "tier": "unknown",
+        "km": 158.09
+      }
+    ]
+  },
+  "6751": {
+    "centroid": [
+      -22.14125,
+      117.05778
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Tom Price Hospital",
+        "tier": "unknown",
+        "km": 97.29
+      }
+    ]
+  },
+  "6753": {
+    "centroid": [
+      -23.25003,
+      120.26174
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Newman Hospital",
+        "tier": "unknown",
+        "km": 54.89
+      }
+    ]
+  },
+  "6765": {
+    "centroid": [
+      -18.79548,
+      125.6034
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fitzroy Crossing Hospital",
+        "tier": "unknown",
+        "km": 67.3
+      }
+    ]
+  },
+  "6770": {
+    "centroid": [
+      -18.72287,
+      127.75341
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Halls Creek Hospital",
+        "tier": "unknown",
+        "km": 56.01
+      }
+    ]
+  },
+  "6798": {
+    "centroid": [
+      -10.48705,
+      105.64067
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Exmouth Hospital",
+        "tier": "unknown",
+        "km": 1560.34
+      }
+    ]
+  },
+  "6799": {
+    "centroid": [
+      -12.16972,
+      96.83152
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Exmouth Hospital",
+        "tier": "unknown",
+        "km": 2131.34
+      }
+    ]
+  },
+  "6847": {
+    "centroid": [
+      -31.99212,
+      115.76323
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "State Forensic Mental Health Service",
+        "tier": "unknown",
+        "km": 4.2
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Eye Hospital",
+        "tier": "private",
+        "km": 8.13
+      }
+    ]
+  },
+  "6909": {
+    "centroid": [
+      -31.98579,
+      115.80469
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Perth Children's Hospital",
+        "tier": "unknown",
+        "km": 2.16
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Subiaco Hospital",
+        "tier": "private",
+        "km": 5.36
+      }
+    ]
+  },
+  "6955": {
+    "centroid": [
+      -32.0615,
+      115.89078
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Fiona Stanley Hospital",
+        "tier": "unknown",
+        "km": 4.24
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 4.4
+      }
+    ]
+  },
+  "6959": {
+    "centroid": [
+      -32.06711,
+      115.9864
+    ],
+    "candidates": [
+      {
+        "domain": "health.wa.gov.au",
+        "hospital": "Armadale-Kelmscott Memorial Hospital",
+        "tier": "unknown",
+        "km": 8.0
+      },
+      {
+        "domain": "sjog.org.au",
+        "hospital": "St John of God Murdoch Hospital",
+        "tier": "private",
+        "km": 13.36
+      }
+    ]
+  }
+}

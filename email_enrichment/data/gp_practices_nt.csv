@@ -1,0 +1,317 @@
+practitioner_id,first,last,suburb,postcode,halaxy_url,halaxy_specialty,clinic_name,clinic_phone,clinic_street,clinic_suburb,clinic_postcode,method,scraped_at,notes
+MED0002454588,bijan,darabi,NT,AB,,,,,,,,no_sitemap_match,2026-04-29T13:14:34,
+MED0002039298,liyana,abeywickrama,Yarrawonga,AB,,,,,,,,no_sitemap_match,2026-04-29T13:14:34,
+MED0001404074,andrew,mckerracher,Katherine,AC,,,,,,,,no_sitemap_match,2026-04-29T13:14:34,
+MED0002123677,dhanesha,arachchilage,Palmerston,AC,https://www.halaxy.com/profile/dr-erandi-indurumwa-arachchilage/gp-general-practitioner/352951,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:14:34,match=last_unique|halaxy_postcode=2594
+MED0002229407,javed,badyari,Nhulunbuy,AD,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001026005,christopher,vladcoff,Casuarina,AD,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001902860,govardhana,aechoor,Casuarina,AE,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001661642,anand,irimpen,NT,AE,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001925659,christopher,ku,Winnellie,AE,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0000960056,arjuna,pandithage,Millner,AG,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001119797,adil,vaghaiwala,Alice Springs,AG,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001685633,mohammed,ahmed,Casuarina,AH,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001141602,rodney,campain,Casuarina,AI,,,,,,,,no_sitemap_match,2026-04-29T13:14:36,
+MED0001211781,eric,sambaiew,Gunbalanya,AI,https://www.halaxy.com/profile/dr-eric-sambaiew/gp-general-practitioner/362412,gp-general-practitioner,Eric Sambaiew,Not available,Bangalow Medical Centre,BANGALOW,2479,halaxy_sitemap,2026-04-29T13:14:36,match=exact|suburb_mismatch:ahpra=Gunbalanya/halaxy=BANGALOW
+MED0001628641,ebenezer,ojo,Winnellie,AJ,,,,,,,,no_sitemap_match,2026-04-29T13:14:38,
+MED0000975594,satbir,aulakh,Rosebery,AK,,,,,,,,no_sitemap_match,2026-04-29T13:14:38,
+MED0002003772,john,baker,Casuarina,AK,,,,,,,,no_sitemap_match,2026-04-29T13:14:38,
+MED0000966224,partha,modak,Coolalinga,AK,,,,,,,,no_sitemap_match,2026-04-29T13:14:38,
+MED0001660112,andrew,falloon,Braitling,AL,,,,,,,,no_sitemap_match,2026-04-29T13:14:38,
+MED0001966956,adishwer,tapryal,Farrar,AL,,,,,,,,no_sitemap_match,2026-04-29T13:14:38,
+MED0001928883,darren,jewell,Darwin City,AL,,,,,,,,no_sitemap_match,2026-04-29T13:14:38,
+MED0001676396,peter,wyllie,The Gap,AL,https://www.halaxy.com/profile/dr-peter-wyllie/gp-general-practitioner/356763,gp-general-practitioner,Gorge Health,8963 6200,PO Box 1796,Katherine,0851,halaxy_sitemap,2026-04-29T13:14:38,match=exact|suburb_mismatch:ahpra=The Gap/halaxy=Katherine
+MED0002591119,kushal,amin,Casuarina,AM,,,,,,,,no_sitemap_match,2026-04-29T13:14:39,
+MED0001133667,gerard,ingham,Katherine,AM,https://www.halaxy.com/profile/dr-gerard-ingham/gp-general-practitioner/332320,gp-general-practitioner,Gerard Ingham,Not available,10 Hospital St,Daylesford,3460,halaxy_sitemap,2026-04-29T13:14:39,match=exact|suburb_mismatch:ahpra=Katherine/halaxy=Daylesford
+MED0001139896,raymond,ingamells,Alice Springs,AM,,,,,,,,no_sitemap_match,2026-04-29T13:14:41,
+MED0001585232,sajeel,samjowan,Casuarina,AM,https://www.halaxy.com/profile/dr-sajeel-samjowan/gp-general-practitioner/327833,gp-general-practitioner,Stuart Park Surgery & Darwin After Hours Medical Service,08 8981 2907,1/5 Westralia Street,Stuart Park,0820,halaxy_sitemap,2026-04-29T13:14:41,match=exact|suburb_mismatch:ahpra=Casuarina/halaxy=Stuart Park
+MED0001129259,stephen,mckernan,Milingimbi,AN,https://www.halaxy.com/profile/dr-stephen-mckernan/gp-general-practitioner/316543,gp-general-practitioner,Narregate Medical and Dental Centre,Not available,60S Victor Crescent,Narre Warren,3805,halaxy_sitemap,2026-04-29T13:14:43,match=exact|suburb_mismatch:ahpra=Milingimbi/halaxy=Narre Warren
+MED0000952558,colin,marchant,The Gap,AN,,,,,,,,no_sitemap_match,2026-04-29T13:14:45,
+MED0001119593,dimitri,andropov,Darwin City,AN,,,,,,,,no_sitemap_match,2026-04-29T13:14:45,
+MED0001049691,albert,foreman,Nakara,AN,,,,,,,,no_sitemap_match,2026-04-29T13:14:45,
+MED0000965185,mohamed,ali,Berrimah,AN,,,,,,,,no_sitemap_match,2026-04-29T13:14:45,
+MED0000986567,olumuyiwa,oyekan,Alice Springs,AN,,,,,,,,no_sitemap_match,2026-04-29T13:14:45,
+MED0001939759,ralph,mangohig,Braitling,AN,,,,,,,,no_sitemap_match,2026-04-29T13:14:45,
+MED0002073398,peter,zimmermann,Stuart Park,AN,https://www.halaxy.com/profile/dr-rene-zimmermann/gp-general-practitioner/350523,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:14:45,match=last_unique|halaxy_postcode=5250
+MED0002137659,stephen,johanson,The Gap,AN,https://www.halaxy.com/profile/dr-paul-johanson/gp-general-practitioner/318604,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:14:47,match=last_unique|halaxy_postcode=4020
+MED0000952115,brent,pannell,Alice Springs,AN,,,,,,,,no_sitemap_match,2026-04-29T13:14:48,
+MED0002315455,william,hannam,Parap,AN,https://www.halaxy.com/profile/dr-eliza-hannam/gp-general-practitioner/324316,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:14:48,match=last_unique|halaxy_postcode=5083
+MED0001651666,iain,spiers,Katherine,AN,https://www.halaxy.com/profile/dr-dougal-spiers/gp-general-practitioner/355933,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:14:50,match=last_unique|halaxy_postcode=4130
+MED0000975872,nolasco,capati,Casuarina,AP,https://www.halaxy.com/profile/dr-nolasco-capati/gp-general-practitioner/330477,gp-general-practitioner,Top End Medical Centre,8927 1033,2/11 Vanderlin Dve,Casuarina,0810,halaxy_sitemap,2026-04-29T13:14:52,match=exact
+MED0000951768,augustine,matarazzo,Alice Springs,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:54,
+MED0000954344,peter,markey,NT,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:54,
+MED0001120871,russell,carter,Tiwi,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:54,
+MED0000957698,daniel,harris,Alice Springs,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:54,
+MED0001583502,anthony,carpenter,Darwin City,AR,https://www.halaxy.com/profile/dr-anthony-carpenter/gp-general-practitioner/335511,gp-general-practitioner,Crawford St Clinic,02 6299 6128,150 Crawford St,Queanbeyan,2620,halaxy_sitemap,2026-04-29T13:14:54,match=exact|suburb_mismatch:ahpra=Darwin City/halaxy=Queanbeyan
+MED0000981945,geoffrey,harper,Casuarina,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0001784036,christopher,parker,Larrakeyah,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0001786267,rhys,harding,Casuarina,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0002159395,suminda,wanigasekara,Stuart Park,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0000949227,ruhunage,dayaratne,Palmerston,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0002137683,daniel,clarke,Nhulunbuy,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0001119372,samuel,heard,The Gap,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0001937344,david,marcelline,The Gap,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0001408109,benjamin,bartel,Katherine,AR,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0001926740,tarun,patel,Tennant Creek,AT,,,,,,,,no_sitemap_match,2026-04-29T13:14:56,
+MED0001778479,thomas,atkinson,Malak,AT,https://www.halaxy.com/profile/dr-peter-atkinson/gp-general-practitioner/321104,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:14:56,match=token:peter|halaxy_postcode=3104
+MED0001136890,stephen,vaughan,Santa Teresa,AU,,,,,,,,no_sitemap_match,2026-04-29T13:14:57,
+MED0001983526,swadhin,paul,Berrimah,AU,,,,,,,,no_sitemap_match,2026-04-29T13:14:57,
+MED0002555033,andrew,davidson,Nhulunbuy,AV,,,,,,,,no_sitemap_match,2026-04-29T13:14:57,
+MED0001995496,benjamin,bambery,Casuarina,BA,,,,,,,,no_sitemap_match,2026-04-29T13:14:57,
+MED0002316040,alexander,booth,Tiwi,BD,,,,,,,,no_sitemap_match,2026-04-29T13:14:57,
+MED0000951115,phillip,brownscombe,Coconut Grove,BE,https://www.halaxy.com/profile/dr-phil-brownscombe/gp-general-practitioner/356767,gp-general-practitioner,Territory Medical Group,8948 4333,PO Box 1558,Nightcliff,0814,halaxy_sitemap,2026-04-29T13:14:57,match=last_unique|suburb_mismatch:ahpra=Coconut Grove/halaxy=Nightcliff
+MED0000954248,andrew,bell,Darwin City,BE,,,,,,,,no_sitemap_match,2026-04-29T13:14:59,
+MED0001202757,timothy,bell,The Gap,BE,,,,,,,,no_sitemap_match,2026-04-29T13:14:59,
+MED0002315013,edmund,benn,Darwin City,BE,https://www.halaxy.com/profile/dr-cherie-benn/gp-general-practitioner/321189,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:14:59,match=last_unique|halaxy_postcode=4305
+MED0000952368,john,boffa,The Gap,BF,,,,,,,,no_sitemap_match,2026-04-29T13:15:01,
+MED0002065625,charles,bligh,Yirrkala,BL,,,,,,,,no_sitemap_match,2026-04-29T13:15:01,
+MED0001066339,paul,money,Palmerston,BL,https://www.halaxy.com/profile/dr-anne-money/gp-general-practitioner/324773,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:01,match=last_unique|halaxy_postcode=3123
+MED0000953876,paul,helliwell,The Gap,BL,,,,,,,,no_sitemap_match,2026-04-29T13:15:03,
+MED0000947587,christopher,burgess,NT,BL,,,,,,,,no_sitemap_match,2026-04-29T13:15:03,
+MED0001988230,rael,codron,Tennant Creek,BL,,,,,,,,no_sitemap_match,2026-04-29T13:15:03,
+MED0000938892,rodney,jones,Katherine,BL,,,,,,,,no_sitemap_match,2026-04-29T13:15:03,
+MED0000947330,koen,decker,Alice Springs,BL,,,,,,,,no_sitemap_match,2026-04-29T13:15:03,
+MED0000958347,stephen,bowen,Borroloola,BN,https://www.halaxy.com/profile/dr-stephen-bowen/gp-general-practitioner/318358,gp-general-practitioner,Happy Valley Clinic,08 8381 5088,Unit 5/ 5-7 SirJames Hardy Way,Woodcroft,5162,halaxy_sitemap,2026-04-29T13:15:03,match=exact|suburb_mismatch:ahpra=Borroloola/halaxy=Woodcroft
+MED0000961112,andrew,boyden,Mutitjulu,BO,,,,,,,,no_sitemap_match,2026-04-29T13:15:04,
+MED0001201655,jarrod,bowditch,Katherine,BO,,,,,,,,no_sitemap_match,2026-04-29T13:15:04,
+MED0001584479,marco,briceno,Darwin City,BR,,,,,,,,no_sitemap_match,2026-04-29T13:15:04,
+MED0001007041,barry,dowell,Nhulunbuy,BR,,,,,,,,no_sitemap_match,2026-04-29T13:15:04,
+MED0000955167,douglas,hardcastle,Tiwi,CA,,,,,,,,no_sitemap_match,2026-04-29T13:15:04,
+MED0000951942,keith,forrest,Muirhead,CD,https://www.halaxy.com/profile/dr-sallie-forrest/gp-general-practitioner/324501,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:04,match=last_unique|halaxy_postcode=6056
+MED0001677735,scott,price,Nhulunbuy,CE,,,,,,,,no_sitemap_match,2026-04-29T13:15:06,
+MED0000976140,david,mitchell,Tiwi,CH,,,,,,,,no_sitemap_match,2026-04-29T13:15:06,
+MED0000951666,david,welch,Stuart Park,CH,,,,,,,,no_sitemap_match,2026-04-29T13:15:06,
+MED0002441623,joshua,dickson,Millner,CK,https://www.halaxy.com/profile/dr-hilary-dickson/gp-general-practitioner/353166,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:06,match=last_unique|halaxy_postcode=6018
+MED0000957458,bruce,hocking,Katherine,CK,https://www.halaxy.com/profile/dr-m-hocking/gp-general-practitioner/321577,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:07,match=last_unique|halaxy_postcode=3038
+MED0001937375,christopher,mclean,Stuart Park,CL,https://www.halaxy.com/profile/dr-christopher-mclean/gp-general-practitioner/356946,gp-general-practitioner,Palmerston GP Super Clinic,8919 8919,PO Box 1850,Palmerston,0831,halaxy_sitemap,2026-04-29T13:15:09,match=exact|suburb_mismatch:ahpra=Stuart Park/halaxy=Palmerston
+MED0001673216,brian,cluney,Nauiyu,CL,,,,,,,,no_sitemap_match,2026-04-29T13:15:11,
+MED0000959715,john,kelly,Yirrkala,CL,,,,,,,,no_sitemap_match,2026-04-29T13:15:11,
+MED0001195018,andrew,mcmartin,Holtze,CM,,,,,,,,no_sitemap_match,2026-04-29T13:15:11,
+MED0001551374,thanh,tran,Darwin City,CM,https://www.halaxy.com/profile/dr-thanh-tran/gp-general-practitioner/323337,gp-general-practitioner,Currambine Family Practice,9304 1120,2/4 Hobsons Gate,Currambine,6028,halaxy_sitemap,2026-04-29T13:15:11,match=exact|suburb_mismatch:ahpra=Darwin City/halaxy=Currambine
+MED0002074324,neil,cooper,Nhulunbuy,CN,,,,,,,,no_sitemap_match,2026-04-29T13:15:12,
+MED0002137817,brandon,mu,Farrar,CN,https://www.halaxy.com/profile/dr-susana-mu/gp-general-practitioner/325269,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:13,match=last_unique|halaxy_postcode=3056
+MED0000988039,john,cooper,Alyangula,CO,,,,,,,,no_sitemap_match,2026-04-29T13:15:14,
+MED0000955142,mark,myerscough,Fannie Bay,CO,https://www.halaxy.com/profile/dr-leanne-myerscough/gp-general-practitioner/323997,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:14,match=last_unique|halaxy_postcode=3805
+MED0001051858,alan,kerr,Mutitjulu,CR,https://www.halaxy.com/profile/dr-alan-kerr/gp-general-practitioner/324370,gp-general-practitioner,Newtown Medical Centre,03 5221 5044,311 Pakington Street,Newtown,3220,halaxy_sitemap,2026-04-29T13:15:16,match=exact|suburb_mismatch:ahpra=Mutitjulu/halaxy=Newtown
+MED0000966444,michael,fonda,Adelaide River,DA,https://www.halaxy.com/profile/dr-natalie-fonda/gp-general-practitioner/352940,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:18,match=last_unique|halaxy_postcode=4558
+MED0001783772,jonathan,dow,Casuarina,DA,https://www.halaxy.com/profile/dr-jonathan-dow/gp-general-practitioner/356858,gp-general-practitioner,Palmerston GP Super Clinic,8919 8919,PO Box 1850,Palmerston,0831,halaxy_sitemap,2026-04-29T13:15:20,match=exact|suburb_mismatch:ahpra=Casuarina/halaxy=Palmerston
+MED0001121322,hung,nguyen,The Gap,DA,https://www.halaxy.com/profile/dr-hung-peter-nguyen/gp-general-practitioner/323678,gp-general-practitioner,Macarthur Medical & Dental Practice,02 4605 9999,Gilchrist Dr,Macarthur Square,2560,halaxy_sitemap,2026-04-29T13:15:22,match=exact|suburb_mismatch:ahpra=The Gap/halaxy=Macarthur Square
+MED0001858518,jarrod,jong,Sadadeen,DA,https://www.halaxy.com/profile/dr-audrey-de-jong/gp-general-practitioner/324612,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:24,match=last_unique|halaxy_postcode=3189
+MED0000962524,david,wong,Katherine,DC,https://www.halaxy.com/profile/dr-david-wong/gp-general-practitioner/1195751,gp-general-practitioner,David Wong,Not available,Valla Beach Anaesthetic Clinic,Valla Beach,2448,halaxy_sitemap,2026-04-29T13:15:26,match=exact|suburb_mismatch:ahpra=Katherine/halaxy=Valla Beach
+MED0000953190,anthony,oest,Casuarina,DE,,,,,,,,no_sitemap_match,2026-04-29T13:15:27,
+MED0001523483,christopher,harnden,Farrar,DE,,,,,,,,no_sitemap_match,2026-04-29T13:15:27,
+MED0002146289,matthew,middleton,Holtze,DL,,,,,,,,no_sitemap_match,2026-04-29T13:15:27,
+MED0002068197,ruaidhri,liddle,East Side,DL,,,,,,,,no_sitemap_match,2026-04-29T13:15:27,
+MED0002070411,deane,martin,Tennant Creek,DN,,,,,,,,no_sitemap_match,2026-04-29T13:15:27,
+MED0001783334,john,nguyen,Tennant Creek,DN,https://www.halaxy.com/profile/dr-john-nguyen/gp-general-practitioner/321941,gp-general-practitioner,Marayong Medical Centre,9672 8855,"Suite 1, 38 Railway Road",Marayong,2148,halaxy_sitemap,2026-04-29T13:15:27,match=exact|suburb_mismatch:ahpra=Tennant Creek/halaxy=Marayong
+MED0001219067,priyantha,wijesurendra,Stuart,DR,,,,,,,,no_sitemap_match,2026-04-29T13:15:28,
+MED0000971184,samuel,goodwin,Alice Springs,DW,,,,,,,,no_sitemap_match,2026-04-29T13:15:28,
+MED0002137598,thomas,sefton,Coconut Grove,EF,,,,,,,,no_sitemap_match,2026-04-29T13:15:28,
+MED0001660862,mark,o'reilly,The Gap,EI,,,,,,,,no_sitemap_match,2026-04-29T13:15:28,
+MED0002590221,adeloye,adeniji,Yarrawonga,EN,,,,,,,,no_sitemap_match,2026-04-29T13:15:28,
+MED0002225939,kelvin,muller,Katherine,ER,,,,,,,,no_sitemap_match,2026-04-29T13:15:28,
+MED0001646223,robert,forbes,Gunbalanya,ES,,,,,,,,no_sitemap_match,2026-04-29T13:15:28,
+MED0000960111,bernard,westley,Larrakeyah,ES,https://www.halaxy.com/profile/dr-bernard-westley/gp-general-practitioner/356877,gp-general-practitioner,Tristar Medical Group,7999 7569,PO Box 890,Parap,0804,halaxy_sitemap,2026-04-29T13:15:28,match=exact|suburb_mismatch:ahpra=Larrakeyah/halaxy=Parap
+MED0002068164,aaron,miles,Tiwi,ES,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0000986838,owain,greville,Yarrawonga,EV,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0001663496,david,foley,The Gap,EY,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0001601882,thomas,quigley,Darwin City,EY,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0000983395,aaron,ferguson,Alice Springs,FE,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0000970378,santhosh,linga,Casuarina,GA,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0002061659,rupert,higgins,Malak,GI,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0002006205,oagile,mogomotsi,Parap,GO,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0001996348,timothy,grove-jones,Nightcliff,GR,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0002111346,sunil,gupta,Stuart Park,GU,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0001120729,david,munro,Larrakeyah,HA,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0000966581,samuel,hone,Wurrumiyanga,HO,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0000951940,conrad,hope,Alice Springs,HO,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0001155623,neil,spike,Nightcliff,IK,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0000971356,sampathawaduge,silva,Rosebery,IL,,,,,,,,no_sitemap_match,2026-04-29T13:15:30,
+MED0001153525,david,simon,Katherine,IM,https://www.halaxy.com/profile/dr-alayne-simon/gp-general-practitioner/318019,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:30,match=last_unique|halaxy_postcode=2454
+MED0001660295,kyran,smith,The Gap,IT,,,,,,,,no_sitemap_match,2026-04-29T13:15:32,
+MED0000946976,johnny,purton,Katherine,JN,https://www.halaxy.com/profile/dr-john-purton/gp-general-practitioner/320914,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:32,match=last_unique|halaxy_postcode=4217
+MED0002448070,phillip,mullany,Holtze,LA,,,,,,,,no_sitemap_match,2026-04-29T13:15:34,
+MED0001205218,bradley,martin,Nightcliff,MA,https://www.halaxy.com/profile/dr-bradley-martin/gp-general-practitioner/356953,gp-general-practitioner,Territory Medical Group,8948 4333,PO Box 1558,Nightcliff,0814,halaxy_sitemap,2026-04-29T13:15:34,match=exact
+MED0000980878,rodney,omond,Casuarina,MO,,,,,,,,no_sitemap_match,2026-04-29T13:15:36,
+MED0001669763,michael,tong,Darwin City,NG,,,,,,,,no_sitemap_match,2026-04-29T13:15:36,
+MED0000939810,stratos,roussos,Millner,OU,https://www.halaxy.com/profile/dr-stratos-roussos/gp-general-practitioner/356869,gp-general-practitioner,Danila Dilba Health Knuckey St,8942 5444,GPO Box 2125,Darwin,0801,halaxy_sitemap,2026-04-29T13:15:36,match=exact|suburb_mismatch:ahpra=Millner/halaxy=Darwin
+MED0000986267,andrew,rowan,Araluen,OW,https://www.halaxy.com/profile/dr-loretta-rowan/gp-general-practitioner/321210,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:37,match=last_unique|halaxy_postcode=2007
+MED0001755080,punsanda,abeyaratne,Millner,AB,,,,,,,,no_sitemap_match,2026-04-29T13:15:39,
+MED0000989659,kiran,abro,Casuarina,AB,https://www.halaxy.com/profile/dr-kiran-abro/gp-general-practitioner/329801,gp-general-practitioner,Northlakes Medical Centre,08 8945 2488,1/1 Links Rd,Marrara,0812,halaxy_sitemap,2026-04-29T13:15:39,match=exact|suburb_mismatch:ahpra=Casuarina/halaxy=Marrara
+MED0001120800,wakinyjan,tabart,Braitling,AB,,,,,,,,no_sitemap_match,2026-04-29T13:15:41,
+MED0001192014,sarah,isaacs,Casuarina,AC,,,,,,,,no_sitemap_match,2026-04-29T13:15:41,
+MED0002083527,natalie,gracia,Darwin City,AC,,,,,,,,no_sitemap_match,2026-04-29T13:15:41,
+MED0000954409,fiona,macdonald,Darwin City,AC,,,,,,,,no_sitemap_match,2026-04-29T13:15:41,
+MED0001610149,zoe,radford,Millner,AD,https://www.halaxy.com/profile/dr-zoe-radford/gp-general-practitioner/356616,gp-general-practitioner,Palmerston GP Super Clinic,8919 8919,PO Box 1850,Palmerston,0830,halaxy_sitemap,2026-04-29T13:15:41,match=exact|suburb_mismatch:ahpra=Millner/halaxy=Palmerston
+MED0002064128,catherine,white,Katherine,AD,,,,,,,,no_sitemap_match,2026-04-29T13:15:42,
+MED0002066223,anna,wyatt,Alice Springs,AD,,,,,,,,no_sitemap_match,2026-04-29T13:15:43,
+MED0000977569,amy,rosser,Yuendumu,AE,https://www.halaxy.com/profile/dr-amy-rosser/gp-general-practitioner/334902,gp-general-practitioner,North Shore Medical Centre,07 5448 9200,P.O. Box 9547,Pacific Paradise,4564,halaxy_sitemap,2026-04-29T13:15:43,match=exact|suburb_mismatch:ahpra=Yuendumu/halaxy=Pacific Paradise
+MED0001119699,beverley,mayer,Millner,AE,https://www.halaxy.com/profile/dr-cora-mayer/gp-general-practitioner/328034,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:44,match=last_unique|halaxy_postcode=3191
+MED0002050419,humera,safi,Palmerston,AF,https://www.halaxy.com/profile/dr-humera-safi/gp-general-practitioner/356956,gp-general-practitioner,Arafura Medical Clinic- Zuccoli,7922 8444,PO Box 41525,Casuarina,0811,halaxy_sitemap,2026-04-29T13:15:46,match=exact|suburb_mismatch:ahpra=Palmerston/halaxy=Casuarina
+MED0001189778,olivia,magno,Wurrumiyanga,AG,https://www.halaxy.com/profile/dr-carly-magno/gp-general-practitioner/332829,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:48,match=last_unique|halaxy_postcode=2093
+MED0000994175,roxane,craig,Tiwi,AI,,,,,,,,no_sitemap_match,2026-04-29T13:15:49,
+MED0001780199,shivon,jain,Darwin City,AI,https://www.halaxy.com/profile/dr-shivon-jain/gp-general-practitioner/351697,gp-general-practitioner,CDU Medical Centre,08 8901 8811,PO Box 41291,Casuarina,0810,halaxy_sitemap,2026-04-29T13:15:49,match=exact|suburb_mismatch:ahpra=Darwin City/halaxy=Casuarina
+MED0001537717,valentina,olakengal,Yarrawonga,AK,,,,,,,,no_sitemap_match,2026-04-29T13:15:52,
+MED0001923076,ayne,akhter,Casuarina,AK,,,,,,,,no_sitemap_match,2026-04-29T13:15:52,
+MED0000972524,siobhan,thakur,Tennant Creek,AK,,,,,,,,no_sitemap_match,2026-04-29T13:15:52,
+MED0001932929,megan,yannakouros,Nhulunbuy,AK,,,,,,,,no_sitemap_match,2026-04-29T13:15:52,
+MED0000974435,sithy,ali,Berrimah,AL,https://www.halaxy.com/profile/dr-sithy-hassian-ali/gp-general-practitioner/330056,gp-general-practitioner,Arafura Medical - Fred's Pass,Not available,Arafura Medical Clinic Fred's Pass,Humpty Doo,0836,halaxy_sitemap,2026-04-29T13:15:52,match=exact|suburb_mismatch:ahpra=Berrimah/halaxy=Humpty Doo
+MED0001120775,barbara,allen,Holtze,AL,,,,,,,,no_sitemap_match,2026-04-29T13:15:53,
+MED0000951938,catherine,dugdale,Nakara,AL,,,,,,,,no_sitemap_match,2026-04-29T13:15:53,
+MED0002002472,estera,daly,Alice Springs,AL,,,,,,,,no_sitemap_match,2026-04-29T13:15:53,
+MED0001551222,kerry,mchale,NT,AL,,,,,,,,no_sitemap_match,2026-04-29T13:15:53,
+MED0002142329,ella,heggen,Nhulunbuy,AL,,,,,,,,no_sitemap_match,2026-04-29T13:15:53,
+MED0001674505,julia,coshan,Milingimbi,AL,,,,,,,,no_sitemap_match,2026-04-29T13:15:53,
+MED0001541521,katherine,mcnamara,Alice Springs,AM,,,,,,,,no_sitemap_match,2026-04-29T13:15:53,
+MED0000955148,penelope,ramsay,Gapuwiyak,AM,https://www.halaxy.com/profile/dr-p-ramsay/gp-general-practitioner/321074,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:53,match=initial|halaxy_postcode=2759
+MED0002225087,hayley,cameron,Tennant Creek,AM,,,,,,,,no_sitemap_match,2026-04-29T13:15:57,
+MED0000982493,emma,ellis,Darwin City,AM,,,,,,,,no_sitemap_match,2026-04-29T13:15:57,
+MED0001606335,emma,tucker,Casuarina,AM,,,,,,,,no_sitemap_match,2026-04-29T13:15:57,
+MED0001119631,emma,kennedy,Millner,AM,,,,,,,,no_sitemap_match,2026-04-29T13:15:57,
+MED0001935185,emmy,nishimura,NT,AM,https://www.halaxy.com/profile/dr-tania-nishimura/gp-general-practitioner/323978,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:57,match=last_unique|halaxy_postcode=3205
+MED0001120913,emma,fitzsimons,Palmerston,AM,https://www.halaxy.com/profile/dr-maria-fitzsimons/gp-general-practitioner/325764,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:15:58,match=last_unique|halaxy_postcode=6065
+MED0001866433,emma,kozianski,Pine Creek,AM,,,,,,,,no_sitemap_match,2026-04-29T13:16:00,
+MED0000987763,emma,bucknell,Holtze,AM,,,,,,,,no_sitemap_match,2026-04-29T13:16:00,
+MED0001935681,phoenix,smith,Yirrkala,AM,https://www.halaxy.com/profile/dr-emma-gardiner-smith/gp-general-practitioner/353348,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:00,match=token:emma|halaxy_postcode=4350
+MED0002228794,jordon,brian,Tindal,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:02,
+MED0000955131,katherine,garran,Millner,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:02,
+MED0001926344,helena,chan,Nhulunbuy,AN,https://www.halaxy.com/profile/dr-helena-chan/gp-general-practitioner/323343,gp-general-practitioner,Five White Street Surgery,02 9528 5266,5 White Street,Jannali,2226,halaxy_sitemap,2026-04-29T13:16:02,match=exact|suburb_mismatch:ahpra=Nhulunbuy/halaxy=Jannali
+MED0001208053,adrienne,deans,Nightcliff,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0000944813,maureen,ryan,Nhulunbuy,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0000954325,lone,andersen,Braitling,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0001754927,divya,kannan,Darwin City,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0000949629,donna,o'kane,Papunya,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0000989703,catherine,gargan,Nhulunbuy,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0001673211,laura,banner,Katherine,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0002137843,teresa,sutherland,NT,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:04,
+MED0001122077,lou,sanderson,Nhulunbuy,AN,https://www.halaxy.com/profile/dr-lou-sanderson/gp-general-practitioner/320469,gp-general-practitioner,Kardinia Health,5202 9333,2-18 Colac Road,Belmont,3216,halaxy_sitemap,2026-04-29T13:16:04,match=exact|suburb_mismatch:ahpra=Nhulunbuy/halaxy=Belmont
+MED0002223011,jessica,johannsen,The Gap,AN,,,,,,,,no_sitemap_match,2026-04-29T13:16:06,
+MED0001624208,marilou,capati,Casuarina,AP,https://www.halaxy.com/profile/dr-nolasco-capati/gp-general-practitioner/330477,gp-general-practitioner,Top End Medical Centre,8927 1033,2/11 Vanderlin Dve,Casuarina,0810,halaxy_sitemap,2026-04-29T13:16:06,match=last_unique
+MED0001119393,zareen,baqar,Alice Springs,AQ,,,,,,,,no_sitemap_match,2026-04-29T13:16:08,
+MED0000947666,susan,clarke,Lajamanu,AR,https://www.halaxy.com/profile/dr-susan-clarke/gp-general-practitioner/318132,gp-general-practitioner,Bondi Junction Seven day medical Centre,9291 9888,"Ground Fl ,1 Newlands St",Bondi Junction,2022,halaxy_sitemap,2026-04-29T13:16:08,match=exact|suburb_mismatch:ahpra=Lajamanu/halaxy=Bondi Junction
+MED0000952690,jeanine,richardson,Darwin City,AR,,,,,,,,no_sitemap_match,2026-04-29T13:16:10,
+MED0000979211,molly,garton,Katherine,AR,,,,,,,,no_sitemap_match,2026-04-29T13:16:10,
+MED0002071881,raelene,martins,Stuart,AR,https://www.halaxy.com/profile/dr-brigitte-martins/gp-general-practitioner/322246,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:10,match=last_unique|halaxy_postcode=4680
+MED0001201170,ruhunage,dayaratne,Palmerston,AR,https://www.halaxy.com/profile/dr-nelumka-dayaratne/gp-general-practitioner/356607,gp-general-practitioner,Tiwi Medical Clinic,8927 4816,1/5 Tiwi Gardens Road,Tiwi,0810,halaxy_sitemap,2026-04-29T13:16:11,match=token:nelumka|suburb_mismatch:ahpra=Palmerston/halaxy=Tiwi
+MED0001861636,lyndelle,barry,Tiwi,AR,,,,,,,,no_sitemap_match,2026-04-29T13:16:13,
+MED0001191746,amy,burraston,Casuarina,AS,,,,,,,,no_sitemap_match,2026-04-29T13:16:13,
+MED0001788670,melanie,thomas,Tiwi,AS,,,,,,,,no_sitemap_match,2026-04-29T13:16:13,
+MED0001945874,jesse,noon,Malak,AS,https://www.halaxy.com/profile/dr-courtney-noon/gp-general-practitioner/357635,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:13,match=last_unique|halaxy_postcode=4077
+MED0000976200,bridgit,mathews,The Gap,AT,https://www.halaxy.com/profile/dr-robert-mathews/gp-general-practitioner/324132,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:15,match=last_unique|halaxy_postcode=2229
+MED0001120419,anuja,kulatunga,Karama,AT,https://www.halaxy.com/profile/dr-mohan-kulatunga/gp-general-practitioner/360125,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:17,match=last_unique|halaxy_postcode=3630
+MED0001668299,megan,wrate,Darwin City,AT,https://www.halaxy.com/profile/dr-megan-wrate/gp-general-practitioner/357005,gp-general-practitioner,Cavenagh Medical Centre,8981 8566,50 Woods St,Darwin,0800,halaxy_sitemap,2026-04-29T13:16:18,match=exact
+MED0002102349,sabeena,bhat,Farrar,AT,,,,,,,,no_sitemap_match,2026-04-29T13:16:19,
+MED0001181634,helen,watson,Galiwinku,AT,,,,,,,,no_sitemap_match,2026-04-29T13:16:19,
+MED0000953728,caroline,pattison,Katherine,AT,https://www.halaxy.com/profile/dr-caroline-pattison/gp-general-practitioner/318567,gp-general-practitioner,Caroline Pattison,07 5474 0033,18 Mary St,Noosaville,4566,halaxy_sitemap,2026-04-29T13:16:19,match=exact|suburb_mismatch:ahpra=Katherine/halaxy=Noosaville
+MED0000969800,darshani,wijayaratne,Marlow Lagoon,AT,https://www.halaxy.com/profile/dr-darshani-wijayaratne/gp-general-practitioner/356606,gp-general-practitioner,Stuart Park Surgery,8981 2907,1/5 Westralia st,Stuart Park,0820,halaxy_sitemap,2026-04-29T13:16:21,match=exact|suburb_mismatch:ahpra=Marlow Lagoon/halaxy=Stuart Park
+MED0002160735,sarah,saunders,Katherine,AU,https://www.halaxy.com/profile/dr-dr-paul-saunders/gp-general-practitioner/323845,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:23,match=last_unique|halaxy_postcode=2100
+MED0001925823,lise,legault,Darwin City,AU,,,,,,,,no_sitemap_match,2026-04-29T13:16:25,
+MED0000978646,greer,weaver,Nhulunbuy,AV,https://www.halaxy.com/profile/dr-john-weaver/gp-general-practitioner/333197,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:25,match=last_unique|halaxy_postcode=5000
+MED0002145272,rachael,davis,Tindal,AV,,,,,,,,no_sitemap_match,2026-04-29T13:16:27,
+MED0000955128,jennifer,davis,Nightcliff,AV,https://www.halaxy.com/profile/dr-jennifer-a-davis/gp-general-practitioner/329992,gp-general-practitioner,Southern Cross Medical Practice,9541 2412,32 Pyree St,Bangor,2234,halaxy_sitemap,2026-04-29T13:16:27,match=exact|suburb_mismatch:ahpra=Nightcliff/halaxy=Bangor
+MED0001402446,natasha,pavlin,Katherine South,AV,,,,,,,,no_sitemap_match,2026-04-29T13:16:29,
+MED0001808339,angulugahagamage,godavitharana,Casuarina,AV,https://www.halaxy.com/profile/dr-nirmala-godavitharana/gp-general-practitioner/356855,gp-general-practitioner,Palmerston Medical Clinic,8932 5100,3/6 Maluka St,Palmerston,0832,halaxy_sitemap,2026-04-29T13:16:29,match=token:nirmala|suburb_mismatch:ahpra=Casuarina/halaxy=Palmerston
+MED0001068893,rachel,hawker,Nhulunbuy,AW,,,,,,,,no_sitemap_match,2026-04-29T13:16:31,
+MED0000974928,rebecca,henshaw,Tiwi,AW,,,,,,,,no_sitemap_match,2026-04-29T13:16:31,
+MED0001935107,georgina,taylor,The Gap,AY,,,,,,,,no_sitemap_match,2026-04-29T13:16:31,
+MED0001407452,simone,raye,Millner,AY,https://www.halaxy.com/profile/dr-simone-raye/gp-general-practitioner/356854,gp-general-practitioner,Northlakes Medical Centre,8945 2488,PO Box 40823,Casuarina,0811,halaxy_sitemap,2026-04-29T13:16:31,match=exact|suburb_mismatch:ahpra=Millner/halaxy=Casuarina
+MED0001781336,rachel,taylor,Tennant Creek,AY,,,,,,,,no_sitemap_match,2026-04-29T13:16:33,
+MED0001206172,tamsin,cockayne,Darwin City,AY,,,,,,,,no_sitemap_match,2026-04-29T13:16:33,
+MED0001665338,sarah,gelbart,Yirrkala,BA,https://www.halaxy.com/profile/dr-sarah-gelbart/gp-general-practitioner/329894,gp-general-practitioner,Northside Clinic,03 9485 7700,370 St Georges Road,Fitzroy North,3068,halaxy_sitemap,2026-04-29T13:16:33,match=exact|suburb_mismatch:ahpra=Yirrkala/halaxy=Fitzroy North
+MED0002137802,natasha,bertschi,Stuart Park,BE,,,,,,,,no_sitemap_match,2026-04-29T13:16:35,
+MED0001115786,trish,kerbi,Milingimbi,BI,,,,,,,,no_sitemap_match,2026-04-29T13:16:35,
+MED0002315153,sarah,bowyer,Coconut Grove,BO,https://www.halaxy.com/profile/dr-michelle-bowyer/gp-general-practitioner/327421,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:35,match=last_unique|halaxy_postcode=6058
+MED0000947402,kristien,brouwers,Alice Springs,BR,,,,,,,,no_sitemap_match,2026-04-29T13:16:37,
+MED0001063083,jennifer,jobst,Gapuwiyak,BS,https://www.halaxy.com/profile/dr-jenny-jobst/gp-general-practitioner/317935,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:37,match=last_unique|halaxy_postcode=3182
+MED0001649889,ciara,o'carroll,Katherine,CA,,,,,,,,no_sitemap_match,2026-04-29T13:16:39,
+MED0000962139,nicole,carter,Malak,CA,https://www.halaxy.com/profile/dr-nicole-carter/gp-general-practitioner/356709,gp-general-practitioner,Danila Dilba Health Service Malak,8942 5444,GPO Box 2125,Darwin,0801,halaxy_sitemap,2026-04-29T13:16:39,match=exact|suburb_mismatch:ahpra=Malak/halaxy=Darwin
+MED0000982579,kate,fitton,Alice Springs,CD,,,,,,,,no_sitemap_match,2026-04-29T13:16:41,
+MED0001674575,melanie,matthews,Maningrida,CD,,,,,,,,no_sitemap_match,2026-04-29T13:16:41,
+MED0002065808,rosa,coleridge,Katherine,CD,https://www.halaxy.com/profile/dr-john-coleridge/gp-general-practitioner/321483,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:41,match=last_unique|halaxy_postcode=3182
+MED0000953958,michelle,scerri,Katherine,CE,https://www.halaxy.com/profile/michelle-scerri/gp-general-practitioner/1711383,gp-general-practitioner,Michelle Scerri,Not available,PO Box 137,Katherine,0851,halaxy_sitemap,2026-04-29T13:16:43,match=exact
+MED0001663215,amanda,chan,Nhulunbuy,CE,,,,,,,,no_sitemap_match,2026-04-29T13:16:44,
+MED0001937230,carol,ritchie,Katherine,CH,,,,,,,,no_sitemap_match,2026-04-29T13:16:44,
+MED0001783809,winnie,chen,Tiwi,CH,https://www.halaxy.com/profile/dr-winnie-chen/gp-general-practitioner/356710,gp-general-practitioner,Palmerston GP Super Clinic,8919 8919,PO Box 1850,Palmerston,0830,halaxy_sitemap,2026-04-29T13:16:44,match=exact|suburb_mismatch:ahpra=Tiwi/halaxy=Palmerston
+MED0001932054,josephine,tchia,Palmerston,CH,,,,,,,,no_sitemap_match,2026-04-29T13:16:46,
+MED0001678221,rosemary,schuddinh,Katherine,CH,,,,,,,,no_sitemap_match,2026-04-29T13:16:46,
+MED0001665468,jane,karmouche,Ludmilla,CH,https://www.halaxy.com/profile/dr-robert-karmouche/gp-general-practitioner/318159,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:46,match=last_unique|halaxy_postcode=3350
+MED0000956537,tanya,martinich,Jabiru,CH,,,,,,,,no_sitemap_match,2026-04-29T13:16:48,
+MED0001676398,gabrielle,diplock,East Side,CK,,,,,,,,no_sitemap_match,2026-04-29T13:16:48,
+MED0002315363,tamsyn,mckeith,Nightcliff,CK,,,,,,,,no_sitemap_match,2026-04-29T13:16:48,
+MED0002146126,lena,rennick,The Gap,CK,,,,,,,,no_sitemap_match,2026-04-29T13:16:48,
+MED0001993653,kathryn,grocke,Tiwi,CK,,,,,,,,no_sitemap_match,2026-04-29T13:16:48,
+MED0000971186,van,nguyen,Winnellie,CM,https://www.halaxy.com/profile/dr-van-son-nguyen/gp-general-practitioner/334155,gp-general-practitioner,Van Son Nguyen,08 7224 6666,926 North East Road,Modbury,5092,halaxy_sitemap,2026-04-29T13:16:48,match=exact|suburb_mismatch:ahpra=Winnellie/halaxy=Modbury
+MED0001125525,chau,nguyen,Holtze,CM,,,,,,,,no_sitemap_match,2026-04-29T13:16:49,
+MED0001666548,suzanne,conden,Nhulunbuy,CO,,,,,,,,no_sitemap_match,2026-04-29T13:16:49,
+MED0001669625,sally,crispe,Alice Springs,CR,,,,,,,,no_sitemap_match,2026-04-29T13:16:49,
+MED0001539430,debra,singh,Darwin City,CR,,,,,,,,no_sitemap_match,2026-04-29T13:16:49,
+MED0001971379,sarah,goddard,Tennant Creek,DA,https://www.halaxy.com/profile/dr-jane-goddard/gp-general-practitioner/360017,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:49,match=last_unique|halaxy_postcode=2650
+MED0002079186,sophie,daniels,Alice Springs,DA,,,,,,,,no_sitemap_match,2026-04-29T13:16:50,
+MED0001063767,kirsten,due,Tiwi,DA,,,,,,,,no_sitemap_match,2026-04-29T13:16:50,
+MED0000987758,ruth,derkenne,Casuarina,DE,,,,,,,,no_sitemap_match,2026-04-29T13:16:50,
+MED0000946547,jennifer,delima,Alice Springs,DE,,,,,,,,no_sitemap_match,2026-04-29T13:16:50,
+MED0001641791,sarah,kloeden,The Gap,DE,,,,,,,,no_sitemap_match,2026-04-29T13:16:50,
+MED0001203974,laura,linden,Katherine,DE,https://www.halaxy.com/profile/dr-laura-linden/gp-general-practitioner/324533,gp-general-practitioner,Yarragon Medical Centre,03 5637 0222,1 Campbell St,Yarragon,3823,halaxy_sitemap,2026-04-29T13:16:50,match=exact|suburb_mismatch:ahpra=Katherine/halaxy=Yarragon
+MED0001867751,stefanie,pender,Palmerston,DE,,,,,,,,no_sitemap_match,2026-04-29T13:16:52,
+MED0002439256,kelsi,golledge,Winnellie,DG,,,,,,,,no_sitemap_match,2026-04-29T13:16:52,
+MED0000981157,edna,gadil,Casuarina,DI,https://www.halaxy.com/profile/dr-edna-gadil/gp-general-practitioner/356943,gp-general-practitioner,Top End Medical Centre Casuarina,8927 1033,2/11 Vanderlin Drive,Casuarina,0810,halaxy_sitemap,2026-04-29T13:16:52,match=exact
+MED0002003466,maria,vidler,Nhulunbuy,DL,https://www.halaxy.com/profile/dr-elissa-vidler/gp-general-practitioner/328398,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:16:53,match=last_unique|halaxy_postcode=2538
+MED0001120184,dana,fitzsimmons,Casuarina,DN,,,,,,,,no_sitemap_match,2026-04-29T13:16:55,
+MED0001051537,diane,phillips,Borroloola,DN,,,,,,,,no_sitemap_match,2026-04-29T13:16:55,
+MED0000972111,tamara,doughton,Winnellie,DO,https://www.halaxy.com/profile/dr-tamara-doughton/gp-general-practitioner/329138,gp-general-practitioner,Terrigal Medical Centre,02 4385 3150,9 Church St,Terrigal,2260,halaxy_sitemap,2026-04-29T13:16:55,match=exact|suburb_mismatch:ahpra=Winnellie/halaxy=Terrigal
+MED0001932052,simone,liddy,Palmerston,DY,,,,,,,,no_sitemap_match,2026-04-29T13:16:57,
+MED0001164134,elise,reid,Alyangula,EI,,,,,,,,no_sitemap_match,2026-04-29T13:16:57,
+MED0001202336,anne,kleinitz,Casuarina,EI,https://www.halaxy.com/profile/dr-anne-kleinitz/gp-general-practitioner/356765,gp-general-practitioner,Cavenagh Medical Centre,8981 8566,50 Woods St,Darwin,0800,halaxy_sitemap,2026-04-29T13:16:57,match=exact|suburb_mismatch:ahpra=Casuarina/halaxy=Darwin
+MED0001935155,katherine,reid,White Gums,EI,,,,,,,,no_sitemap_match,2026-04-29T13:16:59,
+MED0001931448,alyson,knell,Katherine,EL,,,,,,,,no_sitemap_match,2026-04-29T13:16:59,
+MED0001201275,marion,sewell,NT,EL,,,,,,,,no_sitemap_match,2026-04-29T13:16:59,
+MED0001197491,sarah,kemp,Stuart,EM,,,,,,,,no_sitemap_match,2026-04-29T13:16:59,
+MED0002073402,siobhan,hensey,Tiwi,EN,,,,,,,,no_sitemap_match,2026-04-29T13:16:59,
+MED0001577196,anthea,henwood,Birdum,EN,,,,,,,,no_sitemap_match,2026-04-29T13:16:59,
+MED0001192447,gillian,perriment,Ti Tree,EN,https://www.halaxy.com/profile/dr-gillian-perriment/gp-general-practitioner/328671,gp-general-practitioner,Wollongong Medical Centre,02 4254 2600,237-241 Crown St,Wollongong,2500,halaxy_sitemap,2026-04-29T13:16:59,match=exact|suburb_mismatch:ahpra=Ti Tree/halaxy=Wollongong
+MED0001210583,danielle,green,Darwin City,EN,,,,,,,,no_sitemap_match,2026-04-29T13:17:01,
+MED0001155022,belinda,greenwood-smith,Fannie Bay,EN,,,,,,,,no_sitemap_match,2026-04-29T13:17:01,
+MED0001866787,lucy,morris,Nhulunbuy,EN,,,,,,,,no_sitemap_match,2026-04-29T13:17:01,
+MED0002230870,bronte,leonard,Tindal,EO,,,,,,,,no_sitemap_match,2026-04-29T13:17:01,
+MED0001029879,rebecca,george,Coconut Grove,EO,https://www.halaxy.com/profile/dr-rebecca-george/gp-general-practitioner/356952,gp-general-practitioner,Territory Medical Group,8948 4333,PO Box 1558,Nightcliff,0814,halaxy_sitemap,2026-04-29T13:17:01,match=exact|suburb_mismatch:ahpra=Coconut Grove/halaxy=Nightcliff
+MED0001667062,madeleine,shepherd,Alice Springs,EP,,,,,,,,no_sitemap_match,2026-04-29T13:17:02,
+MED0002134001,megan,tepper,Alice Springs,EP,,,,,,,,no_sitemap_match,2026-04-29T13:17:02,
+MED0001126609,nicola,purser,Tiwi,ER,https://www.halaxy.com/profile/dr-shauna-purser/gp-general-practitioner/334015,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:17:02,match=last_unique|halaxy_postcode=2484
+MED0001509408,danielle,esler,Brinkin,ER,,,,,,,,no_sitemap_match,2026-04-29T13:17:04,
+MED0000989572,karen,fuller,Katherine,ER,,,,,,,,no_sitemap_match,2026-04-29T13:17:04,
+MED0001909267,madhuri,perera,Stuart Park,ER,https://www.halaxy.com/profile/dr-madhuri-perera/gp-general-practitioner/357653,gp-general-practitioner,Top End Medical Centre (Stuart Park),8930 4900,PO Box 98,Parap,0804,halaxy_sitemap,2026-04-29T13:17:04,match=exact|suburb_mismatch:ahpra=Stuart Park/halaxy=Parap
+MED0001121087,sarah,giles,Palmerston,ES,,,,,,,,no_sitemap_match,2026-04-29T13:17:06,
+MED0001704336,sophie,lines,Casuarina,ES,https://www.halaxy.com/profile/dr-karin-lines/gp-general-practitioner/333104,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:17:06,match=last_unique|halaxy_postcode=4214
+MED0001928116,francesca,garnett,Kilgariff,ET,,,,,,,,no_sitemap_match,2026-04-29T13:17:07,
+MED0001120084,michele,luey,Araluen,EY,,,,,,,,no_sitemap_match,2026-04-29T13:17:07,
+MED0001672273,sarah,hurley,Katherine,EY,,,,,,,,no_sitemap_match,2026-04-29T13:17:07,
+MED0002197828,talitha,kersey,Alice Springs,EY,,,,,,,,no_sitemap_match,2026-04-29T13:17:07,
+MED0001993583,hannah,fyfe,Alice Springs,FE,https://www.halaxy.com/profile/dr-elyse-fyfe/gp-general-practitioner/359547,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:17:07,match=last_unique|halaxy_postcode=2519
+MED0001585924,fiona,pringle,Nyirripi,FN,,,,,,,,no_sitemap_match,2026-04-29T13:17:09,
+MED0000951860,stephanie,girle,Tiwi,GI,,,,,,,,no_sitemap_match,2026-04-29T13:17:09,
+MED0002000951,laura,grant,Sadadeen,GR,,,,,,,,no_sitemap_match,2026-04-29T13:17:09,
+MED0001395949,jan,hanson,Brinkin,HA,,,,,,,,no_sitemap_match,2026-04-29T13:17:09,
+MED0001021989,odette,phillips,Katherine,HI,,,,,,,,no_sitemap_match,2026-04-29T13:17:09,
+MED0001673154,naressa,pohlman,Holtze,HL,,,,,,,,no_sitemap_match,2026-04-29T13:17:09,
+MED0002008876,rebecca,lee,Tiwi,HL,https://www.halaxy.com/profile/dr-r-lee/gp-general-practitioner/359853,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:17:09,match=initial|halaxy_postcode=2050
+MED0002227514,zara,roche,Tennant Creek,HL,https://www.halaxy.com/profile/dr-robert-roche/gp-general-practitioner/317737,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:17:11,match=last_unique|halaxy_postcode=4557
+MED0001507030,lwin,myo,Farrar,HM,https://www.halaxy.com/profile/dr-lwin-lwin-myo/gp-general-practitioner/330053,gp-general-practitioner,Care Point Medical Clinic,08 8920 5555,283 Trower Road,Casuarina,0810,halaxy_sitemap,2026-04-29T13:17:13,match=exact|suburb_mismatch:ahpra=Farrar/halaxy=Casuarina
+MED0001121122,lucy,hurlstone,Malak,HU,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0001855794,sophie,hunt,Alice Springs,HU,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0000962970,sarah,luthy,Katherine,HY,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0002003764,sarah,mills,Farrar,IL,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0002137308,trisha,milne,Lajamanu,IL,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0000976207,lorraine,mlilo,Darwin City,IL,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0001604109,andrea,wilson,Wurrumiyanga,IL,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0001192624,jessica,sartini,Casuarina,IN,,,,,,,,no_sitemap_match,2026-04-29T13:17:14,
+MED0000951116,sara,martin,Coconut Grove,IN,,,,,,,,no_sitemap_match,2026-04-29T13:17:15,
+MED0001673258,jamila,priore,Holtze,IO,https://www.halaxy.com/profile/dr-jamila-priore/gp-general-practitioner/322853,gp-general-practitioner,Territory Medical Nightcliff,08 8948 4333,159 Dick Ward Dr,Coconut Grove,0810,halaxy_sitemap,2026-04-29T13:17:15,match=exact|suburb_mismatch:ahpra=Holtze/halaxy=Coconut Grove
+MED0001823542,sofia,mir,Lyons,IR,https://www.halaxy.com/profile/dr-sofia-mir/gp-general-practitioner/356766,gp-general-practitioner,Territory Medical Group,8948 4333,PO Box 1558,Nightcliff,0814,halaxy_sitemap,2026-04-29T13:17:16,match=exact|suburb_mismatch:ahpra=Lyons/halaxy=Nightcliff
+MED0000955165,wendy,zerk,Kaltukatjara,JN,,,,,,,,no_sitemap_match,2026-04-29T13:17:18,
+MED0000947523,katrina,lloyd,Kilgariff,LD,,,,,,,,no_sitemap_match,2026-04-29T13:17:18,
+MED0000966187,philippa,wilson,Coconut Grove,LS,,,,,,,,no_sitemap_match,2026-04-29T13:17:18,
+MED0001201622,carlee,mark,Casuarina,LS,,,,,,,,no_sitemap_match,2026-04-29T13:17:18,
+MED0001668087,sara,toonson,Milikapiti,LS,,,,,,,,no_sitemap_match,2026-04-29T13:17:18,
+MED0002084533,asma,sumona,Humpty Doo,MO,,,,,,,,no_sitemap_match,2026-04-29T13:17:18,
+MED0001649317,marcellina,martins,Bakewell,NS,https://www.halaxy.com/profile/dr-brigitte-martins/gp-general-practitioner/322246,gp-general-practitioner,,,,,,wrong_state_fuzzy_reject,2026-04-29T13:17:18,match=last_unique|halaxy_postcode=4680
+MED0001155735,bianca,watson,Yirrkala,SO,https://www.halaxy.com/profile/dr-bianca-watson/gp-general-practitioner/326174,gp-general-practitioner,Malabar Medical Centre,9311 2324,2/22 Mons Ave,Maroubra,2035,halaxy_sitemap,2026-04-29T13:17:20,match=exact|suburb_mismatch:ahpra=Yirrkala/halaxy=Maroubra

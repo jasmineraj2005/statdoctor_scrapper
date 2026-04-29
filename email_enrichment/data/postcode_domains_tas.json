@@ -1,0 +1,1052 @@
+{
+  "7000": {
+    "centroid": [
+      -42.87835,
+      147.308
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 1.81
+      }
+    ]
+  },
+  "7001": {
+    "centroid": [
+      -43.53591,
+      146.35605
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 107.48
+      }
+    ]
+  },
+  "7004": {
+    "centroid": [
+      -42.89015,
+      147.32893
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 1.13
+      }
+    ]
+  },
+  "7005": {
+    "centroid": [
+      -42.9162,
+      147.3368
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 4.06
+      }
+    ]
+  },
+  "7007": {
+    "centroid": [
+      -42.92286,
+      147.3195
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 4.84
+      }
+    ]
+  },
+  "7008": {
+    "centroid": [
+      -42.86193,
+      147.29327
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 3.62
+      }
+    ]
+  },
+  "7009": {
+    "centroid": [
+      -42.84261,
+      147.28968
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 5.31
+      }
+    ]
+  },
+  "7010": {
+    "centroid": [
+      -42.85913,
+      147.21237
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 9.87
+      }
+    ]
+  },
+  "7011": {
+    "centroid": [
+      -42.79339,
+      147.23006
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 12.62
+      }
+    ]
+  },
+  "7015": {
+    "centroid": [
+      -42.83903,
+      147.36017
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 5.17
+      }
+    ]
+  },
+  "7016": {
+    "centroid": [
+      -42.81355,
+      147.34638
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 7.51
+      }
+    ]
+  },
+  "7017": {
+    "centroid": [
+      -42.71927,
+      147.31511
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 17.92
+      }
+    ]
+  },
+  "7018": {
+    "centroid": [
+      -42.87759,
+      147.38568
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 4.53
+      }
+    ]
+  },
+  "7019": {
+    "centroid": [
+      -42.89878,
+      147.43334
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 8.66
+      }
+    ]
+  },
+  "7020": {
+    "centroid": [
+      -42.96574,
+      147.47851
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 15.39
+      }
+    ]
+  },
+  "7021": {
+    "centroid": [
+      -42.9068,
+      147.48002
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 12.57
+      }
+    ]
+  },
+  "7022": {
+    "centroid": [
+      -43.05316,
+      147.47988
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 22.78
+      }
+    ]
+  },
+  "7024": {
+    "centroid": [
+      -42.95041,
+      147.51218
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 16.76
+      }
+    ]
+  },
+  "7025": {
+    "centroid": [
+      -42.73026,
+      147.43967
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 18.9
+      }
+    ]
+  },
+  "7030": {
+    "centroid": [
+      -42.31704,
+      146.96714
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 69.29
+      }
+    ]
+  },
+  "7050": {
+    "centroid": [
+      -42.9755,
+      147.29818
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 10.93
+      }
+    ]
+  },
+  "7052": {
+    "centroid": [
+      -43.00805,
+      147.3093
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 14.34
+      }
+    ]
+  },
+  "7053": {
+    "centroid": [
+      -42.94731,
+      147.3347
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 7.49
+      }
+    ]
+  },
+  "7054": {
+    "centroid": [
+      -43.00658,
+      147.2567
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 15.29
+      }
+    ]
+  },
+  "7109": {
+    "centroid": [
+      -43.57109,
+      146.52406
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 100.85
+      }
+    ]
+  },
+  "7112": {
+    "centroid": [
+      -43.28661,
+      147.1362
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 47.87
+      }
+    ]
+  },
+  "7113": {
+    "centroid": [
+      -43.09105,
+      146.97049
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 37.5
+      }
+    ]
+  },
+  "7116": {
+    "centroid": [
+      -43.26212,
+      147.03435
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 48.81
+      }
+    ]
+  },
+  "7117": {
+    "centroid": [
+      -43.33843,
+      147.04013
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 56.15
+      }
+    ]
+  },
+  "7120": {
+    "centroid": [
+      -42.31694,
+      147.48727
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 63.92
+      }
+    ]
+  },
+  "7140": {
+    "centroid": [
+      -42.54422,
+      146.45502
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 80.66
+      }
+    ]
+  },
+  "7150": {
+    "centroid": [
+      -43.07759,
+      147.95844
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 55.63
+      }
+    ]
+  },
+  "7155": {
+    "centroid": [
+      -43.12887,
+      147.21692
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 29.16
+      }
+    ]
+  },
+  "7163": {
+    "centroid": [
+      -43.20977,
+      147.22748
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 37.6
+      }
+    ]
+  },
+  "7170": {
+    "centroid": [
+      -42.85132,
+      147.44979
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 10.26
+      }
+    ]
+  },
+  "7172": {
+    "centroid": [
+      -42.73029,
+      147.6317
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 29.71
+      }
+    ]
+  },
+  "7173": {
+    "centroid": [
+      -42.82365,
+      147.63074
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 25.29
+      }
+    ]
+  },
+  "7175": {
+    "centroid": [
+      -42.81861,
+      147.82859
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 41.21
+      }
+    ]
+  },
+  "7178": {
+    "centroid": [
+      -42.95847,
+      147.90615
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 47.71
+      }
+    ]
+  },
+  "7180": {
+    "centroid": [
+      -43.13871,
+      148.00656
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 62.07
+      }
+    ]
+  },
+  "7184": {
+    "centroid": [
+      -43.16934,
+      147.72853
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 45.65
+      }
+    ]
+  },
+  "7190": {
+    "centroid": [
+      -42.62988,
+      148.0917
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 68.12
+      }
+    ]
+  },
+  "7210": {
+    "centroid": [
+      -41.91592,
+      147.41075
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 56.75
+      }
+    ]
+  },
+  "7212": {
+    "centroid": [
+      -41.56788,
+      147.48841
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 31.84
+      }
+    ]
+  },
+  "7215": {
+    "centroid": [
+      -42.28145,
+      148.27553
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Royal Hobart Hospital",
+        "tier": "unknown",
+        "km": 102.08
+      }
+    ]
+  },
+  "7216": {
+    "centroid": [
+      -41.28424,
+      148.0764
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 80.04
+      }
+    ]
+  },
+  "7248": {
+    "centroid": [
+      -41.39724,
+      147.13019
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 5.58
+      }
+    ]
+  },
+  "7249": {
+    "centroid": [
+      -41.47243,
+      147.15779
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 3.15
+      }
+    ]
+  },
+  "7250": {
+    "centroid": [
+      -41.43225,
+      147.07759
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 5.61
+      }
+    ]
+  },
+  "7252": {
+    "centroid": [
+      -41.14803,
+      146.99252
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 35.48
+      }
+    ]
+  },
+  "7253": {
+    "centroid": [
+      -41.11742,
+      146.83066
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Mersey Community Hospital",
+        "tier": "unknown",
+        "km": 36.35
+      }
+    ]
+  },
+  "7255": {
+    "centroid": [
+      -39.94938,
+      148.32925
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 194.25
+      }
+    ]
+  },
+  "7256": {
+    "centroid": [
+      -39.83095,
+      144.15977
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 198.84
+      }
+    ]
+  },
+  "7258": {
+    "centroid": [
+      -41.49994,
+      147.20945
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 8.16
+      }
+    ]
+  },
+  "7260": {
+    "centroid": [
+      -41.15879,
+      147.50208
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 43.92
+      }
+    ]
+  },
+  "7268": {
+    "centroid": [
+      -41.33389,
+      147.15276
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 12.57
+      }
+    ]
+  },
+  "7270": {
+    "centroid": [
+      -41.17792,
+      146.78395
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Mersey Community Hospital",
+        "tier": "unknown",
+        "km": 30.77
+      }
+    ]
+  },
+  "7275": {
+    "centroid": [
+      -41.31989,
+      146.83532
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 29.22
+      }
+    ]
+  },
+  "7277": {
+    "centroid": [
+      -41.36642,
+      146.99698
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 15.03
+      }
+    ]
+  },
+  "7300": {
+    "centroid": [
+      -41.61429,
+      147.21929
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 19.72
+      }
+    ]
+  },
+  "7301": {
+    "centroid": [
+      -41.60012,
+      147.04648
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 18.83
+      }
+    ]
+  },
+  "7302": {
+    "centroid": [
+      -41.70457,
+      146.98829
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Launceston General Hospital",
+        "tier": "unknown",
+        "km": 31.4
+      }
+    ]
+  },
+  "7304": {
+    "centroid": [
+      -41.71679,
+      146.16889
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Mersey Community Hospital",
+        "tier": "unknown",
+        "km": 58.2
+      }
+    ]
+  },
+  "7306": {
+    "centroid": [
+      -41.46696,
+      146.19611
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Mersey Community Hospital",
+        "tier": "unknown",
+        "km": 32.51
+      }
+    ]
+  },
+  "7307": {
+    "centroid": [
+      -41.2105,
+      146.57356
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Mersey Community Hospital",
+        "tier": "unknown",
+        "km": 12.81
+      }
+    ]
+  },
+  "7310": {
+    "centroid": [
+      -41.23736,
+      146.23941
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Mersey Community Hospital",
+        "tier": "unknown",
+        "km": 15.33
+      }
+    ]
+  },
+  "7315": {
+    "centroid": [
+      -41.30317,
+      146.07241
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "Mersey Community Hospital",
+        "tier": "unknown",
+        "km": 30.39
+      }
+    ]
+  },
+  "7316": {
+    "centroid": [
+      -41.26971,
+      145.93178
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 24.98
+      }
+    ]
+  },
+  "7320": {
+    "centroid": [
+      -41.08422,
+      145.86208
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 4.28
+      }
+    ]
+  },
+  "7321": {
+    "centroid": [
+      -41.45639,
+      145.50373
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 55.25
+      }
+    ]
+  },
+  "7322": {
+    "centroid": [
+      -41.04447,
+      145.80453
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 6.41
+      }
+    ]
+  },
+  "7325": {
+    "centroid": [
+      -41.1003,
+      145.60756
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 23.62
+      }
+    ]
+  },
+  "7330": {
+    "centroid": [
+      -40.78234,
+      145.05762
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 75.23
+      }
+    ]
+  },
+  "7467": {
+    "centroid": [
+      -42.09373,
+      145.52969
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 119.85
+      }
+    ]
+  },
+  "7470": {
+    "centroid": [
+      -41.90213,
+      145.50057
+    ],
+    "candidates": [
+      {
+        "domain": "health.tas.gov.au",
+        "hospital": "North West Regional Hospital",
+        "tier": "unknown",
+        "km": 100.08
+      }
+    ]
+  }
+}

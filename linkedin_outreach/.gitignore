@@ -1,3 +1,11 @@
 credentials/
 linkedin_cookies.json
 .env
+
+# auto-generated artefacts
+data/*.v1.bak
+profiler_test_output.json
+step4d_profiler_output.json
+_modal_dump_*.json
+_dropdown_dump_*.json
+# (visited_profiles.json is tracked — gitignore can't hide a tracked file's churn)

@@ -1,0 +1,8 @@
+reporting_unit_code,name,private,latitude,longitude,lhn_name,phn_name,health_service_name,domain,tier,resolution_method,mx_ok
+H0737,Royal Darwin Hospital,False,-12.355806,130.881789,NT Regional Health Services (NTRHS),Northern Territory,,nt.gov.au,unknown,lhn:nt regional health services (ntrhs),True
+H0738,Alice Springs Hospital,False,-23.705758,133.878064,NT Regional Health Services (NTRHS),Northern Territory,,nt.gov.au,unknown,lhn:nt regional health services (ntrhs),True
+H0739,Tennant Creek Hospital,False,-19.647791,134.186893,NT Regional Health Services (NTRHS),Northern Territory,,nt.gov.au,unknown,lhn:nt regional health services (ntrhs),True
+H0740,Katherine Hospital,False,-14.439002,132.272129,NT Regional Health Services (NTRHS),Northern Territory,,nt.gov.au,unknown,lhn:nt regional health services (ntrhs),True
+H0741,Gove Hospital,False,-12.18602,136.777874,NT Regional Health Services (NTRHS),Northern Territory,,nt.gov.au,unknown,lhn:nt regional health services (ntrhs),True
+H0754,Palmerston Regional Hospital,False,-12.475079,131.004464,NT Regional Health Services (NTRHS),Northern Territory,,nt.gov.au,unknown,lhn:nt regional health services (ntrhs),True
+H5060,Darwin Private Hospital,True,-12.357357,130.881789,,,,,private,,False

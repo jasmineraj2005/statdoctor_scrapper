@@ -1,0 +1,2718 @@
+{
+  "0872": {
+    "centroid": [
+      -26.26172,
+      131.63315
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Coober Pedy Hospital and Health Service",
+        "tier": "unknown",
+        "km": 433.6
+      }
+    ]
+  },
+  "5000": {
+    "centroid": [
+      -34.93646,
+      138.60776
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Health Services",
+        "tier": "unknown",
+        "km": 1.98
+      }
+    ]
+  },
+  "5001": {
+    "centroid": [
+      -34.9285,
+      138.60075
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 1.48
+      }
+    ]
+  },
+  "5005": {
+    "centroid": [
+      -34.9194,
+      138.60351
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Women's and Children's Hospital",
+        "tier": "unknown",
+        "km": 0.95
+      }
+    ]
+  },
+  "5006": {
+    "centroid": [
+      -34.91152,
+      138.5845
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 1.08
+      }
+    ]
+  },
+  "5007": {
+    "centroid": [
+      -34.90326,
+      138.56787
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 2.65
+      }
+    ]
+  },
+  "5008": {
+    "centroid": [
+      -34.88751,
+      138.55941
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Pregnancy Advisory Centre",
+        "tier": "unknown",
+        "km": 1.72
+      }
+    ]
+  },
+  "5009": {
+    "centroid": [
+      -34.89691,
+      138.54249
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "The Queen Elizabeth Hospital",
+        "tier": "unknown",
+        "km": 1.61
+      }
+    ]
+  },
+  "5010": {
+    "centroid": [
+      -34.8575,
+      138.55832
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Pregnancy Advisory Centre",
+        "tier": "unknown",
+        "km": 2.87
+      }
+    ]
+  },
+  "5011": {
+    "centroid": [
+      -34.88027,
+      138.53072
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "The Queen Elizabeth Hospital",
+        "tier": "unknown",
+        "km": 0.53
+      }
+    ]
+  },
+  "5012": {
+    "centroid": [
+      -34.86303,
+      138.54164
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Pregnancy Advisory Centre",
+        "tier": "unknown",
+        "km": 1.89
+      }
+    ]
+  },
+  "5013": {
+    "centroid": [
+      -34.84198,
+      138.55345
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Pregnancy Advisory Centre",
+        "tier": "unknown",
+        "km": 4.33
+      }
+    ]
+  },
+  "5014": {
+    "centroid": [
+      -34.86475,
+      138.50925
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "The Queen Elizabeth Hospital",
+        "tier": "unknown",
+        "km": 3.13
+      }
+    ]
+  },
+  "5015": {
+    "centroid": [
+      -34.81911,
+      138.5203
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "St Margaret's Hospital",
+        "tier": "unknown",
+        "km": 4.74
+      }
+    ]
+  },
+  "5016": {
+    "centroid": [
+      -34.82452,
+      138.4938
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "St Margaret's Hospital",
+        "tier": "unknown",
+        "km": 2.72
+      }
+    ]
+  },
+  "5017": {
+    "centroid": [
+      -34.80649,
+      138.49813
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "St Margaret's Hospital",
+        "tier": "unknown",
+        "km": 4.72
+      }
+    ]
+  },
+  "5018": {
+    "centroid": [
+      -34.77906,
+      138.49958
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "St Margaret's Hospital",
+        "tier": "unknown",
+        "km": 7.69
+      }
+    ]
+  },
+  "5019": {
+    "centroid": [
+      -34.84771,
+      138.47705
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "St Margaret's Hospital",
+        "tier": "unknown",
+        "km": 0.34
+      }
+    ]
+  },
+  "5020": {
+    "centroid": [
+      -34.86732,
+      138.48164
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "St Margaret's Hospital",
+        "tier": "unknown",
+        "km": 2.33
+      }
+    ]
+  },
+  "5021": {
+    "centroid": [
+      -34.86628,
+      138.49291
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "St Margaret's Hospital",
+        "tier": "unknown",
+        "km": 2.48
+      }
+    ]
+  },
+  "5022": {
+    "centroid": [
+      -34.90546,
+      138.49264
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "The Queen Elizabeth Hospital",
+        "tier": "unknown",
+        "km": 4.46
+      }
+    ]
+  },
+  "5023": {
+    "centroid": [
+      -34.90073,
+      138.51199
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "The Queen Elizabeth Hospital",
+        "tier": "unknown",
+        "km": 2.73
+      }
+    ]
+  },
+  "5024": {
+    "centroid": [
+      -34.94883,
+      138.50605
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "The Queen Elizabeth Hospital",
+        "tier": "unknown",
+        "km": 7.63
+      }
+    ]
+  },
+  "5025": {
+    "centroid": [
+      -34.91238,
+      138.52957
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "The Queen Elizabeth Hospital",
+        "tier": "unknown",
+        "km": 3.16
+      }
+    ]
+  },
+  "5031": {
+    "centroid": [
+      -34.93693,
+      138.57087
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 2.33
+      }
+    ]
+  },
+  "5032": {
+    "centroid": [
+      -34.93573,
+      138.54436
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 4.25
+      }
+    ]
+  },
+  "5033": {
+    "centroid": [
+      -34.93886,
+      138.55845
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 3.3
+      }
+    ]
+  },
+  "5034": {
+    "centroid": [
+      -34.95623,
+      138.58811
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Health Services",
+        "tier": "unknown",
+        "km": 3.88
+      }
+    ]
+  },
+  "5035": {
+    "centroid": [
+      -34.95208,
+      138.57519
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 3.63
+      }
+    ]
+  },
+  "5037": {
+    "centroid": [
+      -34.9574,
+      138.54583
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 5.55
+      }
+    ]
+  },
+  "5038": {
+    "centroid": [
+      -34.96805,
+      138.54837
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 6.32
+      }
+    ]
+  },
+  "5039": {
+    "centroid": [
+      -34.97626,
+      138.57074
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 5.11
+      }
+    ]
+  },
+  "5040": {
+    "centroid": [
+      -34.96308,
+      138.52741
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 7.2
+      }
+    ]
+  },
+  "5041": {
+    "centroid": [
+      -35.00298,
+      138.59418
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 3.11
+      }
+    ]
+  },
+  "5042": {
+    "centroid": [
+      -35.00774,
+      138.57435
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 1.67
+      }
+    ]
+  },
+  "5043": {
+    "centroid": [
+      -35.00549,
+      138.55385
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 2.34
+      }
+    ]
+  },
+  "5044": {
+    "centroid": [
+      -35.00121,
+      138.51631
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 5.37
+      }
+    ]
+  },
+  "5045": {
+    "centroid": [
+      -34.97712,
+      138.51697
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 6.93
+      }
+    ]
+  },
+  "5046": {
+    "centroid": [
+      -35.00379,
+      138.53543
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 3.71
+      }
+    ]
+  },
+  "5047": {
+    "centroid": [
+      -35.0307,
+      138.54657
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 2.29
+      }
+    ]
+  },
+  "5048": {
+    "centroid": [
+      -35.01742,
+      138.52046
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 4.49
+      }
+    ]
+  },
+  "5049": {
+    "centroid": [
+      -35.04539,
+      138.52272
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 4.97
+      }
+    ]
+  },
+  "5050": {
+    "centroid": [
+      -35.02631,
+      138.60127
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 2.93
+      }
+    ]
+  },
+  "5051": {
+    "centroid": [
+      -35.03377,
+      138.62041
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 4.81
+      }
+    ]
+  },
+  "5052": {
+    "centroid": [
+      -35.00389,
+      138.61868
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 4.93
+      }
+    ]
+  },
+  "5061": {
+    "centroid": [
+      -34.95719,
+      138.60648
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Health Services",
+        "tier": "unknown",
+        "km": 2.47
+      }
+    ]
+  },
+  "5062": {
+    "centroid": [
+      -35.00406,
+      138.60239
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 3.62
+      }
+    ]
+  },
+  "5063": {
+    "centroid": [
+      -34.95432,
+      138.62148
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 1.33
+      }
+    ]
+  },
+  "5064": {
+    "centroid": [
+      -34.96319,
+      138.64918
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 2.83
+      }
+    ]
+  },
+  "5065": {
+    "centroid": [
+      -34.94036,
+      138.63397
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 0.62
+      }
+    ]
+  },
+  "5066": {
+    "centroid": [
+      -34.94096,
+      138.66029
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 2.89
+      }
+    ]
+  },
+  "5067": {
+    "centroid": [
+      -34.91998,
+      138.63057
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Health Services",
+        "tier": "unknown",
+        "km": 2.62
+      }
+    ]
+  },
+  "5068": {
+    "centroid": [
+      -34.9226,
+      138.655
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 3.37
+      }
+    ]
+  },
+  "5069": {
+    "centroid": [
+      -34.9076,
+      138.62353
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Women's and Children's Hospital",
+        "tier": "unknown",
+        "km": 2.22
+      }
+    ]
+  },
+  "5070": {
+    "centroid": [
+      -34.9005,
+      138.64217
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Women's and Children's Hospital",
+        "tier": "unknown",
+        "km": 4.07
+      }
+    ]
+  },
+  "5072": {
+    "centroid": [
+      -34.91208,
+      138.69611
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 7.09
+      }
+    ]
+  },
+  "5073": {
+    "centroid": [
+      -34.89528,
+      138.68315
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "James Nash House",
+        "tier": "unknown",
+        "km": 6.57
+      }
+    ]
+  },
+  "5074": {
+    "centroid": [
+      -34.88423,
+      138.66927
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "James Nash House",
+        "tier": "unknown",
+        "km": 4.82
+      }
+    ]
+  },
+  "5075": {
+    "centroid": [
+      -34.86133,
+      138.67525
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 3.33
+      }
+    ]
+  },
+  "5076": {
+    "centroid": [
+      -34.87384,
+      138.70368
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 4.57
+      }
+    ]
+  },
+  "5081": {
+    "centroid": [
+      -34.89142,
+      138.61767
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Women's and Children's Hospital",
+        "tier": "unknown",
+        "km": 2.77
+      }
+    ]
+  },
+  "5082": {
+    "centroid": [
+      -34.88602,
+      138.58708
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Women's and Children's Hospital",
+        "tier": "unknown",
+        "km": 3.05
+      }
+    ]
+  },
+  "5083": {
+    "centroid": [
+      -34.87936,
+      138.60993
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Hampstead Rehabilitation Centre",
+        "tier": "unknown",
+        "km": 2.28
+      }
+    ]
+  },
+  "5084": {
+    "centroid": [
+      -34.86441,
+      138.5816
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Hampstead Rehabilitation Centre",
+        "tier": "unknown",
+        "km": 3.56
+      }
+    ]
+  },
+  "5085": {
+    "centroid": [
+      -34.85719,
+      138.61535
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Hampstead Rehabilitation Centre",
+        "tier": "unknown",
+        "km": 0.6
+      }
+    ]
+  },
+  "5086": {
+    "centroid": [
+      -34.85425,
+      138.64344
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "James Nash House",
+        "tier": "unknown",
+        "km": 0.75
+      }
+    ]
+  },
+  "5087": {
+    "centroid": [
+      -34.87699,
+      138.63771
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Hampstead Rehabilitation Centre",
+        "tier": "unknown",
+        "km": 2.4
+      }
+    ]
+  },
+  "5088": {
+    "centroid": [
+      -34.84714,
+      138.67378
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 2.1
+      }
+    ]
+  },
+  "5089": {
+    "centroid": [
+      -34.85105,
+      138.72449
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 3.63
+      }
+    ]
+  },
+  "5090": {
+    "centroid": [
+      -34.84335,
+      138.70463
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 1.64
+      }
+    ]
+  },
+  "5091": {
+    "centroid": [
+      -34.82261,
+      138.73557
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 4.31
+      }
+    ]
+  },
+  "5092": {
+    "centroid": [
+      -34.82132,
+      138.68023
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 1.71
+      }
+    ]
+  },
+  "5093": {
+    "centroid": [
+      -34.83977,
+      138.65797
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "James Nash House",
+        "tier": "unknown",
+        "km": 2.19
+      }
+    ]
+  },
+  "5095": {
+    "centroid": [
+      -34.82068,
+      138.6199
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "James Nash House",
+        "tier": "unknown",
+        "km": 3.6
+      }
+    ]
+  },
+  "5096": {
+    "centroid": [
+      -34.79855,
+      138.64469
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "James Nash House",
+        "tier": "unknown",
+        "km": 5.74
+      }
+    ]
+  },
+  "5097": {
+    "centroid": [
+      -34.81961,
+      138.70726
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 2.23
+      }
+    ]
+  },
+  "5098": {
+    "centroid": [
+      -34.8296,
+      138.63895
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "James Nash House",
+        "tier": "unknown",
+        "km": 2.25
+      }
+    ]
+  },
+  "5106": {
+    "centroid": [
+      -34.79317,
+      138.62946
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 6.01
+      }
+    ]
+  },
+  "5107": {
+    "centroid": [
+      -34.78445,
+      138.60987
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 6.48
+      }
+    ]
+  },
+  "5108": {
+    "centroid": [
+      -34.76155,
+      138.61884
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 4.48
+      }
+    ]
+  },
+  "5109": {
+    "centroid": [
+      -34.77446,
+      138.66233
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 2.99
+      }
+    ]
+  },
+  "5110": {
+    "centroid": [
+      -34.72213,
+      138.56504
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 9.55
+      }
+    ]
+  },
+  "5111": {
+    "centroid": [
+      -34.71295,
+      138.63531
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 4.7
+      }
+    ]
+  },
+  "5112": {
+    "centroid": [
+      -34.72623,
+      138.66662
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 2.38
+      }
+    ]
+  },
+  "5113": {
+    "centroid": [
+      -34.70271,
+      138.67263
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 5.04
+      }
+    ]
+  },
+  "5114": {
+    "centroid": [
+      -34.71868,
+      138.75425
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 8.78
+      }
+    ]
+  },
+  "5115": {
+    "centroid": [
+      -34.66949,
+      138.6817
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 8.82
+      }
+    ]
+  },
+  "5117": {
+    "centroid": [
+      -34.64127,
+      138.63654
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gawler Health Service",
+        "tier": "unknown",
+        "km": 12.06
+      }
+    ]
+  },
+  "5118": {
+    "centroid": [
+      -34.58465,
+      138.7074
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gawler Health Service",
+        "tier": "unknown",
+        "km": 4.48
+      }
+    ]
+  },
+  "5120": {
+    "centroid": [
+      -34.66855,
+      138.5079
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 16.82
+      }
+    ]
+  },
+  "5121": {
+    "centroid": [
+      -34.68295,
+      138.62481
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 8.07
+      }
+    ]
+  },
+  "5125": {
+    "centroid": [
+      -34.77323,
+      138.73873
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lyell McEwin Hospital",
+        "tier": "unknown",
+        "km": 7.33
+      }
+    ]
+  },
+  "5126": {
+    "centroid": [
+      -34.79341,
+      138.72495
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 5.52
+      }
+    ]
+  },
+  "5127": {
+    "centroid": [
+      -34.79668,
+      138.67466
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Modbury Hospital",
+        "tier": "unknown",
+        "km": 4.41
+      }
+    ]
+  },
+  "5136": {
+    "centroid": [
+      -34.92112,
+      138.73511
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 10.02
+      }
+    ]
+  },
+  "5137": {
+    "centroid": [
+      -34.94578,
+      138.73596
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 9.77
+      }
+    ]
+  },
+  "5141": {
+    "centroid": [
+      -34.95732,
+      138.72242
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 8.66
+      }
+    ]
+  },
+  "5142": {
+    "centroid": [
+      -34.96081,
+      138.74022
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 10.33
+      }
+    ]
+  },
+  "5144": {
+    "centroid": [
+      -34.9685,
+      138.76903
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 13.07
+      }
+    ]
+  },
+  "5151": {
+    "centroid": [
+      -34.97428,
+      138.7239
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 9.3
+      }
+    ]
+  },
+  "5152": {
+    "centroid": [
+      -34.9984,
+      138.70396
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 9.14
+      }
+    ]
+  },
+  "5153": {
+    "centroid": [
+      -35.09834,
+      138.76143
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 10.07
+      }
+    ]
+  },
+  "5154": {
+    "centroid": [
+      -35.02325,
+      138.73592
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Glenside Rural & Remote",
+        "tier": "unknown",
+        "km": 13.15
+      }
+    ]
+  },
+  "5155": {
+    "centroid": [
+      -35.02008,
+      138.75673
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 12.41
+      }
+    ]
+  },
+  "5158": {
+    "centroid": [
+      -35.08201,
+      138.51928
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 6.66
+      }
+    ]
+  },
+  "5159": {
+    "centroid": [
+      -35.06171,
+      138.6039
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Flinders Medical Centre",
+        "tier": "unknown",
+        "km": 5.4
+      }
+    ]
+  },
+  "5161": {
+    "centroid": [
+      -35.09638,
+      138.51565
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 5.04
+      }
+    ]
+  },
+  "5162": {
+    "centroid": [
+      -35.11212,
+      138.56522
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 6.67
+      }
+    ]
+  },
+  "5163": {
+    "centroid": [
+      -35.1508,
+      138.54621
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 4.35
+      }
+    ]
+  },
+  "5164": {
+    "centroid": [
+      -35.12482,
+      138.50036
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 1.67
+      }
+    ]
+  },
+  "5165": {
+    "centroid": [
+      -35.13739,
+      138.47509
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 2.3
+      }
+    ]
+  },
+  "5167": {
+    "centroid": [
+      -35.16687,
+      138.48121
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 3.46
+      }
+    ]
+  },
+  "5168": {
+    "centroid": [
+      -35.14974,
+      138.49632
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 1.15
+      }
+    ]
+  },
+  "5169": {
+    "centroid": [
+      -35.19421,
+      138.47796
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Noarlunga Hospital",
+        "tier": "unknown",
+        "km": 6.37
+      }
+    ]
+  },
+  "5171": {
+    "centroid": [
+      -35.19648,
+      138.55344
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "McLaren Vale & Districts War Memorial Hospital Inc",
+        "tier": "unknown",
+        "km": 2.88
+      }
+    ]
+  },
+  "5172": {
+    "centroid": [
+      -35.28775,
+      138.55517
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "McLaren Vale & Districts War Memorial Hospital Inc",
+        "tier": "unknown",
+        "km": 7.44
+      }
+    ]
+  },
+  "5173": {
+    "centroid": [
+      -35.29057,
+      138.47
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "McLaren Vale & Districts War Memorial Hospital Inc",
+        "tier": "unknown",
+        "km": 10.27
+      }
+    ]
+  },
+  "5203": {
+    "centroid": [
+      -35.45084,
+      138.38813
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "South Coast District Hospital",
+        "tier": "unknown",
+        "km": 23.26
+      }
+    ]
+  },
+  "5204": {
+    "centroid": [
+      -35.57216,
+      138.32457
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "South Coast District Hospital",
+        "tier": "unknown",
+        "km": 25.53
+      }
+    ]
+  },
+  "5210": {
+    "centroid": [
+      -35.38771,
+      138.65568
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "South Coast District Hospital",
+        "tier": "unknown",
+        "km": 19.8
+      }
+    ]
+  },
+  "5211": {
+    "centroid": [
+      -35.5637,
+      138.61944
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "South Coast District Hospital",
+        "tier": "unknown",
+        "km": 1.21
+      }
+    ]
+  },
+  "5212": {
+    "centroid": [
+      -35.5208,
+      138.66878
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "South Coast District Hospital",
+        "tier": "unknown",
+        "km": 7.21
+      }
+    ]
+  },
+  "5213": {
+    "centroid": [
+      -35.50062,
+      138.71019
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "South Coast District Hospital",
+        "tier": "unknown",
+        "km": 11.55
+      }
+    ]
+  },
+  "5214": {
+    "centroid": [
+      -35.49121,
+      138.83481
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "South Coast District Hospital",
+        "tier": "unknown",
+        "km": 22.08
+      }
+    ]
+  },
+  "5223": {
+    "centroid": [
+      -35.78616,
+      137.53965
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Kangaroo Island Health Service",
+        "tier": "unknown",
+        "km": 17.45
+      }
+    ]
+  },
+  "5233": {
+    "centroid": [
+      -34.84383,
+      138.88589
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gumeracha District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 1.99
+      }
+    ]
+  },
+  "5234": {
+    "centroid": [
+      -34.80514,
+      138.96607
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gumeracha District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 8.06
+      }
+    ]
+  },
+  "5235": {
+    "centroid": [
+      -34.68801,
+      139.07815
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Pleasant District Hospital",
+        "tier": "unknown",
+        "km": 9.79
+      }
+    ]
+  },
+  "5238": {
+    "centroid": [
+      -34.86489,
+      139.48456
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mannum District Hospital",
+        "tier": "unknown",
+        "km": 17.04
+      }
+    ]
+  },
+  "5241": {
+    "centroid": [
+      -34.89717,
+      138.86436
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gumeracha District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 8.04
+      }
+    ]
+  },
+  "5242": {
+    "centroid": [
+      -34.99842,
+      138.81913
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 10.38
+      }
+    ]
+  },
+  "5243": {
+    "centroid": [
+      -34.96322,
+      138.82816
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 13.73
+      }
+    ]
+  },
+  "5244": {
+    "centroid": [
+      -34.93866,
+      138.94638
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gumeracha District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 13.83
+      }
+    ]
+  },
+  "5245": {
+    "centroid": [
+      -35.03159,
+      138.79997
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 8.49
+      }
+    ]
+  },
+  "5250": {
+    "centroid": [
+      -35.04361,
+      138.86191
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 4.32
+      }
+    ]
+  },
+  "5251": {
+    "centroid": [
+      -35.08506,
+      138.89115
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 1.93
+      }
+    ]
+  },
+  "5252": {
+    "centroid": [
+      -35.05009,
+      138.94587
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Barker District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 7.73
+      }
+    ]
+  },
+  "5253": {
+    "centroid": [
+      -35.11153,
+      139.27622
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Murray Bridge Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 1.97
+      }
+    ]
+  },
+  "5255": {
+    "centroid": [
+      -35.24854,
+      138.97586
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Strathalbyn and District Health Service",
+        "tier": "unknown",
+        "km": 7.54
+      }
+    ]
+  },
+  "5264": {
+    "centroid": [
+      -35.66995,
+      139.27574
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Meningie and Districts Memorial Hospital and Health Services",
+        "tier": "unknown",
+        "km": 5.99
+      }
+    ]
+  },
+  "5268": {
+    "centroid": [
+      -36.18938,
+      140.7882
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Bordertown Memorial Hospital",
+        "tier": "unknown",
+        "km": 13.79
+      }
+    ]
+  },
+  "5271": {
+    "centroid": [
+      -36.87936,
+      140.64709
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Naracoorte Health Service",
+        "tier": "unknown",
+        "km": 12.98
+      }
+    ]
+  },
+  "5275": {
+    "centroid": [
+      -36.61323,
+      139.93713
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Kingston Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 25.94
+      }
+    ]
+  },
+  "5276": {
+    "centroid": [
+      -37.21415,
+      139.91738
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Kingston Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 42.54
+      }
+    ]
+  },
+  "5277": {
+    "centroid": [
+      -37.40971,
+      140.81827
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Penola War Memorial Hospital",
+        "tier": "unknown",
+        "km": 3.39
+      }
+    ]
+  },
+  "5280": {
+    "centroid": [
+      -37.50606,
+      140.3045
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Millicent and District Hospital and Health Service",
+        "tier": "unknown",
+        "km": 11.33
+      }
+    ]
+  },
+  "5290": {
+    "centroid": [
+      -37.83984,
+      140.76454
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Gambier and Districts Health Service",
+        "tier": "unknown",
+        "km": 4.33
+      }
+    ]
+  },
+  "5291": {
+    "centroid": [
+      -37.9227,
+      140.72431
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Mount Gambier and Districts Health Service",
+        "tier": "unknown",
+        "km": 14.19
+      }
+    ]
+  },
+  "5302": {
+    "centroid": [
+      -35.57951,
+      140.32532
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Lameroo District Health Service",
+        "tier": "unknown",
+        "km": 32.79
+      }
+    ]
+  },
+  "5330": {
+    "centroid": [
+      -33.97265,
+      140.02949
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Waikerie Health Service",
+        "tier": "unknown",
+        "km": 23.69
+      }
+    ]
+  },
+  "5333": {
+    "centroid": [
+      -34.47278,
+      140.63364
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Loxton Hospital Complex",
+        "tier": "unknown",
+        "km": 6.67
+      }
+    ]
+  },
+  "5341": {
+    "centroid": [
+      -33.77509,
+      140.73375
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Renmark Paringa District Hospital",
+        "tier": "unknown",
+        "km": 43.35
+      }
+    ]
+  },
+  "5343": {
+    "centroid": [
+      -34.32129,
+      140.55618
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Riverland General Hospital",
+        "tier": "unknown",
+        "km": 6.5
+      }
+    ]
+  },
+  "5345": {
+    "centroid": [
+      -34.18703,
+      140.45451
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Barmera Health Service",
+        "tier": "unknown",
+        "km": 7.09
+      }
+    ]
+  },
+  "5350": {
+    "centroid": [
+      -34.5509,
+      138.83423
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gawler Health Service",
+        "tier": "unknown",
+        "km": 8.68
+      }
+    ]
+  },
+  "5352": {
+    "centroid": [
+      -34.54704,
+      138.95954
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Tanunda War Memorial Hospital",
+        "tier": "unknown",
+        "km": 2.11
+      }
+    ]
+  },
+  "5353": {
+    "centroid": [
+      -34.57894,
+      139.36998
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Angaston District Hospital",
+        "tier": "unknown",
+        "km": 30.07
+      }
+    ]
+  },
+  "5355": {
+    "centroid": [
+      -34.44397,
+      139.00789
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Angaston District Hospital",
+        "tier": "unknown",
+        "km": 7.89
+      }
+    ]
+  },
+  "5371": {
+    "centroid": [
+      -34.49233,
+      138.76303
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gawler Health Service",
+        "tier": "unknown",
+        "km": 11.3
+      }
+    ]
+  },
+  "5373": {
+    "centroid": [
+      -34.30301,
+      138.93034
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Kapunda Hospital",
+        "tier": "unknown",
+        "km": 3.14
+      }
+    ]
+  },
+  "5401": {
+    "centroid": [
+      -34.29774,
+      138.65987
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Riverton District Soldiers' Memorial Hospital",
+        "tier": "unknown",
+        "km": 17.07
+      }
+    ]
+  },
+  "5417": {
+    "centroid": [
+      -33.46741,
+      139.86582
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Waikerie Health Service",
+        "tier": "unknown",
+        "km": 80.27
+      }
+    ]
+  },
+  "5434": {
+    "centroid": [
+      -31.63812,
+      138.75799
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Hawker Memorial Hospital",
+        "tier": "unknown",
+        "km": 42.19
+      }
+    ]
+  },
+  "5453": {
+    "centroid": [
+      -33.80293,
+      138.58268
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Clare Hospital",
+        "tier": "unknown",
+        "km": 4.17
+      }
+    ]
+  },
+  "5461": {
+    "centroid": [
+      -34.09531,
+      138.44446
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Balaklava Soldiers' Memorial District Hospital",
+        "tier": "unknown",
+        "km": 5.43
+      }
+    ]
+  },
+  "5480": {
+    "centroid": [
+      -33.12575,
+      138.31983
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Laura and District Hospital",
+        "tier": "unknown",
+        "km": 5.81
+      }
+    ]
+  },
+  "5482": {
+    "centroid": [
+      -32.8422,
+      138.35735
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Booleroo Centre District Hospital and Health Services",
+        "tier": "unknown",
+        "km": 4.02
+      }
+    ]
+  },
+  "5491": {
+    "centroid": [
+      -33.21714,
+      138.59212
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Jamestown Hospital and Health Service",
+        "tier": "unknown",
+        "km": 2.31
+      }
+    ]
+  },
+  "5501": {
+    "centroid": [
+      -34.59507,
+      138.548
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Gawler Health Service",
+        "tier": "unknown",
+        "km": 18.95
+      }
+    ]
+  },
+  "5522": {
+    "centroid": [
+      -33.57819,
+      138.00332
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Port Broughton and District Hospital and Health Service",
+        "tier": "unknown",
+        "km": 6.88
+      }
+    ]
+  },
+  "5523": {
+    "centroid": [
+      -33.37189,
+      138.14008
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Crystal Brook and District Hospital",
+        "tier": "unknown",
+        "km": 7.07
+      }
+    ]
+  },
+  "5540": {
+    "centroid": [
+      -33.21712,
+      138.06662
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Port Pirie Regional Health Service",
+        "tier": "unknown",
+        "km": 7.2
+      }
+    ]
+  },
+  "5554": {
+    "centroid": [
+      -33.92961,
+      137.7715
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Northern Yorke Peninsula Health Service (Wallaroo)",
+        "tier": "unknown",
+        "km": 12.43
+      }
+    ]
+  },
+  "5556": {
+    "centroid": [
+      -33.95085,
+      137.61083
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Northern Yorke Peninsula Health Service (Wallaroo)",
+        "tier": "unknown",
+        "km": 3.51
+      }
+    ]
+  },
+  "5558": {
+    "centroid": [
+      -34.1052,
+      137.59845
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Northern Yorke Peninsula Health Service (Wallaroo)",
+        "tier": "unknown",
+        "km": 20.05
+      }
+    ]
+  },
+  "5571": {
+    "centroid": [
+      -34.4981,
+      137.82328
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Central Yorke Peninsula Hospital (Maitland)",
+        "tier": "unknown",
+        "km": 19.72
+      }
+    ]
+  },
+  "5573": {
+    "centroid": [
+      -34.503,
+      137.50567
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Central Yorke Peninsula Hospital (Maitland)",
+        "tier": "unknown",
+        "km": 21.34
+      }
+    ]
+  },
+  "5575": {
+    "centroid": [
+      -34.8201,
+      137.54127
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Southern Yorke Peninsula Health Service (Yorketown)",
+        "tier": "unknown",
+        "km": 23.08
+      }
+    ]
+  },
+  "5576": {
+    "centroid": [
+      -35.05077,
+      137.56046
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Southern Yorke Peninsula Health Service (Yorketown)",
+        "tier": "unknown",
+        "km": 5.23
+      }
+    ]
+  },
+  "5582": {
+    "centroid": [
+      -34.94231,
+      137.73459
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Southern Yorke Peninsula Health Service (Yorketown)",
+        "tier": "unknown",
+        "km": 14.7
+      }
+    ]
+  },
+  "5600": {
+    "centroid": [
+      -33.03634,
+      137.27729
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Whyalla Hospital and Health Services",
+        "tier": "unknown",
+        "km": 27.99
+      }
+    ]
+  },
+  "5605": {
+    "centroid": [
+      -34.2583,
+      136.15409
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Tumby Bay Hospital and Health Services",
+        "tier": "unknown",
+        "km": 13.49
+      }
+    ]
+  },
+  "5606": {
+    "centroid": [
+      -35.15671,
+      136.51144
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Port Lincoln Health Service",
+        "tier": "unknown",
+        "km": 77.12
+      }
+    ]
+  },
+  "5607": {
+    "centroid": [
+      -35.10076,
+      136.37914
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Port Lincoln Health Service",
+        "tier": "unknown",
+        "km": 63.88
+      }
+    ]
+  },
+  "5608": {
+    "centroid": [
+      -33.03888,
+      137.52679
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Whyalla Hospital and Health Services",
+        "tier": "unknown",
+        "km": 4.76
+      }
+    ]
+  },
+  "5631": {
+    "centroid": [
+      -34.28578,
+      135.66453
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Cummins and District Memorial Hospital",
+        "tier": "unknown",
+        "km": 6.75
+      }
+    ]
+  },
+  "5670": {
+    "centroid": [
+      -33.40936,
+      135.02078
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Elliston Hospital",
+        "tier": "unknown",
+        "km": 29.07
+      }
+    ]
+  },
+  "5680": {
+    "centroid": [
+      -32.68883,
+      134.3921
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Streaky Bay Hospital",
+        "tier": "unknown",
+        "km": 20.0
+      }
+    ]
+  },
+  "5690": {
+    "centroid": [
+      -31.98642,
+      133.25248
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Ceduna District Health Service",
+        "tier": "unknown",
+        "km": 42.23
+      }
+    ]
+  },
+  "5700": {
+    "centroid": [
+      -32.6348,
+      137.74925
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Port Augusta Hospital and Regional Health Services",
+        "tier": "unknown",
+        "km": 14.17
+      }
+    ]
+  },
+  "5723": {
+    "centroid": [
+      -28.58052,
+      135.01332
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Coober Pedy Hospital and Health Service",
+        "tier": "unknown",
+        "km": 53.16
+      }
+    ]
+  },
+  "5725": {
+    "centroid": [
+      -30.49654,
+      136.72027
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Roxby Downs Health Service",
+        "tier": "unknown",
+        "km": 18.22
+      }
+    ]
+  },
+  "5731": {
+    "centroid": [
+      -29.70006,
+      139.3418
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Roxby Downs Health Service",
+        "tier": "unknown",
+        "km": 254.17
+      }
+    ]
+  },
+  "5950": {
+    "centroid": [
+      -34.94515,
+      138.53018
+    ],
+    "candidates": [
+      {
+        "domain": "sahealth.sa.gov.au",
+        "hospital": "Royal Adelaide Hospital",
+        "tier": "unknown",
+        "km": 5.87
+      }
+    ]
+  }
+}

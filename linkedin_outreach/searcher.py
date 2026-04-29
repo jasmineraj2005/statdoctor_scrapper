@@ -206,22 +206,43 @@ def search_and_find_profile(page: Page, practitioner: dict,
               detail="LinkedIn search returned 0 results")
         return None
 
+    # Iterate ALL top-N results (not first-match-wins). Among results that
+    # pass verification, prefer the one whose headline carries medical signal —
+    # this is what catches wrong-person namesakes (Helen Hsu council asst at
+    # Result 1 vs Dr Helen Hsu physician at Result 3+). Audit on 2026-04-29
+    # found 6/8 inspected high-conf rejections were namesake mis-matches that
+    # this ranking would have steered around. No hard filter added: if no
+    # candidate has medical signal, we still pick by LinkedIn rank (current
+    # behaviour preserved).
+    matches: list[tuple[int, dict, str, int]] = []
     for i, profile in enumerate(cards[:config.MAX_PROFILES_TO_CHECK]):
-        is_match, reason, confidence = verifier.verify_profile(practitioner, profile)
+        is_match, reason, confidence, signal = verifier.verify_profile_with_signal(
+            practitioner, profile
+        )
         print(f"  [search] Result {i+1}: '{profile['name']}' | '{profile['location']}' | '{profile['headline'][:80]}' — {reason}")
         if is_match:
-            profile["verifier_confidence"] = confidence
-            _emit(event_logger, practitioner,
-                  event="searched", outcome="success",
-                  linkedin_url=profile.get("url", ""),
-                  detail=f"matched {profile.get('name','?')} ({confidence})")
-            return profile
+            matches.append((i, profile, confidence, signal))
         time.sleep(random.uniform(*config.DELAY_BETWEEN_PROFILES_SEC))
 
+    if not matches:
+        _emit(event_logger, practitioner,
+              event="not_found", outcome="fail",
+              detail=f"searched top {config.MAX_PROFILES_TO_CHECK} results, no match")
+        return None
+
+    # Rank by signal_strength desc, then by original LinkedIn rank asc.
+    matches.sort(key=lambda m: (-m[3], m[0]))
+    rank, profile, confidence, signal = matches[0]
+    profile["verifier_confidence"] = confidence
+    if len(matches) > 1:
+        print(f"  [search] Selected Result {rank+1} (signal={signal}) over "
+              f"{len(matches)-1} other name-match candidate(s) — biased toward "
+              f"medical-signal headline")
     _emit(event_logger, practitioner,
-          event="not_found", outcome="fail",
-          detail=f"searched top {config.MAX_PROFILES_TO_CHECK} results, no match")
-    return None
+          event="searched", outcome="success",
+          linkedin_url=profile.get("url", ""),
+          detail=f"matched {profile.get('name','?')} ({confidence}, signal={signal})")
+    return profile
 
 
 def _emit(logger, practitioner: dict, **kwargs) -> None:
